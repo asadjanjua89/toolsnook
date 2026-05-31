@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Bio Generator – Write Your Professional Bio | ToolsNook</title>
+  <meta name="description" content="Generate a professional bio for LinkedIn, Twitter, website or press kit in seconds. Free AI bio generator. No signup required."/>
+  <meta name="keywords" content="AI bio generator, professional bio writer, LinkedIn bio generator, Twitter bio, about me generator, personal bio writer"/>
+  <link rel="canonical" href="https://www.toolsnook.com/tools/ai-bio-generator.html"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:900px;margin:0 auto;padding:0 2rem 4rem}
+    .layout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+    @media(max-width:700px){.layout{grid-template-columns:1fr}}
+    .card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem}
+    .card-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:1.25rem}
+    .field{margin-bottom:1rem}
+    .field label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
+    .field input,.field textarea,.field select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;padding:0.65rem 0.9rem;transition:border-color 0.2s}
+    .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
+    .field textarea{resize:vertical;min-height:80px}
+    .field select{cursor:pointer}.field select option{background:#1a1a24}
+    .platform-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem}
+    .platform-btn{padding:5px 14px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.8rem;border-radius:6px;cursor:pointer;transition:all 0.15s}
+    .platform-btn.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+    .gen-btn{width:100%;padding:0.9rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:0.25rem;display:flex;align-items:center;justify-content:center;gap:8px}
+    .gen-btn:hover{opacity:0.9;transform:translateY(-1px)}
+    .gen-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+    .placeholder-state{text-align:center;padding:3rem 1rem;color:var(--muted)}
+    .placeholder-icon{font-size:3rem;margin-bottom:1rem}
+    .loading-state{display:none;text-align:center;padding:3rem 1rem}
+    .loading-state.show{display:block}
+    .spinner{width:32px;height:32px;border:3px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 1rem}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .bio-tabs{display:flex;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap}
+    .bio-tab{padding:4px 12px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.78rem;border-radius:6px;cursor:pointer;transition:all 0.15s}
+    .bio-tab.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+    .bio-output{display:none;white-space:pre-wrap;font-size:0.9rem;line-height:1.8;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1.25rem;max-height:400px;overflow-y:auto}
+    .bio-output.show{display:block}
+    .char-count{font-size:0.75rem;color:var(--muted);text-align:right;margin-top:4px}
+    .action-row{display:flex;gap:0.75rem;margin-top:1rem}
+    .copy-btn{flex:1;padding:0.65rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer}
+    .copy-btn:hover{opacity:0.88}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › AI Bio Generator</div>
+  <div class="hero-badge">✨ AI Powered</div>
+  <h1>AI Bio Generator</h1>
+  <p>Write your professional bio for LinkedIn, Twitter, website or press kit. Get multiple versions instantly.</p>
+</div>
+<div class="container">
+  <div class="layout">
+    <div class="card">
+      <div class="card-title">YOUR DETAILS</div>
+      <div class="field"><label>YOUR NAME</label><input type="text" id="name" placeholder="Sarah Johnson"/></div>
+      <div class="field"><label>JOB TITLE / ROLE</label><input type="text" id="role" placeholder="Product Designer & UX Consultant"/></div>
+      <div class="field"><label>COMPANY / ORGANIZATION</label><input type="text" id="company" placeholder="Freelance / Acme Inc."/></div>
+      <div class="field"><label>EXPERIENCE & ACHIEVEMENTS</label><textarea id="experience" placeholder="10 years in UX design, worked with Google and Apple, designed products used by 5M+ users..."></textarea></div>
+      <div class="field"><label>SPECIALTIES / SKILLS</label><input type="text" id="skills" placeholder="e.g. Figma, user research, SaaS products..."/></div>
+      <div class="field"><label>PERSONAL TOUCH (OPTIONAL)</label><input type="text" id="personal" placeholder="e.g. Based in London. Coffee addict. Marathon runner."/></div>
+      <div class="field">
+        <label>PLATFORM</label>
+        <div class="platform-row">
+          <button class="platform-btn active" onclick="setPlatform('linkedin',this)">LinkedIn</button>
+          <button class="platform-btn" onclick="setPlatform('twitter',this)">Twitter / X</button>
+          <button class="platform-btn" onclick="setPlatform('website',this)">Website</button>
+          <button class="platform-btn" onclick="setPlatform('press',this)">Press Kit</button>
+        </div>
+      </div>
+      <button class="gen-btn" id="gen-btn" onclick="generateBio()">✨ Generate Bio</button>
+    </div>
+    <div class="card">
+      <div class="card-title">YOUR BIO</div>
+      <div class="placeholder-state" id="placeholder">
+        <div class="placeholder-icon">👤</div>
+        <p>Fill in your details and generate your professional bio.</p>
+      </div>
+      <div class="loading-state" id="loading">
+        <div class="spinner"></div>
+        <p style="color:var(--muted)">Writing your bio...</p>
+      </div>
+      <div id="bio-content" style="display:none">
+        <div class="bio-tabs" id="bio-tabs"></div>
+        <div class="bio-output" id="bio-output"></div>
+        <div class="char-count" id="char-count"></div>
+        <div class="action-row">
+          <button class="copy-btn" onclick="copyBio()">📋 Copy Bio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/ai-cover-letter.html" class="related-card"><span style="font-size:1.4rem">📝</span><span style="font-size:0.88rem;font-weight:500">AI Cover Letter Writer</span></a>
+      <a href="/tools/ai-email-subject.html" class="related-card"><span style="font-size:1.4rem">📧</span><span style="font-size:0.88rem;font-weight:500">Email Subject Generator</span></a>
+      <a href="/tools/ai-business-name-generator.html" class="related-card"><span style="font-size:1.4rem">✨</span><span style="font-size:0.88rem;font-weight:500">Business Name Generator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+  let platform='linkedin';let bios={};let activeBio='short';
+  function setPlatform(p,btn){platform=p;document.querySelectorAll('.platform-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+  async function generateBio(){
+    const name=document.getElementById('name').value.trim();
+    const role=document.getElementById('role').value.trim();
+    if(!role){alert('Please enter your job title or role.');return;}
+    const company=document.getElementById('company').value.trim();
+    const experience=document.getElementById('experience').value.trim();
+    const skills=document.getElementById('skills').value.trim();
+    const personal=document.getElementById('personal').value.trim();
+    document.getElementById('gen-btn').disabled=true;
+    document.getElementById('placeholder').style.display='none';
+    document.getElementById('loading').classList.add('show');
+    document.getElementById('bio-content').style.display='none';
+    const limits={linkedin:'300 characters for the headline area, 2000 for the About section',twitter:'160 characters',website:'150-200 words',press:'200-300 words, third person'};
+    const prompt=`Write professional bios for ${name||'the person'} for ${platform}.
+
+Role: ${role}
+${company?'Company: '+company:''}
+${experience?'Experience: '+experience:''}
+${skills?'Skills: '+skills:''}
+${personal?'Personal: '+personal:''}
+Platform limits: ${limits[platform]}
+
+Generate THREE versions:
+1. SHORT - very concise (1-2 sentences)
+2. MEDIUM - balanced (3-4 sentences)  
+3. LONG - comprehensive (full bio)
+
+${platform==='press'?'Use third person (he/she/they).':'Use first person (I).'}
+${platform==='twitter'?'SHORT version must be under 160 characters.':''}
+
+Respond ONLY with JSON, no other text:
+{"short":"...","medium":"...","long":"..."}`;
+    try{
+      const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})});
+      const data=await res.json();
+      const text=data.content.filter(b=>b.type==='text').map(b=>b.text).join('');
+      const clean=text.replace(/```json|```/g,'').trim();
+      bios=JSON.parse(clean);
+      renderBios();
+    }catch(e){alert('Something went wrong. Please try again.');}
+    finally{document.getElementById('gen-btn').disabled=false;document.getElementById('loading').classList.remove('show');}
+  }
+  function renderBios(){
+    const tabs=document.getElementById('bio-tabs');
+    tabs.innerHTML=['short','medium','long'].map(t=>`<button class="bio-tab ${t===activeBio?'active':''}" onclick="showBio('${t}',this)">${t.charAt(0).toUpperCase()+t.slice(1)}</button>`).join('');
+    showBioText(activeBio);
+    document.getElementById('bio-content').style.display='block';
+  }
+  function showBio(type,btn){activeBio=type;document.querySelectorAll('.bio-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');showBioText(type);}
+  function showBioText(type){
+    const text=bios[type]||'';
+    document.getElementById('bio-output').textContent=text;
+    document.getElementById('bio-output').classList.add('show');
+    document.getElementById('char-count').textContent=text.length+' characters · '+text.split(/\s+/).length+' words';
+  }
+  function copyBio(){
+    const text=bios[activeBio]||'';
+    navigator.clipboard.writeText(text).then(()=>{const btn=document.querySelector('.copy-btn');btn.textContent='✓ Copied!';setTimeout(()=>btn.textContent='📋 Copy Bio',2000);});
+  }
+</script>
+</body>
+</html>
