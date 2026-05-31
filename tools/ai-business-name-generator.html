@@ -182,14 +182,15 @@ Generate exactly 12 names.`;
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({prompt,max_tokens:800})
       });
+      if(!res.ok){const e=await res.json();throw new Error(e.error||'API '+res.status);}
       const data=await res.json();
-      const text=data.result;
+      const text=data.text;
       const clean=text.replace(/```json|```/g,'').trim();
       const names=JSON.parse(clean);
       saveUsage(usage.count+1);updateUsageUI();
       renderNames(names);
     }catch(e){
-      alert('Something went wrong. Please try again.');
+      const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);
       document.getElementById('gen-btn').disabled=false;
     }finally{document.getElementById('loading').classList.remove('show');}
   }
