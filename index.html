@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToolsNook – Free Online Business Tools & Calculators</title>
+  <meta name="description" content="Free online business tools and calculators. Profit margin, invoice generator, ROI calculator, loan calculator, and 20+ more tools for entrepreneurs and small businesses." />
+  <meta name="keywords" content="free business tools, online calculator, profit margin calculator, invoice generator, ROI calculator, loan calculator" />
+  <meta property="og:title" content="ToolsNook – Free Online Business Tools" />
+  <meta property="og:description" content="20+ free tools for entrepreneurs, freelancers and small business owners." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --bg3: #18181f;
+      --border: rgba(255,255,255,0.07);
+      --border2: rgba(255,255,255,0.12);
+      --text: #f0f0f5;
+      --muted: #8888a0;
+      --accent: #6c63ff;
+      --accent2: #ff6b6b;
+      --accent3: #43e97b;
+      --accent4: #f7971e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem; font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(108,99,255,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(108,99,255,0.1);
+      border: 1px solid rgba(108,99,255,0.3);
+      color: #a59fff;
+      font-size: 0.8rem; font-weight: 500;
+      padding: 6px 14px; border-radius: 100px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-badge::before { content: '✦'; font-size: 0.7rem; }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem; color: var(--muted);
+      max-width: 520px; margin: 0 auto 2.5rem;
+      line-height: 1.7;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-cta {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-size: 0.95rem; font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border2);
+      font-size: 0.95rem; font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-secondary:hover { background: var(--bg3); transform: translateY(-1px); }
+
+    .hero-stats {
+      display: flex; gap: 3rem; margin-top: 4rem;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem; font-weight: 800;
+      color: var(--text);
+    }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+
+    /* SECTION */
+    section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 480px; margin-bottom: 3rem; }
+
+    /* TOOLS GRID */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .tool-card {
+      background: var(--bg2);
+      padding: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .tool-card:hover { background: var(--bg3); }
+    .tool-card::after {
+      content: '→';
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      color: var(--muted); font-size: 0.9rem;
+      opacity: 0; transform: translateX(-4px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .tool-card:hover::after { opacity: 1; transform: translateX(0); }
+    .tool-icon {
+      font-size: 1.5rem; margin-bottom: 0.75rem;
+      display: block;
+    }
+    .tool-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem; font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .tool-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+    .tool-tag {
+      display: inline-block; margin-top: 0.75rem;
+      font-size: 0.7rem; font-weight: 500; padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .tag-finance { background: rgba(67,233,123,0.1); color: #43e97b; }
+    .tag-writing { background: rgba(108,99,255,0.12); color: #a59fff; }
+    .tag-marketing { background: rgba(247,151,30,0.1); color: #f7971e; }
+    .tag-hr { background: rgba(255,107,107,0.1); color: #ff6b6b; }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    }
+    .feature-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .feature-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .feature-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .feature-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      .hero-stats { gap: 1.5rem; }
+      .stat-num { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Tools<span>Nook</span></a>
+    <ul>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">20+ Free Business Tools</div>
+    <h1>Your nook for<br /><em>smart tools</em></h1>
+    <p>Free online calculators and tools for entrepreneurs, freelancers, and small business owners. No signup. No cost. Ever.</p>
+    <div class="hero-cta">
+      <a href="#tools" class="btn-primary">Browse All Tools</a>
+      <a href="#about" class="btn-secondary">How it works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Free Tools</div></div>
+      <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Always Free</div></div>
+      <div class="stat"><div class="stat-num">∞</div><div class="stat-label">No Limits</div></div>
+    </div>
+  </div>
+
+  <section id="tools">
+    <div class="section-label">All Tools</div>
+    <h2>Everything you need,<br />nothing you don't</h2>
+    <p class="section-sub">Pick a tool and get your answer in seconds. No account required.</p>
+
+    <div class="tools-grid">
+      <a href="/tools/profit-margin-calculator.html" class="tool-card">
+        <span class="tool-icon">📈</span>
+        <div class="tool-name">Profit Margin Calculator</div>
+        <div class="tool-desc">Calculate gross, net & operating profit margins instantly.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/invoice-generator.html" class="tool-card">
+        <span class="tool-icon">🧾</span>
+        <div class="tool-name">Invoice Generator</div>
+        <div class="tool-desc">Create and download professional invoices in seconds.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/roi-calculator.html" class="tool-card">
+        <span class="tool-icon">💰</span>
+        <div class="tool-name">ROI Calculator</div>
+        <div class="tool-desc">Measure return on investment for any project or campaign.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/loan-calculator.html" class="tool-card">
+        <span class="tool-icon">🏦</span>
+        <div class="tool-name">Business Loan Calculator</div>
+        <div class="tool-desc">Monthly payments, total interest & amortization schedule.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/break-even-calculator.html" class="tool-card">
+        <span class="tool-icon">⚖️</span>
+        <div class="tool-name">Break-Even Calculator</div>
+        <div class="tool-desc">Find out exactly when your business becomes profitable.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/markup-calculator.html" class="tool-card">
+        <span class="tool-icon">🏷️</span>
+        <div class="tool-name">Markup Calculator</div>
+        <div class="tool-desc">Calculate selling price from cost and desired markup %.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/salary-to-hourly.html" class="tool-card">
+        <span class="tool-icon">⏱️</span>
+        <div class="tool-name">Salary to Hourly</div>
+        <div class="tool-desc">Convert annual salary to hourly, daily or weekly rate.</div>
+        <span class="tool-tag tag-hr">HR</span>
+      </a>
+      <a href="/tools/freelancer-rate-calculator.html" class="tool-card">
+        <span class="tool-icon">🧑‍💻</span>
+        <div class="tool-name">Freelancer Rate Calculator</div>
+        <div class="tool-desc">Find your ideal hourly rate based on income goals.</div>
+        <span class="tool-tag tag-hr">HR</span>
+      </a>
+      <a href="/tools/vat-calculator.html" class="tool-card">
+        <span class="tool-icon">🧮</span>
+        <div class="tool-name">VAT / Tax Calculator</div>
+        <div class="tool-desc">Add or remove VAT/tax from any amount globally.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/compound-interest-calculator.html" class="tool-card">
+        <span class="tool-icon">📊</span>
+        <div class="tool-name">Compound Interest</div>
+        <div class="tool-desc">See how your money grows with compound interest over time.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/ai-business-name-generator.html" class="tool-card">
+        <span class="tool-icon">✨</span>
+        <div class="tool-name">Business Name Generator</div>
+        <div class="tool-desc">AI-powered name ideas for your business or startup.</div>
+        <span class="tool-tag tag-writing">AI Writing</span>
+      </a>
+      <a href="/tools/ai-cover-letter.html" class="tool-card">
+        <span class="tool-icon">📝</span>
+        <div class="tool-name">AI Cover Letter Writer</div>
+        <div class="tool-desc">Generate a tailored cover letter in under 30 seconds.</div>
+        <span class="tool-tag tag-writing">AI Writing</span>
+      </a>
+      <a href="/tools/ai-bio-generator.html" class="tool-card">
+        <span class="tool-icon">👤</span>
+        <div class="tool-name">AI Bio Generator</div>
+        <div class="tool-desc">Write your professional bio for LinkedIn, website or press.</div>
+        <span class="tool-tag tag-writing">AI Writing</span>
+      </a>
+      <a href="/tools/ai-product-description.html" class="tool-card">
+        <span class="tool-icon">🛍️</span>
+        <div class="tool-name">Product Description Writer</div>
+        <div class="tool-desc">AI-generated product descriptions for ecommerce listings.</div>
+        <span class="tool-tag tag-writing">AI Writing</span>
+      </a>
+      <a href="/tools/ai-email-subject.html" class="tool-card">
+        <span class="tool-icon">📧</span>
+        <div class="tool-name">Email Subject Line Generator</div>
+        <div class="tool-desc">Boost open rates with AI-crafted subject lines.</div>
+        <span class="tool-tag tag-marketing">Marketing</span>
+      </a>
+      <a href="/tools/startup-cost-estimator.html" class="tool-card">
+        <span class="tool-icon">🚀</span>
+        <div class="tool-name">Startup Cost Estimator</div>
+        <div class="tool-desc">Estimate total startup costs before launching your business.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/working-capital-calculator.html" class="tool-card">
+        <span class="tool-icon">🔄</span>
+        <div class="tool-name">Working Capital Calculator</div>
+        <div class="tool-desc">Calculate net working capital and current ratio fast.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/debt-payoff-calculator.html" class="tool-card">
+        <span class="tool-icon">💳</span>
+        <div class="tool-name">Debt Payoff Calculator</div>
+        <div class="tool-desc">Plan your debt repayment with avalanche or snowball method.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/currency-converter.html" class="tool-card">
+        <span class="tool-icon">💱</span>
+        <div class="tool-name">Currency Converter</div>
+        <div class="tool-desc">Convert between 150+ currencies with live-ish rates.</div>
+        <span class="tool-tag tag-finance">Finance</span>
+      </a>
+      <a href="/tools/business-plan-outline.html" class="tool-card">
+        <span class="tool-icon">📋</span>
+        <div class="tool-name">Business Plan Outline</div>
+        <div class="tool-desc">Generate a structured business plan outline instantly.</div>
+        <span class="tool-tag tag-writing">AI Writing</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-label">Why ToolsNook</div>
+    <h2>Built for people<br />who mean business</h2>
+    <p class="section-sub">No fluff. No paywalls. Just tools that work.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Instant results</div>
+        <div class="feature-desc">Every tool runs in your browser. No loading screens, no waiting, no server calls for basic calculations.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">No account needed</div>
+        <div class="feature-desc">We don't ask for your email. We don't track what you calculate. Just open and use.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <div class="feature-title">Works everywhere</div>
+        <div class="feature-desc">Every tool is fully responsive. Use it on your phone, tablet, or desktop without any issues.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <div class="feature-title">Built for global use</div>
+        <div class="feature-desc">Tools support multiple currencies, tax systems, and use cases across different countries and industries.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a></p>
+    <p style="margin-top:0.5rem;">Free tools for the people who build things.</p>
+  </footer>
+
+</body>
+</html>
