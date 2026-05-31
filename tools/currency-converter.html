@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter – Free Online Tool | ToolsNook</title>
+  <meta name="description" content="Convert between 150+ currencies with up-to-date exchange rates. Free online currency converter. No signup required." />
+  <meta name="keywords" content="currency converter, exchange rate calculator, USD to EUR, currency exchange, free currency converter online, foreign exchange calculator" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/currency-converter.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:700px;margin:0 auto;padding:0 2rem 4rem}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem;margin-top:2rem}
+    .converter-row{display:flex;align-items:flex-end;gap:1rem;margin-bottom:1rem}
+    @media(max-width:500px){.converter-row{flex-direction:column}}
+    .conv-group{flex:1}
+    .conv-group label{display:block;font-size:0.75rem;color:var(--muted);font-weight:500;letter-spacing:0.04em;margin-bottom:0.5rem}
+    .conv-group input[type=number]{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1.3rem;font-weight:600;padding:0.85rem 1rem;-moz-appearance:textfield;transition:border-color 0.2s}
+    .conv-group input::-webkit-outer-spin-button,.conv-group input::-webkit-inner-spin-button{-webkit-appearance:none}
+    .conv-group input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
+    .csw{position:relative;margin-top:0.5rem}.csw::after{content:'▾';position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.75rem;pointer-events:none}
+    select.csel{appearance:none;-webkit-appearance:none;width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;padding:0.75rem 2.2rem 0.75rem 1rem;cursor:pointer;transition:border-color 0.2s}
+    select.csel:focus{outline:none;border-color:var(--accent)}select.csel option{background:#1a1a24}
+    .swap-btn{background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:1.2rem;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;margin-bottom:0.5rem}
+    .swap-btn:hover{color:var(--accent);border-color:var(--accent);transform:rotate(180deg)}
+    .result-box{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;margin-bottom:1.5rem}
+    .result-label{font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .result-value{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;color:var(--green);line-height:1}
+    .result-rate{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
+    .status-row{display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+    .quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.75rem}
+    .quick-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem;cursor:pointer;transition:all 0.2s}
+    .quick-card:hover{border-color:var(--accent);background:rgba(108,99,255,0.08)}
+    .qc-pair{font-size:0.78rem;color:var(--muted);margin-bottom:4px}
+    .qc-rate{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text)}
+    .info-section{margin-top:4rem}
+    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Currency Converter</div>
+  <div class="hero-badge">✦ Finance Tool</div>
+  <h1>Currency Converter</h1>
+  <p>Convert between 30+ major currencies with live exchange rates. Fast, free, no signup.</p>
+</div>
+<div class="container">
+  <div class="calc-card">
+    <div class="status-row"><div class="status-dot"></div><span id="rate-status">Fetching live rates...</span></div>
+    <div class="converter-row">
+      <div class="conv-group">
+        <label>AMOUNT</label>
+        <input type="number" id="amount" value="1" min="0" step="any" oninput="convert()" />
+        <div class="csw"><select class="csel" id="from-cur" onchange="convert()"></select></div>
+      </div>
+      <button class="swap-btn" onclick="swapCurrencies()" title="Swap">⇄</button>
+      <div class="conv-group">
+        <label>CONVERTED TO</label>
+        <input type="number" id="result-input" readonly style="cursor:default;color:var(--green)" />
+        <div class="csw"><select class="csel" id="to-cur" onchange="convert()"></select></div>
+      </div>
+    </div>
+    <div class="result-box">
+      <div class="result-label" id="res-label">—</div>
+      <div class="result-value" id="res-value">—</div>
+      <div class="result-rate" id="res-rate">—</div>
+    </div>
+    <div style="font-size:0.75rem;color:var(--muted);margin-bottom:1rem;letter-spacing:0.04em">QUICK REFERENCE RATES (vs USD)</div>
+    <div class="quick-grid" id="quick-grid"></div>
+  </div>
+  <div class="info-section">
+    <h2>About Exchange Rates</h2>
+    <p>Exchange rates fluctuate constantly based on economic factors, interest rates, inflation, and market sentiment. The rates shown here are fetched from a live public API and are updated regularly.</p>
+    <p>For large financial transactions, always verify with your bank or financial institution as they may apply additional fees or spreads on top of the mid-market rate.</p>
+  </div>
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/vat-calculator.html" class="related-card"><span style="font-size:1.4rem">🧮</span><span style="font-size:0.88rem;font-weight:500">VAT Calculator</span></a>
+      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+  const CURRENCIES=[
+    {code:'USD',name:'US Dollar',symbol:'$'},{code:'EUR',name:'Euro',symbol:'€'},
+    {code:'GBP',name:'British Pound',symbol:'£'},{code:'JPY',name:'Japanese Yen',symbol:'¥'},
+    {code:'CAD',name:'Canadian Dollar',symbol:'C$'},{code:'AUD',name:'Australian Dollar',symbol:'A$'},
+    {code:'CHF',name:'Swiss Franc',symbol:'Fr'},{code:'CNY',name:'Chinese Yuan',symbol:'¥'},
+    {code:'INR',name:'Indian Rupee',symbol:'₹'},{code:'PKR',name:'Pakistani Rupee',symbol:'₨'},
+    {code:'AED',name:'UAE Dirham',symbol:'AED'},{code:'SAR',name:'Saudi Riyal',symbol:'﷼'},
+    {code:'SGD',name:'Singapore Dollar',symbol:'S$'},{code:'MYR',name:'Malaysian Ringgit',symbol:'RM'},
+    {code:'KRW',name:'South Korean Won',symbol:'₩'},{code:'TRY',name:'Turkish Lira',symbol:'₺'},
+    {code:'BRL',name:'Brazilian Real',symbol:'R$'},{code:'MXN',name:'Mexican Peso',symbol:'$'},
+    {code:'ZAR',name:'South African Rand',symbol:'R'},{code:'NGN',name:'Nigerian Naira',symbol:'₦'},
+    {code:'EGP',name:'Egyptian Pound',symbol:'£'},{code:'IDR',name:'Indonesian Rupiah',symbol:'Rp'},
+    {code:'PHP',name:'Philippine Peso',symbol:'₱'},{code:'THB',name:'Thai Baht',symbol:'฿'},
+    {code:'SEK',name:'Swedish Krona',symbol:'kr'},{code:'NOK',name:'Norwegian Krone',symbol:'kr'},
+    {code:'DKK',name:'Danish Krone',symbol:'kr'},{code:'PLN',name:'Polish Zloty',symbol:'zł'},
+    {code:'HKD',name:'Hong Kong Dollar',symbol:'HK$'},{code:'NZD',name:'New Zealand Dollar',symbol:'NZ$'},
+  ];
+  const QUICK=['EUR','GBP','JPY','CAD','AUD','INR','PKR','AED','SAR','CNY','BRL','ZAR'];
+  let rates={};
+  async function fetchRates(){
+    try{
+      const r=await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+      const data=await r.json();
+      rates=data.rates;
+      document.getElementById('rate-status').textContent='Live rates — updated '+new Date().toLocaleTimeString();
+      buildQuickGrid();convert();
+    }catch(e){
+      // Fallback static rates
+      rates={USD:1,EUR:0.92,GBP:0.79,JPY:149.5,CAD:1.36,AUD:1.53,CHF:0.89,CNY:7.24,INR:83.1,PKR:278,AED:3.67,SAR:3.75,SGD:1.34,MYR:4.71,KRW:1325,TRY:30.5,BRL:4.97,MXN:17.1,ZAR:18.6,NGN:1550,EGP:30.9,IDR:15600,PHP:56.5,THB:35.1,SEK:10.4,NOK:10.6,DKK:6.89,PLN:4.0,HKD:7.82,NZD:1.63};
+      document.getElementById('rate-status').textContent='Using approximate rates (offline)';
+      buildQuickGrid();convert();
+    }
+  }
+  function populateSelects(){
+    const opts=CURRENCIES.map(c=>`<option value="${c.code}">${c.symbol} ${c.code} — ${c.name}</option>`).join('');
+    document.getElementById('from-cur').innerHTML=opts;
+    document.getElementById('to-cur').innerHTML=opts;
+    document.getElementById('to-cur').value='EUR';
+  }
+  function convert(){
+    const amt=parseFloat(document.getElementById('amount').value)||0;
+    const from=document.getElementById('from-cur').value;
+    const to=document.getElementById('to-cur').value;
+    if(!rates[from]||!rates[to])return;
+    const rate=rates[to]/rates[from];
+    const result=amt*rate;
+    const fromC=CURRENCIES.find(c=>c.code===from);
+    const toC=CURRENCIES.find(c=>c.code===to);
+    document.getElementById('result-input').value=result.toFixed(4);
+    document.getElementById('res-label').textContent=`${amt} ${from} =`;
+    document.getElementById('res-value').textContent=`${toC.symbol} ${result.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4})}`;
+    document.getElementById('res-rate').textContent=`1 ${from} = ${rate.toFixed(6)} ${to} · 1 ${to} = ${(1/rate).toFixed(6)} ${from}`;
+  }
+  function swapCurrencies(){
+    const f=document.getElementById('from-cur').value;
+    const t=document.getElementById('to-cur').value;
+    document.getElementById('from-cur').value=t;
+    document.getElementById('to-cur').value=f;
+    convert();
+  }
+  function buildQuickGrid(){
+    const grid=document.getElementById('quick-grid');
+    grid.innerHTML=QUICK.map(code=>{
+      const rate=rates[code]?rates[code].toFixed(code==='JPY'||code==='KRW'||code==='IDR'?1:4):'—';
+      const c=CURRENCIES.find(x=>x.code===code);
+      return `<div class="quick-card" onclick="document.getElementById('to-cur').value='${code}';convert()"><div class="qc-pair">USD → ${code}</div><div class="qc-rate">${c.symbol} ${rate}</div></div>`;
+    }).join('');
+  }
+  populateSelects();fetchRates();
+</script>
+</body>
+</html>
