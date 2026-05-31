@@ -132,15 +132,16 @@ Generate tailored content for each section. Respond ONLY with JSON:
 {"sections":[{"title":"Executive Summary","content":"..."},{"title":"Company Overview","content":"..."},{"title":"Problem & Solution","content":"..."},{"title":"Market Opportunity","content":"..."},{"title":"Target Customer","content":"..."},{"title":"Products & Services","content":"..."},{"title":"Business Model","content":"..."},{"title":"Competitive Analysis","content":"..."},{"title":"Marketing Strategy","content":"..."},{"title":"Operations Plan","content":"..."},{"title":"Financial Projections","content":"..."},{"title":"Team","content":"..."},{"title":"Funding Requirements","content":"..."}]}`;
   try{
     const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:1000})});
-    const data=await res.json();
-    const plan=JSON.parse(data.result.replace(/```json|```/g,'').trim());
+    if(!res.ok){const e=await res.json();throw new Error(e.error||'API '+res.status);}
+      const data=await res.json();
+    const plan=JSON.parse(data.text.replace(/```json|```/g,'').trim());
     const name=document.getElementById('bname').value||'My Business';
     fullText='BUSINESS PLAN: '+name+'\n'+'='.repeat(50)+'\n\n'+plan.sections.map(s=>s.title.toUpperCase()+'\n'+'-'.repeat(s.title.length)+'\n'+s.content).join('\n\n');
     document.getElementById('plan-output').innerHTML=plan.sections.map((s,i)=>`<div class="plan-section"><div class="psh" onclick="toggleSection(this)"><span class="psn">${String(i+1).padStart(2,'0')}</span><span class="pst">${s.title}</span><span style="color:var(--muted);font-size:0.8rem">▼</span></div><div class="psb">${s.content}</div></div>`).join('');
     document.getElementById('plan-output').classList.add('show');
     document.getElementById('action-row').style.display='flex';
     saveUsage();initUI();
-  }catch(e){alert('Something went wrong. Please try again.');document.getElementById('gen-btn').disabled=false;}
+  }catch(e){const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
 }
 function toggleSection(h){const b=h.nextElementSibling;const o=b.style.display!=='none';b.style.display=o?'none':'block';h.querySelector('span:last-child').textContent=o?'▶':'▼';}
