@@ -116,10 +116,11 @@ Under 60 chars when possible.
 Respond ONLY with JSON array: [{"subject":"text","type":"curiosity|urgency|benefit|question|social"}]`;
   try{
     const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:600})});
-    const data=await res.json();
-    const subjects=JSON.parse(data.result.replace(/```json|```/g,'').trim());
+    if(!res.ok){const e=await res.json();throw new Error(e.error||'API '+res.status);}
+      const data=await res.json();
+    const subjects=JSON.parse(data.text.replace(/```json|```/g,'').trim());
     saveUsage();initUI();renderSubjects(subjects);
-  }catch(e){alert('Something went wrong. Please try again.');document.getElementById('gen-btn').disabled=false;}
+  }catch(e){const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
 }
 function renderSubjects(subjects){
