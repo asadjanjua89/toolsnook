@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAT Calculator – Add or Remove VAT Instantly | ToolsNook</title>
+  <meta name="description" content="Add or remove VAT from any amount instantly. Free online VAT calculator supporting all VAT rates globally. Works for GST, sales tax and any percentage." />
+  <meta name="keywords" content="VAT calculator, add VAT, remove VAT, VAT inclusive, VAT exclusive, GST calculator, sales tax calculator, tax calculator online" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/vat-calculator.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"VAT Calculator","description":"Free VAT calculator. Add or remove VAT/GST/sales tax from any amount.","url":"https://www.toolsnook.com/tools/vat-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
+    .top-row{display:flex;gap:1rem;margin-top:2rem;margin-bottom:0.75rem;flex-wrap:wrap;justify-content:space-between;align-items:center}
+    .csw{position:relative}.csw::after{content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.7rem;pointer-events:none}
+    select.dsel{appearance:none;-webkit-appearance:none;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:6px 28px 6px 12px;cursor:pointer}
+    select.dsel:focus{outline:none;border-color:var(--accent)}select.dsel option{background:#1a1a24;color:var(--text)}
+    .rate-chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+    .rate-chip{background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-size:0.8rem;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all 0.15s}
+    .rate-chip:hover{border-color:var(--accent);color:var(--text)}
+    .rate-chip.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+    .tabs{display:flex;border-bottom:1px solid var(--border)}
+    .tab{flex:1;padding:1rem;background:none;border:none;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;transition:all 0.2s;border-bottom:2px solid transparent;margin-bottom:-1px}
+    .tab:hover{color:var(--text);background:var(--bg3)}.tab.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--bg3)}
+    .calc-body{padding:2rem}
+    .input-row{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-end;flex-wrap:wrap}
+    .ig{flex:1;min-width:180px}
+    .ig label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .iw{position:relative}
+    .ip{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    .is{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    input[type=number]{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem 0.75rem 2.4rem;-moz-appearance:textfield}
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+    input[type=number]:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
+    input.si{padding-right:2.2rem;padding-left:1rem}
+    .calc-btn{padding:0.75rem 2rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;white-space:nowrap}
+    .calc-btn:hover{opacity:0.88}
+    .results{display:none;margin-top:0}.results.show{display:block}
+    .big-result{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;margin-bottom:1rem}
+    .big-label{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.06em;margin-bottom:0.5rem}
+    .big-value{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:var(--green);line-height:1}
+    .big-sub{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
+    .breakdown-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem}
+    @media(max-width:500px){.breakdown-grid{grid-template-columns:1fr}}
+    .bcard{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center}
+    .bl{font-size:0.72rem;color:var(--muted);margin-bottom:4px;font-weight:500}
+    .bv{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700}
+    .bv.green{color:var(--green)}.bv.amber{color:var(--amber)}.bv.red{color:var(--red)}
+    .info-section{margin-top:4rem}
+    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .info-section h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:600;margin:1.5rem 0 0.5rem}
+    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
+    .rates-table{width:100%;border-collapse:collapse;margin:1rem 0}
+    .rates-table th{font-size:0.78rem;color:var(--muted);font-weight:500;padding:0.6rem 1rem;text-align:left;border-bottom:1px solid var(--border);background:var(--bg2)}
+    .rates-table td{padding:0.6rem 1rem;font-size:0.88rem;border-bottom:1px solid var(--border)}
+    .rates-table tr:last-child td{border-bottom:none}
+    .formula-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    .faq-item{margin-bottom:1.25rem}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
+    .faq-a{color:var(--muted);font-size:0.9rem;line-height:1.7}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">Tools<span>Nook</span></a>
+  <a href="/" class="nav-back">← All Tools</a>
+</nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › VAT / Tax Calculator</div>
+  <div class="hero-badge">✦ Finance Tool</div>
+  <h1>VAT / Tax Calculator</h1>
+  <p>Add or remove VAT, GST or sales tax from any amount instantly. Supports all rates globally. Free, no signup.</p>
+</div>
+<div class="container">
+  <div class="top-row">
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <span style="font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em">QUICK RATES:</span>
+      <div class="rate-chips">
+        <span class="rate-chip" onclick="setRate(5)">5%</span>
+        <span class="rate-chip" onclick="setRate(10)">10%</span>
+        <span class="rate-chip" onclick="setRate(15)">15%</span>
+        <span class="rate-chip" onclick="setRate(17)">17%</span>
+        <span class="rate-chip" onclick="setRate(18)">18% GST</span>
+        <span class="rate-chip active" onclick="setRate(20)">20% UK</span>
+        <span class="rate-chip" onclick="setRate(21)">21%</span>
+        <span class="rate-chip" onclick="setRate(25)">25%</span>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em">CURRENCY</span>
+      <div class="csw">
+        <select class="dsel" id="cs" onchange="onCC()">
+          <option value="$|USD">$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option>
+          <option value="₹|INR">₹ INR</option><option value="₨|PKR">₨ PKR</option><option value="AED|AED">AED</option>
+          <option value="﷼|SAR">﷼ SAR</option><option value="R|ZAR">R ZAR</option><option value="R$|BRL">R$ BRL</option>
+          <option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('add',this)">Add VAT</button>
+      <button class="tab" onclick="switchTab('remove',this)">Remove VAT</button>
+    </div>
+
+    <!-- ADD VAT -->
+    <div class="calc-body" id="tab-add">
+      <div class="input-row">
+        <div class="ig">
+          <label>AMOUNT (BEFORE TAX)</label>
+          <div class="iw"><span class="ip cur-sym">$</span><input type="number" id="add-amount" placeholder="1,000" min="0" step="any" /></div>
+        </div>
+        <div class="ig" style="max-width:140px">
+          <label>VAT / TAX RATE</label>
+          <div class="iw"><input type="number" id="add-rate" value="20" min="0" max="100" step="any" class="si" oninput="syncRate()" /><span class="is">%</span></div>
+        </div>
+        <button class="calc-btn" onclick="calcAdd()">Calculate →</button>
+      </div>
+      <div class="results" id="add-results">
+        <div class="big-result">
+          <div class="big-label">TOTAL PRICE (INCLUDING TAX)</div>
+          <div class="big-value" id="add-total">—</div>
+          <div class="big-sub" id="add-sub">—</div>
+        </div>
+        <div class="breakdown-grid">
+          <div class="bcard"><div class="bl">NET AMOUNT</div><div class="bv" id="add-net">—</div></div>
+          <div class="bcard"><div class="bl">TAX AMOUNT</div><div class="bv amber" id="add-tax">—</div></div>
+          <div class="bcard"><div class="bl">GROSS TOTAL</div><div class="bv green" id="add-gross">—</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REMOVE VAT -->
+    <div class="calc-body" id="tab-remove" style="display:none">
+      <div class="input-row">
+        <div class="ig">
+          <label>AMOUNT (ALREADY INCLUDES TAX)</label>
+          <div class="iw"><span class="ip cur-sym">$</span><input type="number" id="rem-amount" placeholder="1,200" min="0" step="any" /></div>
+        </div>
+        <div class="ig" style="max-width:140px">
+          <label>VAT / TAX RATE</label>
+          <div class="iw"><input type="number" id="rem-rate" value="20" min="0" max="100" step="any" class="si" oninput="syncRate()" /><span class="is">%</span></div>
+        </div>
+        <button class="calc-btn" onclick="calcRem()">Calculate →</button>
+      </div>
+      <div class="results" id="rem-results">
+        <div class="big-result">
+          <div class="big-label">NET AMOUNT (BEFORE TAX)</div>
+          <div class="big-value" id="rem-net">—</div>
+          <div class="big-sub" id="rem-sub">—</div>
+        </div>
+        <div class="breakdown-grid">
+          <div class="bcard"><div class="bl">GROSS AMOUNT</div><div class="bv" id="rem-gross">—</div></div>
+          <div class="bcard"><div class="bl">TAX AMOUNT</div><div class="bv amber" id="rem-tax">—</div></div>
+          <div class="bcard"><div class="bl">NET AMOUNT</div><div class="bv green" id="rem-net2">—</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>VAT Rates Around the World</h2>
+    <p>VAT (Value Added Tax) rates vary significantly by country. Here are the standard rates for major economies:</p>
+    <table class="rates-table">
+      <thead><tr><th>Country</th><th>Standard Rate</th><th>Tax Name</th></tr></thead>
+      <tbody>
+        <tr><td>United Kingdom</td><td>20%</td><td>VAT</td></tr>
+        <tr><td>Germany</td><td>19%</td><td>Mehrwertsteuer (MwSt)</td></tr>
+        <tr><td>France</td><td>20%</td><td>TVA</td></tr>
+        <tr><td>India</td><td>18%</td><td>GST</td></tr>
+        <tr><td>Pakistan</td><td>17%</td><td>GST</td></tr>
+        <tr><td>UAE</td><td>5%</td><td>VAT</td></tr>
+        <tr><td>Saudi Arabia</td><td>15%</td><td>VAT</td></tr>
+        <tr><td>Australia</td><td>10%</td><td>GST</td></tr>
+        <tr><td>Canada</td><td>5–15%</td><td>GST/HST</td></tr>
+        <tr><td>USA</td><td>0–13%</td><td>Sales Tax (varies by state)</td></tr>
+      </tbody>
+    </table>
+    <h3>How to Add VAT</h3>
+    <div class="formula-box">Gross Price = Net Price × (1 + VAT Rate / 100)</div>
+    <h3>How to Remove VAT</h3>
+    <div class="formula-box">Net Price = Gross Price ÷ (1 + VAT Rate / 100)</div>
+    <h2 style="margin-top:2.5rem">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What is the difference between VAT and GST?</div>
+      <div class="faq-a">VAT (Value Added Tax) and GST (Goods and Services Tax) are essentially the same type of consumption tax — they're just named differently in different countries. The UK uses VAT, India and Pakistan use GST, Australia uses GST, and the USA uses Sales Tax.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What does "VAT inclusive" mean?</div>
+      <div class="faq-a">VAT inclusive means the price already includes tax. To find the pre-tax price, you need to remove VAT. Use the "Remove VAT" tab above for this calculation.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I use this for sales tax in the US?</div>
+      <div class="faq-a">Yes — just enter your state's sales tax rate in the rate field. The math is identical whether you call it VAT, GST, or sales tax.</div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+      <a href="/tools/markup-calculator.html" class="related-card"><span style="font-size:1.4rem">🏷️</span><span style="font-size:0.88rem;font-weight:500">Markup Calculator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+  let cur='$';
+  function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);}
+  const fmt=n=>cur+' '+parseFloat(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+
+  function setRate(r){
+    document.getElementById('add-rate').value=r;
+    document.getElementById('rem-rate').value=r;
+    document.querySelectorAll('.rate-chip').forEach(c=>{c.classList.toggle('active',parseFloat(c.textContent)===r||c.textContent.startsWith(r+'%'));});
+  }
+
+  function syncRate(){
+    const active=document.querySelector('.tab.active');
+    const isAdd=active&&active.textContent.trim()==='Add VAT';
+    const src=isAdd?'add-rate':'rem-rate';
+    const dst=isAdd?'rem-rate':'add-rate';
+    document.getElementById(dst).value=document.getElementById(src).value;
+  }
+
+  function switchTab(name,btn){
+    ['add','remove'].forEach(t=>document.getElementById('tab-'+t).style.display='none');
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    document.getElementById('tab-'+name).style.display='block';
+    btn.classList.add('active');
+  }
+
+  function calcAdd(){
+    const amt=parseFloat(document.getElementById('add-amount').value);
+    const rate=parseFloat(document.getElementById('add-rate').value);
+    if(isNaN(amt)||isNaN(rate)||amt<0){alert('Please enter a valid amount.');return;}
+    const tax=amt*(rate/100);
+    const total=amt+tax;
+    document.getElementById('add-total').textContent=fmt(total);
+    document.getElementById('add-sub').textContent=fmt(amt)+' + '+fmt(tax)+' tax';
+    document.getElementById('add-net').textContent=fmt(amt);
+    document.getElementById('add-tax').textContent=fmt(tax);
+    document.getElementById('add-gross').textContent=fmt(total);
+    document.getElementById('add-results').classList.add('show');
+  }
+
+  function calcRem(){
+    const amt=parseFloat(document.getElementById('rem-amount').value);
+    const rate=parseFloat(document.getElementById('rem-rate').value);
+    if(isNaN(amt)||isNaN(rate)||amt<0){alert('Please enter a valid amount.');return;}
+    const net=amt/(1+rate/100);
+    const tax=amt-net;
+    document.getElementById('rem-net').textContent=fmt(net);
+    document.getElementById('rem-sub').textContent=fmt(tax)+' tax removed from '+fmt(amt);
+    document.getElementById('rem-gross').textContent=fmt(amt);
+    document.getElementById('rem-tax').textContent=fmt(tax);
+    document.getElementById('rem-net2').textContent=fmt(net);
+    document.getElementById('rem-results').classList.add('show');
+  }
+</script>
+</body>
+</html>
