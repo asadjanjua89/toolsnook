@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compound Interest Calculator – Free Online Tool | ToolsNook</title>
+  <meta name="description" content="Calculate compound interest on any investment. See how your money grows over time with daily, monthly or yearly compounding. Free compound interest calculator." />
+  <meta name="keywords" content="compound interest calculator, compound interest formula, investment growth calculator, savings calculator, interest calculator online" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/compound-interest-calculator.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(67,233,123,0.1);border:1px solid rgba(67,233,123,0.2);color:var(--green);font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:900px;margin:0 auto;padding:0 2rem 4rem}
+    .top-row{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:2rem;margin-bottom:0.75rem}
+    .top-row label{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em}
+    .csw{position:relative}.csw::after{content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.7rem;pointer-events:none}
+    select.dsel{appearance:none;-webkit-appearance:none;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:6px 28px 6px 12px;cursor:pointer}
+    select.dsel:focus{outline:none;border-color:var(--accent)}select.dsel option{background:#1a1a24;color:var(--text)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem}
+    .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem}
+    @media(max-width:580px){.input-grid{grid-template-columns:1fr}}
+    .ig label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .iw{position:relative}
+    .ip{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    .is{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    input[type=number],select.sinp{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem 0.75rem 2.4rem;-moz-appearance:textfield}
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+    input[type=number]:focus,select.sinp:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
+    select.sinp{padding-left:1rem;cursor:pointer}
+    input.si{padding-right:2.2rem;padding-left:1rem}
+    .calc-btn{width:100%;padding:0.9rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-bottom:1.5rem}
+    .calc-btn:hover{opacity:0.88;transform:translateY(-1px)}
+    .results{display:none}.results.show{display:block}
+    .big-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+    @media(max-width:500px){.big-row{grid-template-columns:1fr}}
+    .big-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center}
+    .big-card.featured{border-color:rgba(108,99,255,0.4);background:rgba(108,99,255,0.05)}
+    .bl{font-size:0.72rem;color:var(--muted);margin-bottom:6px;font-weight:500;letter-spacing:0.04em}
+    .bv{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;line-height:1}
+    .bv.green{color:var(--green)}.bv.accent{color:var(--accent)}
+    .bs{font-size:0.78rem;color:var(--muted);margin-top:6px}
+    .year-table{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;max-height:320px;overflow-y:auto}
+    .yt-head{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;padding:0.75rem 1rem;background:var(--bg3);font-size:0.75rem;font-weight:600;color:var(--muted);letter-spacing:0.04em;position:sticky;top:0}
+    .yt-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;padding:0.7rem 1rem;border-bottom:1px solid var(--border);font-size:0.85rem}
+    .yt-row:last-child{border-bottom:none}
+    .yt-row:nth-child(even){background:rgba(255,255,255,0.02)}
+    .yt-year{color:var(--muted)}.yt-val{color:var(--text)}.yt-int{color:var(--amber)}.yt-total{color:var(--green);font-weight:500}
+    .info-section{margin-top:4rem}
+    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .info-section h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:600;margin:1.5rem 0 0.5rem}
+    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
+    .formula-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    .faq-item{margin-bottom:1.25rem}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
+    .faq-a{color:var(--muted);font-size:0.9rem;line-height:1.7}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Compound Interest Calculator</div>
+  <div class="hero-badge">✦ Finance Tool</div>
+  <h1>Compound Interest Calculator</h1>
+  <p>See how your money grows over time with the power of compounding. Includes year-by-year breakdown and optional monthly contributions.</p>
+</div>
+<div class="container">
+  <div class="top-row">
+    <label>CURRENCY</label>
+    <div class="csw"><select class="dsel" id="cs" onchange="onCC()">
+      <optgroup label="Major"><option value="$|USD" selected>$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option><option value="¥|JPY">¥ JPY</option><option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option></optgroup>
+      <optgroup label="Asia & Middle East"><option value="₹|INR">₹ INR</option><option value="₨|PKR">₨ PKR</option><option value="AED|AED">AED</option><option value="﷼|SAR">﷼ SAR</option></optgroup>
+      <optgroup label="Other"><option value="R|ZAR">R ZAR</option><option value="₦|NGN">₦ NGN</option><option value="R$|BRL">R$ BRL</option></optgroup>
+    </select></div>
+  </div>
+  <div class="calc-card">
+    <div class="input-grid">
+      <div class="ig"><label>INITIAL INVESTMENT</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="principal" placeholder="10,000" min="0" step="any" /></div></div>
+      <div class="ig"><label>ANNUAL INTEREST RATE</label><div class="iw"><input type="number" id="rate" placeholder="7" min="0" step="any" class="si" /><span class="is">%</span></div></div>
+      <div class="ig"><label>TIME PERIOD (YEARS)</label><div class="iw"><input type="number" id="years" placeholder="10" min="1" max="100" step="1" class="si" /><span class="is">yrs</span></div></div>
+      <div class="ig"><label>COMPOUND FREQUENCY</label><div class="iw"><select class="sinp" id="freq"><option value="1">Annually</option><option value="2">Semi-annually</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option><option value="365">Daily</option></select></div></div>
+      <div class="ig"><label>MONTHLY CONTRIBUTION (OPTIONAL)</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="monthly" placeholder="0" min="0" step="any" /></div></div>
+    </div>
+    <button class="calc-btn" onclick="calcCI()">Calculate Growth →</button>
+    <div class="results" id="ci-results">
+      <div class="big-row">
+        <div class="big-card featured"><div class="bl">FINAL BALANCE</div><div class="bv accent" id="r-final">—</div><div class="bs">after compounding</div></div>
+        <div class="big-card"><div class="bl">TOTAL INTEREST EARNED</div><div class="bv green" id="r-interest">—</div><div class="bs">compound growth</div></div>
+      </div>
+      <div class="big-row" style="margin-bottom:1.5rem">
+        <div class="big-card"><div class="bl">TOTAL CONTRIBUTIONS</div><div class="bv" id="r-contrib">—</div><div class="bs">money put in</div></div>
+        <div class="big-card"><div class="bl">GROWTH MULTIPLE</div><div class="bv amber" id="r-multi">—</div><div class="bs">times initial investment</div></div>
+      </div>
+      <div class="year-table">
+        <div class="yt-head"><span>YEAR</span><span>CONTRIBUTIONS</span><span>INTEREST</span><span>BALANCE</span></div>
+        <div id="year-rows"></div>
+      </div>
+    </div>
+  </div>
+  <div class="info-section">
+    <h2>What is Compound Interest?</h2>
+    <p>Compound interest is interest calculated on both the initial principal and the accumulated interest. Unlike simple interest, compounding means your interest earns interest — creating exponential growth over time. Einstein reportedly called it the "eighth wonder of the world."</p>
+    <div class="formula-box">A = P × (1 + r/n)^(nt)</div>
+    <p>Where: A = final amount, P = principal, r = annual rate, n = compounds per year, t = years</p>
+    <h3>Why Compounding Frequency Matters</h3>
+    <p>The more frequently interest compounds, the more you earn. Daily compounding earns slightly more than monthly, which earns more than annually. The difference becomes significant over long time periods.</p>
+    <div class="faq-item" style="margin-top:1.5rem"><div class="faq-q">What is the Rule of 72?</div><div class="faq-a">Divide 72 by your interest rate to estimate how many years it takes to double your money. At 7% annual interest, your money doubles roughly every 72 ÷ 7 = 10.3 years.</div></div>
+    <div class="faq-item"><div class="faq-q">Does compound interest work against you too?</div><div class="faq-a">Yes — compound interest works both ways. It grows your savings but also grows your debt if you carry balances on credit cards or loans. This is why paying off high-interest debt quickly is so important.</div></div>
+  </div>
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/roi-calculator.html" class="related-card"><span style="font-size:1.4rem">💰</span><span style="font-size:0.88rem;font-weight:500">ROI Calculator</span></a>
+      <a href="/tools/loan-calculator.html" class="related-card"><span style="font-size:1.4rem">🏦</span><span style="font-size:0.88rem;font-weight:500">Loan Calculator</span></a>
+      <a href="/tools/debt-payoff-calculator.html" class="related-card"><span style="font-size:1.4rem">💳</span><span style="font-size:0.88rem;font-weight:500">Debt Payoff Calculator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+  let cur='$';
+  function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);if(document.getElementById('ci-results').classList.contains('show'))calcCI();}
+  const fmt=n=>cur+' '+parseFloat(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const fmtShort=n=>{if(n>=1e9)return cur+' '+(n/1e9).toFixed(2)+'B';if(n>=1e6)return cur+' '+(n/1e6).toFixed(2)+'M';if(n>=1e3)return cur+' '+(n/1e3).toFixed(1)+'K';return fmt(n);}
+  function calcCI(){
+    const P=parseFloat(document.getElementById('principal').value)||0;
+    const r=parseFloat(document.getElementById('rate').value)||0;
+    const t=parseInt(document.getElementById('years').value)||10;
+    const n=parseInt(document.getElementById('freq').value)||12;
+    const mc=parseFloat(document.getElementById('monthly').value)||0;
+    if(P<=0&&mc<=0){alert('Please enter an initial investment or monthly contribution.');return;}
+    const rateDecimal=r/100;
+    const rows=[];
+    let balance=P;
+    let totalContrib=P;
+    for(let yr=1;yr<=t;yr++){
+      const startBal=balance;
+      const yearlyContrib=mc*12;
+      for(let m=0;m<12;m++){balance=balance*(1+rateDecimal/n)+(mc*(n===12?1:0));if(n!==12){for(let d=0;d<(n===365?30:n===4?3:n===2?6:12);d++){}}}
+      if(n===12){}
+      else{balance=startBal;for(let p=0;p<n;p++){balance=balance*(1+rateDecimal/n);}balance+=yearlyContrib;}
+      if(n===12){balance=startBal;for(let m2=0;m2<12;m2++){balance=(balance+mc)*(1+rateDecimal/12);}}
+      totalContrib+=yearlyContrib;
+      const interest=balance-totalContrib;
+      rows.push({yr,contrib:totalContrib,interest:Math.max(0,interest),balance});
+    }
+    const final=rows[rows.length-1].balance;
+    const totalInterest=final-totalContrib;
+    document.getElementById('r-final').textContent=fmtShort(final);
+    document.getElementById('r-interest').textContent=fmtShort(Math.max(0,totalInterest));
+    document.getElementById('r-contrib').textContent=fmtShort(totalContrib);
+    document.getElementById('r-multi').textContent=(final/P>0?'×'+(final/P).toFixed(2):'—');
+    const tbody=document.getElementById('year-rows');
+    tbody.innerHTML=rows.map(r=>`<div class="yt-row"><span class="yt-year">Year ${r.yr}</span><span class="yt-val">${fmtShort(r.contrib)}</span><span class="yt-int">${fmtShort(r.interest)}</span><span class="yt-total">${fmtShort(r.balance)}</span></div>`).join('');
+    document.getElementById('ci-results').classList.add('show');
+  }
+</script>
+</body>
+</html>
