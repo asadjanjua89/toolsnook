@@ -136,7 +136,8 @@
 <script>
   const TOOL_KEY='biz-name-gen';const DAILY_LIMIT=3;
 
-  function getUsage(){
+  const TOOL='biz-name-gen';const LIMIT=3;
+function getUsage(){
     const today=new Date().toDateString();
     const data=JSON.parse(localStorage.getItem(TOOL_KEY)||'{}');
     if(data.date!==today)return{date:today,count:0};
