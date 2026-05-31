@@ -91,7 +91,7 @@
 </div>
 <footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
 <script>
-const TOOL='email-sub';const LIMIT=3;const KEY='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';
+const TOOL='email-sub';const LIMIT=3;
 function getUsage(){const t=new Date().toDateString();const d=JSON.parse(localStorage.getItem('tn_'+TOOL)||'{}');return d.date!==t?{date:t,count:0}:d;}
 function saveUsage(){const u=getUsage();localStorage.setItem('tn_'+TOOL,JSON.stringify({date:new Date().toDateString(),count:u.count+1}));}
 function initUI(){
@@ -115,9 +115,9 @@ Use variety: curiosity gap, urgency, benefit-driven, question-based, social proo
 Under 60 chars when possible.
 Respond ONLY with JSON array: [{"subject":"text","type":"curiosity|urgency|benefit|question|social"}]`;
   try{
-    const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+KEY},body:JSON.stringify({model:'llama3-8b-8192',messages:[{role:'user',content:prompt}],max_tokens:600})});
+    const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:600})});
     const data=await res.json();
-    const subjects=JSON.parse(data.choices[0].message.content.replace(/```json|```/g,'').trim());
+    const subjects=JSON.parse(data.result.replace(/```json|```/g,'').trim());
     saveUsage();initUI();renderSubjects(subjects);
   }catch(e){alert('Something went wrong. Please try again.');document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
