@@ -135,7 +135,6 @@
 <footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
 <script>
   const TOOL_KEY='biz-name-gen';const DAILY_LIMIT=3;
-  const GROQ_KEY='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';
 
   function getUsage(){
     const today=new Date().toDateString();
@@ -177,13 +176,13 @@ Respond ONLY with a JSON array:
 [{"name":"BusinessName","tagline":"Short tagline","style":"modern"}]
 Generate exactly 12 names.`;
     try{
-      const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+      const res=await fetch('/api/ai',{
         method:'POST',
-        headers:{'Content-Type':'application/json','Authorization':'Bearer '+GROQ_KEY},
-        body:JSON.stringify({model:'llama3-8b-8192',messages:[{role:'user',content:prompt}],max_tokens:800,temperature:0.9})
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({prompt,max_tokens:800})
       });
       const data=await res.json();
-      const text=data.choices[0].message.content;
+      const text=data.result;
       const clean=text.replace(/```json|```/g,'').trim();
       const names=JSON.parse(clean);
       saveUsage(usage.count+1);updateUsageUI();
