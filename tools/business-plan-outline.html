@@ -102,8 +102,8 @@
 </div>
 <footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
 <script>
-const TOOL='biz-plan';const LIMIT=3;const KEY='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';
 let fullText='';
+const TOOL='biz-plan';const LIMIT=3;
 function getUsage(){const t=new Date().toDateString();const d=JSON.parse(localStorage.getItem('tn_'+TOOL)||'{}');return d.date!==t?{date:t,count:0}:d;}
 function saveUsage(){const u=getUsage();localStorage.setItem('tn_'+TOOL,JSON.stringify({date:new Date().toDateString(),count:u.count+1}));}
 function initUI(){
@@ -131,9 +131,9 @@ Purpose: ${document.getElementById('purpose').value}
 Generate tailored content for each section. Respond ONLY with JSON:
 {"sections":[{"title":"Executive Summary","content":"..."},{"title":"Company Overview","content":"..."},{"title":"Problem & Solution","content":"..."},{"title":"Market Opportunity","content":"..."},{"title":"Target Customer","content":"..."},{"title":"Products & Services","content":"..."},{"title":"Business Model","content":"..."},{"title":"Competitive Analysis","content":"..."},{"title":"Marketing Strategy","content":"..."},{"title":"Operations Plan","content":"..."},{"title":"Financial Projections","content":"..."},{"title":"Team","content":"..."},{"title":"Funding Requirements","content":"..."}]}`;
   try{
-    const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+KEY},body:JSON.stringify({model:'llama3-8b-8192',messages:[{role:'user',content:prompt}],max_tokens:1000})});
+    const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:1000})});
     const data=await res.json();
-    const plan=JSON.parse(data.choices[0].message.content.replace(/```json|```/g,'').trim());
+    const plan=JSON.parse(data.result.replace(/```json|```/g,'').trim());
     const name=document.getElementById('bname').value||'My Business';
     fullText='BUSINESS PLAN: '+name+'\n'+'='.repeat(50)+'\n\n'+plan.sections.map(s=>s.title.toUpperCase()+'\n'+'-'.repeat(s.title.length)+'\n'+s.content).join('\n\n');
     document.getElementById('plan-output').innerHTML=plan.sections.map((s,i)=>`<div class="plan-section"><div class="psh" onclick="toggleSection(this)"><span class="psn">${String(i+1).padStart(2,'0')}</span><span class="pst">${s.title}</span><span style="color:var(--muted);font-size:0.8rem">▼</span></div><div class="psb">${s.content}</div></div>`).join('');
