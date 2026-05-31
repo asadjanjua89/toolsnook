@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profit Margin Calculator – Free Online Tool | ToolsNook</title>
+  <meta name="description" content="Calculate gross profit margin, net profit margin, and operating margin instantly. Free online profit margin calculator for businesses, freelancers and entrepreneurs." />
+  <meta name="keywords" content="profit margin calculator, gross profit margin, net profit margin, profit calculator, margin calculator online, free business calculator" />
+  <meta property="og:title" content="Profit Margin Calculator – ToolsNook" />
+  <meta property="og:description" content="Calculate gross, net and operating profit margins instantly. Free, no signup required." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/profit-margin-calculator.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Profit Margin Calculator",
+    "description": "Free online profit margin calculator. Calculate gross profit margin, net profit margin, and operating margin instantly.",
+    "url": "https://www.toolsnook.com/tools/profit-margin-calculator.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f; --bg2: #111118; --bg3: #18181f;
+      --border: rgba(255,255,255,0.07); --border2: rgba(255,255,255,0.12);
+      --text: #f0f0f5; --muted: #8888a0;
+      --accent: #6c63ff; --green: #43e97b; --red: #ff6b6b; --amber: #f7971e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(10,10,15,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .logo { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .nav-back:hover { color: var(--text); }
+    .hero { padding: 7rem 2rem 3rem; text-align: center; max-width: 700px; margin: 0 auto; }
+    .hero::before { content: ''; position: fixed; inset: 0; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(108,99,255,0.1) 0%, transparent 70%); pointer-events: none; z-index: -1; }
+    .breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(67,233,123,0.1); border: 1px solid rgba(67,233,123,0.2); color: var(--green); font-size: 0.75rem; font-weight: 500; padding: 5px 12px; border-radius: 100px; margin-bottom: 1.25rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+    .hero p { color: var(--muted); font-size: 1rem; max-width: 500px; margin: 0 auto; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem 4rem; }
+
+    /* CURRENCY DROPDOWN */
+    .currency-row {
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 10px; margin-top: 2rem; margin-bottom: 0.75rem;
+    }
+    .currency-row label {
+      font-size: 0.78rem; color: var(--muted);
+      font-weight: 500; letter-spacing: 0.04em;
+    }
+    .currency-select-wrap { position: relative; }
+    .currency-select-wrap::after {
+      content: '▾';
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      color: var(--muted); font-size: 0.7rem; pointer-events: none;
+    }
+    select#currency-select {
+      appearance: none; -webkit-appearance: none;
+      background: var(--bg2); border: 1px solid var(--border2);
+      border-radius: 8px; color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-size: 0.85rem;
+      padding: 6px 28px 6px 12px; cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    select#currency-select:focus { outline: none; border-color: var(--accent); }
+    select#currency-select:hover { border-color: var(--border2); }
+    select#currency-select option { background: #1a1a24; color: var(--text); }
+
+    /* CALC */
+    .calc-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+    .tabs { display: flex; border-bottom: 1px solid var(--border); }
+    .tab { flex: 1; padding: 1rem; background: none; border: none; cursor: pointer; color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+    .tab:hover { color: var(--text); background: var(--bg3); }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); background: var(--bg3); }
+    .calc-body { padding: 2rem; }
+    .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+    @media (max-width: 580px) { .input-grid { grid-template-columns: 1fr; } }
+    .input-group label { display: block; font-size: 0.78rem; font-weight: 500; color: var(--muted); margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+    .input-wrap { position: relative; }
+    .input-prefix { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 0.85rem; pointer-events: none; min-width: 16px; }
+    .input-suffix { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 0.9rem; pointer-events: none; }
+    input[type="number"] { width: 100%; background: var(--bg3); border: 1px solid var(--border2); border-radius: 10px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 1rem; padding: 0.75rem 1rem 0.75rem 2.4rem; transition: border-color 0.2s, box-shadow 0.2s; -moz-appearance: textfield; }
+    input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+    input[type="number"]:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(108,99,255,0.15); }
+    input.suffix-input { padding-right: 2.2rem; padding-left: 1rem; }
+    .calc-btn { width: 100%; padding: 0.9rem; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s, transform 0.2s; margin-bottom: 1.5rem; }
+    .calc-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .results { display: none; }
+    .results.show { display: block; }
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .result-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; text-align: center; transition: transform 0.2s; }
+    .result-card:hover { transform: translateY(-2px); }
+    .result-label { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.5rem; font-weight: 500; letter-spacing: 0.04em; }
+    .result-value { font-family: 'Syne', sans-serif; font-size: 1.7rem; font-weight: 800; line-height: 1; }
+    .result-value.green { color: var(--green); }
+    .result-value.amber { color: var(--amber); }
+    .result-value.red { color: var(--red); }
+    .result-sub { font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
+    .health-section { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+    .health-label { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.75rem; font-weight: 500; letter-spacing: 0.04em; }
+    .health-bar-bg { height: 6px; background: var(--bg3); border-radius: 4px; overflow: hidden; margin-bottom: 0.6rem; }
+    .health-bar { height: 100%; border-radius: 4px; transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .health-status { font-size: 0.85rem; font-weight: 500; }
+    .breakdown { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .breakdown-row { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+    .breakdown-row:last-child { border-bottom: none; }
+    .breakdown-row.total { background: var(--bg3); font-family: 'Syne', sans-serif; font-weight: 700; }
+    .breakdown-key { color: var(--muted); }
+    .breakdown-val { font-weight: 500; }
+    .breakdown-val.pos { color: var(--green); }
+    .breakdown-val.neg { color: var(--red); }
+    .info-section { margin-top: 4rem; }
+    .info-section h2 { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .info-section h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    .info-section p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+    .formula-box { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 1rem 1.25rem; font-family: monospace; font-size: 0.9rem; color: var(--text); margin: 1rem 0; }
+    .faq-item { margin-bottom: 1.25rem; }
+    .faq-q { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-a { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+    .related { margin-top: 3rem; }
+    .related h2 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .related-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; text-decoration: none; color: var(--text); transition: background 0.2s, transform 0.2s; display: flex; align-items: center; gap: 12px; }
+    .related-card:hover { background: var(--bg3); transform: translateY(-2px); }
+    .related-icon { font-size: 1.4rem; }
+    .related-name { font-size: 0.88rem; font-weight: 500; }
+    footer { border-top: 1px solid var(--border); text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; margin-top: 4rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Tools<span>Nook</span></a>
+  <a href="/" class="nav-back">← All Tools</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Profit Margin Calculator</div>
+  <div class="hero-badge">✦ Finance Tool</div>
+  <h1>Profit Margin Calculator</h1>
+  <p>Calculate gross, net and operating profit margins instantly. Works in any currency. Free, no signup needed.</p>
+</div>
+
+<div class="container">
+
+  <!-- CURRENCY DROPDOWN -->
+  <div class="currency-row">
+    <label for="currency-select">CURRENCY</label>
+    <div class="currency-select-wrap">
+      <select id="currency-select" onchange="onCurrencyChange()">
+        <optgroup label="Major">
+          <option value="$|USD" selected>$ USD — US Dollar</option>
+          <option value="£|GBP">£ GBP — British Pound</option>
+          <option value="€|EUR">€ EUR — Euro</option>
+          <option value="¥|JPY">¥ JPY — Japanese Yen</option>
+          <option value="C$|CAD">C$ CAD — Canadian Dollar</option>
+          <option value="A$|AUD">A$ AUD — Australian Dollar</option>
+          <option value="Fr|CHF">Fr CHF — Swiss Franc</option>
+        </optgroup>
+        <optgroup label="Asia & Middle East">
+          <option value="₹|INR">₹ INR — Indian Rupee</option>
+          <option value="₨|PKR">₨ PKR — Pakistani Rupee</option>
+          <option value="AED|AED">AED — UAE Dirham</option>
+          <option value="﷼|SAR">﷼ SAR — Saudi Riyal</option>
+          <option value="৳|BDT">৳ BDT — Bangladeshi Taka</option>
+          <option value="₺|TRY">₺ TRY — Turkish Lira</option>
+          <option value="₩|KRW">₩ KRW — South Korean Won</option>
+          <option value="¥|CNY">¥ CNY — Chinese Yuan</option>
+          <option value="₱|PHP">₱ PHP — Philippine Peso</option>
+          <option value="Rp|IDR">Rp IDR — Indonesian Rupiah</option>
+          <option value="RM|MYR">RM MYR — Malaysian Ringgit</option>
+          <option value="S$|SGD">S$ SGD — Singapore Dollar</option>
+        </optgroup>
+        <optgroup label="Africa & Americas">
+          <option value="R|ZAR">R ZAR — South African Rand</option>
+          <option value="₦|NGN">₦ NGN — Nigerian Naira</option>
+          <option value="KSh|KES">KSh KES — Kenyan Shilling</option>
+          <option value="R$|BRL">R$ BRL — Brazilian Real</option>
+          <option value="$|MXN">$ MXN — Mexican Peso</option>
+          <option value="$|ARS">$ ARS — Argentine Peso</option>
+          <option value="COP|COP">COP — Colombian Peso</option>
+        </optgroup>
+        <optgroup label="Europe">
+          <option value="zł|PLN">zł PLN — Polish Zloty</option>
+          <option value="Kč|CZK">Kč CZK — Czech Koruna</option>
+          <option value="kr|SEK">kr SEK — Swedish Krona</option>
+          <option value="kr|NOK">kr NOK — Norwegian Krone</option>
+          <option value="kr|DKK">kr DKK — Danish Krone</option>
+        </optgroup>
+      </select>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('gross', this)">Gross Margin</button>
+      <button class="tab" onclick="switchTab('net', this)">Net Margin</button>
+      <button class="tab" onclick="switchTab('markup', this)">Markup → Margin</button>
+    </div>
+
+    <!-- GROSS TAB -->
+    <div class="calc-body" id="tab-gross">
+      <div class="input-grid">
+        <div class="input-group">
+          <label>REVENUE / SELLING PRICE</label>
+          <div class="input-wrap">
+            <span class="input-prefix cur-symbol">$</span>
+            <input type="number" id="gross-revenue" placeholder="10,000" min="0" step="any" />
+          </div>
+        </div>
+        <div class="input-group">
+          <label>COST OF GOODS SOLD (COGS)</label>
+          <div class="input-wrap">
+            <span class="input-prefix cur-symbol">$</span>
+            <input type="number" id="gross-cogs" placeholder="6,000" min="0" step="any" />
+          </div>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcGross()">Calculate Profit Margin →</button>
+      <div class="results" id="gross-results">
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-label">GROSS PROFIT MARGIN</div>
+            <div class="result-value green" id="gross-margin-pct">—</div>
+            <div class="result-sub">% of revenue</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label">GROSS PROFIT</div>
+            <div class="result-value" id="gross-profit-val">—</div>
+            <div class="result-sub">revenue − COGS</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label">MARKUP</div>
+            <div class="result-value amber" id="gross-markup">—</div>
+            <div class="result-sub">% above cost</div>
+          </div>
+        </div>
+        <div class="health-section">
+          <div class="health-label">MARGIN HEALTH</div>
+          <div class="health-bar-bg"><div class="health-bar" id="gross-bar" style="width:0%"></div></div>
+          <div class="health-status" id="gross-health"></div>
+        </div>
+        <div class="breakdown">
+          <div class="breakdown-row"><span class="breakdown-key">Revenue</span><span class="breakdown-val pos" id="bd-revenue">—</span></div>
+          <div class="breakdown-row"><span class="breakdown-key">Cost of Goods Sold</span><span class="breakdown-val neg" id="bd-cogs">—</span></div>
+          <div class="breakdown-row total"><span class="breakdown-key">Gross Profit</span><span class="breakdown-val pos" id="bd-profit">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NET TAB -->
+    <div class="calc-body" id="tab-net" style="display:none">
+      <div class="input-grid">
+        <div class="input-group">
+          <label>TOTAL REVENUE</label>
+          <div class="input-wrap"><span class="input-prefix cur-symbol">$</span><input type="number" id="net-revenue" placeholder="100,000" min="0" step="any" /></div>
+        </div>
+        <div class="input-group">
+          <label>COST OF GOODS SOLD</label>
+          <div class="input-wrap"><span class="input-prefix cur-symbol">$</span><input type="number" id="net-cogs" placeholder="50,000" min="0" step="any" /></div>
+        </div>
+        <div class="input-group">
+          <label>OPERATING EXPENSES</label>
+          <div class="input-wrap"><span class="input-prefix cur-symbol">$</span><input type="number" id="net-opex" placeholder="20,000" min="0" step="any" /></div>
+        </div>
+        <div class="input-group">
+          <label>TAXES</label>
+          <div class="input-wrap"><span class="input-prefix cur-symbol">$</span><input type="number" id="net-tax" placeholder="5,000" min="0" step="any" /></div>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcNet()">Calculate Net Margin →</button>
+      <div class="results" id="net-results">
+        <div class="results-grid">
+          <div class="result-card"><div class="result-label">NET PROFIT MARGIN</div><div class="result-value green" id="net-margin-pct">—</div><div class="result-sub">% of revenue</div></div>
+          <div class="result-card"><div class="result-label">NET PROFIT</div><div class="result-value" id="net-profit-val">—</div><div class="result-sub">after all expenses</div></div>
+          <div class="result-card"><div class="result-label">GROSS MARGIN</div><div class="result-value amber" id="net-gross-pct">—</div><div class="result-sub">before expenses</div></div>
+          <div class="result-card"><div class="result-label">OPERATING MARGIN</div><div class="result-value" id="net-op-pct">—</div><div class="result-sub">before taxes</div></div>
+        </div>
+        <div class="breakdown">
+          <div class="breakdown-row"><span class="breakdown-key">Revenue</span><span class="breakdown-val pos" id="nbd-rev">—</span></div>
+          <div class="breakdown-row"><span class="breakdown-key">− Cost of Goods Sold</span><span class="breakdown-val neg" id="nbd-cogs">—</span></div>
+          <div class="breakdown-row"><span class="breakdown-key">= Gross Profit</span><span class="breakdown-val pos" id="nbd-gross">—</span></div>
+          <div class="breakdown-row"><span class="breakdown-key">− Operating Expenses</span><span class="breakdown-val neg" id="nbd-opex">—</span></div>
+          <div class="breakdown-row"><span class="breakdown-key">= Operating Profit (EBIT)</span><span class="breakdown-val pos" id="nbd-ebit">—</span></div>
+          <div class="breakdown-row"><span class="breakdown-key">− Taxes</span><span class="breakdown-val neg" id="nbd-tax">—</span></div>
+          <div class="breakdown-row total"><span class="breakdown-key">= Net Profit</span><span class="breakdown-val pos" id="nbd-net">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARKUP TAB -->
+    <div class="calc-body" id="tab-markup" style="display:none">
+      <div class="input-grid">
+        <div class="input-group">
+          <label>COST PRICE</label>
+          <div class="input-wrap"><span class="input-prefix cur-symbol">$</span><input type="number" id="mu-cost" placeholder="50" min="0" step="any" /></div>
+        </div>
+        <div class="input-group">
+          <label>MARKUP PERCENTAGE</label>
+          <div class="input-wrap"><input type="number" id="mu-markup" placeholder="40" min="0" step="any" class="suffix-input" /><span class="input-suffix">%</span></div>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcMarkup()">Calculate →</button>
+      <div class="results" id="markup-results">
+        <div class="results-grid">
+          <div class="result-card"><div class="result-label">SELLING PRICE</div><div class="result-value green" id="mu-price">—</div><div class="result-sub">cost + markup</div></div>
+          <div class="result-card"><div class="result-label">PROFIT MARGIN</div><div class="result-value amber" id="mu-margin">—</div><div class="result-sub">% of selling price</div></div>
+          <div class="result-card"><div class="result-label">PROFIT AMOUNT</div><div class="result-value" id="mu-profit">—</div><div class="result-sub">per unit</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO SECTION -->
+  <div class="info-section">
+    <h2>What is Profit Margin?</h2>
+    <p>Profit margin is a key financial metric that measures how much profit a business makes for every unit of revenue. It tells you what percentage of your sales actually becomes profit after covering costs.</p>
+    <h3>Gross Profit Margin</h3>
+    <p>Gross profit margin measures profitability after deducting the direct costs of producing your goods or services (COGS).</p>
+    <div class="formula-box">Gross Profit Margin = ((Revenue − COGS) ÷ Revenue) × 100</div>
+    <h3>Net Profit Margin</h3>
+    <p>Net profit margin is the bottom line — profit remaining after ALL expenses including operating costs, interest, and taxes.</p>
+    <div class="formula-box">Net Profit Margin = (Net Profit ÷ Revenue) × 100</div>
+    <h3>What is a Good Profit Margin?</h3>
+    <p>• <strong style="color:var(--red)">Under 5%</strong> — Thin margins, vulnerable to cost increases<br/>• <strong style="color:var(--amber)">5%–20%</strong> — Healthy for most industries<br/>• <strong style="color:var(--green)">20%+</strong> — Excellent, common in software and services</p>
+    <h2 style="margin-top:2.5rem;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What's the difference between margin and markup?</div>
+      <div class="faq-a">Margin is a percentage of the selling price. Markup is a percentage of the cost. A 40% markup gives only a 28.6% margin — they are not the same number.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Does currency affect profit margin calculation?</div>
+      <div class="faq-a">No — profit margin is a percentage, so it works identically in USD, GBP, EUR, PKR, INR or any currency. Just make sure revenue and costs are in the same currency.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I improve my profit margin?</div>
+      <div class="faq-a">Increase prices, reduce COGS through better supplier negotiation, cut operating expenses, or shift focus to higher-margin products and services.</div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/roi-calculator.html" class="related-card"><span class="related-icon">💰</span><span class="related-name">ROI Calculator</span></a>
+      <a href="/tools/markup-calculator.html" class="related-card"><span class="related-icon">🏷️</span><span class="related-name">Markup Calculator</span></a>
+      <a href="/tools/break-even-calculator.html" class="related-card"><span class="related-icon">⚖️</span><span class="related-name">Break-Even Calculator</span></a>
+      <a href="/tools/invoice-generator.html" class="related-card"><span class="related-icon">🧾</span><span class="related-name">Invoice Generator</span></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p>
+</footer>
+
+<script>
+  let curSymbol = '$';
+
+  function onCurrencyChange() {
+    const val = document.getElementById('currency-select').value;
+    curSymbol = val.split('|')[0] || '$';
+    document.querySelectorAll('.cur-symbol').forEach(el => el.textContent = curSymbol);
+    if (document.getElementById('gross-results').classList.contains('show')) calcGross();
+    if (document.getElementById('net-results').classList.contains('show')) calcNet();
+    if (document.getElementById('markup-results').classList.contains('show')) calcMarkup();
+  }
+
+  const fmt = n => curSymbol + ' ' + parseFloat(n).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  const pct = n => parseFloat(n).toFixed(2) + '%';
+
+  function switchTab(name, btn) {
+    ['gross','net','markup'].forEach(t => document.getElementById('tab-' + t).style.display = 'none');
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).style.display = 'block';
+    btn.classList.add('active');
+  }
+
+  function getHealth(margin) {
+    if (margin >= 20) return { color: '#43e97b', label: '🟢 Excellent margin — highly profitable.', bar: '#43e97b' };
+    if (margin >= 10) return { color: '#43e97b', label: '🟢 Good margin — healthy profitability.', bar: '#43e97b' };
+    if (margin >= 5)  return { color: '#f7971e', label: '🟡 Average margin — room for improvement.', bar: '#f7971e' };
+    if (margin > 0)   return { color: '#ff6b6b', label: '🔴 Thin margin — vulnerable to cost increases.', bar: '#ff6b6b' };
+    return { color: '#ff6b6b', label: '🔴 Negative margin — you are losing money.', bar: '#ff6b6b' };
+  }
+
+  function calcGross() {
+    const rev = parseFloat(document.getElementById('gross-revenue').value);
+    const cogs = parseFloat(document.getElementById('gross-cogs').value);
+    if (isNaN(rev) || isNaN(cogs) || rev <= 0) { alert('Please enter valid revenue and COGS values.'); return; }
+    const profit = rev - cogs;
+    const margin = (profit / rev) * 100;
+    const markup = cogs > 0 ? (profit / cogs) * 100 : 0;
+    const h = getHealth(margin);
+    document.getElementById('gross-margin-pct').textContent = pct(margin);
+    document.getElementById('gross-margin-pct').className = 'result-value ' + (margin >= 10 ? 'green' : margin >= 5 ? 'amber' : 'red');
+    document.getElementById('gross-profit-val').textContent = fmt(profit);
+    document.getElementById('gross-markup').textContent = pct(markup);
+    document.getElementById('bd-revenue').textContent = fmt(rev);
+    document.getElementById('bd-cogs').textContent = '− ' + fmt(cogs);
+    document.getElementById('bd-profit').textContent = fmt(profit);
+    document.getElementById('gross-bar').style.width = Math.min(Math.max(margin,0),100) + '%';
+    document.getElementById('gross-bar').style.background = h.bar;
+    document.getElementById('gross-health').textContent = h.label;
+    document.getElementById('gross-health').style.color = h.color;
+    document.getElementById('gross-results').classList.add('show');
+  }
+
+  function calcNet() {
+    const rev = parseFloat(document.getElementById('net-revenue').value);
+    const cogs = parseFloat(document.getElementById('net-cogs').value);
+    const opex = parseFloat(document.getElementById('net-opex').value) || 0;
+    const tax = parseFloat(document.getElementById('net-tax').value) || 0;
+    if (isNaN(rev) || isNaN(cogs) || rev <= 0) { alert('Please enter valid revenue and COGS values.'); return; }
+    const gross = rev - cogs;
+    const ebit = gross - opex;
+    const net = ebit - tax;
+    document.getElementById('net-margin-pct').textContent = pct((net/rev)*100);
+    document.getElementById('net-margin-pct').className = 'result-value ' + ((net/rev)*100 >= 10 ? 'green' : (net/rev)*100 >= 5 ? 'amber' : 'red');
+    document.getElementById('net-profit-val').textContent = fmt(net);
+    document.getElementById('net-gross-pct').textContent = pct((gross/rev)*100);
+    document.getElementById('net-op-pct').textContent = pct((ebit/rev)*100);
+    document.getElementById('nbd-rev').textContent = fmt(rev);
+    document.getElementById('nbd-cogs').textContent = fmt(cogs);
+    document.getElementById('nbd-gross').textContent = fmt(gross);
+    document.getElementById('nbd-opex').textContent = fmt(opex);
+    document.getElementById('nbd-ebit').textContent = fmt(ebit);
+    document.getElementById('nbd-tax').textContent = fmt(tax);
+    document.getElementById('nbd-net').textContent = fmt(net);
+    document.getElementById('net-results').classList.add('show');
+  }
+
+  function calcMarkup() {
+    const cost = parseFloat(document.getElementById('mu-cost').value);
+    const markup = parseFloat(document.getElementById('mu-markup').value);
+    if (isNaN(cost) || isNaN(markup) || cost <= 0) { alert('Please enter valid cost and markup values.'); return; }
+    const price = cost * (1 + markup / 100);
+    const margin = (markup / (100 + markup)) * 100;
+    document.getElementById('mu-price').textContent = fmt(price);
+    document.getElementById('mu-margin').textContent = pct(margin);
+    document.getElementById('mu-profit').textContent = fmt(price - cost);
+    document.getElementById('markup-results').classList.add('show');
+  }
+</script>
+</body>
+</html>
