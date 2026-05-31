@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salary to Hourly Calculator – Convert Annual Salary | ToolsNook</title>
+  <meta name="description" content="Convert annual salary to hourly, daily, weekly and monthly rate instantly. Free salary to hourly calculator. Works for any country and currency." />
+  <meta name="keywords" content="salary to hourly calculator, annual salary to hourly, salary converter, hourly rate calculator, wage calculator, salary calculator" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/salary-to-hourly.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(67,233,123,0.1);border:1px solid rgba(67,233,123,0.2);color:var(--green);font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
+    .top-row{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:2rem;margin-bottom:0.75rem}
+    .top-row label{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em}
+    .csw{position:relative}.csw::after{content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.7rem;pointer-events:none}
+    select.dsel{appearance:none;-webkit-appearance:none;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:6px 28px 6px 12px;cursor:pointer}
+    select.dsel:focus{outline:none;border-color:var(--accent)}select.dsel option{background:#1a1a24;color:var(--text)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem}
+    .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem}
+    @media(max-width:580px){.input-grid{grid-template-columns:1fr}}
+    .ig label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .iw{position:relative}
+    .ip{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    input[type=number],select.inp{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem 0.75rem 2.4rem;-moz-appearance:textfield}
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+    input[type=number]:focus,select.inp:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
+    select.inp{padding-left:1rem}
+    .calc-btn{width:100%;padding:0.9rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-bottom:1.5rem}
+    .calc-btn:hover{opacity:0.88;transform:translateY(-1px)}
+    .results{display:none}.results.show{display:block}
+    .rate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:1rem}
+    .rate-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center}
+    .rate-card.featured{border-color:rgba(108,99,255,0.4);background:rgba(108,99,255,0.05)}
+    .rl{font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:500;letter-spacing:0.04em}
+    .rv{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;line-height:1}
+    .rv.accent{color:var(--accent)}.rv.green{color:var(--green)}.rv.amber{color:var(--amber)}
+    .rs{font-size:0.72rem;color:var(--muted);margin-top:4px}
+    .breakdown{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1rem}
+    .brow{display:flex;justify-content:space-between;padding:0.85rem 1.25rem;border-bottom:1px solid var(--border);font-size:0.88rem}
+    .brow:last-child{border-bottom:none}.brow.head{background:var(--bg3);font-family:'Syne',sans-serif;font-weight:700}
+    .bk{color:var(--muted)}.bv{font-weight:500;color:var(--text)}
+    .info-section{margin-top:4rem}
+    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .info-section h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:600;margin:1.5rem 0 0.5rem}
+    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
+    .formula-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    .faq-item{margin-bottom:1.25rem}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
+    .faq-a{color:var(--muted);font-size:0.9rem;line-height:1.7}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Salary to Hourly Calculator</div>
+  <div class="hero-badge">✦ HR Tool</div>
+  <h1>Salary to Hourly Calculator</h1>
+  <p>Convert any salary to hourly, daily, weekly and monthly rates. Adjust for hours per week and weeks per year. Free, any currency.</p>
+</div>
+<div class="container">
+  <div class="top-row">
+    <label>CURRENCY</label>
+    <div class="csw"><select class="dsel" id="cs" onchange="onCC()">
+      <optgroup label="Major"><option value="$|USD" selected>$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option><option value="¥|JPY">¥ JPY</option><option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option></optgroup>
+      <optgroup label="Asia & Middle East"><option value="₹|INR">₹ INR</option><option value="₨|PKR">₨ PKR</option><option value="AED|AED">AED</option><option value="﷼|SAR">﷼ SAR</option></optgroup>
+      <optgroup label="Other"><option value="R|ZAR">R ZAR</option><option value="₦|NGN">₦ NGN</option><option value="R$|BRL">R$ BRL</option></optgroup>
+    </select></div>
+  </div>
+  <div class="calc-card">
+    <div class="input-grid">
+      <div class="ig"><label>ANNUAL SALARY</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="salary" placeholder="60,000" min="0" step="any" /></div></div>
+      <div class="ig"><label>HOURS PER WEEK</label><div class="iw"><input type="number" id="hours" value="40" min="1" max="168" step="any" class="inp" style="padding-left:1rem" /></div></div>
+      <div class="ig"><label>WEEKS PER YEAR</label><div class="iw"><input type="number" id="weeks" value="52" min="1" max="52" step="any" class="inp" style="padding-left:1rem" /></div></div>
+      <div class="ig"><label>VACATION DAYS PER YEAR</label><div class="iw"><input type="number" id="vacation" value="0" min="0" max="365" step="any" class="inp" style="padding-left:1rem" /></div></div>
+    </div>
+    <button class="calc-btn" onclick="calcSalary()">Convert Salary →</button>
+    <div class="results" id="sal-results">
+      <div class="rate-cards">
+        <div class="rate-card featured"><div class="rl">HOURLY RATE</div><div class="rv accent" id="r-hourly">—</div><div class="rs">per hour worked</div></div>
+        <div class="rate-card"><div class="rl">DAILY RATE</div><div class="rv green" id="r-daily">—</div><div class="rs">per working day</div></div>
+        <div class="rate-card"><div class="rl">WEEKLY RATE</div><div class="rv amber" id="r-weekly">—</div><div class="rs">per week</div></div>
+        <div class="rate-card"><div class="rl">MONTHLY RATE</div><div class="rv" id="r-monthly">—</div><div class="rs">per month</div></div>
+      </div>
+      <div class="breakdown">
+        <div class="brow head"><span>BREAKDOWN</span><span></span></div>
+        <div class="brow"><span class="bk">Annual Salary</span><span class="bv" id="b-annual">—</span></div>
+        <div class="brow"><span class="bk">Working Hours / Year</span><span class="bv" id="b-yhours">—</span></div>
+        <div class="brow"><span class="bk">Working Days / Year</span><span class="bv" id="b-ydays">—</span></div>
+        <div class="brow"><span class="bk">Working Weeks / Year</span><span class="bv" id="b-yweeks">—</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="info-section">
+    <h2>How to Convert Salary to Hourly Rate</h2>
+    <p>The basic formula divides your annual salary by the total hours worked per year. The total hours are calculated from your weekly hours and working weeks.</p>
+    <div class="formula-box">Hourly Rate = Annual Salary ÷ (Hours per Week × Weeks per Year)</div>
+    <p>For a standard 40-hour work week with 52 weeks per year: Annual Salary ÷ 2,080 = Hourly Rate</p>
+    <h3>Why Vacation Days Matter</h3>
+    <p>If you have paid vacation, your effective hourly rate stays the same since you're still paid. But if you're a freelancer calculating what to charge clients, subtract your vacation days to find how many billable hours you actually work.</p>
+    <h2 style="margin-top:2.5rem">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">How many working hours are in a year?</div><div class="faq-a">A standard full-time employee works 40 hours per week × 52 weeks = 2,080 hours per year. Accounting for public holidays and vacation reduces this to around 1,800–1,950 hours.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I convert hourly to annual salary?</div><div class="faq-a">Multiply your hourly rate by the hours you work per week, then multiply by 52. For example: $25/hour × 40 hours × 52 weeks = $52,000/year.</div></div>
+  </div>
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/freelancer-rate-calculator.html" class="related-card"><span style="font-size:1.4rem">🧑‍💻</span><span style="font-size:0.88rem;font-weight:500">Freelancer Rate Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+  let cur='$';
+  function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);if(document.getElementById('sal-results').classList.contains('show'))calcSalary();}
+  const fmt=n=>cur+' '+parseFloat(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function calcSalary(){
+    const sal=parseFloat(document.getElementById('salary').value);
+    const hrs=parseFloat(document.getElementById('hours').value)||40;
+    const wks=parseFloat(document.getElementById('weeks').value)||52;
+    const vac=parseFloat(document.getElementById('vacation').value)||0;
+    if(isNaN(sal)||sal<=0){alert('Please enter a valid annual salary.');return;}
+    const vacWks=vac/5;
+    const workWks=wks-vacWks;
+    const totalHrs=hrs*workWks;
+    const totalDays=workWks*5;
+    const hourly=sal/totalHrs;
+    const daily=hourly*hrs/5*(5);
+    const weekly=sal/workWks;
+    const monthly=sal/12;
+    document.getElementById('r-hourly').textContent=fmt(hourly);
+    document.getElementById('r-daily').textContent=fmt(sal/totalDays);
+    document.getElementById('r-weekly').textContent=fmt(weekly);
+    document.getElementById('r-monthly').textContent=fmt(monthly);
+    document.getElementById('b-annual').textContent=fmt(sal);
+    document.getElementById('b-yhours').textContent=Math.round(totalHrs).toLocaleString()+' hrs';
+    document.getElementById('b-ydays').textContent=Math.round(totalDays).toLocaleString()+' days';
+    document.getElementById('b-yweeks').textContent=workWks.toFixed(1)+' weeks';
+    document.getElementById('sal-results').classList.add('show');
+  }
+</script>
+</body>
+</html>
