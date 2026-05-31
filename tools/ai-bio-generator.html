@@ -109,8 +109,8 @@
 </div>
 <footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
 <script>
-const TOOL='bio-gen';const LIMIT=3;const KEY='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';
 let platform='linkedin';let bios={};let activeTab='short';
+const TOOL='bio-gen';const LIMIT=3;
 function getUsage(){const t=new Date().toDateString();const d=JSON.parse(localStorage.getItem('tn_'+TOOL)||'{}');return d.date!==t?{date:t,count:0}:d;}
 function saveUsage(){const u=getUsage();localStorage.setItem('tn_'+TOOL,JSON.stringify({date:new Date().toDateString(),count:u.count+1}));}
 function initUI(){
@@ -137,9 +137,9 @@ ${platform==='press'?'Use third person.':'Use first person.'}
 ${platform==='twitter'?'Short version under 160 chars.':''}
 Respond ONLY with JSON: {"short":"1-2 sentences","medium":"3-4 sentences","long":"full bio paragraph"}`;
   try{
-    const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+KEY},body:JSON.stringify({model:'llama3-8b-8192',messages:[{role:'user',content:prompt}],max_tokens:600})});
+    const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:600})});
     const data=await res.json();
-    const text=data.choices[0].message.content;
+    const text=data.result;
     bios=JSON.parse(text.replace(/```json|```/g,'').trim());
     saveUsage();initUI();renderBios();
   }catch(e){alert('Something went wrong. Please try again.');document.getElementById('gen-btn').disabled=false;}
