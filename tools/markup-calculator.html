@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markup Calculator – Calculate Selling Price from Cost | ToolsNook</title>
+  <meta name="description" content="Calculate selling price from cost and markup percentage. Or find the markup from cost and selling price. Free online markup calculator for retailers and businesses." />
+  <meta name="keywords" content="markup calculator, selling price calculator, cost plus markup, markup percentage, markup vs margin, retail markup calculator" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/markup-calculator.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(247,151,30,0.1);border:1px solid rgba(247,151,30,0.25);color:var(--amber);font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
+    .currency-row{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:2rem;margin-bottom:0.75rem}
+    .currency-row label{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em}
+    .csw{position:relative}.csw::after{content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.7rem;pointer-events:none}
+    select#cs{appearance:none;-webkit-appearance:none;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:6px 28px 6px 12px;cursor:pointer}
+    select#cs:focus{outline:none;border-color:var(--accent)}select#cs option{background:#1a1a24;color:var(--text)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+    .tabs{display:flex;border-bottom:1px solid var(--border)}
+    .tab{flex:1;padding:1rem;background:none;border:none;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;transition:all 0.2s;border-bottom:2px solid transparent;margin-bottom:-1px}
+    .tab:hover{color:var(--text);background:var(--bg3)}.tab.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--bg3)}
+    .calc-body{padding:2rem}
+    .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem}
+    @media(max-width:580px){.input-grid{grid-template-columns:1fr}}
+    .ig label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .iw{position:relative}
+    .ip{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    .is{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    input[type=number]{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem 0.75rem 2.4rem;-moz-appearance:textfield}
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+    input[type=number]:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
+    input.si{padding-right:2.2rem;padding-left:1rem}
+    .calc-btn{width:100%;padding:0.9rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-bottom:1.5rem}
+    .calc-btn:hover{opacity:0.88;transform:translateY(-1px)}
+    .results{display:none}.results.show{display:block}
+    .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:1rem}
+    .result-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center}
+    .result-card.featured{border-color:rgba(108,99,255,0.4);background:rgba(108,99,255,0.05)}
+    .rl{font-size:0.72rem;color:var(--muted);margin-bottom:0.5rem;font-weight:500;letter-spacing:0.04em}
+    .rv{font-family:'Syne',sans-serif;font-size:1.7rem;font-weight:800;line-height:1}
+    .rv.green{color:var(--green)}.rv.amber{color:var(--amber)}.rv.accent{color:var(--accent)}
+    .rs{font-size:0.72rem;color:var(--muted);margin-top:4px}
+    .compare-box{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem}
+    .compare-title{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em;margin-bottom:0.75rem}
+    .compare-row{display:flex;justify-content:space-between;font-size:0.88rem;padding:6px 0;border-bottom:1px solid var(--border)}
+    .compare-row:last-child{border-bottom:none}
+    .ck{color:var(--muted)}.cv{font-weight:500}
+    .info-section{margin-top:4rem}
+    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .info-section h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:600;margin:1.5rem 0 0.5rem}
+    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
+    .formula-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    .faq-item{margin-bottom:1.25rem}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
+    .faq-a{color:var(--muted);font-size:0.9rem;line-height:1.7}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Markup Calculator</div>
+  <div class="hero-badge">✦ Finance Tool</div>
+  <h1>Markup Calculator</h1>
+  <p>Calculate selling price from cost and markup, find markup from cost and price, or convert markup to margin. Free, any currency.</p>
+</div>
+<div class="container">
+  <div class="currency-row">
+    <label for="cs">CURRENCY</label>
+    <div class="csw"><select id="cs" onchange="onCC()">
+      <optgroup label="Major"><option value="$|USD" selected>$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option><option value="¥|JPY">¥ JPY</option><option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option></optgroup>
+      <optgroup label="Asia & Middle East"><option value="₹|INR">₹ INR</option><option value="₨|PKR">₨ PKR</option><option value="AED|AED">AED</option><option value="﷼|SAR">﷼ SAR</option></optgroup>
+      <optgroup label="Other"><option value="R|ZAR">R ZAR</option><option value="₦|NGN">₦ NGN</option><option value="R$|BRL">R$ BRL</option></optgroup>
+    </select></div>
+  </div>
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('price',this)">Cost → Price</button>
+      <button class="tab" onclick="switchTab('find',this)">Find Markup</button>
+      <button class="tab" onclick="switchTab('convert',this)">Markup ↔ Margin</button>
+    </div>
+    <!-- COST TO PRICE -->
+    <div class="calc-body" id="tab-price">
+      <div class="input-grid">
+        <div class="ig"><label>COST PRICE</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="p-cost" placeholder="50" min="0" step="any" /></div></div>
+        <div class="ig"><label>MARKUP (%)</label><div class="iw"><input type="number" id="p-markup" placeholder="40" min="0" step="any" class="si" /><span class="is">%</span></div></div>
+      </div>
+      <button class="calc-btn" onclick="calcPrice()">Calculate Selling Price →</button>
+      <div class="results" id="price-results">
+        <div class="results-grid">
+          <div class="result-card featured"><div class="rl">SELLING PRICE</div><div class="rv accent" id="p-sell">—</div><div class="rs">recommended price</div></div>
+          <div class="result-card"><div class="rl">PROFIT</div><div class="rv green" id="p-profit">—</div><div class="rs">per unit sold</div></div>
+          <div class="result-card"><div class="rl">PROFIT MARGIN</div><div class="rv amber" id="p-margin">—</div><div class="rs">% of selling price</div></div>
+        </div>
+        <div class="compare-box">
+          <div class="compare-title">MARKUP VS MARGIN COMPARISON</div>
+          <div class="compare-row"><span class="ck">Cost Price</span><span class="cv" id="pc-cost">—</span></div>
+          <div class="compare-row"><span class="ck">Markup %</span><span class="cv" id="pc-markup">—</span></div>
+          <div class="compare-row"><span class="ck">Selling Price</span><span class="cv" id="pc-sell">—</span></div>
+          <div class="compare-row"><span class="ck">Profit Margin %</span><span class="cv" id="pc-margin">—</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- FIND MARKUP -->
+    <div class="calc-body" id="tab-find" style="display:none">
+      <div class="input-grid">
+        <div class="ig"><label>COST PRICE</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="f-cost" placeholder="50" min="0" step="any" /></div></div>
+        <div class="ig"><label>SELLING PRICE</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="f-sell" placeholder="70" min="0" step="any" /></div></div>
+      </div>
+      <button class="calc-btn" onclick="calcFind()">Find Markup →</button>
+      <div class="results" id="find-results">
+        <div class="results-grid">
+          <div class="result-card featured"><div class="rl">MARKUP %</div><div class="rv accent" id="f-markup">—</div><div class="rs">above cost</div></div>
+          <div class="result-card"><div class="rl">PROFIT MARGIN</div><div class="rv green" id="f-margin">—</div><div class="rs">% of selling price</div></div>
+          <div class="result-card"><div class="rl">PROFIT</div><div class="rv amber" id="f-profit">—</div><div class="rs">per unit</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- CONVERT -->
+    <div class="calc-body" id="tab-convert" style="display:none">
+      <div class="input-grid">
+        <div class="ig"><label>MARKUP % → MARGIN %</label><div class="iw"><input type="number" id="c-markup" placeholder="40" min="0" step="any" class="si" oninput="convertMarkup()" /><span class="is">%</span></div></div>
+        <div class="ig"><label>MARGIN % → MARKUP %</label><div class="iw"><input type="number" id="c-margin" placeholder="28.57" min="0" step="any" class="si" oninput="convertMargin()" /><span class="is">%</span></div></div>
+      </div>
+      <div class="results show" id="convert-results">
+        <div class="results-grid">
+          <div class="result-card"><div class="rl">MARKUP → MARGIN</div><div class="rv green" id="c-m2mg">—</div><div class="rs">profit margin %</div></div>
+          <div class="result-card"><div class="rl">MARGIN → MARKUP</div><div class="rv amber" id="c-mg2m">—</div><div class="rs">markup %</div></div>
+        </div>
+        <div class="compare-box">
+          <div class="compare-title">KEY DIFFERENCE</div>
+          <div class="compare-row"><span class="ck">Markup is calculated on</span><span class="cv">Cost price</span></div>
+          <div class="compare-row"><span class="ck">Margin is calculated on</span><span class="cv">Selling price</span></div>
+          <div class="compare-row"><span class="ck">Markup is always</span><span class="cv">Higher than margin</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-section">
+    <h2>Markup vs Margin — What's the Difference?</h2>
+    <p>This is one of the most common sources of confusion in business. Markup and margin both measure profitability but they're calculated differently.</p>
+    <div class="formula-box">Markup % = (Profit ÷ Cost) × 100</div>
+    <div class="formula-box">Margin % = (Profit ÷ Selling Price) × 100</div>
+    <p>Example: You buy a product for $50 and sell it for $70. Your profit is $20.</p>
+    <p>• Markup = $20 ÷ $50 = <strong style="color:var(--amber)">40%</strong> (40% above cost)<br/>• Margin = $20 ÷ $70 = <strong style="color:var(--green)">28.6%</strong> (28.6% of selling price)</p>
+    <h2 style="margin-top:2.5rem">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q">Why is markup always higher than margin?</div><div class="faq-a">Because markup uses the smaller number (cost) as the base, while margin uses the larger number (selling price). The same profit amount divided by a smaller base always gives a larger percentage.</div></div>
+    <div class="faq-item"><div class="faq-q">What markup should I use for my business?</div><div class="faq-a">It depends on your industry. Retail typically uses 50–100% markup. Food service often uses 200–300%. Software and digital products can be 1000%+. The key is covering all your costs and generating enough profit.</div></div>
+  </div>
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+      <a href="/tools/break-even-calculator.html" class="related-card"><span style="font-size:1.4rem">⚖️</span><span style="font-size:0.88rem;font-weight:500">Break-Even Calculator</span></a>
+      <a href="/tools/vat-calculator.html" class="related-card"><span style="font-size:1.4rem">🧮</span><span style="font-size:0.88rem;font-weight:500">VAT Calculator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+  let cur='$';
+  function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);}
+  const fmt=n=>cur+' '+parseFloat(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const pct=n=>parseFloat(n).toFixed(2)+'%';
+  function switchTab(name,btn){['price','find','convert'].forEach(t=>document.getElementById('tab-'+t).style.display='none');document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+name).style.display='block';btn.classList.add('active');}
+  function calcPrice(){
+    const cost=parseFloat(document.getElementById('p-cost').value);
+    const markup=parseFloat(document.getElementById('p-markup').value);
+    if(isNaN(cost)||isNaN(markup)||cost<=0){alert('Please enter valid cost and markup.');return;}
+    const sell=cost*(1+markup/100);
+    const profit=sell-cost;
+    const margin=(profit/sell)*100;
+    document.getElementById('p-sell').textContent=fmt(sell);
+    document.getElementById('p-profit').textContent=fmt(profit);
+    document.getElementById('p-margin').textContent=pct(margin);
+    document.getElementById('pc-cost').textContent=fmt(cost);
+    document.getElementById('pc-markup').textContent=pct(markup);
+    document.getElementById('pc-sell').textContent=fmt(sell);
+    document.getElementById('pc-margin').textContent=pct(margin);
+    document.getElementById('price-results').classList.add('show');
+  }
+  function calcFind(){
+    const cost=parseFloat(document.getElementById('f-cost').value);
+    const sell=parseFloat(document.getElementById('f-sell').value);
+    if(isNaN(cost)||isNaN(sell)||cost<=0){alert('Please enter valid cost and selling price.');return;}
+    const profit=sell-cost;
+    const markup=(profit/cost)*100;
+    const margin=(profit/sell)*100;
+    document.getElementById('f-markup').textContent=pct(markup);
+    document.getElementById('f-margin').textContent=pct(margin);
+    document.getElementById('f-profit').textContent=fmt(profit);
+    document.getElementById('find-results').classList.add('show');
+  }
+  function convertMarkup(){
+    const m=parseFloat(document.getElementById('c-markup').value);
+    if(!isNaN(m)&&m>=0){const mg=(m/(100+m))*100;document.getElementById('c-m2mg').textContent=pct(mg);}
+  }
+  function convertMargin(){
+    const mg=parseFloat(document.getElementById('c-margin').value);
+    if(!isNaN(mg)&&mg>=0&&mg<100){const m=(mg/(100-mg))*100;document.getElementById('c-mg2m').textContent=pct(m);}
+  }
+</script>
+</body>
+</html>
