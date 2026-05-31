@@ -125,10 +125,11 @@ Focus on BENEFITS not just features. Make it persuasive and conversion-focused.
 Respond ONLY with JSON: {"full":"150-200 word description","short":"50-75 word description","bullets":"5 bullet points with • character"}`;
   try{
     const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:700})});
-    const data=await res.json();
-    outputs=JSON.parse(data.result.replace(/```json|```/g,'').trim());
+    if(!res.ok){const e=await res.json();throw new Error(e.error||'API '+res.status);}
+      const data=await res.json();
+    outputs=JSON.parse(data.text.replace(/```json|```/g,'').trim());
     saveUsage();initUI();renderOutputs();
-  }catch(e){alert('Something went wrong. Please try again.');document.getElementById('gen-btn').disabled=false;}
+  }catch(e){const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
 }
 function renderOutputs(){
