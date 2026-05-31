@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Business Name Generator – Free Online Tool | ToolsNook</title>
+  <meta name="description" content="Generate unique, creative business name ideas with AI. Get domain-friendly names for your startup, brand or company instantly. Free AI business name generator." />
+  <meta name="keywords" content="business name generator, AI business name, startup name generator, company name ideas, brand name generator, business name ideas" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/ai-business-name-generator.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:800px;margin:0 auto;padding:0 2rem 4rem}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem;margin-top:2rem}
+    .field{margin-bottom:1.25rem}
+    .field label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .field input,.field textarea,.field select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem;transition:border-color 0.2s}
+    .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
+    .field textarea{resize:vertical;min-height:80px}
+    .field select{cursor:pointer}.field select option{background:#1a1a24}
+    .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:580px){.input-grid{grid-template-columns:1fr}}
+    .gen-btn{width:100%;padding:1rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:12px;font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:0.5rem;display:flex;align-items:center;justify-content:center;gap:10px}
+    .gen-btn:hover{opacity:0.9;transform:translateY(-1px)}
+    .gen-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+    .loading{display:none;text-align:center;padding:2rem;color:var(--muted)}
+    .loading.show{display:block}
+    .spinner{width:32px;height:32px;border:3px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 1rem}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .results-area{display:none;margin-top:1.5rem}
+    .results-area.show{display:block}
+    .names-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:1rem}
+    .name-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;cursor:pointer;transition:all 0.2s;position:relative}
+    .name-card:hover{border-color:var(--accent);background:rgba(108,99,255,0.05);transform:translateY(-2px)}
+    .name-card.copied{border-color:var(--green)}
+    .name-text{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+    .name-domain{font-size:0.8rem;color:var(--muted)}
+    .name-tag{display:inline-block;font-size:0.68rem;padding:2px 7px;border-radius:4px;margin-top:6px;font-weight:500}
+    .tag-modern{background:rgba(108,99,255,0.15);color:#a59fff}
+    .tag-playful{background:rgba(247,151,30,0.15);color:var(--amber)}
+    .tag-professional{background:rgba(67,233,123,0.15);color:var(--green)}
+    .copy-hint{font-size:0.72rem;color:var(--muted);text-align:center;margin-top:0.5rem}
+    .regen-btn{width:100%;padding:0.75rem;background:transparent;border:1px solid var(--border2);color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.9rem;border-radius:10px;cursor:pointer;transition:all 0.2s;margin-top:0.5rem}
+    .regen-btn:hover{border-color:var(--accent);color:var(--accent)}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › AI Business Name Generator</div>
+  <div class="hero-badge">✨ AI Powered</div>
+  <h1>AI Business Name Generator</h1>
+  <p>Describe your business and get unique, creative name ideas instantly. AI-generated, domain-friendly names for your brand.</p>
+</div>
+<div class="container">
+  <div class="calc-card">
+    <div class="field">
+      <label>WHAT DOES YOUR BUSINESS DO?</label>
+      <textarea id="description" placeholder="e.g. A mobile app that helps freelancers track their time and invoice clients automatically..." rows="3"></textarea>
+    </div>
+    <div class="input-grid">
+      <div class="field">
+        <label>INDUSTRY</label>
+        <select id="industry">
+          <option value="technology">Technology / SaaS</option>
+          <option value="ecommerce">E-commerce / Retail</option>
+          <option value="finance">Finance / Fintech</option>
+          <option value="health">Health / Wellness</option>
+          <option value="food">Food / Restaurant</option>
+          <option value="education">Education / EdTech</option>
+          <option value="creative">Creative / Design</option>
+          <option value="consulting">Consulting / Services</option>
+          <option value="construction">Construction / Real Estate</option>
+          <option value="fashion">Fashion / Apparel</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>NAME STYLE</label>
+        <select id="style">
+          <option value="modern">Modern & Minimal</option>
+          <option value="playful">Playful & Fun</option>
+          <option value="professional">Professional & Corporate</option>
+          <option value="creative">Creative & Unique</option>
+          <option value="descriptive">Descriptive & Clear</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>KEYWORDS TO INCLUDE (OPTIONAL)</label>
+      <input type="text" id="keywords" placeholder="e.g. swift, smart, hub, pro..." />
+    </div>
+    <button class="gen-btn" id="gen-btn" onclick="generateNames()">✨ Generate Business Names</button>
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>AI is crafting unique names for your business...</p>
+    </div>
+    <div class="results-area" id="results-area">
+      <div class="names-grid" id="names-grid"></div>
+      <p class="copy-hint">Click any name to copy it</p>
+      <button class="regen-btn" onclick="generateNames()">↻ Generate More Names</button>
+    </div>
+  </div>
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/ai-bio-generator.html" class="related-card"><span style="font-size:1.4rem">👤</span><span style="font-size:0.88rem;font-weight:500">AI Bio Generator</span></a>
+      <a href="/tools/business-plan-outline.html" class="related-card"><span style="font-size:1.4rem">📋</span><span style="font-size:0.88rem;font-weight:500">Business Plan Outline</span></a>
+      <a href="/tools/startup-cost-estimator.html" class="related-card"><span style="font-size:1.4rem">🚀</span><span style="font-size:0.88rem;font-weight:500">Startup Cost Estimator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+async function generateNames(){
+  const desc=document.getElementById('description').value.trim();
+  if(!desc){alert('Please describe your business first.');return;}
+  const industry=document.getElementById('industry').value;
+  const style=document.getElementById('style').value;
+  const keywords=document.getElementById('keywords').value.trim();
+  document.getElementById('gen-btn').disabled=true;
+  document.getElementById('loading').classList.add('show');
+  document.getElementById('results-area').classList.remove('show');
+  const prompt=`Generate 12 unique business name ideas for the following business:
+
+Description: ${desc}
+Industry: ${industry}
+Style: ${style}
+${keywords?'Keywords to consider: '+keywords:''}
+
+Requirements:
+- Each name should be memorable, easy to spell, and ideally work as a .com domain
+- Mix different naming approaches (coined words, portmanteaus, descriptive, abstract)
+- Include a brief one-line tagline for each name
+
+Respond ONLY with a JSON array, no other text. Format:
+[{"name":"BusinessName","tagline":"Short tagline here","style":"modern|playful|professional"},...]
+
+Generate exactly 12 names.`;
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})
+    });
+    const data=await res.json();
+    const text=data.content.filter(b=>b.type==='text').map(b=>b.text).join('');
+    const clean=text.replace(/```json|```/g,'').trim();
+    const names=JSON.parse(clean);
+    renderNames(names);
+  }catch(e){
+    alert('Something went wrong. Please try again.');
+    console.error(e);
+  }finally{
+    document.getElementById('gen-btn').disabled=false;
+    document.getElementById('loading').classList.remove('show');
+  }
+}
+function renderNames(names){
+  const grid=document.getElementById('names-grid');
+  grid.innerHTML=names.map(n=>`
+    <div class="name-card" onclick="copyName('${n.name}',this)">
+      <div class="name-text">${n.name}</div>
+      <div class="name-domain">${n.name.toLowerCase().replace(/\s+/g,'')}.com</div>
+      <div class="name-tag tag-${n.style||'modern'}">${n.style||'modern'}</div>
+      <div style="font-size:0.78rem;color:var(--muted);margin-top:6px">${n.tagline||''}</div>
+    </div>`).join('');
+  document.getElementById('results-area').classList.add('show');
+}
+function copyName(name,el){
+  navigator.clipboard.writeText(name).then(()=>{
+    el.classList.add('copied');
+    el.querySelector('.name-text').textContent='✓ Copied!';
+    setTimeout(()=>{el.classList.remove('copied');el.querySelector('.name-text').textContent=name;},1500);
+  });
+}
+</script>
+</body>
+</html>
