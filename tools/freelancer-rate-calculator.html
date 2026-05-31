@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelancer Rate Calculator – Find Your Hourly Rate | ToolsNook</title>
+  <meta name="description" content="Calculate your ideal freelance hourly rate based on your income goals, expenses, and billable hours. Free freelancer rate calculator for consultants and self-employed professionals." />
+  <meta name="keywords" content="freelancer rate calculator, hourly rate calculator, freelance pricing, consultant rate, self employed rate, how much to charge freelance" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/freelancer-rate-calculator.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
+    .top-row{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:2rem;margin-bottom:0.75rem}
+    .top-row label{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em}
+    .csw{position:relative}.csw::after{content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.7rem;pointer-events:none}
+    select.dsel{appearance:none;-webkit-appearance:none;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:6px 28px 6px 12px;cursor:pointer}
+    select.dsel:focus{outline:none;border-color:var(--accent)}select.dsel option{background:#1a1a24;color:var(--text)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem}
+    .section-label{font-size:0.75rem;font-weight:600;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;margin-top:1.5rem}
+    .section-label:first-child{margin-top:0}
+    .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:0.5rem}
+    @media(max-width:580px){.input-grid{grid-template-columns:1fr}}
+    .ig label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .iw{position:relative}
+    .ip{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    .is{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
+    input[type=number]{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem 0.75rem 2.4rem;-moz-appearance:textfield}
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+    input[type=number]:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
+    input.np{padding-left:1rem}input.si{padding-right:2.2rem;padding-left:1rem}
+    .divider{height:1px;background:var(--border);margin:1.5rem 0}
+    .calc-btn{width:100%;padding:0.9rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:1.5rem;margin-bottom:1.5rem}
+    .calc-btn:hover{opacity:0.88;transform:translateY(-1px)}
+    .results{display:none}.results.show{display:block}
+    .hero-result{background:linear-gradient(135deg,rgba(108,99,255,0.15),rgba(108,99,255,0.05));border:1px solid rgba(108,99,255,0.3);border-radius:16px;padding:2rem;text-align:center;margin-bottom:1.5rem}
+    .hr-label{font-size:0.78rem;color:#a59fff;font-weight:500;letter-spacing:0.06em;margin-bottom:0.5rem}
+    .hr-value{font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;color:var(--accent);line-height:1}
+    .hr-sub{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
+    .rate-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1.5rem}
+    .rate-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center}
+    .rl{font-size:0.72rem;color:var(--muted);margin-bottom:4px;font-weight:500;letter-spacing:0.04em}
+    .rv{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800}
+    .rv.green{color:var(--green)}.rv.amber{color:var(--amber)}
+    .rs{font-size:0.72rem;color:var(--muted);margin-top:3px}
+    .breakdown{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .brow{display:flex;justify-content:space-between;padding:0.85rem 1.25rem;border-bottom:1px solid var(--border);font-size:0.88rem}
+    .brow:last-child{border-bottom:none}.brow.head{background:var(--bg3);font-family:'Syne',sans-serif;font-weight:700}
+    .bk{color:var(--muted)}.bv{font-weight:500}
+    .info-section{margin-top:4rem}
+    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
+    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
+    .formula-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    .faq-item{margin-bottom:1.25rem}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
+    .faq-a{color:var(--muted);font-size:0.9rem;line-height:1.7}
+    .related{margin-top:3rem}
+    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Freelancer Rate Calculator</div>
+  <div class="hero-badge">✦ HR Tool</div>
+  <h1>Freelancer Rate Calculator</h1>
+  <p>Find your ideal hourly rate based on your income goals, business expenses and available hours. Stop guessing what to charge.</p>
+</div>
+<div class="container">
+  <div class="top-row">
+    <label>CURRENCY</label>
+    <div class="csw"><select class="dsel" id="cs" onchange="onCC()">
+      <optgroup label="Major"><option value="$|USD" selected>$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option><option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option></optgroup>
+      <optgroup label="Asia & Middle East"><option value="₹|INR">₹ INR</option><option value="₨|PKR">₨ PKR</option><option value="AED|AED">AED</option><option value="﷼|SAR">﷼ SAR</option></optgroup>
+      <optgroup label="Other"><option value="R|ZAR">R ZAR</option><option value="₦|NGN">₦ NGN</option><option value="R$|BRL">R$ BRL</option></optgroup>
+    </select></div>
+  </div>
+  <div class="calc-card">
+    <div class="section-label">Income Goals</div>
+    <div class="input-grid">
+      <div class="ig"><label>DESIRED ANNUAL INCOME</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="income" placeholder="60,000" min="0" step="any" /></div></div>
+      <div class="ig"><label>PROFIT MARGIN / BUFFER (%)</label><div class="iw"><input type="number" id="buffer" value="20" min="0" max="100" step="any" class="si" /><span class="is">%</span></div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="section-label">Business Expenses (Annual)</div>
+    <div class="input-grid">
+      <div class="ig"><label>SOFTWARE & TOOLS</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="software" placeholder="1,200" min="0" step="any" /></div></div>
+      <div class="ig"><label>MARKETING & WEBSITE</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="marketing" placeholder="500" min="0" step="any" /></div></div>
+      <div class="ig"><label>TAXES (ESTIMATED %)</label><div class="iw"><input type="number" id="taxrate" value="25" min="0" max="100" step="any" class="si" /><span class="is">%</span></div></div>
+      <div class="ig"><label>OTHER EXPENSES</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="other" placeholder="500" min="0" step="any" /></div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="section-label">Working Hours</div>
+    <div class="input-grid">
+      <div class="ig"><label>HOURS AVAILABLE PER WEEK</label><div class="iw"><input type="number" id="avail" value="40" min="1" max="168" step="any" class="np" /></div></div>
+      <div class="ig"><label>BILLABLE HOURS % (NON-BILLABLE = ADMIN)</label><div class="iw"><input type="number" id="billable" value="70" min="1" max="100" step="any" class="si" /><span class="is">%</span></div></div>
+      <div class="ig"><label>WEEKS OFF PER YEAR</label><div class="iw"><input type="number" id="weeksoff" value="4" min="0" max="52" step="any" class="np" /></div></div>
+    </div>
+    <button class="calc-btn" onclick="calcRate()">Calculate My Rate →</button>
+    <div class="results" id="fl-results">
+      <div class="hero-result">
+        <div class="hr-label">YOUR MINIMUM HOURLY RATE</div>
+        <div class="hr-value" id="r-hourly">—</div>
+        <div class="hr-sub">charge less than this and you'll lose money</div>
+      </div>
+      <div class="rate-grid">
+        <div class="rate-card"><div class="rl">DAILY RATE</div><div class="rv green" id="r-daily">—</div><div class="rs">per day</div></div>
+        <div class="rate-card"><div class="rl">WEEKLY RATE</div><div class="rv amber" id="r-weekly">—</div><div class="rs">per week</div></div>
+        <div class="rate-card"><div class="rl">MONTHLY RATE</div><div class="rv" id="r-monthly">—</div><div class="rs">per month</div></div>
+        <div class="rate-card"><div class="rl">BILLABLE HRS/YEAR</div><div class="rv" id="r-bhours">—</div><div class="rs">hours to sell</div></div>
+      </div>
+      <div class="breakdown">
+        <div class="brow head"><span>FULL BREAKDOWN</span><span></span></div>
+        <div class="brow"><span class="bk">Desired Income</span><span class="bv" id="b-income">—</span></div>
+        <div class="brow"><span class="bk">Total Business Expenses</span><span class="bv" id="b-expenses">—</span></div>
+        <div class="brow"><span class="bk">Tax Provision</span><span class="bv" id="b-tax">—</span></div>
+        <div class="brow"><span class="bk">Profit Buffer</span><span class="bv" id="b-buffer">—</span></div>
+        <div class="brow"><span class="bk">Total Revenue Needed</span><span class="bv" id="b-total">—</span></div>
+        <div class="brow"><span class="bk">Billable Hours / Year</span><span class="bv" id="b-bhours">—</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="info-section">
+    <h2>How to Calculate Your Freelance Rate</h2>
+    <p>Most freelancers underprice themselves because they only think about their desired income and forget about taxes, business expenses, and the fact that not all hours are billable (admin, proposals, meetings eat into your time).</p>
+    <div class="formula-box">Hourly Rate = Total Revenue Needed ÷ Annual Billable Hours</div>
+    <div class="formula-box">Total Revenue Needed = Income + Expenses + Tax Provision + Profit Buffer</div>
+    <div class="faq-item" style="margin-top:1.5rem"><div class="faq-q">What percentage of hours should be billable?</div><div class="faq-a">Most freelancers can realistically bill 60–75% of their working hours. The rest goes to admin, marketing, proposals, and professional development. Using 70% is a safe starting assumption.</div></div>
+    <div class="faq-item"><div class="faq-q">Should I include taxes in my rate?</div><div class="faq-a">Absolutely. As a freelancer you're responsible for your own taxes including self-employment tax. Set aside 25–35% depending on your country. This calculator factors that in automatically.</div></div>
+  </div>
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/salary-to-hourly.html" class="related-card"><span style="font-size:1.4rem">⏱️</span><span style="font-size:0.88rem;font-weight:500">Salary to Hourly</span></a>
+      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<script>
+  let cur='$';
+  function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);if(document.getElementById('fl-results').classList.contains('show'))calcRate();}
+  const fmt=n=>cur+' '+parseFloat(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function calcRate(){
+    const income=parseFloat(document.getElementById('income').value)||0;
+    const buffer=parseFloat(document.getElementById('buffer').value)||0;
+    const software=parseFloat(document.getElementById('software').value)||0;
+    const marketing=parseFloat(document.getElementById('marketing').value)||0;
+    const taxrate=parseFloat(document.getElementById('taxrate').value)||0;
+    const other=parseFloat(document.getElementById('other').value)||0;
+    const avail=parseFloat(document.getElementById('avail').value)||40;
+    const billablePct=parseFloat(document.getElementById('billable').value)||70;
+    const weeksoff=parseFloat(document.getElementById('weeksoff').value)||4;
+    if(income<=0){alert('Please enter your desired annual income.');return;}
+    const expenses=software+marketing+other;
+    const workingWeeks=52-weeksoff;
+    const weeklyBillable=avail*(billablePct/100);
+    const annualBillable=weeklyBillable*workingWeeks;
+    const taxProvision=income*(taxrate/100);
+    const subtotal=income+expenses+taxProvision;
+    const total=subtotal*(1+buffer/100);
+    const hourly=total/annualBillable;
+    const daily=hourly*(avail/5);
+    const weekly=hourly*weeklyBillable;
+    const monthly=total/12;
+    document.getElementById('r-hourly').textContent=fmt(hourly);
+    document.getElementById('r-daily').textContent=fmt(daily);
+    document.getElementById('r-weekly').textContent=fmt(weekly);
+    document.getElementById('r-monthly').textContent=fmt(monthly);
+    document.getElementById('r-bhours').textContent=Math.round(annualBillable).toLocaleString()+' hrs';
+    document.getElementById('b-income').textContent=fmt(income);
+    document.getElementById('b-expenses').textContent=fmt(expenses);
+    document.getElementById('b-tax').textContent=fmt(taxProvision);
+    document.getElementById('b-buffer').textContent=fmt(subtotal*(buffer/100));
+    document.getElementById('b-total').textContent=fmt(total);
+    document.getElementById('b-bhours').textContent=Math.round(annualBillable).toLocaleString()+' hrs';
+    document.getElementById('fl-results').classList.add('show');
+  }
+</script>
+</body>
+</html>
