@@ -18,7 +18,13 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: 'llama-3.3-70b-versatile',
-        messages: [{ role: 'user', content: prompt }],
+        messages: [
+          {
+            role: 'system',
+            content: 'You are a helpful assistant. When asked to respond in JSON, respond ONLY with valid JSON. No preamble, no explanation, no markdown code blocks, no extra text before or after. Just the raw JSON.'
+          },
+          { role: 'user', content: prompt }
+        ],
         max_tokens: max_tokens,
         temperature: 0.85
       })
@@ -30,9 +36,14 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
-    return res.status(200).json({ text: data.choices[0].message.content });
+    let text = data.choices[0].message.content;
+
+    // Strip any markdown code fences the model might add despite instructions
+    text = text.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/i, '').trim();
+
+    return res.status(200).json({ text });
 
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ error: error.message || 'Internal server error' });
   }
 }
