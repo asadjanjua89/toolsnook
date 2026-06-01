@@ -141,7 +141,7 @@ Generate tailored content for each section. Respond ONLY with JSON:
     document.getElementById('plan-output').classList.add('show');
     document.getElementById('action-row').style.display='flex';
     saveUsage();initUI();
-  }catch(e){const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);document.getElementById('gen-btn').disabled=false;}
+  }catch(e){console.error('API error:',e.message);alert('Error: '+e.message);document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
 }
 function toggleSection(h){const b=h.nextElementSibling;const o=b.style.display!=='none';b.style.display=o?'none':'block';h.querySelector('span:last-child').textContent=o?'▶':'▼';}
