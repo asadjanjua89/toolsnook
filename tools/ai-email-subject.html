@@ -120,7 +120,7 @@ Respond ONLY with JSON array: [{"subject":"text","type":"curiosity|urgency|benef
       const data=await res.json();
     const subjects=JSON.parse(data.text.replace(/```json|```/g,'').trim());
     saveUsage();initUI();renderSubjects(subjects);
-  }catch(e){const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);document.getElementById('gen-btn').disabled=false;}
+  }catch(e){console.error('API error:',e.message);alert('Error: '+e.message);document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
 }
 function renderSubjects(subjects){
