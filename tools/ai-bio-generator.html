@@ -143,7 +143,7 @@ Respond ONLY with JSON: {"short":"1-2 sentences","medium":"3-4 sentences","long"
     const text=data.text;
     bios=JSON.parse(text.replace(/```json|```/g,'').trim());
     saveUsage();initUI();renderBios();
-  }catch(e){const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);document.getElementById('gen-btn').disabled=false;}
+  }catch(e){console.error('API error:',e.message);alert('Error: '+e.message);document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
 }
 function renderBios(){
