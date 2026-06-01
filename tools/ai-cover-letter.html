@@ -136,7 +136,7 @@ Write a complete cover letter with greeting, 3 body paragraphs, and sign-off. Un
     document.getElementById('letter-output').classList.add('show');
     document.getElementById('action-row').style.display='flex';
     saveUsage();initUI();
-  }catch(e){const errMsg=data?.error||'Unknown error';console.error('API error:',errMsg);alert('Error: '+errMsg);document.getElementById('gen-btn').disabled=false;}
+  }catch(e){console.error('API error:',e.message);alert('Error: '+e.message);document.getElementById('gen-btn').disabled=false;}
   finally{document.getElementById('loading').classList.remove('show');}
 }
 function copyLetter(){const t=document.getElementById('letter-output').textContent;navigator.clipboard.writeText(t).then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>b.textContent='📋 Copy Letter',2000);});}
