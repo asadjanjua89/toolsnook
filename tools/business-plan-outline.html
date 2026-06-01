@@ -131,7 +131,7 @@ Purpose: ${document.getElementById('purpose').value}
 Generate tailored content for each section. Respond ONLY with JSON:
 {"sections":[{"title":"Executive Summary","content":"..."},{"title":"Company Overview","content":"..."},{"title":"Problem & Solution","content":"..."},{"title":"Market Opportunity","content":"..."},{"title":"Target Customer","content":"..."},{"title":"Products & Services","content":"..."},{"title":"Business Model","content":"..."},{"title":"Competitive Analysis","content":"..."},{"title":"Marketing Strategy","content":"..."},{"title":"Operations Plan","content":"..."},{"title":"Financial Projections","content":"..."},{"title":"Team","content":"..."},{"title":"Funding Requirements","content":"..."}]}`;
   try{
-    const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:1000})});
+    const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:2000})});
     if(!res.ok){const e=await res.json();throw new Error(e.error||'API '+res.status);}
       const data=await res.json();
     const plan=JSON.parse(data.text.replace(/```json|```/g,'').trim());
