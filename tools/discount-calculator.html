@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discount Calculator – Percent Off, Sale Price & Savings | ToolsNook</title>
+  <meta name="description" content="Free discount calculator. Find sale price, amount saved, original price before discount, stacked discounts and more. Fast, accurate, no signup required." />
+  <meta name="keywords" content="discount calculator, percent off calculator, sale price calculator, how much is 20% off, percentage off calculator, how to calculate discount, original price calculator, coupon calculator, stacked discount calculator, BOGO calculator, double discount calculator, what is 10% off, 20% off calculator, 30% off calculator, 50% off calculator, calculate discount percentage, how much do I save, sale price calculator, discount price calculator, percent off sale, how to find original price before discount, Black Friday discount calculator" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/discount-calculator.html" />
+
+  <meta property="og:title" content="Discount Calculator – Percent Off, Sale Price & Savings" />
+  <meta property="og:description" content="Calculate sale prices, savings and original prices instantly. Handles stacked discounts, reverse calculations and BOGO deals. Free and accurate." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/discount-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ToolsNook" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Discount Calculator",
+    "url": "https://www.toolsnook.com/tools/discount-calculator.html",
+    "description": "Free online discount calculator. Calculate sale price after percentage off, find original price before discount, stack multiple discounts, and compare deals.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate a percentage discount?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To calculate a percentage discount, multiply the original price by the discount percentage and divide by 100 to get the discount amount. Then subtract that from the original price. For example, 20% off $50: (50 × 20) ÷ 100 = $10 discount. Sale price = $50 - $10 = $40." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is 20% off $50?",
+        "acceptedAnswer": { "@type": "Answer", "text": "20% off $50 is $40. You save $10. To calculate: $50 × 0.20 = $10 discount. $50 - $10 = $40 sale price." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find the original price before a discount?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To find the original price before a discount, divide the sale price by (1 minus the discount percentage as a decimal). For example, if you paid $80 and the discount was 20%, the original price was $80 ÷ (1 - 0.20) = $80 ÷ 0.80 = $100." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do stacked discounts add up? Is 20% off + 10% off the same as 30% off?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No — stacked discounts do NOT simply add up. 20% off plus 10% off equals 28% total, not 30%. This is because the second discount applies to the already-reduced price. On a $100 item: 20% off gives $80, then 10% off $80 gives $72. Total saving is $28 — not $30." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much is 50% off?",
+        "acceptedAnswer": { "@type": "Answer", "text": "50% off means you pay exactly half the original price. For example, 50% off $120 = $60. You save $60. To calculate any price at 50% off, simply divide the original price by 2." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does BOGO mean and how much do I save?",
+        "acceptedAnswer": { "@type": "Answer", "text": "BOGO stands for Buy One Get One. BOGO Free means the second item is free — effectively 50% off per item when buying two. BOGO 50% off means the second item is half price — effectively 25% off your total. Always calculate the per-unit cost to see if BOGO is actually a good deal." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate what percentage discount I received?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To find the discount percentage, subtract the sale price from the original price, divide by the original price, then multiply by 100. Formula: Discount % = ((Original Price - Sale Price) ÷ Original Price) × 100. For example, original $100, sale price $75: ((100 - 75) ÷ 100) × 100 = 25% off." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is 30% off better than $20 off?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on the original price. 30% off beats $20 off when the item costs more than $66.67. On a $50 item: 30% off saves $15 (worse than $20 off). On a $100 item: 30% off saves $30 (better than $20 off). Use the discount calculator above to compare any two offers instantly." }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:540px;margin:0 auto}
+    .container{max-width:900px;margin:0 auto;padding:0 2rem 4rem}
+    .calc-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:2rem;margin-bottom:1rem}
+    .calc-tab{padding:7px 16px;background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-size:0.83rem;border-radius:100px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .calc-tab.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem;display:none}
+    .calc-card.active{display:block}
+    .card-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:0.05em}
+    .field{margin-bottom:1.1rem}
+    .field label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
+    .field input{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.7rem 1rem;transition:border-color 0.2s}
+    .field input:focus{outline:none;border-color:var(--accent)}
+    .input-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:540px){.input-row{grid-template-columns:1fr}}
+    .quick-pcts{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1rem}
+    .qp{padding:4px 12px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.8rem;border-radius:6px;cursor:pointer;transition:all 0.15s}
+    .qp:hover{border-color:var(--accent);color:var(--accent)}
+    .calc-btn{width:100%;padding:0.85rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;margin-top:0.25rem}
+    .calc-btn:hover{opacity:0.88}
+    .result{display:none;margin-top:1.5rem}.result.show{display:block}
+    .result-hero{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-bottom:0.75rem}
+    @media(max-width:480px){.result-hero{grid-template-columns:1fr 1fr}}
+    .result-item{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:1rem;text-align:center}
+    .result-num{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800}
+    .result-num.green{color:var(--green)}.result-num.amber{color:var(--amber)}.result-num.accent{color:var(--accent)}
+    .result-label{font-size:0.75rem;color:var(--muted);margin-top:4px}
+    .savings-bar{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:1rem;margin-top:0.5rem}
+    .bar-track{background:var(--bg);border-radius:4px;height:8px;overflow:hidden;margin:0.5rem 0}
+    .bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--green));border-radius:4px;transition:width 0.4s ease}
+    .bar-labels{display:flex;justify-content:space-between;font-size:0.75rem;color:var(--muted)}
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
+    .formula{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:0.75rem 1rem;font-family:monospace;font-size:0.9rem;color:var(--accent);margin:0.75rem 0}
+    .highlight-box{background:rgba(255,107,107,0.07);border:1px solid rgba(255,107,107,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .highlight-box p{color:var(--text);margin:0;font-size:0.9rem}
+    .quick-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin-top:1rem}
+    .quick-table th{background:var(--bg3);color:var(--muted);font-weight:600;padding:0.55rem 0.75rem;text-align:center;font-size:0.75rem;letter-spacing:0.04em}
+    .quick-table th:first-child{text-align:left}
+    .quick-table td{padding:0.55rem 0.75rem;border-bottom:1px solid var(--border);color:var(--muted);text-align:center}
+    .quick-table td:first-child{color:var(--text);font-weight:500;text-align:left}
+    .quick-table tr:last-child td{border-bottom:none}
+    .quick-table tr:hover td{background:var(--bg3)}
+    .quick-table .savings{color:var(--green);font-weight:600}
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7}
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Discount Calculator</div>
+  <h1>Discount Calculator</h1>
+  <p>Calculate sale prices, savings, and original prices instantly. Handles percent off, stacked discounts, reverse calculations and BOGO deals — free and accurate.</p>
+</div>
+
+<div class="container">
+  <div class="calc-tabs">
+    <button class="calc-tab active" onclick="switchTab('main',this)">🏷️ Percent Off</button>
+    <button class="calc-tab" onclick="switchTab('reverse',this)">🔁 Original Price</button>
+    <button class="calc-tab" onclick="switchTab('findpct',this)">🔍 Find Discount %</button>
+    <button class="calc-tab" onclick="switchTab('stacked',this)">📦 Stacked Discounts</button>
+  </div>
+
+  <!-- PERCENT OFF -->
+  <div class="calc-card active" id="tab-main">
+    <div class="card-title">What is X% off?</div>
+    <div class="input-row">
+      <div class="field">
+        <label>ORIGINAL PRICE</label>
+        <input type="number" id="m-price" placeholder="e.g. 100" min="0" />
+      </div>
+      <div class="field">
+        <label>DISCOUNT %</label>
+        <input type="number" id="m-pct" placeholder="e.g. 20" min="0" max="100" />
+      </div>
+    </div>
+    <div style="margin-bottom:0.75rem">
+      <div style="font-size:0.75rem;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em;font-weight:500">QUICK SELECT</div>
+      <div class="quick-pcts">
+        <button class="qp" onclick="setDiscount(5)">5% off</button>
+        <button class="qp" onclick="setDiscount(10)">10% off</button>
+        <button class="qp" onclick="setDiscount(15)">15% off</button>
+        <button class="qp" onclick="setDiscount(20)">20% off</button>
+        <button class="qp" onclick="setDiscount(25)">25% off</button>
+        <button class="qp" onclick="setDiscount(30)">30% off</button>
+        <button class="qp" onclick="setDiscount(40)">40% off</button>
+        <button class="qp" onclick="setDiscount(50)">50% off</button>
+        <button class="qp" onclick="setDiscount(75)">75% off</button>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcMain()">Calculate Sale Price</button>
+    <div class="result" id="result-main">
+      <div class="result-hero">
+        <div class="result-item"><div class="result-num green" id="m-saleprice"></div><div class="result-label">Sale Price</div></div>
+        <div class="result-item"><div class="result-num amber" id="m-saving"></div><div class="result-label">You Save</div></div>
+        <div class="result-item"><div class="result-num accent" id="m-savepct"></div><div class="result-label">Discount</div></div>
+      </div>
+      <div class="savings-bar">
+        <div class="bar-labels"><span id="m-bar-pay">You pay</span><span id="m-bar-save">You save</span></div>
+        <div class="bar-track"><div class="bar-fill" id="m-bar"></div></div>
+        <div style="font-size:0.78rem;color:var(--muted);text-align:center;margin-top:4px" id="m-bar-desc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVERSE -->
+  <div class="calc-card" id="tab-reverse">
+    <div class="card-title">Find Original Price Before Discount</div>
+    <div class="input-row">
+      <div class="field">
+        <label>SALE PRICE (WHAT YOU PAID)</label>
+        <input type="number" id="r-price" placeholder="e.g. 80" min="0" />
+      </div>
+      <div class="field">
+        <label>DISCOUNT % THAT WAS APPLIED</label>
+        <input type="number" id="r-pct" placeholder="e.g. 20" min="0" max="99" />
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcReverse()">Find Original Price</button>
+    <div class="result" id="result-reverse">
+      <div class="result-hero">
+        <div class="result-item"><div class="result-num accent" id="r-original"></div><div class="result-label">Original Price</div></div>
+        <div class="result-item"><div class="result-num amber" id="r-saving"></div><div class="result-label">Amount Saved</div></div>
+        <div class="result-item"><div class="result-num green" id="r-paid"></div><div class="result-label">You Paid</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIND DISCOUNT % -->
+  <div class="calc-card" id="tab-findpct">
+    <div class="card-title">What Discount % Did I Get?</div>
+    <div class="input-row">
+      <div class="field">
+        <label>ORIGINAL PRICE</label>
+        <input type="number" id="f-original" placeholder="e.g. 100" min="0" />
+      </div>
+      <div class="field">
+        <label>SALE PRICE</label>
+        <input type="number" id="f-sale" placeholder="e.g. 75" min="0" />
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcFindPct()">Find Discount %</button>
+    <div class="result" id="result-findpct">
+      <div class="result-hero">
+        <div class="result-item"><div class="result-num accent" id="f-pct"></div><div class="result-label">Discount %</div></div>
+        <div class="result-item"><div class="result-num amber" id="f-saved"></div><div class="result-label">Amount Saved</div></div>
+        <div class="result-item"><div class="result-num green" id="f-saleprice"></div><div class="result-label">Sale Price</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STACKED DISCOUNTS -->
+  <div class="calc-card" id="tab-stacked">
+    <div class="card-title">Stacked Discounts Calculator</div>
+    <div class="highlight-box"><p>⚠️ <strong>Important:</strong> 20% off + 10% off does NOT equal 30% off. Each discount applies to the already-reduced price. Use this calculator to find the true total discount.</p></div>
+    <div class="field" style="margin-top:1rem">
+      <label>ORIGINAL PRICE</label>
+      <input type="number" id="s-price" placeholder="e.g. 100" min="0" />
+    </div>
+    <div class="input-row">
+      <div class="field">
+        <label>FIRST DISCOUNT %</label>
+        <input type="number" id="s-d1" placeholder="e.g. 20" min="0" max="100" />
+      </div>
+      <div class="field">
+        <label>SECOND DISCOUNT %</label>
+        <input type="number" id="s-d2" placeholder="e.g. 10" min="0" max="100" />
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcStacked()">Calculate Stacked Discount</button>
+    <div class="result" id="result-stacked">
+      <div class="result-hero">
+        <div class="result-item"><div class="result-num green" id="s-final"></div><div class="result-label">Final Price</div></div>
+        <div class="result-item"><div class="result-num amber" id="s-saved"></div><div class="result-label">Total Saved</div></div>
+        <div class="result-item"><div class="result-num accent" id="s-effective"></div><div class="result-label">Effective Discount</div></div>
+      </div>
+      <div class="savings-bar" id="s-breakdown"></div>
+    </div>
+  </div>
+
+  <!-- QUICK REFERENCE TABLE -->
+  <div class="content-section">
+    <h2>Quick Reference — Common Discounts</h2>
+    <p>Here are the most commonly searched discount amounts. Enter your exact price in the calculator above for any amount not shown here.</p>
+    <table class="quick-table">
+      <thead>
+        <tr><th>Original Price</th><th>10% off</th><th>20% off</th><th>25% off</th><th>30% off</th><th>50% off</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>$10</td><td class="savings">$9.00</td><td class="savings">$8.00</td><td class="savings">$7.50</td><td class="savings">$7.00</td><td class="savings">$5.00</td></tr>
+        <tr><td>$20</td><td class="savings">$18.00</td><td class="savings">$16.00</td><td class="savings">$15.00</td><td class="savings">$14.00</td><td class="savings">$10.00</td></tr>
+        <tr><td>$25</td><td class="savings">$22.50</td><td class="savings">$20.00</td><td class="savings">$18.75</td><td class="savings">$17.50</td><td class="savings">$12.50</td></tr>
+        <tr><td>$50</td><td class="savings">$45.00</td><td class="savings">$40.00</td><td class="savings">$37.50</td><td class="savings">$35.00</td><td class="savings">$25.00</td></tr>
+        <tr><td>$75</td><td class="savings">$67.50</td><td class="savings">$60.00</td><td class="savings">$56.25</td><td class="savings">$52.50</td><td class="savings">$37.50</td></tr>
+        <tr><td>$100</td><td class="savings">$90.00</td><td class="savings">$80.00</td><td class="savings">$75.00</td><td class="savings">$70.00</td><td class="savings">$50.00</td></tr>
+        <tr><td>$150</td><td class="savings">$135.00</td><td class="savings">$120.00</td><td class="savings">$112.50</td><td class="savings">$105.00</td><td class="savings">$75.00</td></tr>
+        <tr><td>$200</td><td class="savings">$180.00</td><td class="savings">$160.00</td><td class="savings">$150.00</td><td class="savings">$140.00</td><td class="savings">$100.00</td></tr>
+        <tr><td>$250</td><td class="savings">$225.00</td><td class="savings">$200.00</td><td class="savings">$187.50</td><td class="savings">$175.00</td><td class="savings">$125.00</td></tr>
+        <tr><td>$300</td><td class="savings">$270.00</td><td class="savings">$240.00</td><td class="savings">$225.00</td><td class="savings">$210.00</td><td class="savings">$150.00</td></tr>
+        <tr><td>$500</td><td class="savings">$450.00</td><td class="savings">$400.00</td><td class="savings">$375.00</td><td class="savings">$350.00</td><td class="savings">$250.00</td></tr>
+        <tr><td>$1,000</td><td class="savings">$900.00</td><td class="savings">$800.00</td><td class="savings">$750.00</td><td class="savings">$700.00</td><td class="savings">$500.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- HOW TO CALCULATE -->
+  <div class="content-section">
+    <h2>How to Calculate Discounts</h2>
+    <p>Understanding how discounts work helps you make smarter purchasing decisions and spot when a "deal" isn't actually a deal. Here are all the formulas you need.</p>
+
+    <h3>How to calculate a percentage discount</h3>
+    <p>To find the sale price after a percentage discount, multiply the original price by the discount percentage to get the savings, then subtract from the original price.</p>
+    <div class="formula">Sale Price = Original Price × (1 − Discount% ÷ 100)</div>
+    <p>Example: 20% off $50 → $50 × (1 − 0.20) = $50 × 0.80 = <strong style="color:var(--green)">$40 sale price</strong>. You save $10.</p>
+
+    <h3>How to find the original price before a discount</h3>
+    <p>If you know what you paid and what discount was applied, you can work backwards to find the original price. This is useful when comparing prices across stores.</p>
+    <div class="formula">Original Price = Sale Price ÷ (1 − Discount% ÷ 100)</div>
+    <p>Example: You paid $80 and it was 20% off → $80 ÷ 0.80 = <strong style="color:var(--green)">$100 original price</strong>.</p>
+
+    <h3>How to find the discount percentage</h3>
+    <p>To calculate what percentage discount you received, subtract the sale price from the original, divide by the original price, and multiply by 100.</p>
+    <div class="formula">Discount % = ((Original Price − Sale Price) ÷ Original Price) × 100</div>
+    <p>Example: Original $120, sale price $90 → ((120 − 90) ÷ 120) × 100 = <strong style="color:var(--green)">25% off</strong>.</p>
+
+    <h3>The truth about stacked discounts</h3>
+    <p>One of the most common misconceptions in shopping is that two percentage discounts add together. They don't — and retailers know this.</p>
+    <div class="highlight-box"><p>🧮 <strong>Example:</strong> A $100 item with 20% off then 10% off → First: $100 × 0.80 = $80. Then: $80 × 0.90 = $72. Total saved: $28. Effective discount: 28% — NOT 30%.</p></div>
+    <p>Each successive discount is applied to the already-reduced price. The more discounts stack, the bigger the gap between what you might expect and what you actually save. Use our stacked discount calculator above to see the true effective discount.</p>
+
+    <h3>BOGO deals — how much do you actually save?</h3>
+    <p>BOGO (Buy One Get One) deals are popular but often misunderstood. Here's what each type actually means in real savings:</p>
+    <p><strong style="color:var(--text)">BOGO Free</strong> — You buy one at full price, get the second free. Effective discount: 50% per item (when buying exactly two identical items).</p>
+    <p><strong style="color:var(--text)">BOGO 50% off</strong> — You buy one at full price, get the second at half price. Effective discount: 25% on your total purchase.</p>
+    <p><strong style="color:var(--text)">Buy 2 Get 1 Free</strong> — You buy two at full price, get the third free. Effective discount: 33% per item when buying three.</p>
+    <p>The key question to ask: would you have bought the second item anyway? If not, BOGO is often designed to make you spend more, not save more.</p>
+
+    <h3>Percentage off vs fixed amount off — which is better?</h3>
+    <p>When comparing a percentage discount to a fixed amount off, the answer depends on the original price. A percentage discount grows with the price, while a fixed discount stays the same.</p>
+    <p>Example: Is 20% off better than $15 off? On a $60 item — 20% off saves $12, so $15 off is better. On an $80 item — 20% off saves $16, so 20% off is better. The crossover point is $75 — at exactly $75, both save the same amount.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What is 20% off $50?</div>
+      <div class="faq-a">20% off $50 is $40. You save $10. Calculation: $50 × 0.20 = $10 discount. $50 − $10 = $40 sale price. You can verify this using the calculator above.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is 30% off $100?</div>
+      <div class="faq-a">30% off $100 is $70. You save $30. Calculation: $100 × 0.30 = $30 discount. $100 − $30 = $70 sale price.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do stacked discounts add up? Is 20% off + 10% off the same as 30% off?</div>
+      <div class="faq-a">No. Stacked discounts do NOT add up. 20% off + 10% off equals 28% total, not 30%. On a $100 item: 20% off gives $80, then 10% off $80 gives $72. Total saving is $28. Use the Stacked Discounts calculator above to find the true effective discount for any combination.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I find the original price before a discount?</div>
+      <div class="faq-a">Divide the sale price by (1 minus the discount as a decimal). Example: you paid $80 and the item was 20% off → $80 ÷ 0.80 = $100 original price. Use the "Original Price" tab in the calculator above for instant results.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How much is 50% off?</div>
+      <div class="faq-a">50% off means you pay exactly half the original price. 50% off $80 = $40. 50% off $150 = $75. 50% off $200 = $100. To calculate any price at 50% off, simply divide by 2.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is 30% off better than $20 off?</div>
+      <div class="faq-a">It depends on the original price. 30% off beats $20 off on items over $66.67. On a $50 item: 30% off saves $15 — worse than $20 off. On a $100 item: 30% off saves $30 — better than $20 off. The crossover point is $66.67.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How does a BOGO deal work?</div>
+      <div class="faq-a">BOGO stands for Buy One Get One. BOGO Free gives you a second item free — effectively 50% off your total when buying two. BOGO 50% off gives you the second item at half price — effectively 25% off your total. The savings only apply if you need both items. If you only need one, a direct 25% off is usually a better deal.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate what percentage discount I received?</div>
+      <div class="faq-a">Subtract the sale price from the original price, divide by the original price, and multiply by 100. Formula: ((Original − Sale) ÷ Original) × 100. Example: original $120, sale price $84 → ((120 − 84) ÷ 120) × 100 = 30% off. Use the "Find Discount %" tab above for instant calculation.</div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/percentage-calculator.html" class="related-card"><span style="font-size:1.4rem">%</span><span style="font-size:0.88rem;font-weight:500">Percentage Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+      <a href="/tools/markup-calculator.html" class="related-card"><span style="font-size:1.4rem">🏷️</span><span style="font-size:0.88rem;font-weight:500">Markup Calculator</span></a>
+      <a href="/tools/vat-calculator.html" class="related-card"><span style="font-size:1.4rem">🧮</span><span style="font-size:0.88rem;font-weight:500">VAT Calculator</span></a>
+    </div>
+  </div>
+</div>
+
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a></p></footer>
+
+<script>
+  function switchTab(id, btn) {
+    document.querySelectorAll('.calc-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.calc-card').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
+  }
+  function fmt(n) { return '$' + parseFloat(n.toFixed(2)).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  function setDiscount(pct) { document.getElementById('m-pct').value = pct; calcMain(); }
+
+  function calcMain() {
+    const price = parseFloat(document.getElementById('m-price').value);
+    const pct = parseFloat(document.getElementById('m-pct').value);
+    if (isNaN(price) || isNaN(pct) || pct < 0 || pct > 100) return;
+    const saving = price * pct / 100;
+    const salePrice = price - saving;
+    document.getElementById('m-saleprice').textContent = fmt(salePrice);
+    document.getElementById('m-saving').textContent = fmt(saving);
+    document.getElementById('m-savepct').textContent = pct + '% off';
+    const payPct = Math.round((salePrice / price) * 100);
+    document.getElementById('m-bar').style.width = payPct + '%';
+    document.getElementById('m-bar-pay').textContent = 'You pay ' + fmt(salePrice);
+    document.getElementById('m-bar-save').textContent = 'You save ' + fmt(saving);
+    document.getElementById('m-bar-desc').textContent = 'Paying ' + payPct + '% of original price — saving ' + pct + '%';
+    document.getElementById('result-main').classList.add('show');
+  }
+
+  function calcReverse() {
+    const sale = parseFloat(document.getElementById('r-price').value);
+    const pct = parseFloat(document.getElementById('r-pct').value);
+    if (isNaN(sale) || isNaN(pct) || pct >= 100) return;
+    const original = sale / (1 - pct / 100);
+    const saved = original - sale;
+    document.getElementById('r-original').textContent = fmt(original);
+    document.getElementById('r-saving').textContent = fmt(saved);
+    document.getElementById('r-paid').textContent = fmt(sale);
+    document.getElementById('result-reverse').classList.add('show');
+  }
+
+  function calcFindPct() {
+    const original = parseFloat(document.getElementById('f-original').value);
+    const sale = parseFloat(document.getElementById('f-sale').value);
+    if (isNaN(original) || isNaN(sale) || original <= 0 || sale > original) return;
+    const saved = original - sale;
+    const pct = (saved / original) * 100;
+    document.getElementById('f-pct').textContent = parseFloat(pct.toFixed(2)) + '%';
+    document.getElementById('f-saved').textContent = fmt(saved);
+    document.getElementById('f-saleprice').textContent = fmt(sale);
+    document.getElementById('result-findpct').classList.add('show');
+  }
+
+  function calcStacked() {
+    const price = parseFloat(document.getElementById('s-price').value);
+    const d1 = parseFloat(document.getElementById('s-d1').value);
+    const d2 = parseFloat(document.getElementById('s-d2').value);
+    if (isNaN(price) || isNaN(d1) || isNaN(d2)) return;
+    const afterFirst = price * (1 - d1 / 100);
+    const afterSecond = afterFirst * (1 - d2 / 100);
+    const totalSaved = price - afterSecond;
+    const effectivePct = (totalSaved / price) * 100;
+    document.getElementById('s-final').textContent = fmt(afterSecond);
+    document.getElementById('s-saved').textContent = fmt(totalSaved);
+    document.getElementById('s-effective').textContent = parseFloat(effectivePct.toFixed(1)) + '% off';
+    document.getElementById('s-breakdown').innerHTML = `
+      <div style="font-size:0.82rem;color:var(--muted);line-height:1.9">
+        <div>Original price: <strong style="color:var(--text)">${fmt(price)}</strong></div>
+        <div>After ${d1}% off: <strong style="color:var(--amber)">${fmt(afterFirst)}</strong> (saved ${fmt(price - afterFirst)})</div>
+        <div>After additional ${d2}% off: <strong style="color:var(--green)">${fmt(afterSecond)}</strong> (saved another ${fmt(afterFirst - afterSecond)})</div>
+        <div style="margin-top:6px;padding-top:6px;border-top:1px solid var(--border)">
+          Total saved: <strong style="color:var(--amber)">${fmt(totalSaved)}</strong> — 
+          Effective discount: <strong style="color:var(--accent)">${parseFloat(effectivePct.toFixed(1))}%</strong> 
+          (not ${d1 + d2}% — stacked discounts don't simply add up)
+        </div>
+      </div>`;
+    document.getElementById('result-stacked').classList.add('show');
+  }
+
+  // Enter key support
+  document.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const card = inp.closest('.calc-card');
+        if (card) card.querySelector('.calc-btn').click();
+      }
+    });
+  });
+</script>
+</body>
+</html>
