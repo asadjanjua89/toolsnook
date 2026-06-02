@@ -3,10 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Percentage Calculator – Free Online Tool | ToolsNook</title>
-  <meta name="description" content="Free online percentage calculator. Calculate what percent one number is of another, find percentage increase or decrease, and more. Fast, simple, accurate." />
-  <meta name="keywords" content="percentage calculator, percent calculator, what percent of, percentage increase, percentage decrease, calculate percentage" />
+  <title>Percentage Calculator – Free Online Percent Calculator | ToolsNook</title>
+  <meta name="description" content="Free percentage calculator. Calculate what percent of a number, percentage increase, decrease, change and more. Fast, accurate, no signup required." />
+  <meta name="keywords" content="percentage calculator, percent calculator, how to calculate percentage, percentage increase calculator, percentage decrease calculator, what percent of, percent change calculator, percentage difference, calculate percentage of a number" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/percentage-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Percentage Calculator – Free Online Tool" />
+  <meta property="og:description" content="Calculate percentages instantly. What is X% of Y, percentage increase, decrease, change and more. Free, fast, no signup." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/percentage-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ToolsNook" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Percentage Calculator",
+    "url": "https://www.toolsnook.com/tools/percentage-calculator.html",
+    "description": "Free online percentage calculator. Calculate what percent one number is of another, find percentage increase or decrease, add or subtract percentages.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate a percentage of a number?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To find X% of a number Y, multiply Y by X and divide by 100. For example, 20% of 150 = (150 × 20) / 100 = 30." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate percentage increase?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Percentage increase = ((New Value - Old Value) / Old Value) × 100. For example, from 100 to 125: ((125 - 100) / 100) × 100 = 25% increase." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find what percentage one number is of another?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide the first number by the second, then multiply by 100. For example, 30 is what percent of 150? (30 / 150) × 100 = 20%." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate percentage decrease?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Percentage decrease = ((Old Value - New Value) / Old Value) × 100. For example, from 200 to 150: ((200 - 150) / 200) × 100 = 25% decrease." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula for percentage change?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Percentage change = ((New Value - Old Value) / |Old Value|) × 100. A positive result means an increase, a negative result means a decrease." }
+      }
+    ]
+  }
+  </script>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
@@ -23,10 +79,8 @@
     .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
     .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
     h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
-    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
+    .hero p{color:var(--muted);font-size:1rem;max-width:540px;margin:0 auto}
     .container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
-
-    /* CALC CARDS */
     .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem}
     @media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
     .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.5rem}
@@ -41,15 +95,21 @@
     .result-box.show{display:block}
     .result-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--green)}
     .result-label{font-size:0.82rem;color:var(--muted);margin-top:4px}
-
-    /* EXPLAINER */
-    .explainer{margin-top:3rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
-    .explainer h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
-    .explainer p{color:var(--muted);font-size:0.9rem;margin-bottom:0.75rem;line-height:1.7}
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem;color:var(--text)}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin:1.5rem 0 0.5rem;color:var(--text)}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
     .formula{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:0.75rem 1rem;font-family:monospace;font-size:0.9rem;color:var(--accent);margin:0.75rem 0}
-
-    /* RELATED */
-    .related{margin-top:3rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .examples-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:1rem 0}
+    @media(max-width:540px){.examples-grid{grid-template-columns:1fr}}
+    .example-card{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:0.9rem}
+    .example-q{font-size:0.82rem;color:var(--muted);margin-bottom:4px}
+    .example-a{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--green)}
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7}
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
     .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
     .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
     .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
@@ -62,129 +122,116 @@
 <div class="hero">
   <div class="breadcrumb"><a href="/">ToolsNook</a> › Percentage Calculator</div>
   <h1>Percentage Calculator</h1>
-  <p>Calculate percentages instantly. What percent of a number, percentage change, increase or decrease — all in one place.</p>
+  <p>Calculate percentages instantly — find what percent of a number, percentage increase or decrease, percent change, and more. Free, fast, no signup required.</p>
 </div>
 
 <div class="container">
   <div class="calc-grid">
-
-    <!-- WHAT IS X% OF Y -->
     <div class="calc-card">
       <h2>What is X% of Y?</h2>
-      <div class="row">
-        <span>What is</span>
-        <input type="number" id="a1" placeholder="25" />
-        <span>% of</span>
-        <input type="number" id="a2" placeholder="200" />
-      </div>
+      <div class="row"><span>What is</span><input type="number" id="a1" placeholder="25" /><span>% of</span><input type="number" id="a2" placeholder="200" /></div>
       <button class="calc-btn" onclick="calcA()">Calculate</button>
-      <div class="result-box" id="res-a">
-        <div class="result-num" id="res-a-num"></div>
-        <div class="result-label" id="res-a-label"></div>
-      </div>
+      <div class="result-box" id="res-a"><div class="result-num" id="res-a-num"></div><div class="result-label" id="res-a-label"></div></div>
     </div>
-
-    <!-- X IS WHAT % OF Y -->
     <div class="calc-card">
       <h2>X is what % of Y?</h2>
-      <div class="row">
-        <input type="number" id="b1" placeholder="50" />
-        <span>is what % of</span>
-        <input type="number" id="b2" placeholder="200" />
-      </div>
+      <div class="row"><input type="number" id="b1" placeholder="50" /><span>is what % of</span><input type="number" id="b2" placeholder="200" /></div>
       <button class="calc-btn" onclick="calcB()">Calculate</button>
-      <div class="result-box" id="res-b">
-        <div class="result-num" id="res-b-num"></div>
-        <div class="result-label" id="res-b-label"></div>
-      </div>
+      <div class="result-box" id="res-b"><div class="result-num" id="res-b-num"></div><div class="result-label" id="res-b-label"></div></div>
     </div>
-
-    <!-- PERCENTAGE INCREASE -->
     <div class="calc-card">
       <h2>Percentage Increase</h2>
-      <div class="row">
-        <span>From</span>
-        <input type="number" id="c1" placeholder="100" />
-        <span>to</span>
-        <input type="number" id="c2" placeholder="150" />
-      </div>
+      <div class="row"><span>From</span><input type="number" id="c1" placeholder="100" /><span>to</span><input type="number" id="c2" placeholder="150" /></div>
       <button class="calc-btn" onclick="calcC()">Calculate</button>
-      <div class="result-box" id="res-c">
-        <div class="result-num" id="res-c-num"></div>
-        <div class="result-label" id="res-c-label"></div>
-      </div>
+      <div class="result-box" id="res-c"><div class="result-num" id="res-c-num"></div><div class="result-label" id="res-c-label"></div></div>
     </div>
-
-    <!-- PERCENTAGE DECREASE -->
     <div class="calc-card">
       <h2>Percentage Decrease</h2>
-      <div class="row">
-        <span>From</span>
-        <input type="number" id="d1" placeholder="200" />
-        <span>to</span>
-        <input type="number" id="d2" placeholder="150" />
-      </div>
+      <div class="row"><span>From</span><input type="number" id="d1" placeholder="200" /><span>to</span><input type="number" id="d2" placeholder="150" /></div>
       <button class="calc-btn" onclick="calcD()">Calculate</button>
-      <div class="result-box" id="res-d">
-        <div class="result-num" id="res-d-num"></div>
-        <div class="result-label" id="res-d-label"></div>
-      </div>
+      <div class="result-box" id="res-d"><div class="result-num" id="res-d-num"></div><div class="result-label" id="res-d-label"></div></div>
     </div>
-
-    <!-- ADD PERCENTAGE -->
     <div class="calc-card">
       <h2>Add a Percentage</h2>
-      <div class="row">
-        <input type="number" id="e1" placeholder="100" />
-        <span>+</span>
-        <input type="number" id="e2" placeholder="20" />
-        <span>%</span>
-      </div>
+      <div class="row"><input type="number" id="e1" placeholder="100" /><span>+</span><input type="number" id="e2" placeholder="20" /><span>%</span></div>
       <button class="calc-btn" onclick="calcE()">Calculate</button>
-      <div class="result-box" id="res-e">
-        <div class="result-num" id="res-e-num"></div>
-        <div class="result-label" id="res-e-label"></div>
-      </div>
+      <div class="result-box" id="res-e"><div class="result-num" id="res-e-num"></div><div class="result-label" id="res-e-label"></div></div>
     </div>
-
-    <!-- SUBTRACT PERCENTAGE -->
     <div class="calc-card">
       <h2>Subtract a Percentage</h2>
-      <div class="row">
-        <input type="number" id="f1" placeholder="100" />
-        <span>−</span>
-        <input type="number" id="f2" placeholder="20" />
-        <span>%</span>
-      </div>
+      <div class="row"><input type="number" id="f1" placeholder="100" /><span>−</span><input type="number" id="f2" placeholder="20" /><span>%</span></div>
       <button class="calc-btn" onclick="calcF()">Calculate</button>
-      <div class="result-box" id="res-f">
-        <div class="result-num" id="res-f-num"></div>
-        <div class="result-label" id="res-f-label"></div>
-      </div>
+      <div class="result-box" id="res-f"><div class="result-num" id="res-f-num"></div><div class="result-label" id="res-f-label"></div></div>
     </div>
-
   </div>
 
-  <!-- EXPLAINER -->
-  <div class="explainer">
-    <h2>How to calculate percentages</h2>
-    <p>A percentage is a number expressed as a fraction of 100. The word comes from Latin "per centum" meaning "by the hundred." Here are the most common percentage formulas:</p>
-    <p><strong style="color:var(--text)">What is X% of Y?</strong></p>
-    <div class="formula">Result = (X / 100) × Y</div>
-    <p>Example: What is 25% of 200? → (25 / 100) × 200 = <strong style="color:var(--green)">50</strong></p>
-    <p><strong style="color:var(--text)">X is what % of Y?</strong></p>
-    <div class="formula">Result = (X / Y) × 100</div>
-    <p>Example: 50 is what % of 200? → (50 / 200) × 100 = <strong style="color:var(--green)">25%</strong></p>
-    <p><strong style="color:var(--text)">Percentage change (increase or decrease)</strong></p>
-    <div class="formula">Result = ((New - Old) / Old) × 100</div>
-    <p>Example: From 100 to 150 → ((150 - 100) / 100) × 100 = <strong style="color:var(--green)">50% increase</strong></p>
+  <!-- HOW TO CALCULATE PERCENTAGES -->
+  <div class="content-section">
+    <h2>How to Calculate Percentages</h2>
+    <p>A percentage is a number expressed as a fraction of 100. The word comes from the Latin <em>per centum</em>, meaning "by the hundred." Percentages are used everywhere — from calculating discounts and tax, to measuring growth rates, exam scores, and salary increases.</p>
+
+    <h3>Formula: What is X% of a number?</h3>
+    <p>To find a percentage of a number, multiply the number by the percentage and divide by 100.</p>
+    <div class="formula">Result = (Percentage ÷ 100) × Number</div>
+    <p>Example: What is 20% of 150? → (20 ÷ 100) × 150 = <strong style="color:var(--green)">30</strong></p>
+
+    <h3>Formula: What percentage is X of Y?</h3>
+    <p>To find what percentage one number is of another, divide the first by the second and multiply by 100.</p>
+    <div class="formula">Percentage = (X ÷ Y) × 100</div>
+    <p>Example: What percentage is 30 of 150? → (30 ÷ 150) × 100 = <strong style="color:var(--green)">20%</strong></p>
+
+    <h3>Formula: Percentage Increase or Decrease</h3>
+    <p>To calculate the percentage change between two values, subtract the old value from the new, divide by the old value, and multiply by 100. A positive result is an increase, a negative result is a decrease.</p>
+    <div class="formula">% Change = ((New Value − Old Value) ÷ Old Value) × 100</div>
+    <p>Example: Price went from £80 to £100 → ((100 − 80) ÷ 80) × 100 = <strong style="color:var(--green)">25% increase</strong></p>
+
+    <h3>Common Percentage Examples</h3>
+    <div class="examples-grid">
+      <div class="example-card"><div class="example-q">What is 10% of 500?</div><div class="example-a">50</div></div>
+      <div class="example-card"><div class="example-q">What is 25% of 200?</div><div class="example-a">50</div></div>
+      <div class="example-card"><div class="example-q">What is 15% of 80?</div><div class="example-a">12</div></div>
+      <div class="example-card"><div class="example-q">What is 5% of 1000?</div><div class="example-a">50</div></div>
+      <div class="example-card"><div class="example-q">50 is what % of 200?</div><div class="example-a">25%</div></div>
+      <div class="example-card"><div class="example-q">75 is what % of 300?</div><div class="example-a">25%</div></div>
+      <div class="example-card"><div class="example-q">% increase: 100 to 120</div><div class="example-a">20% increase</div></div>
+      <div class="example-card"><div class="example-q">% decrease: 200 to 160</div><div class="example-a">20% decrease</div></div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate a percentage of a number?</div>
+      <div class="faq-a">Multiply the number by the percentage, then divide by 100. For example, to find 20% of 150: (150 × 20) ÷ 100 = 30. Or use the calculator above — enter 20 in the first field and 150 in the second.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate percentage increase?</div>
+      <div class="faq-a">Subtract the old value from the new value, divide by the old value, then multiply by 100. Example: From 100 to 125 → ((125 − 100) ÷ 100) × 100 = 25% increase.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is the difference between percentage increase and percentage change?</div>
+      <div class="faq-a">They use the same formula. Percentage change is the general term — if the result is positive, it's an increase. If negative, it's a decrease. Our calculator labels them separately for clarity.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I add a percentage to a number?</div>
+      <div class="faq-a">Multiply the number by (1 + percentage/100). For example, to add 20% to 100: 100 × 1.20 = 120. This is useful for calculating prices with tax or markup added.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate a discount?</div>
+      <div class="faq-a">Use the "Subtract a Percentage" calculator above. Enter the original price and the discount percentage. For example, 20% off £150: 150 − (150 × 0.20) = £120. Or try our dedicated <a href="/tools/discount-calculator.html" style="color:var(--accent)">Discount Calculator</a>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is 1% of a number?</div>
+      <div class="faq-a">Simply divide the number by 100. For example, 1% of 500 = 5. This is a useful mental math trick — once you know 1%, you can easily find any percentage by multiplying.</div>
+    </div>
   </div>
 
   <div class="related">
     <h2>Related Tools</h2>
     <div class="related-grid">
-      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
       <a href="/tools/discount-calculator.html" class="related-card"><span style="font-size:1.4rem">🏷️</span><span style="font-size:0.88rem;font-weight:500">Discount Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
       <a href="/tools/vat-calculator.html" class="related-card"><span style="font-size:1.4rem">🧮</span><span style="font-size:0.88rem;font-weight:500">VAT Calculator</span></a>
       <a href="/tools/markup-calculator.html" class="related-card"><span style="font-size:1.4rem">🏷️</span><span style="font-size:0.88rem;font-weight:500">Markup Calculator</span></a>
     </div>
@@ -195,58 +242,14 @@
 
 <script>
   function fmt(n){return parseFloat(n.toFixed(4)).toLocaleString();}
-  function show(id,num,label){
-    document.getElementById(id).classList.add('show');
-    document.getElementById(id+'-num').textContent=num;
-    document.getElementById(id+'-label').textContent=label;
-  }
-  function calcA(){
-    const x=parseFloat(document.getElementById('a1').value);
-    const y=parseFloat(document.getElementById('a2').value);
-    if(isNaN(x)||isNaN(y))return;
-    const r=(x/100)*y;
-    show('res-a',fmt(r),x+'% of '+y+' = '+fmt(r));
-  }
-  function calcB(){
-    const x=parseFloat(document.getElementById('b1').value);
-    const y=parseFloat(document.getElementById('b2').value);
-    if(isNaN(x)||isNaN(y)||y===0)return;
-    const r=(x/y)*100;
-    show('res-b',fmt(r)+'%',x+' is '+fmt(r)+'% of '+y);
-  }
-  function calcC(){
-    const a=parseFloat(document.getElementById('c1').value);
-    const b=parseFloat(document.getElementById('c2').value);
-    if(isNaN(a)||isNaN(b)||a===0)return;
-    const r=((b-a)/a)*100;
-    const sign=r>=0?'+':'';
-    show('res-c',sign+fmt(r)+'%',r>=0?'Increase from '+a+' to '+b:'Decrease from '+a+' to '+b);
-  }
-  function calcD(){
-    const a=parseFloat(document.getElementById('d1').value);
-    const b=parseFloat(document.getElementById('d2').value);
-    if(isNaN(a)||isNaN(b)||a===0)return;
-    const r=((a-b)/a)*100;
-    show('res-d',fmt(r)+'%','Decrease from '+a+' to '+b);
-  }
-  function calcE(){
-    const a=parseFloat(document.getElementById('e1').value);
-    const b=parseFloat(document.getElementById('e2').value);
-    if(isNaN(a)||isNaN(b))return;
-    const r=a+(a*b/100);
-    show('res-e',fmt(r),a+' + '+b+'% = '+fmt(r));
-  }
-  function calcF(){
-    const a=parseFloat(document.getElementById('f1').value);
-    const b=parseFloat(document.getElementById('f2').value);
-    if(isNaN(a)||isNaN(b))return;
-    const r=a-(a*b/100);
-    show('res-f',fmt(r),a+' − '+b+'% = '+fmt(r));
-  }
-  // Allow Enter key on all inputs
-  document.querySelectorAll('input').forEach(inp=>{
-    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){inp.closest('.calc-card').querySelector('.calc-btn').click();}});
-  });
+  function show(id,num,label){document.getElementById(id).classList.add('show');document.getElementById(id+'-num').textContent=num;document.getElementById(id+'-label').textContent=label;}
+  function calcA(){const x=parseFloat(document.getElementById('a1').value),y=parseFloat(document.getElementById('a2').value);if(isNaN(x)||isNaN(y))return;show('res-a',fmt((x/100)*y),x+'% of '+y+' = '+fmt((x/100)*y));}
+  function calcB(){const x=parseFloat(document.getElementById('b1').value),y=parseFloat(document.getElementById('b2').value);if(isNaN(x)||isNaN(y)||y===0)return;show('res-b',fmt((x/y)*100)+'%',x+' is '+fmt((x/y)*100)+'% of '+y);}
+  function calcC(){const a=parseFloat(document.getElementById('c1').value),b=parseFloat(document.getElementById('c2').value);if(isNaN(a)||isNaN(b)||a===0)return;const r=((b-a)/a)*100;show('res-c',(r>=0?'+':'')+fmt(r)+'%',r>=0?'Increase from '+a+' to '+b:'Change from '+a+' to '+b);}
+  function calcD(){const a=parseFloat(document.getElementById('d1').value),b=parseFloat(document.getElementById('d2').value);if(isNaN(a)||isNaN(b)||a===0)return;show('res-d',fmt(((a-b)/a)*100)+'%','Decrease from '+a+' to '+b);}
+  function calcE(){const a=parseFloat(document.getElementById('e1').value),b=parseFloat(document.getElementById('e2').value);if(isNaN(a)||isNaN(b))return;show('res-e',fmt(a+(a*b/100)),a+' + '+b+'% = '+fmt(a+(a*b/100)));}
+  function calcF(){const a=parseFloat(document.getElementById('f1').value),b=parseFloat(document.getElementById('f2').value);if(isNaN(a)||isNaN(b))return;show('res-f',fmt(a-(a*b/100)),a+' − '+b+'% = '+fmt(a-(a*b/100)));}
+  document.querySelectorAll('input').forEach(inp=>{inp.addEventListener('keydown',e=>{if(e.key==='Enter')inp.closest('.calc-card').querySelector('.calc-btn').click();});});
 </script>
 </body>
 </html>
