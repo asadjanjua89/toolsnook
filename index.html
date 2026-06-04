@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ToolsNook – Free Online Business Tools & Calculators</title>
-  <meta name="description" content="Free online business tools and calculators. Profit margin, invoice generator, ROI calculator, AI writing tools, and 20+ more tools for entrepreneurs and small businesses." />
-  <meta name="keywords" content="free business tools, online calculator, profit margin calculator, invoice generator, ROI calculator, AI writing tools" />
+  <meta name="description" content="Free online business tools and calculators. Profit margin, invoice generator, BMI calculator, tip calculator, AI writing tools, and 25+ more tools for entrepreneurs and small businesses." />
+  <meta name="keywords" content="free business tools, online calculator, profit margin calculator, invoice generator, BMI calculator, tip calculator, percentage calculator, age calculator, discount calculator, AI writing tools" />
   <meta property="og:title" content="ToolsNook – Free Online Business Tools" />
-  <meta property="og:description" content="20+ free tools for entrepreneurs, freelancers and small business owners." />
+  <meta property="og:description" content="25+ free tools for entrepreneurs, freelancers and small business owners." />
   <meta property="og:type" content="website" />
   <meta name="google-site-verification" content="fNWe10L3ElbaL9t9Q2VdqC9ZwIp6n6gImQUN-Wn9nNE" />
-  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,40 +24,73 @@
       --text: #f0f0f5; --muted: #8888a0; --accent: #6c63ff;
       --green: #43e97b; --amber: #f7971e; --red: #ff6b6b; --blue: #4ecdc4;
     }
+    body.light {
+      --bg: #f5f5fa; --bg2: #ffffff; --bg3: #eeeef5;
+      --border: rgba(0,0,0,0.08); --border2: rgba(0,0,0,0.14);
+      --text: #111118; --muted: #6666888;
+    }
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; transition: background 0.3s, color 0.3s; }
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(10,10,15,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    body.light nav { background: rgba(245,245,250,0.9); }
     .logo { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
     .logo span { color: var(--accent); }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav ul a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    nav ul a:hover { color: var(--text); }
+    .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .theme-btn { background: var(--bg3); border: 1px solid var(--border2); color: var(--muted); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .theme-btn:hover { color: var(--text); border-color: var(--accent); }
 
     /* HERO */
-    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero { min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem 3rem; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(108,99,255,0.15) 0%, transparent 70%); pointer-events: none; }
     .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.3); color: #a59fff; font-size: 0.8rem; font-weight: 500; padding: 6px 14px; border-radius: 100px; margin-bottom: 1.5rem; animation: fadeUp 0.6s ease both; }
-    .hero-badge::before { content: '✦'; font-size: 0.7rem; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; animation: fadeUp 0.6s 0.1s ease both; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.25rem; animation: fadeUp 0.6s 0.1s ease both; }
     h1 em { font-style: normal; background: linear-gradient(135deg, var(--accent), var(--red)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.7; animation: fadeUp 0.6s 0.2s ease both; }
-    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; animation: fadeUp 0.6s 0.3s ease both; }
-    .btn-primary { background: var(--accent); color: #fff; padding: 0.85rem 2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
-    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-secondary { background: transparent; color: var(--text); padding: 0.85rem 2rem; border-radius: 8px; border: 1px solid var(--border2); font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: background 0.2s; }
-    .btn-secondary:hover { background: var(--bg3); }
-    .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; animation: fadeUp 0.6s 0.4s ease both; }
+    .hero p { font-size: 1.1rem; color: var(--muted); max-width: 500px; margin: 0 auto 2.5rem; animation: fadeUp 0.6s 0.2s ease both; }
+
+    /* SEARCH BAR */
+    .search-wrap { width: 100%; max-width: 560px; margin: 0 auto 2rem; position: relative; animation: fadeUp 0.6s 0.25s ease both; }
+    .search-input { width: 100%; background: var(--bg2); border: 1px solid var(--border2); border-radius: 14px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 1rem; padding: 0.9rem 1.25rem 0.9rem 3rem; transition: border-color 0.2s, box-shadow 0.2s; }
+    .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(108,99,255,0.15); }
+    .search-input::placeholder { color: var(--muted); }
+    .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 1rem; pointer-events: none; }
+    .search-results { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; background: var(--bg2); border: 1px solid var(--border2); border-radius: 12px; overflow: hidden; z-index: 50; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .search-result-item { padding: 0.85rem 1.25rem; cursor: pointer; transition: background 0.15s; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+    .search-result-item:hover { background: var(--bg3); }
+    .search-result-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .search-result-name { font-size: 0.9rem; font-weight: 500; }
+    .search-result-cat { font-size: 0.75rem; color: var(--muted); }
+    .search-no-results { padding: 1.25rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+    .hero-stats { display: flex; gap: 3rem; animation: fadeUp 0.6s 0.3s ease both; }
     .stat { text-align: center; }
     .stat-num { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; }
     .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
 
-    /* TOOLS SECTION */
-    .tools-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+    /* SECTIONS */
+    .tools-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
     .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
-    h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
-    .section-sub { color: var(--muted); font-size: 1rem; max-width: 480px; margin-bottom: 2.5rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .section-sub { color: var(--muted); font-size: 0.95rem; max-width: 480px; margin-bottom: 2rem; }
+
+    /* RECENTLY USED */
+    .recently-used { display: none; margin-bottom: 2.5rem; }
+    .recently-used.show { display: block; }
+    .recent-grid { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.75rem; }
+    .recent-card { background: var(--bg2); border: 1px solid var(--accent); border-radius: 10px; padding: 0.7rem 1rem; text-decoration: none; color: var(--text); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: background 0.2s; }
+    .recent-card:hover { background: var(--bg3); }
+    .recent-clear { background: none; border: none; color: var(--muted); font-size: 0.78rem; cursor: pointer; margin-top: 0.5rem; padding: 2px 0; }
+    .recent-clear:hover { color: var(--red); }
+
+    /* POPULAR TOOLS */
+    .popular-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+    .popular-card { background: linear-gradient(135deg, var(--bg2), var(--bg3)); border: 1px solid var(--accent); border-radius: 14px; padding: 1.25rem; text-decoration: none; color: var(--text); transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+    .popular-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(108,99,255,0.08), transparent); pointer-events: none; }
+    .popular-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(108,99,255,0.2); }
+    .popular-badge { position: absolute; top: 0.6rem; right: 0.6rem; background: var(--accent); color: #fff; font-size: 0.6rem; font-weight: 700; padding: 2px 6px; border-radius: 4px; letter-spacing: 0.05em; }
+    .popular-icon { font-size: 1.6rem; margin-bottom: 0.6rem; display: block; }
+    .popular-name { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; }
 
     /* CATEGORY TABS */
     .cat-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
@@ -72,7 +105,7 @@
     .cat-section.hidden { display: none; }
     .cat-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
     .cat-icon { font-size: 1.2rem; }
-    .cat-name { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); }
+    .cat-name { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; }
     .cat-badge { font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
     .badge-finance { background: rgba(67,233,123,0.12); color: var(--green); }
     .badge-hr { background: rgba(78,205,196,0.12); color: var(--blue); }
@@ -80,7 +113,6 @@
     .badge-billing { background: rgba(247,151,30,0.12); color: var(--amber); }
     .badge-ai { background: rgba(255,107,107,0.12); color: var(--red); }
     .badge-math { background: rgba(100,200,255,0.12); color: #64c8ff; }
-    .tag-math { background: rgba(100,200,255,0.1); color: #64c8ff; }
 
     /* TOOLS GRID */
     .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
@@ -97,57 +129,114 @@
     .tag-startup { background: rgba(108,99,255,0.12); color: #a59fff; }
     .tag-billing { background: rgba(247,151,30,0.1); color: var(--amber); }
     .tag-ai { background: rgba(255,107,107,0.1); color: var(--red); }
+    .tag-math { background: rgba(100,200,255,0.1); color: #64c8ff; }
     .ai-badge { position: absolute; top: 0.75rem; right: 0.75rem; background: rgba(255,107,107,0.15); color: var(--red); font-size: 0.62rem; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
 
     /* FEATURES */
-    .features-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .features-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
     .feature-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
     .feature-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
     .feature-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
     .feature-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
+    /* MOBILE BOTTOM NAV */
+    .mobile-bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: var(--bg2); border-top: 1px solid var(--border2); padding: 0.5rem 0; backdrop-filter: blur(12px); }
+    .mobile-nav-items { display: flex; justify-content: space-around; }
+    .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--muted); text-decoration: none; font-size: 0.65rem; padding: 0.4rem 1rem; cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; transition: color 0.2s; }
+    .mobile-nav-item:hover, .mobile-nav-item.active { color: var(--accent); }
+    .mobile-nav-icon { font-size: 1.2rem; }
+
+    /* FEEDBACK WIDGET */
+    .feedback-float { position: fixed; bottom: 5rem; right: 1.5rem; z-index: 90; display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
+    @media(min-width:768px) { .feedback-float { bottom: 2rem; } }
+    .feedback-btn { background: var(--bg2); border: 1px solid var(--border2); border-radius: 100px; padding: 8px 16px; font-size: 0.82rem; color: var(--muted); cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; }
+    .feedback-btn:hover { border-color: var(--accent); color: var(--text); }
+    .feedback-popup { background: var(--bg2); border: 1px solid var(--border2); border-radius: 16px; padding: 1.25rem; width: 260px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); display: none; }
+    .feedback-popup.show { display: block; }
+    .feedback-popup h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .feedback-btns { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .fb { flex: 1; padding: 0.6rem; border-radius: 8px; border: 1px solid var(--border2); background: var(--bg3); color: var(--muted); font-size: 1.2rem; cursor: pointer; transition: all 0.2s; }
+    .fb:hover { border-color: var(--accent); background: rgba(108,99,255,0.1); }
+    .feedback-textarea { width: 100%; background: var(--bg3); border: 1px solid var(--border2); border-radius: 8px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; padding: 0.6rem 0.8rem; resize: none; height: 70px; }
+    .feedback-textarea::placeholder { color: var(--muted); }
+    .feedback-textarea:focus { outline: none; border-color: var(--accent); }
+    .feedback-submit { width: 100%; padding: 0.6rem; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; cursor: pointer; margin-top: 0.5rem; }
+    .feedback-thanks { text-align: center; padding: 0.5rem; font-size: 0.88rem; color: var(--green); display: none; }
+
     /* FOOTER */
-    footer { border-top: 1px solid var(--border); text-align: center; padding: 2.5rem 2rem; color: var(--muted); font-size: 0.85rem; }
+    footer { border-top: 1px solid var(--border); text-align: center; padding: 2.5rem 2rem 5rem; color: var(--muted); font-size: 0.85rem; }
+    @media(min-width:768px) { footer { padding-bottom: 2.5rem; } }
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 600px) { nav ul { display: none; } .hero-stats { gap: 1.5rem; } .stat-num { font-size: 1.4rem; } .cat-tabs { gap: 0.4rem; } .cat-tab { padding: 6px 12px; font-size: 0.78rem; } }
+
+    @media (max-width: 767px) {
+      .mobile-bottom-nav { display: block; }
+      nav ul { display: none; }
+      .hero-stats { gap: 1.5rem; }
+      .stat-num { font-size: 1.4rem; }
+      .cat-tabs { gap: 0.4rem; }
+      .cat-tab { padding: 6px 12px; font-size: 0.78rem; }
+    }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <nav>
   <a href="/" class="logo">Tools<span>Nook</span></a>
-  <ul>
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light/dark mode">🌙</button>
+  </div>
 </nav>
 
 <div class="hero">
-  <div class="hero-badge">20+ Free Business Tools</div>
+  <div class="hero-badge">✦ 25+ Free Business Tools</div>
   <h1>Your nook for<br /><em>smart tools</em></h1>
-  <p>Free online calculators and AI-powered tools for entrepreneurs, freelancers, and small business owners. No signup. No cost. Ever.</p>
-  <div class="hero-cta">
-    <a href="#tools" class="btn-primary">Browse All Tools</a>
-    <a href="#about" class="btn-secondary">How it works</a>
+  <p>Free calculators and AI-powered tools for entrepreneurs, freelancers, and small business owners. No signup. No cost. Ever.</p>
+
+  <!-- SEARCH BAR -->
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" class="search-input" id="search-input" placeholder="Search tools... e.g. BMI, tip, invoice, profit margin" oninput="handleSearch(this.value)" onblur="closeSearchDelay()" onfocus="handleSearch(this.value)" />
+    <div class="search-results" id="search-results"></div>
   </div>
+
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Free Tools</div></div>
+    <div class="stat"><div class="stat-num">25+</div><div class="stat-label">Free Tools</div></div>
     <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Always Free</div></div>
     <div class="stat"><div class="stat-num">∞</div><div class="stat-label">No Limits</div></div>
   </div>
 </div>
 
 <section class="tools-section" id="tools">
-  <div class="section-label">All Tools</div>
-  <h2>Everything you need,<br />nothing you don't</h2>
-  <p class="section-sub">Pick a category or browse all tools. No account required.</p>
+
+  <!-- RECENTLY USED -->
+  <div class="recently-used" id="recently-used">
+    <div class="section-label">⏱ Recently Used</div>
+    <div class="recent-grid" id="recent-grid"></div>
+    <button class="recent-clear" onclick="clearRecent()">✕ Clear history</button>
+  </div>
+
+  <!-- MOST POPULAR -->
+  <div style="margin-bottom:3rem">
+    <div class="section-label">🔥 Most Popular</div>
+    <h2 style="font-size:1.4rem;margin-bottom:1rem">Start with these</h2>
+    <div class="popular-grid">
+      <a href="/tools/percentage-calculator.html" class="popular-card" onclick="trackRecent('Percentage Calculator','%',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">%</span><div class="popular-name">Percentage Calculator</div></a>
+      <a href="/tools/bmi-calculator.html" class="popular-card" onclick="trackRecent('BMI Calculator','⚖️',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">⚖️</span><div class="popular-name">BMI Calculator</div></a>
+      <a href="/tools/tip-calculator.html" class="popular-card" onclick="trackRecent('Tip Calculator','🍽️',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🍽️</span><div class="popular-name">Tip Calculator</div></a>
+      <a href="/tools/age-calculator.html" class="popular-card" onclick="trackRecent('Age Calculator','🎂',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🎂</span><div class="popular-name">Age Calculator</div></a>
+      <a href="/tools/discount-calculator.html" class="popular-card" onclick="trackRecent('Discount Calculator','🏷️',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🏷️</span><div class="popular-name">Discount Calculator</div></a>
+      <a href="/tools/invoice-generator.html" class="popular-card" onclick="trackRecent('Invoice Generator','🧾',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🧾</span><div class="popular-name">Invoice Generator</div></a>
+    </div>
+  </div>
 
   <!-- CATEGORY TABS -->
+  <div class="section-label">All Tools</div>
+  <h2 style="margin-bottom:0.75rem">Browse by category</h2>
+  <p class="section-sub">Pick a category or browse everything. No account required.</p>
   <div class="cat-tabs">
     <button class="cat-tab active" onclick="filterCat('all', this)">🗂 All Tools <span class="cat-count">25</span></button>
     <button class="cat-tab" onclick="filterCat('finance', this)">💰 Finance <span class="cat-count">9</span></button>
@@ -155,96 +244,73 @@
     <button class="cat-tab" onclick="filterCat('hr', this)">👥 HR & Salary <span class="cat-count">2</span></button>
     <button class="cat-tab" onclick="filterCat('startup', this)">🚀 Startup <span class="cat-count">2</span></button>
     <button class="cat-tab" onclick="filterCat('ai', this)">✨ AI Writing <span class="cat-count">5</span></button>
-    <button class="cat-tab" onclick="filterCat('math', this)">🔢 Math &amp; Everyday <span class="cat-count">5</span></button>
+    <button class="cat-tab" onclick="filterCat('math', this)">🔢 Math & Everyday <span class="cat-count">5</span></button>
   </div>
 
-  <!-- FINANCE CATEGORY -->
+  <!-- FINANCE -->
   <div class="cat-section" data-cat="finance">
-    <div class="cat-heading">
-      <span class="cat-icon">💰</span>
-      <span class="cat-name">Finance & Business</span>
-      <span class="cat-badge badge-finance">9 tools</span>
-    </div>
+    <div class="cat-heading"><span class="cat-icon">💰</span><span class="cat-name">Finance & Business</span><span class="cat-badge badge-finance">9 tools</span></div>
     <div class="tools-grid">
-      <a href="/tools/profit-margin-calculator.html" class="tool-card"><span class="tool-icon">📈</span><div class="tool-name">Profit Margin Calculator</div><div class="tool-desc">Gross, net & operating margins instantly.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/roi-calculator.html" class="tool-card"><span class="tool-icon">💰</span><div class="tool-name">ROI Calculator</div><div class="tool-desc">Return on investment for any project or campaign.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/break-even-calculator.html" class="tool-card"><span class="tool-icon">⚖️</span><div class="tool-name">Break-Even Calculator</div><div class="tool-desc">Find out when your business becomes profitable.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/markup-calculator.html" class="tool-card"><span class="tool-icon">🏷️</span><div class="tool-name">Markup Calculator</div><div class="tool-desc">Calculate selling price from cost and markup %.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/compound-interest-calculator.html" class="tool-card"><span class="tool-icon">📊</span><div class="tool-name">Compound Interest</div><div class="tool-desc">See how your money grows over time.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/loan-calculator.html" class="tool-card"><span class="tool-icon">🏦</span><div class="tool-name">Business Loan Calculator</div><div class="tool-desc">Monthly payments & amortization schedule.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/working-capital-calculator.html" class="tool-card"><span class="tool-icon">🔄</span><div class="tool-name">Working Capital Calculator</div><div class="tool-desc">Net working capital and current ratio.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/debt-payoff-calculator.html" class="tool-card"><span class="tool-icon">💳</span><div class="tool-name">Debt Payoff Calculator</div><div class="tool-desc">Avalanche vs snowball debt payoff methods.</div><span class="tool-tag tag-finance">Finance</span></a>
-      <a href="/tools/vat-calculator.html" class="tool-card"><span class="tool-icon">🧮</span><div class="tool-name">VAT / Tax Calculator</div><div class="tool-desc">Add or remove VAT/GST from any amount.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="tool-card" onclick="trackRecent('Profit Margin Calculator','📈',this.href)"><span class="tool-icon">📈</span><div class="tool-name">Profit Margin Calculator</div><div class="tool-desc">Gross, net & operating margins instantly.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/roi-calculator.html" class="tool-card" onclick="trackRecent('ROI Calculator','💰',this.href)"><span class="tool-icon">💰</span><div class="tool-name">ROI Calculator</div><div class="tool-desc">Return on investment for any project or campaign.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/break-even-calculator.html" class="tool-card" onclick="trackRecent('Break-Even Calculator','⚖️',this.href)"><span class="tool-icon">⚖️</span><div class="tool-name">Break-Even Calculator</div><div class="tool-desc">Find out when your business becomes profitable.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/markup-calculator.html" class="tool-card" onclick="trackRecent('Markup Calculator','🏷️',this.href)"><span class="tool-icon">🏷️</span><div class="tool-name">Markup Calculator</div><div class="tool-desc">Calculate selling price from cost and markup %.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/compound-interest-calculator.html" class="tool-card" onclick="trackRecent('Compound Interest','📊',this.href)"><span class="tool-icon">📊</span><div class="tool-name">Compound Interest</div><div class="tool-desc">See how your money grows over time.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/loan-calculator.html" class="tool-card" onclick="trackRecent('Loan Calculator','🏦',this.href)"><span class="tool-icon">🏦</span><div class="tool-name">Business Loan Calculator</div><div class="tool-desc">Monthly payments & amortization schedule.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/working-capital-calculator.html" class="tool-card" onclick="trackRecent('Working Capital','🔄',this.href)"><span class="tool-icon">🔄</span><div class="tool-name">Working Capital Calculator</div><div class="tool-desc">Net working capital and current ratio.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/debt-payoff-calculator.html" class="tool-card" onclick="trackRecent('Debt Payoff Calculator','💳',this.href)"><span class="tool-icon">💳</span><div class="tool-name">Debt Payoff Calculator</div><div class="tool-desc">Avalanche vs snowball debt payoff methods.</div><span class="tool-tag tag-finance">Finance</span></a>
+      <a href="/tools/vat-calculator.html" class="tool-card" onclick="trackRecent('VAT Calculator','🧮',this.href)"><span class="tool-icon">🧮</span><div class="tool-name">VAT / Tax Calculator</div><div class="tool-desc">Add or remove VAT/GST from any amount.</div><span class="tool-tag tag-finance">Finance</span></a>
     </div>
   </div>
 
-  <!-- BILLING CATEGORY -->
+  <!-- BILLING -->
   <div class="cat-section" data-cat="billing">
-    <div class="cat-heading">
-      <span class="cat-icon">🧾</span>
-      <span class="cat-name">Invoicing & Billing</span>
-      <span class="cat-badge badge-billing">2 tools</span>
-    </div>
+    <div class="cat-heading"><span class="cat-icon">🧾</span><span class="cat-name">Invoicing & Billing</span><span class="cat-badge badge-billing">2 tools</span></div>
     <div class="tools-grid">
-      <a href="/tools/invoice-generator.html" class="tool-card"><span class="tool-icon">🧾</span><div class="tool-name">Invoice Generator</div><div class="tool-desc">Create and download professional invoices as PDF.</div><span class="tool-tag tag-billing">Billing</span></a>
-      <a href="/tools/currency-converter.html" class="tool-card"><span class="tool-icon">💱</span><div class="tool-name">Currency Converter</div><div class="tool-desc">Convert between 30+ currencies with live rates.</div><span class="tool-tag tag-billing">Billing</span></a>
+      <a href="/tools/invoice-generator.html" class="tool-card" onclick="trackRecent('Invoice Generator','🧾',this.href)"><span class="tool-icon">🧾</span><div class="tool-name">Invoice Generator</div><div class="tool-desc">Create and download professional invoices as PDF.</div><span class="tool-tag tag-billing">Billing</span></a>
+      <a href="/tools/currency-converter.html" class="tool-card" onclick="trackRecent('Currency Converter','💱',this.href)"><span class="tool-icon">💱</span><div class="tool-name">Currency Converter</div><div class="tool-desc">Convert between 30+ currencies with live rates.</div><span class="tool-tag tag-billing">Billing</span></a>
     </div>
   </div>
 
-  <!-- HR CATEGORY -->
+  <!-- HR -->
   <div class="cat-section" data-cat="hr">
-    <div class="cat-heading">
-      <span class="cat-icon">👥</span>
-      <span class="cat-name">HR & Salary</span>
-      <span class="cat-badge badge-hr">2 tools</span>
-    </div>
+    <div class="cat-heading"><span class="cat-icon">👥</span><span class="cat-name">HR & Salary</span><span class="cat-badge badge-hr">2 tools</span></div>
     <div class="tools-grid">
-      <a href="/tools/salary-to-hourly.html" class="tool-card"><span class="tool-icon">⏱️</span><div class="tool-name">Salary to Hourly</div><div class="tool-desc">Convert annual salary to hourly, daily & weekly rates.</div><span class="tool-tag tag-hr">HR</span></a>
-      <a href="/tools/freelancer-rate-calculator.html" class="tool-card"><span class="tool-icon">🧑‍💻</span><div class="tool-name">Freelancer Rate Calculator</div><div class="tool-desc">Find your ideal hourly rate based on income goals.</div><span class="tool-tag tag-hr">HR</span></a>
+      <a href="/tools/salary-to-hourly.html" class="tool-card" onclick="trackRecent('Salary to Hourly','⏱️',this.href)"><span class="tool-icon">⏱️</span><div class="tool-name">Salary to Hourly</div><div class="tool-desc">Convert annual salary to hourly, daily & weekly rates.</div><span class="tool-tag tag-hr">HR</span></a>
+      <a href="/tools/freelancer-rate-calculator.html" class="tool-card" onclick="trackRecent('Freelancer Rate','🧑‍💻',this.href)"><span class="tool-icon">🧑‍💻</span><div class="tool-name">Freelancer Rate Calculator</div><div class="tool-desc">Find your ideal hourly rate based on income goals.</div><span class="tool-tag tag-hr">HR</span></a>
     </div>
   </div>
 
-  <!-- STARTUP CATEGORY -->
+  <!-- STARTUP -->
   <div class="cat-section" data-cat="startup">
-    <div class="cat-heading">
-      <span class="cat-icon">🚀</span>
-      <span class="cat-name">Startup & Planning</span>
-      <span class="cat-badge badge-startup">2 tools</span>
-    </div>
+    <div class="cat-heading"><span class="cat-icon">🚀</span><span class="cat-name">Startup & Planning</span><span class="cat-badge badge-startup">2 tools</span></div>
     <div class="tools-grid">
-      <a href="/tools/startup-cost-estimator.html" class="tool-card"><span class="tool-icon">🚀</span><div class="tool-name">Startup Cost Estimator</div><div class="tool-desc">Plan your full business launch budget by category.</div><span class="tool-tag tag-startup">Planning</span></a>
-      <a href="/tools/business-plan-outline.html" class="tool-card"><span class="tool-icon">📋</span><div class="tool-name">AI Business Plan Generator</div><div class="tool-desc">13-section business plan tailored to your idea.</div><span class="tool-tag tag-ai">AI</span><div class="ai-badge">AI</div></a>
+      <a href="/tools/startup-cost-estimator.html" class="tool-card" onclick="trackRecent('Startup Cost Estimator','🚀',this.href)"><span class="tool-icon">🚀</span><div class="tool-name">Startup Cost Estimator</div><div class="tool-desc">Plan your full business launch budget by category.</div><span class="tool-tag tag-startup">Planning</span></a>
+      <a href="/tools/business-plan-outline.html" class="tool-card" onclick="trackRecent('Business Plan Generator','📋',this.href)"><span class="tool-icon">📋</span><div class="tool-name">AI Business Plan Generator</div><div class="tool-desc">13-section business plan tailored to your idea.</div><span class="tool-tag tag-ai">AI</span><div class="ai-badge">AI</div></a>
     </div>
   </div>
 
-  <!-- AI WRITING CATEGORY -->
+  <!-- AI -->
   <div class="cat-section" data-cat="ai">
-    <div class="cat-heading">
-      <span class="cat-icon">✨</span>
-      <span class="cat-name">AI Writing Tools</span>
-      <span class="cat-badge badge-ai">5 tools · 3 free uses/day</span>
-    </div>
+    <div class="cat-heading"><span class="cat-icon">✨</span><span class="cat-name">AI Writing Tools</span><span class="cat-badge badge-ai">5 tools · 3 free uses/day</span></div>
     <div class="tools-grid">
-      <a href="/tools/ai-business-name-generator.html" class="tool-card"><div class="ai-badge">AI</div><span class="tool-icon">✨</span><div class="tool-name">Business Name Generator</div><div class="tool-desc">12 unique name ideas with taglines & domain suggestions.</div><span class="tool-tag tag-ai">AI Writing</span></a>
-      <a href="/tools/ai-cover-letter.html" class="tool-card"><div class="ai-badge">AI</div><span class="tool-icon">📝</span><div class="tool-name">AI Cover Letter Writer</div><div class="tool-desc">Tailored professional cover letters in seconds.</div><span class="tool-tag tag-ai">AI Writing</span></a>
-      <a href="/tools/ai-bio-generator.html" class="tool-card"><div class="ai-badge">AI</div><span class="tool-icon">👤</span><div class="tool-name">AI Bio Generator</div><div class="tool-desc">Professional bios for LinkedIn, Twitter and more.</div><span class="tool-tag tag-ai">AI Writing</span></a>
-      <a href="/tools/ai-product-description.html" class="tool-card"><div class="ai-badge">AI</div><span class="tool-icon">🛍️</span><div class="tool-name">Product Description Writer</div><div class="tool-desc">Conversion-focused descriptions for Shopify, Amazon & Etsy.</div><span class="tool-tag tag-ai">AI Writing</span></a>
-      <a href="/tools/ai-email-subject.html" class="tool-card"><div class="ai-badge">AI</div><span class="tool-icon">📧</span><div class="tool-name">Email Subject Generator</div><div class="tool-desc">10 high-converting subject lines for any campaign.</div><span class="tool-tag tag-ai">AI Writing</span></a>
+      <a href="/tools/ai-business-name-generator.html" class="tool-card" onclick="trackRecent('Business Name Generator','✨',this.href)"><div class="ai-badge">AI</div><span class="tool-icon">✨</span><div class="tool-name">Business Name Generator</div><div class="tool-desc">12 unique name ideas with taglines & domain suggestions.</div><span class="tool-tag tag-ai">AI Writing</span></a>
+      <a href="/tools/ai-cover-letter.html" class="tool-card" onclick="trackRecent('Cover Letter Writer','📝',this.href)"><div class="ai-badge">AI</div><span class="tool-icon">📝</span><div class="tool-name">AI Cover Letter Writer</div><div class="tool-desc">Tailored professional cover letters in seconds.</div><span class="tool-tag tag-ai">AI Writing</span></a>
+      <a href="/tools/ai-bio-generator.html" class="tool-card" onclick="trackRecent('Bio Generator','👤',this.href)"><div class="ai-badge">AI</div><span class="tool-icon">👤</span><div class="tool-name">AI Bio Generator</div><div class="tool-desc">Professional bios for LinkedIn, Twitter and more.</div><span class="tool-tag tag-ai">AI Writing</span></a>
+      <a href="/tools/ai-product-description.html" class="tool-card" onclick="trackRecent('Product Description Writer','🛍️',this.href)"><div class="ai-badge">AI</div><span class="tool-icon">🛍️</span><div class="tool-name">Product Description Writer</div><div class="tool-desc">Conversion-focused descriptions for Shopify, Amazon & Etsy.</div><span class="tool-tag tag-ai">AI Writing</span></a>
+      <a href="/tools/ai-email-subject.html" class="tool-card" onclick="trackRecent('Email Subject Generator','📧',this.href)"><div class="ai-badge">AI</div><span class="tool-icon">📧</span><div class="tool-name">Email Subject Generator</div><div class="tool-desc">10 high-converting subject lines for any campaign.</div><span class="tool-tag tag-ai">AI Writing</span></a>
     </div>
   </div>
-  <!-- MATH & EVERYDAY CATEGORY -->
+
+  <!-- MATH -->
   <div class="cat-section" data-cat="math">
-    <div class="cat-heading">
-      <span class="cat-icon">🔢</span>
-      <span class="cat-name">Math &amp; Everyday</span>
-      <span class="cat-badge badge-math">5 tools</span>
-    </div>
+    <div class="cat-heading"><span class="cat-icon">🔢</span><span class="cat-name">Math & Everyday</span><span class="cat-badge badge-math">5 tools</span></div>
     <div class="tools-grid">
-      <a href="/tools/percentage-calculator.html" class="tool-card"><span class="tool-icon">%</span><div class="tool-name">Percentage Calculator</div><div class="tool-desc">What is X% of Y, percentage change, increase &amp; decrease.</div><span class="tool-tag tag-math">Math</span></a>
-      <a href="/tools/age-calculator.html" class="tool-card"><span class="tool-icon">🎂</span><div class="tool-name">Age Calculator</div><div class="tool-desc">How old am I? Age in years, months, days, hours. Age difference &amp; future age.</div><span class="tool-tag tag-math">Math</span></a>
-      <a href="/tools/discount-calculator.html" class="tool-card"><span class="tool-icon">🏷️</span><div class="tool-name">Discount Calculator</div><div class="tool-desc">Sale price, percent off, original price, stacked discounts &amp; BOGO deals.</div><span class="tool-tag tag-math">Math</span></a>
-      <a href="/tools/tip-calculator.html" class="tool-card"><span class="tool-icon">🍽️</span><div class="tool-name">Tip Calculator</div><div class="tool-desc">How much to tip at restaurants, delivery, Uber, hairdressers. Split bill per person.</div><span class="tool-tag tag-math">Math</span></a>
-      <a href="/tools/bmi-calculator.html" class="tool-card"><span class="tool-icon">⚖️</span><div class="tool-name">BMI Calculator</div><div class="tool-desc">Body mass index, healthy weight range, target weight &amp; New BMI formula.</div><span class="tool-tag tag-math">Math</span></a>
+      <a href="/tools/percentage-calculator.html" class="tool-card" onclick="trackRecent('Percentage Calculator','%',this.href)"><span class="tool-icon">%</span><div class="tool-name">Percentage Calculator</div><div class="tool-desc">What is X% of Y, percentage change, increase & decrease.</div><span class="tool-tag tag-math">Math</span></a>
+      <a href="/tools/age-calculator.html" class="tool-card" onclick="trackRecent('Age Calculator','🎂',this.href)"><span class="tool-icon">🎂</span><div class="tool-name">Age Calculator</div><div class="tool-desc">How old am I? Age in years, months, days, hours. Age difference & future age.</div><span class="tool-tag tag-math">Math</span></a>
+      <a href="/tools/discount-calculator.html" class="tool-card" onclick="trackRecent('Discount Calculator','🏷️',this.href)"><span class="tool-icon">🏷️</span><div class="tool-name">Discount Calculator</div><div class="tool-desc">Sale price, percent off, original price, stacked discounts & BOGO deals.</div><span class="tool-tag tag-math">Math</span></a>
+      <a href="/tools/tip-calculator.html" class="tool-card" onclick="trackRecent('Tip Calculator','🍽️',this.href)"><span class="tool-icon">🍽️</span><div class="tool-name">Tip Calculator</div><div class="tool-desc">How much to tip at restaurants, delivery, Uber, hairdressers. Split bill per person.</div><span class="tool-tag tag-math">Math</span></a>
+      <a href="/tools/bmi-calculator.html" class="tool-card" onclick="trackRecent('BMI Calculator','⚖️',this.href)"><span class="tool-icon">⚖️</span><div class="tool-name">BMI Calculator</div><div class="tool-desc">Body mass index, healthy weight range, target weight & New BMI formula.</div><span class="tool-tag tag-math">Math</span></a>
     </div>
   </div>
 
@@ -260,31 +326,161 @@
     <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">Works everywhere</div><div class="feature-desc">Every tool is fully responsive. Use on your phone, tablet, or desktop without issues.</div></div>
     <div class="feature-card"><div class="feature-icon">🌍</div><div class="feature-title">Built for global use</div><div class="feature-desc">Tools support 30+ currencies, global tax rates, and use cases across different countries.</div></div>
   </div>
-  </section>
+</section>
 
 <footer>
   <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a></p>
   <p style="margin-top:0.5rem;">Free tools for the people who build things.</p>
 </footer>
 
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav">
+  <div class="mobile-nav-items">
+    <a href="/" class="mobile-nav-item active"><span class="mobile-nav-icon">🏠</span>Home</a>
+    <button class="mobile-nav-item" onclick="document.getElementById('search-input').focus();document.getElementById('search-input').scrollIntoView({behavior:'smooth'})"><span class="mobile-nav-icon">🔍</span>Search</button>
+    <button class="mobile-nav-item" onclick="scrollToRecent()"><span class="mobile-nav-icon">⏱</span>Recent</button>
+    <a href="/about.html" class="mobile-nav-item"><span class="mobile-nav-icon">ℹ️</span>About</a>
+  </div>
+</nav>
+
+<!-- FEEDBACK WIDGET -->
+<div class="feedback-float">
+  <div class="feedback-popup" id="feedback-popup">
+    <h4>How's ToolsNook? 👋</h4>
+    <div class="feedback-btns">
+      <button class="fb" onclick="selectFeedback('😍')" title="Love it">😍</button>
+      <button class="fb" onclick="selectFeedback('😊')" title="Good">😊</button>
+      <button class="fb" onclick="selectFeedback('😐')" title="Okay">😐</button>
+      <button class="fb" onclick="selectFeedback('😕')" title="Not great">😕</button>
+    </div>
+    <textarea class="feedback-textarea" id="feedback-text" placeholder="Any suggestions? (optional)"></textarea>
+    <button class="feedback-submit" onclick="submitFeedback()">Send Feedback</button>
+    <div class="feedback-thanks" id="feedback-thanks">✅ Thanks! We read every message.</div>
+  </div>
+  <button class="feedback-btn" onclick="toggleFeedback()">💬 Feedback</button>
+</div>
+
 <script>
+  // ============ ALL TOOLS DATA (for search) ============
+  const ALL_TOOLS = [
+    {name:'Profit Margin Calculator',icon:'📈',cat:'Finance',url:'/tools/profit-margin-calculator.html',tags:'profit margin revenue cost gross net'},
+    {name:'ROI Calculator',icon:'💰',cat:'Finance',url:'/tools/roi-calculator.html',tags:'roi return investment'},
+    {name:'Break-Even Calculator',icon:'⚖️',cat:'Finance',url:'/tools/break-even-calculator.html',tags:'break even fixed costs profit'},
+    {name:'Markup Calculator',icon:'🏷️',cat:'Finance',url:'/tools/markup-calculator.html',tags:'markup selling price cost'},
+    {name:'Compound Interest Calculator',icon:'📊',cat:'Finance',url:'/tools/compound-interest-calculator.html',tags:'compound interest savings investment growth'},
+    {name:'Business Loan Calculator',icon:'🏦',cat:'Finance',url:'/tools/loan-calculator.html',tags:'loan calculator monthly payment amortization'},
+    {name:'Working Capital Calculator',icon:'🔄',cat:'Finance',url:'/tools/working-capital-calculator.html',tags:'working capital current ratio liquidity'},
+    {name:'Debt Payoff Calculator',icon:'💳',cat:'Finance',url:'/tools/debt-payoff-calculator.html',tags:'debt payoff avalanche snowball credit card'},
+    {name:'VAT / Tax Calculator',icon:'🧮',cat:'Finance',url:'/tools/vat-calculator.html',tags:'vat tax gst add remove'},
+    {name:'Invoice Generator',icon:'🧾',cat:'Billing',url:'/tools/invoice-generator.html',tags:'invoice pdf generate billing client'},
+    {name:'Currency Converter',icon:'💱',cat:'Billing',url:'/tools/currency-converter.html',tags:'currency convert exchange rate usd gbp eur pkr'},
+    {name:'Salary to Hourly',icon:'⏱️',cat:'HR',url:'/tools/salary-to-hourly.html',tags:'salary hourly daily weekly rate'},
+    {name:'Freelancer Rate Calculator',icon:'🧑‍💻',cat:'HR',url:'/tools/freelancer-rate-calculator.html',tags:'freelancer rate hourly income goal'},
+    {name:'Startup Cost Estimator',icon:'🚀',cat:'Startup',url:'/tools/startup-cost-estimator.html',tags:'startup cost estimate budget launch'},
+    {name:'AI Business Plan Generator',icon:'📋',cat:'AI',url:'/tools/business-plan-outline.html',tags:'business plan ai generate outline'},
+    {name:'Business Name Generator',icon:'✨',cat:'AI',url:'/tools/ai-business-name-generator.html',tags:'business name ai generate brand startup'},
+    {name:'AI Cover Letter Writer',icon:'📝',cat:'AI',url:'/tools/ai-cover-letter.html',tags:'cover letter ai write job application'},
+    {name:'AI Bio Generator',icon:'👤',cat:'AI',url:'/tools/ai-bio-generator.html',tags:'bio ai generate linkedin twitter profile'},
+    {name:'Product Description Writer',icon:'🛍️',cat:'AI',url:'/tools/ai-product-description.html',tags:'product description ai shopify amazon etsy'},
+    {name:'Email Subject Generator',icon:'📧',cat:'AI',url:'/tools/ai-email-subject.html',tags:'email subject line ai generate open rate'},
+    {name:'Percentage Calculator',icon:'%',cat:'Math',url:'/tools/percentage-calculator.html',tags:'percentage percent of increase decrease change'},
+    {name:'Age Calculator',icon:'🎂',cat:'Math',url:'/tools/age-calculator.html',tags:'age calculator birthday how old days months years'},
+    {name:'Discount Calculator',icon:'🏷️',cat:'Math',url:'/tools/discount-calculator.html',tags:'discount percent off sale price original stacked'},
+    {name:'Tip Calculator',icon:'🍽️',cat:'Math',url:'/tools/tip-calculator.html',tags:'tip calculator restaurant gratuity split bill per person'},
+    {name:'BMI Calculator',icon:'⚖️',cat:'Math',url:'/tools/bmi-calculator.html',tags:'bmi body mass index weight height healthy overweight'},
+  ];
+
+  // ============ SEARCH ============
+  function handleSearch(val) {
+    const q = val.trim().toLowerCase();
+    const box = document.getElementById('search-results');
+    if (!q) { box.style.display = 'none'; return; }
+    const results = ALL_TOOLS.filter(t =>
+      t.name.toLowerCase().includes(q) || t.tags.includes(q) || t.cat.toLowerCase().includes(q)
+    ).slice(0, 6);
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">No tools found for "' + val + '"</div>';
+    } else {
+      box.innerHTML = results.map(t => `
+        <a class="search-result-item" href="${t.url}" onclick="trackRecent('${t.name}','${t.icon}','${t.url}')">
+          <span class="search-result-icon">${t.icon}</span>
+          <div><div class="search-result-name">${t.name}</div><div class="search-result-cat">${t.cat}</div></div>
+        </a>`).join('');
+    }
+    box.style.display = 'block';
+  }
+  function closeSearchDelay() { setTimeout(() => { document.getElementById('search-results').style.display = 'none'; }, 200); }
+
+  // ============ RECENTLY USED ============
+  function getRecent() { return JSON.parse(localStorage.getItem('tn_recent') || '[]'); }
+  function trackRecent(name, icon, url) {
+    let recent = getRecent().filter(r => r.url !== url);
+    recent.unshift({name, icon, url});
+    if (recent.length > 5) recent = recent.slice(0, 5);
+    localStorage.setItem('tn_recent', JSON.stringify(recent));
+  }
+  function renderRecent() {
+    const recent = getRecent();
+    const wrap = document.getElementById('recently-used');
+    const grid = document.getElementById('recent-grid');
+    if (recent.length === 0) { wrap.classList.remove('show'); return; }
+    wrap.classList.add('show');
+    grid.innerHTML = recent.map(r => `<a href="${r.url}" class="recent-card" onclick="trackRecent('${r.name}','${r.icon}','${r.url}')">${r.icon} ${r.name}</a>`).join('');
+  }
+  function clearRecent() { localStorage.removeItem('tn_recent'); renderRecent(); }
+  function scrollToRecent() {
+    const el = document.getElementById('recently-used');
+    if (el.classList.contains('show')) el.scrollIntoView({behavior:'smooth'});
+    else document.getElementById('tools').scrollIntoView({behavior:'smooth'});
+  }
+
+  // ============ CATEGORY FILTER ============
   function filterCat(cat, btn) {
     document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.cat-section').forEach(section => {
-      if (cat === 'all') {
-        section.classList.remove('hidden');
-      } else {
-        const sectionCat = section.getAttribute('data-cat');
-        // Business plan is in both startup and ai
-        if (cat === 'ai' && sectionCat === 'startup') {
-          section.classList.remove('hidden');
-        } else {
-          section.classList.toggle('hidden', sectionCat !== cat);
-        }
-      }
+      if (cat === 'all') { section.classList.remove('hidden'); return; }
+      const sc = section.getAttribute('data-cat');
+      if (cat === 'ai' && sc === 'startup') { section.classList.remove('hidden'); return; }
+      section.classList.toggle('hidden', sc !== cat);
     });
   }
+
+  // ============ THEME TOGGLE ============
+  function toggleTheme() {
+    const isLight = document.body.classList.toggle('light');
+    document.getElementById('theme-btn').textContent = isLight ? '🌙' : '🌙';
+    localStorage.setItem('tn_theme', isLight ? 'light' : 'dark');
+  }
+  if (localStorage.getItem('tn_theme') === 'light') document.body.classList.add('light');
+
+  // ============ FEEDBACK WIDGET ============
+  let selectedEmoji = '';
+  function toggleFeedback() {
+    document.getElementById('feedback-popup').classList.toggle('show');
+  }
+  function selectFeedback(emoji) {
+    selectedEmoji = emoji;
+    document.querySelectorAll('.fb').forEach(b => b.style.opacity = b.textContent === emoji ? '1' : '0.4');
+  }
+  function submitFeedback() {
+    const text = document.getElementById('feedback-text').value;
+    fetch('https://formspree.io/f/xjgdkkeb', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        emoji: selectedEmoji || '(no rating)',
+        message: text || '(no message)',
+        page: window.location.href,
+        date: new Date().toISOString()
+      })
+    });
+    document.getElementById('feedback-thanks').style.display = 'block';
+    setTimeout(() => { document.getElementById('feedback-popup').classList.remove('show'); document.getElementById('feedback-thanks').style.display = 'none'; document.getElementById('feedback-text').value = ''; selectedEmoji = ''; document.querySelectorAll('.fb').forEach(b => b.style.opacity = '1'); }, 2500);
+  }
+
+  // Init
+  renderRecent();
 </script>
 </body>
 </html>
