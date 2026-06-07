@@ -113,6 +113,8 @@
     .badge-billing { background: rgba(247,151,30,0.12); color: var(--amber); }
     .badge-ai { background: rgba(255,107,107,0.12); color: var(--red); }
     .badge-math { background: rgba(100,200,255,0.12); color: #64c8ff; }
+    .badge-convert { background: rgba(192,132,252,0.12); color: #c084fc; }
+    .tag-convert { background: rgba(192,132,252,0.1); color: #c084fc; }
 
     /* TOOLS GRID */
     .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
@@ -170,6 +172,33 @@
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
 
+
+    /* IMAGE CONVERTER HERO BANNER */
+    .hero-tool-banner{margin-bottom:2.5rem}
+    .hero-tool-link{display:block;text-decoration:none;position:relative;overflow:hidden;background:linear-gradient(135deg,#111118,#18181f);border:1px solid rgba(192,132,252,0.35);border-radius:20px;padding:2rem 2.5rem;transition:transform 0.2s,box-shadow 0.2s}
+    .hero-tool-link:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(192,132,252,0.15)}
+    .hero-tool-glow1{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 50%,rgba(192,132,252,0.1) 0%,transparent 70%);pointer-events:none}
+    .hero-tool-glow2{position:absolute;inset:0;background:radial-gradient(ellipse 40% 60% at 0% 50%,rgba(108,99,255,0.08) 0%,transparent 60%);pointer-events:none}
+    .hero-tool-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;position:relative}
+    .hero-tool-content{flex:1;min-width:200px}
+    .hero-tool-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(192,132,252,0.12);border:1px solid rgba(192,132,252,0.3);color:#c084fc;font-size:0.72rem;font-weight:700;padding:4px 12px;border-radius:100px;margin-bottom:0.85rem;letter-spacing:0.06em}
+    .hero-tool-title{font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.5rem;color:#f0f0f5}
+    .hero-tool-desc{font-size:0.9rem;color:#8888a0;margin-bottom:1.25rem;line-height:1.6;max-width:480px}
+    .hero-tool-desc strong{color:#f0f0f5}
+    .hero-tool-tags{display:flex;gap:0.6rem;flex-wrap:wrap}
+    .htag{background:rgba(67,233,123,0.1);border:1px solid rgba(67,233,123,0.2);color:#43e97b;font-size:0.72rem;padding:3px 10px;border-radius:100px;font-weight:500}
+    .hero-tool-icon-wrap{display:flex;flex-direction:column;align-items:center;gap:1rem;flex-shrink:0}
+    .hero-tool-icon{width:80px;height:80px;background:linear-gradient(135deg,rgba(192,132,252,0.2),rgba(108,99,255,0.2));border:1px solid rgba(192,132,252,0.3);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+    .hero-tool-cta{background:linear-gradient(135deg,#6c63ff,#9c5cff);color:#fff;padding:0.65rem 1.5rem;border-radius:10px;font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:700;white-space:nowrap}
+    .hero-tool-formats{position:relative;display:flex;gap:0.5rem;flex-wrap:wrap;padding-top:1rem;margin-top:0.25rem;border-top:1px solid rgba(255,255,255,0.06)}
+    .hf-label{font-size:0.72rem;color:#8888a0;line-height:22px;margin-right:2px}
+    .hf{background:#18181f;border:1px solid rgba(255,255,255,0.1);color:#8888a0;font-size:0.72rem;padding:2px 9px;border-radius:4px}
+    .hf-accent{background:rgba(192,132,252,0.1);border:1px solid rgba(192,132,252,0.25);color:#c084fc;font-weight:600}
+    @media(max-width:600px){
+      .hero-tool-link{padding:1.25rem}
+      .hero-tool-icon-wrap{display:none}
+      .hero-tool-title{font-size:1.4rem}
+    }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 767px) {
@@ -222,6 +251,39 @@
     <button class="recent-clear" onclick="clearRecent()">✕ Clear history</button>
   </div>
 
+
+  <!-- IMAGE CONVERTER HERO BANNER -->
+  <div class="hero-tool-banner">
+    <a href="/tools/image-converter.html" class="hero-tool-link" onclick="trackRecent('Image Converter','🖼️',this.href)">
+      <div class="hero-tool-glow1"></div>
+      <div class="hero-tool-glow2"></div>
+      <div class="hero-tool-inner">
+        <div class="hero-tool-content">
+          <div class="hero-tool-badge">🔥 FEATURED TOOL</div>
+          <div class="hero-tool-title">Image Converter</div>
+          <div class="hero-tool-desc">Convert PNG, JPG, WebP, HEIC and more — instantly. Bulk convert up to 20 images, download as ZIP. <strong>100% private — files never leave your device.</strong></div>
+          <div class="hero-tool-tags">
+            <span class="htag">🔒 No uploads</span>
+            <span class="htag">⚡ Instant</span>
+            <span class="htag">📦 Bulk + ZIP</span>
+            <span class="htag">🚫 No watermarks</span>
+          </div>
+        </div>
+        <div class="hero-tool-icon-wrap">
+          <div class="hero-tool-icon">🖼️</div>
+          <div class="hero-tool-cta">Convert Now →</div>
+        </div>
+      </div>
+      <div class="hero-tool-formats">
+        <span class="hf-label">Supports:</span>
+        <span class="hf">PNG</span><span class="hf">JPG</span><span class="hf">WebP</span>
+        <span class="hf">HEIC</span><span class="hf">GIF</span><span class="hf">BMP</span>
+        <span class="hf">TIFF</span><span class="hf">SVG</span><span class="hf">PDF</span>
+        <span class="hf hf-accent">+ Bulk ZIP</span>
+      </div>
+    </a>
+  </div>
+
   <!-- MOST POPULAR -->
   <div style="margin-bottom:3rem">
     <div class="section-label">🔥 Most Popular</div>
@@ -232,7 +294,7 @@
       <a href="/tools/tip-calculator.html" class="popular-card" onclick="trackRecent('Tip Calculator','🍽️',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🍽️</span><div class="popular-name">Tip Calculator</div></a>
       <a href="/tools/age-calculator.html" class="popular-card" onclick="trackRecent('Age Calculator','🎂',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🎂</span><div class="popular-name">Age Calculator</div></a>
       <a href="/tools/discount-calculator.html" class="popular-card" onclick="trackRecent('Discount Calculator','🏷️',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🏷️</span><div class="popular-name">Discount Calculator</div></a>
-      <a href="/tools/invoice-generator.html" class="popular-card" onclick="trackRecent('Invoice Generator','🧾',this.href)"><span class="popular-badge">TOP</span><span class="popular-icon">🧾</span><div class="popular-name">Invoice Generator</div></a>
+      <a href="/tools/image-converter.html" class="popular-card" onclick="trackRecent('Image Converter','🖼️',this.href)" style="border-color:var(--purple);background:linear-gradient(135deg,var(--bg2),rgba(192,132,252,0.08))"><span class="popular-badge" style="background:var(--purple)">🔥 NEW</span><span class="popular-icon">🖼️</span><div class="popular-name">Image Converter</div></a>
     </div>
   </div>
 
@@ -241,7 +303,7 @@
   <h2 style="margin-bottom:0.75rem">Browse by category</h2>
   <p class="section-sub">Pick a category or browse everything. No account required.</p>
   <div class="cat-tabs">
-    <button class="cat-tab active" onclick="filterCat('all', this)">🗂 All Tools <span class="cat-count">25</span></button>
+    <button class="cat-tab active" onclick="filterCat('all', this)">🗂 All Tools <span class="cat-count">26</span></button>
     <button class="cat-tab" onclick="filterCat('finance', this)">💰 Finance <span class="cat-count">9</span></button>
     <button class="cat-tab" onclick="filterCat('billing', this)">🧾 Billing <span class="cat-count">2</span></button>
     <button class="cat-tab" onclick="filterCat('hr', this)">👥 HR & Salary <span class="cat-count">2</span></button>
@@ -317,6 +379,14 @@
     </div>
   </div>
 
+  <!-- CONVERTERS CATEGORY -->
+  <div class="cat-section" data-cat="convert">
+    <div class="cat-heading"><span class="cat-icon">🔄</span><span class="cat-name">Converters</span><span class="cat-badge badge-convert">1 tool</span></div>
+    <div class="tools-grid">
+      <a href="/tools/image-converter.html" class="tool-card" onclick="trackRecent('Image Converter','🖼️',this.href)"><span class="tool-icon">🖼️</span><div class="tool-name">Image Converter</div><div class="tool-desc">Convert PNG, JPG, WebP, HEIC, GIF &amp; more. Bulk convert + ZIP download. 100% private.</div><span class="tool-tag tag-convert">Converter</span></a>
+    </div>
+  </div>
+
 </section>
 
 <section class="features-section" id="about">
@@ -329,6 +399,14 @@
     <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">Works everywhere</div><div class="feature-desc">Every tool is fully responsive. Use on your phone, tablet, or desktop without issues.</div></div>
     <div class="feature-card"><div class="feature-icon">🌍</div><div class="feature-title">Built for global use</div><div class="feature-desc">Tools support 30+ currencies, global tax rates, and use cases across different countries.</div></div>
   </div>
+  <!-- CONVERTERS CATEGORY -->
+  <div class="cat-section" data-cat="convert">
+    <div class="cat-heading"><span class="cat-icon">🔄</span><span class="cat-name">Converters</span><span class="cat-badge badge-convert">1 tool</span></div>
+    <div class="tools-grid">
+      <a href="/tools/image-converter.html" class="tool-card" onclick="trackRecent('Image Converter','🖼️',this.href)"><span class="tool-icon">🖼️</span><div class="tool-name">Image Converter</div><div class="tool-desc">Convert PNG, JPG, WebP, HEIC, GIF &amp; more. Bulk convert + ZIP download. 100% private.</div><span class="tool-tag tag-convert">Converter</span></a>
+    </div>
+  </div>
+
 </section>
 
 <footer>
