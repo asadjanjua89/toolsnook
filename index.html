@@ -202,12 +202,87 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 767px) {
+      /* NAV */
       .mobile-bottom-nav { display: block; }
+      nav { padding: 0.75rem 1rem; }
       nav ul { display: none; }
-      .hero-stats { gap: 1.5rem; }
+
+      /* HERO */
+      .hero { padding: 5rem 1.25rem 2rem; }
+      h1 { font-size: 2.2rem; }
+      .hero p { font-size: 0.95rem; }
+      .trust-badges { gap: 0.4rem; }
+      .trust-badge { font-size: 0.68rem; padding: 4px 9px; }
+      .hero-stats { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
       .stat-num { font-size: 1.4rem; }
-      .cat-tabs { gap: 0.4rem; }
-      .cat-tab { padding: 6px 12px; font-size: 0.78rem; }
+      .stat-label { font-size: 0.72rem; }
+
+      /* SEARCH */
+      .search-wrap { margin: 0 auto 1.5rem; }
+      .search-input { font-size: 0.95rem; padding: 0.8rem 1rem 0.8rem 2.75rem; }
+
+      /* TOOLS SECTION */
+      .tools-section { padding: 2.5rem 1rem; }
+      .features-section { padding: 2.5rem 1rem; }
+
+      /* HERO BANNER */
+      .hero-tool-link { padding: 1.25rem; border-radius: 16px; }
+      .hero-tool-icon-wrap { display: none; }
+      .hero-tool-title { font-size: 1.4rem; }
+      .hero-tool-desc { font-size: 0.85rem; margin-bottom: 1rem; }
+      .hero-tool-formats { display: none; }
+      .htag { font-size: 0.68rem; padding: 3px 8px; }
+
+      /* POPULAR GRID */
+      .popular-grid { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+      .popular-card { padding: 0.9rem 0.6rem; border-radius: 10px; }
+      .popular-icon { font-size: 1.2rem; margin-bottom: 0.4rem; }
+      .popular-name { font-size: 0.72rem; }
+      .popular-badge { font-size: 0.55rem; padding: 1px 5px; }
+
+      /* CATEGORY TABS */
+      .cat-tabs { gap: 0.35rem; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .cat-tabs::-webkit-scrollbar { display: none; }
+      .cat-tab { padding: 6px 12px; font-size: 0.76rem; white-space: nowrap; flex-shrink: 0; }
+
+      /* TOOLS GRID */
+      .tools-grid { grid-template-columns: 1fr 1fr; }
+      .tool-card { padding: 1rem; }
+      .tool-icon { font-size: 1.2rem; margin-bottom: 0.5rem; }
+      .tool-name { font-size: 0.82rem; }
+      .tool-desc { font-size: 0.72rem; }
+      .tool-tag { font-size: 0.62rem; padding: 2px 6px; margin-top: 0.5rem; }
+      .ai-badge { font-size: 0.55rem; padding: 1px 5px; }
+
+      /* CAT HEADINGS */
+      .cat-heading { flex-wrap: wrap; gap: 6px; }
+      .cat-name { font-size: 0.9rem; }
+
+      /* SECTION HEADINGS */
+      h2 { font-size: 1.5rem; }
+      .section-sub { font-size: 0.88rem; }
+
+      /* RECENTLY USED */
+      .recent-card { font-size: 0.78rem; padding: 0.5rem 0.85rem; }
+
+      /* FEATURES */
+      .features-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .feature-card { padding: 1rem; }
+      .feature-title { font-size: 0.88rem; }
+      .feature-desc { font-size: 0.78rem; }
+
+      /* FEEDBACK */
+      .feedback-float { bottom: 5rem; right: 1rem; }
+      .feedback-popup { width: 240px; }
+
+      /* FOOTER */
+      footer { padding: 1.5rem 1rem 5rem; font-size: 0.78rem; }
+    }
+
+    @media (max-width: 380px) {
+      .tools-grid { grid-template-columns: 1fr; }
+      .popular-grid { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 1.9rem; }
     }
   </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
