@@ -3,306 +3,567 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VAT Calculator – Add or Remove VAT Instantly | ToolsNook</title>
-  <meta name="description" content="Add or remove VAT from any amount instantly. Free online VAT calculator supporting all VAT rates globally. Works for GST, sales tax and any percentage." />
-  <meta name="keywords" content="VAT calculator, add VAT, remove VAT, VAT inclusive, VAT exclusive, GST calculator, sales tax calculator, tax calculator online" />
+  <title>VAT Calculator – Add or Remove VAT, GST & Sales Tax | ToolsNook</title>
+  <meta name="description" content="Free VAT calculator. Add VAT to a price or remove VAT from a price instantly. Works for UK, EU, Philippines, UAE, Australia GST and 100+ countries. Online VAT calculator with country rates table." />
+  <meta name="keywords" content="VAT calculator, online VAT calculator, VAT calculator online, add VAT calculator, remove VAT calculator, VAT inclusive calculator, VAT exclusive calculator, VAT remover, reverse VAT calculator, VAT tax calculator, VAT rate calculator, online VAT cal, calc VAT, VAT calculator UK, VAT calculator Philippines, Philippines VAT calculator, VAT calculator UAE, VAT calculator Australia GST, VAT calculator South Africa, VAT calculator Nigeria, VAT calculator Ireland, VAT calculator Uganda, VAT calculator Oman, VAT calculator Trinidad, VAT calculator Germany, VAT calculator France, VAT calculator India GST, calculate VAT, how to calculate VAT, VAT inclusive price, VAT exclusive price, price excluding VAT, price including VAT, including VAT, excluding VAT, VAT to GST, value added tax calculator, GST calculator, sales tax calculator" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/vat-calculator.html" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"VAT Calculator","description":"Free VAT calculator. Add or remove VAT/GST/sales tax from any amount.","url":"https://www.toolsnook.com/tools/vat-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
-    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
-    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
-    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
-    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
-    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
-    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
-    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
-    .container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
-    .top-row{display:flex;gap:1rem;margin-top:2rem;margin-bottom:0.75rem;flex-wrap:wrap;justify-content:space-between;align-items:center}
-    .csw{position:relative}.csw::after{content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.7rem;pointer-events:none}
-    select.dsel{appearance:none;-webkit-appearance:none;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:6px 28px 6px 12px;cursor:pointer}
-    select.dsel:focus{outline:none;border-color:var(--accent)}select.dsel option{background:#1a1a24;color:var(--text)}
-    .rate-chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-    .rate-chip{background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-size:0.8rem;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all 0.15s}
-    .rate-chip:hover{border-color:var(--accent);color:var(--text)}
-    .rate-chip.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
-    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;overflow:hidden}
-    .tabs{display:flex;border-bottom:1px solid var(--border)}
-    .tab{flex:1;padding:1rem;background:none;border:none;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:500;transition:all 0.2s;border-bottom:2px solid transparent;margin-bottom:-1px}
-    .tab:hover{color:var(--text);background:var(--bg3)}.tab.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--bg3)}
-    .calc-body{padding:2rem}
-    .input-row{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-end;flex-wrap:wrap}
-    .ig{flex:1;min-width:180px}
-    .ig label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
-    .iw{position:relative}
-    .ip{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
-    .is{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
-    input[type=number]{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem 0.75rem 2.4rem;-moz-appearance:textfield}
-    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
-    input[type=number]:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
-    input.si{padding-right:2.2rem;padding-left:1rem}
-    .calc-btn{padding:0.75rem 2rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s;white-space:nowrap}
-    .calc-btn:hover{opacity:0.88}
-    .results{display:none;margin-top:0}.results.show{display:block}
-    .big-result{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;margin-bottom:1rem}
-    .big-label{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.06em;margin-bottom:0.5rem}
-    .big-value{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:var(--green);line-height:1}
-    .big-sub{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
-    .breakdown-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem}
-    @media(max-width:500px){.breakdown-grid{grid-template-columns:1fr}}
-    .bcard{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center}
-    .bl{font-size:0.72rem;color:var(--muted);margin-bottom:4px;font-weight:500}
-    .bv{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700}
-    .bv.green{color:var(--green)}.bv.amber{color:var(--amber)}.bv.red{color:var(--red)}
-    .info-section{margin-top:4rem}
-    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
-    .info-section h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:600;margin:1.5rem 0 0.5rem}
-    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
-    .rates-table{width:100%;border-collapse:collapse;margin:1rem 0}
-    .rates-table th{font-size:0.78rem;color:var(--muted);font-weight:500;padding:0.6rem 1rem;text-align:left;border-bottom:1px solid var(--border);background:var(--bg2)}
-    .rates-table td{padding:0.6rem 1rem;font-size:0.88rem;border-bottom:1px solid var(--border)}
-    .rates-table tr:last-child td{border-bottom:none}
-    .formula-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
-    .faq-item{margin-bottom:1.25rem}
-    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
-    .faq-a{color:var(--muted);font-size:0.9rem;line-height:1.7}
-    .related{margin-top:3rem}
-    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
-    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
-    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
-    footer a{color:var(--muted);text-decoration:none}
-  </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:title" content="VAT Calculator – Add or Remove VAT, GST & Sales Tax" />
+  <meta property="og:description" content="Free VAT calculator. Add or remove VAT instantly for UK, EU, Philippines, UAE, Australia and 100+ countries. Reverse VAT, inclusive and exclusive calculations." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/vat-calculator.html" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "VAT Calculator",
+    "url": "https://www.toolsnook.com/tools/vat-calculator.html",
+    "description": "Free online VAT calculator. Add VAT to a price or remove VAT from a price. Works for UK, EU, Philippines, UAE, Australia GST, and 100+ countries with a full VAT rates table.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com"},
-      {"@type": "ListItem", "position": 2, "name": "VAT / Tax Calculator", "item": "https://www.toolsnook.com/tools/vat-calculator.html"}
+      { "@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com" },
+      { "@type": "ListItem", "position": 2, "name": "VAT Calculator", "item": "https://www.toolsnook.com/tools/vat-calculator.html" }
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate VAT?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To add VAT to a price: multiply the price by the VAT rate divided by 100, then add the result to the original price. Formula: VAT-inclusive price = price × (1 + VAT rate / 100). Example: £100 + 20% VAT = £100 × 1.20 = £120. To remove VAT from a price: divide the VAT-inclusive price by (1 + VAT rate / 100). Example: £120 ÷ 1.20 = £100 excluding VAT." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is VAT inclusive and VAT exclusive?",
+        "acceptedAnswer": { "@type": "Answer", "text": "VAT inclusive (also called gross price) means VAT is already included in the price shown. VAT exclusive (also called net price) means VAT has not yet been added. When a business quotes a VAT-exclusive price of £100 with 20% VAT, the VAT-inclusive price you pay is £120. Use the reverse VAT calculator above to convert between the two." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I remove VAT from a price?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To remove VAT from a VAT-inclusive price, divide the price by (1 + VAT rate / 100). For 20% UK VAT: divide by 1.20. For 12% Philippines VAT: divide by 1.12. For 5% UAE VAT: divide by 1.05. Example: remove 20% VAT from £120 → £120 ÷ 1.20 = £100 excluding VAT. Use the VAT Remover tab in the calculator above." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the VAT rate in the Philippines?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The VAT rate in the Philippines is 12%, set by the Bureau of Internal Revenue (BIR). This has been the standard rate since 2021. To add 12% VAT to a price, multiply by 1.12. To remove 12% VAT from a price, divide by 1.12. The Philippines VAT threshold for business registration is PHP 3,000,000 annual sales." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the UK VAT rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The standard UK VAT rate is 20%. There is also a reduced rate of 5% for domestic fuel, children's car seats, and some other goods, and a zero rate (0%) for most food, children's clothes, books, and newspapers. To add 20% VAT to a price in the UK, multiply by 1.20. To remove 20% VAT, divide by 1.20." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between VAT and GST?",
+        "acceptedAnswer": { "@type": "Answer", "text": "VAT (Value Added Tax) and GST (Goods and Services Tax) are effectively the same type of consumption tax — they are just called different names in different countries. The UK, EU, and most of the world use 'VAT'. Australia, Canada, India, Singapore, and New Zealand use 'GST'. The calculation method is identical — a percentage added to the price of goods and services." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much VAT do I pay on £100?",
+        "acceptedAnswer": { "@type": "Answer", "text": "At the standard UK VAT rate of 20%, the VAT on £100 is £20, making the total price £120. At 5% reduced rate, VAT on £100 is £5, total £105. Use the VAT calculator above to calculate VAT for any amount and any rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the VAT rate in the UAE?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The UAE VAT rate is 5%, introduced in January 2018. It applies to most goods and services, with some exemptions including healthcare, education, and residential property. To add 5% UAE VAT to a price, multiply by 1.05. To remove 5% VAT, divide by 1.05. Saudi Arabia also has a 15% VAT rate." }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--blue:#4ecdc4}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2.5rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:560px;margin:0 auto}
+    .container{max-width:920px;margin:0 auto;padding:0 2rem 4rem}
+
+    /* TABS */
+    .calc-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:2rem;margin-bottom:1rem}
+    .calc-tab{padding:8px 18px;background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-size:0.85rem;border-radius:100px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .calc-tab.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem;display:none}
+    .calc-card.active{display:block}
+    .card-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:0.05em}
+
+    /* COUNTRY PRESETS */
+    .country-row{margin-bottom:1.5rem}
+    .country-label{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem;display:block}
+    .country-pills{display:flex;gap:0.4rem;flex-wrap:wrap}
+    .cpill{padding:5px 12px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.78rem;border-radius:6px;cursor:pointer;transition:all 0.15s;font-family:'DM Sans',sans-serif}
+    .cpill:hover{border-color:var(--accent);color:var(--text)}
+    .cpill.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+
+    .field{margin-bottom:1.1rem}
+    .field label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
+    .field input{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.7rem 1rem;transition:border-color 0.2s}
+    .field input:focus{outline:none;border-color:var(--accent)}
+    .input-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:540px){.input-row{grid-template-columns:1fr}}
+    .calc-btn{width:100%;padding:0.9rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;margin-top:0.25rem}
+    .calc-btn:hover{opacity:0.88}
+
+    /* RESULTS */
+    .result{display:none;margin-top:1.5rem}.result.show{display:block}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:0.75rem}
+    @media(max-width:480px){.result-grid{grid-template-columns:1fr 1fr}}
+    .result-item{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:1rem;text-align:center}
+    .result-num{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800}
+    .result-num.green{color:var(--green)}.result-num.amber{color:var(--amber)}.result-num.accent{color:var(--accent)}.result-num.blue{color:var(--blue)}
+    .result-label{font-size:0.72rem;color:var(--muted);margin-top:4px}
+    .copy-result-btn{width:100%;padding:0.6rem;background:transparent;border:1px solid var(--border2);color:var(--muted);border-radius:8px;font-size:0.82rem;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;margin-top:0.5rem}
+    .copy-result-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+    /* CONTENT */
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
+    .formula{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:0.75rem 1rem;font-family:monospace;font-size:0.9rem;color:var(--accent);margin:0.75rem 0}
+
+    /* VAT RATES TABLE */
+    .vat-table{width:100%;border-collapse:collapse;font-size:0.83rem;margin-top:1rem}
+    .vat-table th{background:var(--bg3);color:var(--muted);font-weight:600;padding:0.6rem 0.9rem;text-align:left;font-size:0.75rem;letter-spacing:0.05em}
+    .vat-table td{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    .vat-table td:first-child{color:var(--text);font-weight:500}
+    .vat-table tr:last-child td{border-bottom:none}
+    .vat-table tr:hover td{background:var(--bg3);cursor:pointer}
+    .rate-badge{display:inline-block;background:rgba(108,99,255,0.12);color:#a59fff;font-size:0.72rem;padding:2px 7px;border-radius:4px;font-weight:600}
+
+    /* QUICK CALC TABLE */
+    .quick-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin-top:1rem}
+    .quick-table th{background:var(--bg3);color:var(--muted);font-weight:600;padding:0.55rem 0.75rem;text-align:center;font-size:0.75rem;letter-spacing:0.04em}
+    .quick-table th:first-child{text-align:left}
+    .quick-table td{padding:0.55rem 0.75rem;border-bottom:1px solid var(--border);text-align:center;color:var(--muted)}
+    .quick-table td:first-child{color:var(--text);font-weight:500;text-align:left}
+    .quick-table tr:last-child td{border-bottom:none}
+    .quick-table tr:hover td{background:var(--bg3)}
+    .td-green{color:var(--green)!important;font-weight:600}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q::after{content:'▼';font-size:0.7rem;color:var(--muted);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{transform:rotate(180deg)}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;display:none}
+    .faq-item.open .faq-a{display:block}
+
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+    @media(max-width:600px){.calc-card{padding:1.25rem}.country-pills{gap:0.3rem}}
+  </style>
 </head>
 <body>
-<nav>
-  <a href="/" class="logo">Tools<span>Nook</span></a>
-  <a href="/" class="nav-back">← All Tools</a>
-</nav>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+
 <div class="hero">
-  <div class="breadcrumb"><a href="/">ToolsNook</a> › VAT / Tax Calculator</div>
-  <div class="hero-badge">✦ Finance Tool</div>
-  <h1>VAT / Tax Calculator</h1>
-  <p>Add or remove VAT, GST or sales tax from any amount instantly. Supports all rates globally. Free, no signup.</p>
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › VAT Calculator</div>
+  <h1>VAT Calculator</h1>
+  <p>Add VAT to a price or remove VAT from a price instantly. Works for UK, EU, Philippines, UAE, Australia GST and 100+ countries worldwide. Free, no signup, no limits.</p>
 </div>
+
 <div class="container">
-  <div class="top-row">
-    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-      <span style="font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em">QUICK RATES:</span>
-      <div class="rate-chips">
-        <span class="rate-chip" onclick="setRate(5)">5%</span>
-        <span class="rate-chip" onclick="setRate(10)">10%</span>
-        <span class="rate-chip" onclick="setRate(15)">15%</span>
-        <span class="rate-chip" onclick="setRate(17)">17%</span>
-        <span class="rate-chip" onclick="setRate(18)">18% GST</span>
-        <span class="rate-chip active" onclick="setRate(20)">20% UK</span>
-        <span class="rate-chip" onclick="setRate(21)">21%</span>
-        <span class="rate-chip" onclick="setRate(25)">25%</span>
+  <div class="calc-tabs">
+    <button class="calc-tab active" onclick="switchTab('add',this)">➕ Add VAT</button>
+    <button class="calc-tab" onclick="switchTab('remove',this)">➖ Remove VAT (Reverse)</button>
+    <button class="calc-tab" onclick="switchTab('check',this)">🔍 Check VAT Amount</button>
+  </div>
+
+  <!-- ADD VAT -->
+  <div class="calc-card active" id="tab-add">
+    <div class="card-title">Add VAT to a Price</div>
+    <div class="country-row">
+      <span class="country-label">Quick Country Select</span>
+      <div class="country-pills">
+        <button class="cpill" onclick="setRate(20,'UK 20%',this)">🇬🇧 UK 20%</button>
+        <button class="cpill" onclick="setRate(12,'Philippines 12%',this)">🇵🇭 PH 12%</button>
+        <button class="cpill" onclick="setRate(5,'UAE 5%',this)">🇦🇪 UAE 5%</button>
+        <button class="cpill" onclick="setRate(10,'Australia GST 10%',this)">🇦🇺 AU 10%</button>
+        <button class="cpill" onclick="setRate(19,'Germany 19%',this)">🇩🇪 DE 19%</button>
+        <button class="cpill" onclick="setRate(20,'France 20%',this)">🇫🇷 FR 20%</button>
+        <button class="cpill" onclick="setRate(23,'Ireland 23%',this)">🇮🇪 IE 23%</button>
+        <button class="cpill" onclick="setRate(15,'South Africa 15%',this)">🇿🇦 ZA 15%</button>
+        <button class="cpill" onclick="setRate(7.5,'Nigeria 7.5%',this)">🇳🇬 NG 7.5%</button>
+        <button class="cpill" onclick="setRate(18,'Uganda 18%',this)">🇺🇬 UG 18%</button>
+        <button class="cpill" onclick="setRate(5,'Oman 5%',this)">🇴🇲 OM 5%</button>
+        <button class="cpill" onclick="setRate(12.5,'Trinidad 12.5%',this)">🇹🇹 TT 12.5%</button>
+        <button class="cpill" onclick="setRate(18,'India GST 18%',this)">🇮🇳 IN 18%</button>
+        <button class="cpill" onclick="setRate(15,'Saudi Arabia 15%',this)">🇸🇦 SA 15%</button>
       </div>
     </div>
-    <div style="display:flex;align-items:center;gap:8px">
-      <span style="font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em">CURRENCY</span>
-      <div class="csw">
-        <select class="dsel" id="cs" onchange="onCC()">
-          <option value="$|USD">$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option>
-          <option value="₹|INR">₹ INR</option><option value="₨|PKR">₨ PKR</option><option value="AED|AED">AED</option>
-          <option value="﷼|SAR">﷼ SAR</option><option value="R|ZAR">R ZAR</option><option value="R$|BRL">R$ BRL</option>
-          <option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option>
-        </select>
+    <div class="input-row">
+      <div class="field">
+        <label>NET PRICE (EXCLUDING VAT)</label>
+        <input type="number" id="add-price" placeholder="e.g. 100.00" min="0" step="0.01" />
+      </div>
+      <div class="field">
+        <label>VAT RATE (%)</label>
+        <input type="number" id="add-rate" placeholder="e.g. 20" min="0" max="100" step="0.1" value="20" />
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcAdd()">Calculate VAT</button>
+    <div class="result" id="result-add">
+      <div class="result-grid">
+        <div class="result-item"><div class="result-num amber" id="add-vatamt"></div><div class="result-label">VAT Amount</div></div>
+        <div class="result-item"><div class="result-num green" id="add-gross"></div><div class="result-label">Gross Price (Inc. VAT)</div></div>
+        <div class="result-item"><div class="result-num accent" id="add-net"></div><div class="result-label">Net Price (Ex. VAT)</div></div>
+      </div>
+      <button class="copy-result-btn" onclick="copyResult('add')">📋 Copy result</button>
+    </div>
+  </div>
+
+  <!-- REMOVE VAT -->
+  <div class="calc-card" id="tab-remove">
+    <div class="card-title">Remove VAT from a Price (Reverse VAT)</div>
+    <div class="country-row">
+      <span class="country-label">Quick Country Select</span>
+      <div class="country-pills">
+        <button class="cpill" onclick="setRateRemove(20,'UK 20%',this)">🇬🇧 UK 20%</button>
+        <button class="cpill" onclick="setRateRemove(12,'Philippines 12%',this)">🇵🇭 PH 12%</button>
+        <button class="cpill" onclick="setRateRemove(5,'UAE 5%',this)">🇦🇪 UAE 5%</button>
+        <button class="cpill" onclick="setRateRemove(10,'Australia GST 10%',this)">🇦🇺 AU 10%</button>
+        <button class="cpill" onclick="setRateRemove(19,'Germany 19%',this)">🇩🇪 DE 19%</button>
+        <button class="cpill" onclick="setRateRemove(20,'France 20%',this)">🇫🇷 FR 20%</button>
+        <button class="cpill" onclick="setRateRemove(23,'Ireland 23%',this)">🇮🇪 IE 23%</button>
+        <button class="cpill" onclick="setRateRemove(15,'South Africa 15%',this)">🇿🇦 ZA 15%</button>
+        <button class="cpill" onclick="setRateRemove(7.5,'Nigeria 7.5%',this)">🇳🇬 NG 7.5%</button>
+        <button class="cpill" onclick="setRateRemove(18,'Uganda 18%',this)">🇺🇬 UG 18%</button>
+        <button class="cpill" onclick="setRateRemove(5,'Oman 5%',this)">🇴🇲 OM 5%</button>
+        <button class="cpill" onclick="setRateRemove(12.5,'Trinidad 12.5%',this)">🇹🇹 TT 12.5%</button>
+        <button class="cpill" onclick="setRateRemove(18,'India GST 18%',this)">🇮🇳 IN 18%</button>
+        <button class="cpill" onclick="setRateRemove(15,'Saudi Arabia 15%',this)">🇸🇦 SA 15%</button>
+      </div>
+    </div>
+    <div class="input-row">
+      <div class="field">
+        <label>GROSS PRICE (INCLUDING VAT)</label>
+        <input type="number" id="rem-price" placeholder="e.g. 120.00" min="0" step="0.01" />
+      </div>
+      <div class="field">
+        <label>VAT RATE (%)</label>
+        <input type="number" id="rem-rate" placeholder="e.g. 20" min="0" max="100" step="0.1" value="20" />
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcRemove()">Remove VAT</button>
+    <div class="result" id="result-remove">
+      <div class="result-grid">
+        <div class="result-item"><div class="result-num accent" id="rem-net"></div><div class="result-label">Net Price (Ex. VAT)</div></div>
+        <div class="result-item"><div class="result-num amber" id="rem-vatamt"></div><div class="result-label">VAT Amount</div></div>
+        <div class="result-item"><div class="result-num green" id="rem-gross"></div><div class="result-label">Gross Price (Inc. VAT)</div></div>
+      </div>
+      <button class="copy-result-btn" onclick="copyResult('remove')">📋 Copy result</button>
+    </div>
+  </div>
+
+  <!-- CHECK VAT -->
+  <div class="calc-card" id="tab-check">
+    <div class="card-title">Find the VAT Rate Between Two Prices</div>
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.25rem">Know the price with and without VAT? Find the exact VAT rate that was applied.</p>
+    <div class="input-row">
+      <div class="field">
+        <label>NET PRICE (EXCLUDING VAT)</label>
+        <input type="number" id="chk-net" placeholder="e.g. 100.00" min="0" step="0.01" />
+      </div>
+      <div class="field">
+        <label>GROSS PRICE (INCLUDING VAT)</label>
+        <input type="number" id="chk-gross" placeholder="e.g. 120.00" min="0" step="0.01" />
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcCheck()">Find VAT Rate</button>
+    <div class="result" id="result-check">
+      <div class="result-grid">
+        <div class="result-item"><div class="result-num accent" id="chk-rate"></div><div class="result-label">VAT Rate</div></div>
+        <div class="result-item"><div class="result-num amber" id="chk-vatamt"></div><div class="result-label">VAT Amount</div></div>
+        <div class="result-item"><div class="result-num green" id="chk-pct"></div><div class="result-label">VAT as % of Gross</div></div>
       </div>
     </div>
   </div>
 
-  <div class="calc-card">
-    <div class="tabs">
-      <button class="tab active" onclick="switchTab('add',this)">Add VAT</button>
-      <button class="tab" onclick="switchTab('remove',this)">Remove VAT</button>
-    </div>
+  <!-- HOW TO CALCULATE VAT -->
+  <div class="content-section">
+    <h2>How to Calculate VAT</h2>
+    <p>VAT (Value Added Tax) is a consumption tax applied to the sale of goods and services. It is calculated as a percentage of the net price and added to produce the gross price that the customer pays. Here are the two most common VAT calculations:</p>
 
-    <!-- ADD VAT -->
-    <div class="calc-body" id="tab-add">
-      <div class="input-row">
-        <div class="ig">
-          <label>AMOUNT (BEFORE TAX)</label>
-          <div class="iw"><span class="ip cur-sym">$</span><input type="number" id="add-amount" placeholder="1,000" min="0" step="any" /></div>
-        </div>
-        <div class="ig" style="max-width:140px">
-          <label>VAT / TAX RATE</label>
-          <div class="iw"><input type="number" id="add-rate" value="20" min="0" max="100" step="any" class="si" oninput="syncRate()" /><span class="is">%</span></div>
-        </div>
-        <button class="calc-btn" onclick="calcAdd()">Calculate →</button>
-      </div>
-      <div class="results" id="add-results">
-        <div class="big-result">
-          <div class="big-label">TOTAL PRICE (INCLUDING TAX)</div>
-          <div class="big-value" id="add-total">—</div>
-          <div class="big-sub" id="add-sub">—</div>
-        </div>
-        <div class="breakdown-grid">
-          <div class="bcard"><div class="bl">NET AMOUNT</div><div class="bv" id="add-net">—</div></div>
-          <div class="bcard"><div class="bl">TAX AMOUNT</div><div class="bv amber" id="add-tax">—</div></div>
-          <div class="bcard"><div class="bl">GROSS TOTAL</div><div class="bv green" id="add-gross">—</div></div>
-        </div>
-      </div>
-    </div>
+    <h3>Adding VAT to a price (VAT-exclusive to VAT-inclusive)</h3>
+    <p>To add VAT to a net price, multiply the price by the VAT rate and add the result to the original price.</p>
+    <div class="formula">Gross Price = Net Price × (1 + VAT Rate ÷ 100)</div>
+    <p>Example: Net price £100, VAT rate 20% → £100 × 1.20 = <strong style="color:var(--green)">£120 gross price</strong>. VAT amount = £20.</p>
 
-    <!-- REMOVE VAT -->
-    <div class="calc-body" id="tab-remove" style="display:none">
-      <div class="input-row">
-        <div class="ig">
-          <label>AMOUNT (ALREADY INCLUDES TAX)</label>
-          <div class="iw"><span class="ip cur-sym">$</span><input type="number" id="rem-amount" placeholder="1,200" min="0" step="any" /></div>
-        </div>
-        <div class="ig" style="max-width:140px">
-          <label>VAT / TAX RATE</label>
-          <div class="iw"><input type="number" id="rem-rate" value="20" min="0" max="100" step="any" class="si" oninput="syncRate()" /><span class="is">%</span></div>
-        </div>
-        <button class="calc-btn" onclick="calcRem()">Calculate →</button>
-      </div>
-      <div class="results" id="rem-results">
-        <div class="big-result">
-          <div class="big-label">NET AMOUNT (BEFORE TAX)</div>
-          <div class="big-value" id="rem-net">—</div>
-          <div class="big-sub" id="rem-sub">—</div>
-        </div>
-        <div class="breakdown-grid">
-          <div class="bcard"><div class="bl">GROSS AMOUNT</div><div class="bv" id="rem-gross">—</div></div>
-          <div class="bcard"><div class="bl">TAX AMOUNT</div><div class="bv amber" id="rem-tax">—</div></div>
-          <div class="bcard"><div class="bl">NET AMOUNT</div><div class="bv green" id="rem-net2">—</div></div>
-        </div>
-      </div>
-    </div>
+    <h3>Removing VAT from a price (Reverse VAT / VAT-inclusive to VAT-exclusive)</h3>
+    <p>To remove VAT from a gross price, divide the price by (1 + VAT rate ÷ 100). This is called the reverse VAT calculation.</p>
+    <div class="formula">Net Price = Gross Price ÷ (1 + VAT Rate ÷ 100)</div>
+    <p>Example: Gross price £120, VAT rate 20% → £120 ÷ 1.20 = <strong style="color:var(--green)">£100 net price</strong>. VAT amount = £20.</p>
+
+    <h3>VAT inclusive vs VAT exclusive — what's the difference?</h3>
+    <p><strong style="color:var(--text)">VAT inclusive (gross price)</strong> means VAT is already included in the displayed price. This is what consumers typically see in shops and on receipts. A product priced at £120 VAT-inclusive at 20% VAT contains £20 of VAT.</p>
+    <p><strong style="color:var(--text)">VAT exclusive (net price)</strong> means VAT has not yet been added. Businesses often quote prices excluding VAT (ex-VAT or +VAT). A product quoted at £100 ex-VAT at 20% will cost the customer £120 in total.</p>
   </div>
 
-  <div class="info-section">
-    <h2>VAT Rates Around the World</h2>
-    <p>VAT (Value Added Tax) rates vary significantly by country. Here are the standard rates for major economies:</p>
-    <table class="rates-table">
-      <thead><tr><th>Country</th><th>Standard Rate</th><th>Tax Name</th></tr></thead>
+  <!-- QUICK REFERENCE TABLE -->
+  <div class="content-section">
+    <h2>Quick VAT Reference — Common Amounts</h2>
+    <p>Here are the most commonly calculated VAT amounts for standard prices at popular VAT rates. Click a row in the calculator to use that country's rate.</p>
+    <table class="quick-table">
+      <thead>
+        <tr><th>Net Price</th><th>5% VAT</th><th>10% VAT</th><th>12% VAT</th><th>20% VAT</th><th>23% VAT</th></tr>
+      </thead>
       <tbody>
-        <tr><td>United Kingdom</td><td>20%</td><td>VAT</td></tr>
-        <tr><td>Germany</td><td>19%</td><td>Mehrwertsteuer (MwSt)</td></tr>
-        <tr><td>France</td><td>20%</td><td>TVA</td></tr>
-        <tr><td>India</td><td>18%</td><td>GST</td></tr>
-        <tr><td>Pakistan</td><td>17%</td><td>GST</td></tr>
-        <tr><td>UAE</td><td>5%</td><td>VAT</td></tr>
-        <tr><td>Saudi Arabia</td><td>15%</td><td>VAT</td></tr>
-        <tr><td>Australia</td><td>10%</td><td>GST</td></tr>
-        <tr><td>Canada</td><td>5–15%</td><td>GST/HST</td></tr>
-        <tr><td>USA</td><td>0–13%</td><td>Sales Tax (varies by state)</td></tr>
+        <tr><td>£10 / $10</td><td class="td-green">£10.50</td><td class="td-green">£11.00</td><td class="td-green">£11.20</td><td class="td-green">£12.00</td><td class="td-green">£12.30</td></tr>
+        <tr><td>£25 / $25</td><td class="td-green">£26.25</td><td class="td-green">£27.50</td><td class="td-green">£28.00</td><td class="td-green">£30.00</td><td class="td-green">£30.75</td></tr>
+        <tr><td>£50 / $50</td><td class="td-green">£52.50</td><td class="td-green">£55.00</td><td class="td-green">£56.00</td><td class="td-green">£60.00</td><td class="td-green">£61.50</td></tr>
+        <tr><td>£100 / $100</td><td class="td-green">£105.00</td><td class="td-green">£110.00</td><td class="td-green">£112.00</td><td class="td-green">£120.00</td><td class="td-green">£123.00</td></tr>
+        <tr><td>£200 / $200</td><td class="td-green">£210.00</td><td class="td-green">£220.00</td><td class="td-green">£224.00</td><td class="td-green">£240.00</td><td class="td-green">£246.00</td></tr>
+        <tr><td>£500 / $500</td><td class="td-green">£525.00</td><td class="td-green">£550.00</td><td class="td-green">£560.00</td><td class="td-green">£600.00</td><td class="td-green">£615.00</td></tr>
+        <tr><td>£1,000 / $1,000</td><td class="td-green">£1,050</td><td class="td-green">£1,100</td><td class="td-green">£1,120</td><td class="td-green">£1,200</td><td class="td-green">£1,230</td></tr>
       </tbody>
     </table>
-    <h3>How to Add VAT</h3>
-    <div class="formula-box">Gross Price = Net Price × (1 + VAT Rate / 100)</div>
-    <h3>How to Remove VAT</h3>
-    <div class="formula-box">Net Price = Gross Price ÷ (1 + VAT Rate / 100)</div>
-    <h2 style="margin-top:2.5rem">Frequently Asked Questions</h2>
+  </div>
+
+  <!-- VAT RATES BY COUNTRY -->
+  <div class="content-section">
+    <h2>VAT & GST Rates by Country (2026)</h2>
+    <p>Click any row to automatically set that country's VAT rate in the calculator above. Rates are updated for 2026. Some countries have reduced rates for certain goods — the standard rate is shown here.</p>
+    <table class="vat-table" id="rates-table">
+      <thead><tr><th>Country</th><th>Standard Rate</th><th>Tax Name</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr onclick="setRateFromTable(20,'UK')"><td>🇬🇧 United Kingdom</td><td><span class="rate-badge">20%</span></td><td>VAT</td><td>Reduced 5% for domestic fuel. Zero rate for food & children's items.</td></tr>
+        <tr onclick="setRateFromTable(20,'EU/France')"><td>🇫🇷 France</td><td><span class="rate-badge">20%</span></td><td>TVA</td><td>Reduced rates of 10%, 5.5% and 2.1%.</td></tr>
+        <tr onclick="setRateFromTable(19,'Germany')"><td>🇩🇪 Germany</td><td><span class="rate-badge">19%</span></td><td>MwSt</td><td>Reduced rate 7% for food, books, transport.</td></tr>
+        <tr onclick="setRateFromTable(23,'Ireland')"><td>🇮🇪 Ireland</td><td><span class="rate-badge">23%</span></td><td>VAT</td><td>Reduced 13.5% for construction; 9% for hospitality.</td></tr>
+        <tr onclick="setRateFromTable(21,'Netherlands')"><td>🇳🇱 Netherlands</td><td><span class="rate-badge">21%</span></td><td>BTW</td><td>Reduced rate 9% for food and medicine.</td></tr>
+        <tr onclick="setRateFromTable(25,'Sweden')"><td>🇸🇪 Sweden</td><td><span class="rate-badge">25%</span></td><td>Moms</td><td>One of the highest in the EU. Reduced 12% and 6%.</td></tr>
+        <tr onclick="setRateFromTable(23,'Poland')"><td>🇵🇱 Poland</td><td><span class="rate-badge">23%</span></td><td>VAT</td><td>Reduced 8% and 5% for certain goods.</td></tr>
+        <tr onclick="setRateFromTable(21,'Spain')"><td>🇪🇸 Spain</td><td><span class="rate-badge">21%</span></td><td>IVA</td><td>Reduced 10% for food; 4% for essentials.</td></tr>
+        <tr onclick="setRateFromTable(22,'Italy')"><td>🇮🇹 Italy</td><td><span class="rate-badge">22%</span></td><td>IVA</td><td>Reduced 10% for food and hospitality.</td></tr>
+        <tr onclick="setRateFromTable(12,'Philippines')"><td>🇵🇭 Philippines</td><td><span class="rate-badge">12%</span></td><td>VAT</td><td>Threshold: PHP 3M annual sales. Senior citizens VAT-exempt.</td></tr>
+        <tr onclick="setRateFromTable(5,'UAE')"><td>🇦🇪 UAE</td><td><span class="rate-badge">5%</span></td><td>VAT</td><td>Introduced Jan 2018. Healthcare and education exempt.</td></tr>
+        <tr onclick="setRateFromTable(15,'Saudi Arabia')"><td>🇸🇦 Saudi Arabia</td><td><span class="rate-badge">15%</span></td><td>VAT</td><td>Raised from 5% to 15% in 2020.</td></tr>
+        <tr onclick="setRateFromTable(5,'Oman')"><td>🇴🇲 Oman</td><td><span class="rate-badge">5%</span></td><td>VAT</td><td>Introduced April 2021.</td></tr>
+        <tr onclick="setRateFromTable(10,'Australia')"><td>🇦🇺 Australia</td><td><span class="rate-badge">10%</span></td><td>GST</td><td>Most fresh food, medical and educational supplies are GST-free.</td></tr>
+        <tr onclick="setRateFromTable(15,'New Zealand')"><td>🇳🇿 New Zealand</td><td><span class="rate-badge">15%</span></td><td>GST</td><td>One of the broadest GST systems — few exemptions.</td></tr>
+        <tr onclick="setRateFromTable(9,'Singapore')"><td>🇸🇬 Singapore</td><td><span class="rate-badge">9%</span></td><td>GST</td><td>Raised from 8% to 9% in January 2024.</td></tr>
+        <tr onclick="setRateFromTable(18,'India')"><td>🇮🇳 India</td><td><span class="rate-badge">18%</span></td><td>GST</td><td>Multiple slabs: 5%, 12%, 18%, 28%. 18% is the most common standard rate.</td></tr>
+        <tr onclick="setRateFromTable(15,'South Africa')"><td>🇿🇦 South Africa</td><td><span class="rate-badge">15%</span></td><td>VAT</td><td>Basic food items zero-rated.</td></tr>
+        <tr onclick="setRateFromTable(7.5,'Nigeria')"><td>🇳🇬 Nigeria</td><td><span class="rate-badge">7.5%</span></td><td>VAT</td><td>Raised from 5% to 7.5% in 2020.</td></tr>
+        <tr onclick="setRateFromTable(15,'Ghana')"><td>🇬🇭 Ghana</td><td><span class="rate-badge">15%</span></td><td>VAT</td><td>Raised from 12.5% in 2024.</td></tr>
+        <tr onclick="setRateFromTable(18,'Uganda')"><td>🇺🇬 Uganda</td><td><span class="rate-badge">18%</span></td><td>VAT</td><td>Standard rate applies to most goods and services.</td></tr>
+        <tr onclick="setRateFromTable(12.5,'Trinidad')"><td>🇹🇹 Trinidad & Tobago</td><td><span class="rate-badge">12.5%</span></td><td>VAT</td><td>Standard rate for most goods and services.</td></tr>
+        <tr onclick="setRateFromTable(13,'Nepal')"><td>🇳🇵 Nepal</td><td><span class="rate-badge">13%</span></td><td>VAT</td><td>Standard rate for most goods and services.</td></tr>
+        <tr onclick="setRateFromTable(11,'Indonesia')"><td>🇮🇩 Indonesia</td><td><span class="rate-badge">11%</span></td><td>PPN</td><td>Raised from 10% to 11% in April 2022.</td></tr>
+        <tr onclick="setRateFromTable(7,'Thailand')"><td>🇹🇭 Thailand</td><td><span class="rate-badge">7%</span></td><td>VAT</td><td>Legal rate is 10% but temporarily reduced to 7% for decades.</td></tr>
+        <tr onclick="setRateFromTable(8,'Vietnam')"><td>🇻🇳 Vietnam</td><td><span class="rate-badge">8%</span></td><td>VAT</td><td>Temporarily reduced from 10% — extension through 2026.</td></tr>
+        <tr onclick="setRateFromTable(15,'Canada')"><td>🇨🇦 Canada</td><td><span class="rate-badge">5–15%</span></td><td>GST/HST</td><td>Federal GST 5%. HST varies by province: Ontario 13%, Nova Scotia 15%.</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted)">⚠️ VAT rates are updated for 2026. Rates may change — always verify with official government sources for formal tax filings.</p>
+  </div>
+
+  <!-- CONTENT SECTION -->
+  <div class="content-section">
+    <h2>VAT Explained — Everything You Need to Know</h2>
+    <p>VAT (Value Added Tax) is a consumption tax levied on goods and services at each stage of production and distribution. Unlike a simple sales tax applied only at the point of sale, VAT is collected incrementally — each business in the supply chain charges VAT to the next buyer and can reclaim the VAT they paid on their own purchases.</p>
+
+    <h3>Who pays VAT?</h3>
+    <p>Ultimately, the end consumer bears the cost of VAT — it is included in the final price they pay. Businesses act as VAT collectors on behalf of the government. A VAT-registered business charges VAT on its sales (output tax), deducts the VAT it paid on purchases (input tax), and pays the difference to the tax authority.</p>
+
+    <h3>What is the difference between VAT and GST?</h3>
+    <p>VAT and GST are effectively the same type of consumption tax — they just go by different names in different countries. Countries including the UK, EU member states, UAE, Philippines, and most of Africa use the term "VAT". Countries including Australia, Canada, India, Singapore, and New Zealand call it "GST" (Goods and Services Tax). The mechanics of calculation — adding a percentage to the price of goods and services — are identical.</p>
+
+    <h3>What is reverse VAT calculation?</h3>
+    <p>Reverse VAT (also called removing VAT, backing out VAT, or VAT extraction) means finding the original price before VAT from a VAT-inclusive price. It is used when you see a price that already includes VAT and want to know what the net price is. The reverse VAT formula divides the gross price by (1 + VAT rate ÷ 100). For 20% UK VAT: net price = gross ÷ 1.20.</p>
+
+    <h3>Philippines VAT — 12%</h3>
+    <p>The Philippines imposes a standard VAT rate of 12% on most goods and services, administered by the Bureau of Internal Revenue (BIR). Businesses with annual taxable sales exceeding PHP 3,000,000 must register for VAT. Senior citizens and persons with disabilities are exempt from VAT on personal consumption of certain goods and services. To calculate Philippines VAT: multiply the net price by 0.12 to get the VAT amount, or multiply by 1.12 for the total VAT-inclusive price.</p>
+
+    <h3>UAE VAT — 5%</h3>
+    <p>The UAE introduced VAT at 5% in January 2018, making it one of the lowest standard VAT rates globally. Healthcare, education, and residential properties are generally exempt. To add UAE VAT: multiply the price by 1.05. To remove UAE VAT from a price: divide by 1.05.</p>
+
+    <h3>UK VAT — 20%</h3>
+    <p>The standard UK VAT rate is 20%. There is a reduced rate of 5% for domestic fuel and power, children's car seats, and some energy-saving materials. Most food, children's clothing, books, and newspapers are zero-rated (0%). To add UK VAT: multiply by 1.20. To remove UK VAT: divide by 1.20.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
-      <div class="faq-q">What is the difference between VAT and GST?</div>
-      <div class="faq-a">VAT (Value Added Tax) and GST (Goods and Services Tax) are essentially the same type of consumption tax — they're just named differently in different countries. The UK uses VAT, India and Pakistan use GST, Australia uses GST, and the USA uses Sales Tax.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate VAT?</div>
+      <div class="faq-a">To add VAT: multiply the net price by (1 + VAT rate ÷ 100). Example: £100 + 20% VAT = £100 × 1.20 = £120. To remove VAT: divide the gross price by (1 + VAT rate ÷ 100). Example: £120 ÷ 1.20 = £100 net. Use the calculator above for instant results.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">What does "VAT inclusive" mean?</div>
-      <div class="faq-a">VAT inclusive means the price already includes tax. To find the pre-tax price, you need to remove VAT. Use the "Remove VAT" tab above for this calculation.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">What is VAT inclusive and VAT exclusive?</div>
+      <div class="faq-a">VAT inclusive means VAT is already included in the price shown. VAT exclusive means VAT has not yet been added. A product priced at £120 VAT-inclusive at 20% contains £20 of VAT and £100 net price. Businesses often quote prices excluding VAT and add it separately for B2B customers who can reclaim it.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">Can I use this for sales tax in the US?</div>
-      <div class="faq-a">Yes — just enter your state's sales tax rate in the rate field. The math is identical whether you call it VAT, GST, or sales tax.</div>
+      <div class="faq-q" onclick="toggleFaq(this)">How do I remove VAT from a price?</div>
+      <div class="faq-a">Divide the VAT-inclusive price by (1 + VAT rate ÷ 100). For 20% UK VAT: divide by 1.20. For 12% Philippines VAT: divide by 1.12. For 5% UAE VAT: divide by 1.05. Example: remove 20% VAT from £120 → £120 ÷ 1.20 = £100. Use the "Remove VAT" tab above.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the VAT rate in the Philippines?</div>
+      <div class="faq-a">The Philippines VAT rate is 12%, administered by the Bureau of Internal Revenue (BIR). To add 12% VAT: multiply by 1.12. To remove 12% VAT: divide by 1.12. The VAT registration threshold is PHP 3,000,000 annual taxable sales. Senior citizens are exempt from VAT on personal consumption of most goods.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How much is 20% VAT on £100?</div>
+      <div class="faq-a">20% VAT on £100 is £20, making the total VAT-inclusive price £120. To calculate: £100 × 0.20 = £20 VAT. £100 + £20 = £120 gross. Use the Add VAT calculator above for any amount and rate.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the difference between VAT and GST?</div>
+      <div class="faq-a">VAT and GST are the same type of consumption tax with different names. UK, EU, UAE, Philippines use "VAT". Australia, Canada, India, Singapore, New Zealand use "GST". The calculation is identical — a percentage added to goods and services prices. Our calculator works for both.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the UAE VAT rate?</div>
+      <div class="faq-a">The UAE VAT rate is 5%, introduced in January 2018. It is one of the lowest standard VAT rates globally. Healthcare, education, and residential property are generally exempt or zero-rated. To add 5% UAE VAT: multiply by 1.05. To remove: divide by 1.05.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate VAT backwards from a total?</div>
+      <div class="faq-a">Use the "Remove VAT" tab above. Enter the total (VAT-inclusive) price and the VAT rate, and the calculator shows you the net price (ex-VAT) and the exact VAT amount. This is also called reverse VAT or backing out VAT. Formula: net = gross ÷ (1 + rate/100). VAT amount = gross − net.</div>
     </div>
   </div>
 
   <div class="related">
     <h2>Related Tools</h2>
     <div class="related-grid">
-      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
+      <a href="/tools/percentage-calculator.html" class="related-card"><span style="font-size:1.4rem">%</span><span style="font-size:0.88rem;font-weight:500">Percentage Calculator</span></a>
+      <a href="/tools/discount-calculator.html" class="related-card"><span style="font-size:1.4rem">🏷️</span><span style="font-size:0.88rem;font-weight:500">Discount Calculator</span></a>
       <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
-      <a href="/tools/markup-calculator.html" class="related-card"><span style="font-size:1.4rem">🏷️</span><span style="font-size:0.88rem;font-weight:500">Markup Calculator</span></a>
+      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
     </div>
   </div>
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
 <script>
-  let cur='$';
-  function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);}
-  const fmt=n=>cur+' '+parseFloat(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  let addResult = '', removeResult = '';
 
-  function setRate(r){
-    document.getElementById('add-rate').value=r;
-    document.getElementById('rem-rate').value=r;
-    document.querySelectorAll('.rate-chip').forEach(c=>{c.classList.toggle('active',parseFloat(c.textContent)===r||c.textContent.startsWith(r+'%'));});
-  }
-
-  function syncRate(){
-    const active=document.querySelector('.tab.active');
-    const isAdd=active&&active.textContent.trim()==='Add VAT';
-    const src=isAdd?'add-rate':'rem-rate';
-    const dst=isAdd?'rem-rate':'add-rate';
-    document.getElementById(dst).value=document.getElementById(src).value;
-  }
-
-  function switchTab(name,btn){
-    ['add','remove'].forEach(t=>document.getElementById('tab-'+t).style.display='none');
-    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
-    document.getElementById('tab-'+name).style.display='block';
+  function switchTab(id, btn) {
+    document.querySelectorAll('.calc-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.calc-card').forEach(c => c.classList.remove('active'));
     btn.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
   }
 
-  function calcAdd(){
-    const amt=parseFloat(document.getElementById('add-amount').value);
-    const rate=parseFloat(document.getElementById('add-rate').value);
-    if(isNaN(amt)||isNaN(rate)||amt<0){alert('Please enter a valid amount.');return;}
-    const tax=amt*(rate/100);
-    const total=amt+tax;
-    document.getElementById('add-total').textContent=fmt(total);
-    document.getElementById('add-sub').textContent=fmt(amt)+' + '+fmt(tax)+' tax';
-    document.getElementById('add-net').textContent=fmt(amt);
-    document.getElementById('add-tax').textContent=fmt(tax);
-    document.getElementById('add-gross').textContent=fmt(total);
-    document.getElementById('add-results').classList.add('show');
+  function setRate(rate, label, btn) {
+    document.querySelectorAll('#tab-add .cpill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('add-rate').value = rate;
   }
 
-  function calcRem(){
-    const amt=parseFloat(document.getElementById('rem-amount').value);
-    const rate=parseFloat(document.getElementById('rem-rate').value);
-    if(isNaN(amt)||isNaN(rate)||amt<0){alert('Please enter a valid amount.');return;}
-    const net=amt/(1+rate/100);
-    const tax=amt-net;
-    document.getElementById('rem-net').textContent=fmt(net);
-    document.getElementById('rem-sub').textContent=fmt(tax)+' tax removed from '+fmt(amt);
-    document.getElementById('rem-gross').textContent=fmt(amt);
-    document.getElementById('rem-tax').textContent=fmt(tax);
-    document.getElementById('rem-net2').textContent=fmt(net);
-    document.getElementById('rem-results').classList.add('show');
+  function setRateRemove(rate, label, btn) {
+    document.querySelectorAll('#tab-remove .cpill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('rem-rate').value = rate;
   }
+
+  function setRateFromTable(rate, country) {
+    document.getElementById('add-rate').value = rate;
+    document.getElementById('rem-rate').value = rate;
+    // Switch to add tab
+    document.querySelectorAll('.calc-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.calc-card').forEach(c => c.classList.remove('active'));
+    document.querySelector('.calc-tab').classList.add('active');
+    document.getElementById('tab-add').classList.add('active');
+    document.getElementById('tab-add').scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  function fmt(n) {
+    return parseFloat(n.toFixed(2)).toLocaleString('en-GB', {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+
+  function calcAdd() {
+    const price = parseFloat(document.getElementById('add-price').value);
+    const rate = parseFloat(document.getElementById('add-rate').value);
+    if (isNaN(price) || isNaN(rate) || price < 0 || rate < 0) { alert('Please enter a valid price and VAT rate.'); return; }
+    const vatAmt = price * rate / 100;
+    const gross = price + vatAmt;
+    document.getElementById('add-vatamt').textContent = fmt(vatAmt);
+    document.getElementById('add-gross').textContent = fmt(gross);
+    document.getElementById('add-net').textContent = fmt(price);
+    addResult = `Net: ${fmt(price)} | VAT (${rate}%): ${fmt(vatAmt)} | Gross: ${fmt(gross)}`;
+    document.getElementById('result-add').classList.add('show');
+  }
+
+  function calcRemove() {
+    const gross = parseFloat(document.getElementById('rem-price').value);
+    const rate = parseFloat(document.getElementById('rem-rate').value);
+    if (isNaN(gross) || isNaN(rate) || gross < 0 || rate < 0) { alert('Please enter a valid price and VAT rate.'); return; }
+    const net = gross / (1 + rate / 100);
+    const vatAmt = gross - net;
+    document.getElementById('rem-net').textContent = fmt(net);
+    document.getElementById('rem-vatamt').textContent = fmt(vatAmt);
+    document.getElementById('rem-gross').textContent = fmt(gross);
+    removeResult = `Net: ${fmt(net)} | VAT (${rate}%): ${fmt(vatAmt)} | Gross: ${fmt(gross)}`;
+    document.getElementById('result-remove').classList.add('show');
+  }
+
+  function calcCheck() {
+    const net = parseFloat(document.getElementById('chk-net').value);
+    const gross = parseFloat(document.getElementById('chk-gross').value);
+    if (isNaN(net) || isNaN(gross) || net <= 0 || gross <= net) { alert('Please enter valid prices. Gross must be greater than net.'); return; }
+    const vatAmt = gross - net;
+    const rate = (vatAmt / net) * 100;
+    const pctOfGross = (vatAmt / gross) * 100;
+    document.getElementById('chk-rate').textContent = parseFloat(rate.toFixed(2)) + '%';
+    document.getElementById('chk-vatamt').textContent = fmt(vatAmt);
+    document.getElementById('chk-pct').textContent = parseFloat(pctOfGross.toFixed(2)) + '%';
+    document.getElementById('result-check').classList.add('show');
+  }
+
+  function copyResult(type) {
+    const text = type === 'add' ? addResult : removeResult;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector(`#tab-${type} .copy-result-btn`);
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = '📋 Copy result', 2000);
+    });
+  }
+
+  function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+
+  // Enter key
+  document.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const card = inp.closest('.calc-card');
+        if (card) card.querySelector('.calc-btn').click();
+      }
+    });
+  });
 </script>
 </body>
 </html>
