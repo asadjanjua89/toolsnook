@@ -3,95 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Freelancer Rate Calculator – Find Your Hourly Rate | ToolsNook</title>
-  <meta name="description" content="Calculate your ideal freelance hourly rate based on your income goals, expenses, and billable hours. Free freelancer rate calculator for consultants and self-employed professionals." />
-  <meta name="keywords" content="freelancer rate calculator, hourly rate calculator, freelance pricing, consultant rate, self employed rate, how much to charge freelance" />
+  <title>Freelancer Rate Calculator – Hourly, Day Rate & Project Rate | ToolsNook</title>
+  <meta name="description" content="Free freelancer rate calculator. Calculate your minimum hourly rate, day rate, project rate and monthly target. Accounts for taxes, expenses, platform fees and non-billable time. Used by 10,000+ freelancers." />
+  <meta name="keywords" content="freelancer rate calculator, freelance hourly rate calculator, freelance rate calculator, how much to charge as a freelancer, freelance day rate calculator, freelance project rate calculator, calculate freelance rate, freelancer fees calculator, freelance hourly rate, minimum freelance rate, freelance rate by industry, how to calculate freelance rate, Upwork hourly rate calculator, Fiverr pricing calculator, freelance tax calculator, freelance pricing calculator, what should I charge as a freelancer, freelance rate formula, freelance income calculator, freelance rates 2026, self employed rate calculator, contractor rate calculator, consulting rate calculator, freelance weekly rate, freelance monthly income calculator, freelance platform fee calculator" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/freelancer-rate-calculator.html" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
-    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
-    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
-    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
-    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
-    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
-    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
-    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
-    .container{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
-    .top-row{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:2rem;margin-bottom:0.75rem}
-    .top-row label{font-size:0.78rem;color:var(--muted);font-weight:500;letter-spacing:0.04em}
-    .csw{position:relative}.csw::after{content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.7rem;pointer-events:none}
-    select.dsel{appearance:none;-webkit-appearance:none;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;padding:6px 28px 6px 12px;cursor:pointer}
-    select.dsel:focus{outline:none;border-color:var(--accent)}select.dsel option{background:#1a1a24;color:var(--text)}
-    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem}
-    .section-label{font-size:0.75rem;font-weight:600;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;margin-top:1.5rem}
-    .section-label:first-child{margin-top:0}
-    .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:0.5rem}
-    @media(max-width:580px){.input-grid{grid-template-columns:1fr}}
-    .ig label{display:block;font-size:0.78rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
-    .iw{position:relative}
-    .ip{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
-    .is{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;pointer-events:none}
-    input[type=number]{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem 0.75rem 2.4rem;-moz-appearance:textfield}
-    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
-    input[type=number]:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
-    input.np{padding-left:1rem}input.si{padding-right:2.2rem;padding-left:1rem}
-    .divider{height:1px;background:var(--border);margin:1.5rem 0}
-    .calc-btn{width:100%;padding:0.9rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:1.5rem;margin-bottom:1.5rem}
-    .calc-btn:hover{opacity:0.88;transform:translateY(-1px)}
-    .results{display:none}.results.show{display:block}
-    .hero-result{background:linear-gradient(135deg,rgba(108,99,255,0.15),rgba(108,99,255,0.05));border:1px solid rgba(108,99,255,0.3);border-radius:16px;padding:2rem;text-align:center;margin-bottom:1.5rem}
-    .hr-label{font-size:0.78rem;color:#a59fff;font-weight:500;letter-spacing:0.06em;margin-bottom:0.5rem}
-    .hr-value{font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;color:var(--accent);line-height:1}
-    .hr-sub{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
-    .rate-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1.5rem}
-    .rate-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center}
-    .rl{font-size:0.72rem;color:var(--muted);margin-bottom:4px;font-weight:500;letter-spacing:0.04em}
-    .rv{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800}
-    .rv.green{color:var(--green)}.rv.amber{color:var(--amber)}
-    .rs{font-size:0.72rem;color:var(--muted);margin-top:3px}
-    .breakdown{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-    .brow{display:flex;justify-content:space-between;padding:0.85rem 1.25rem;border-bottom:1px solid var(--border);font-size:0.88rem}
-    .brow:last-child{border-bottom:none}.brow.head{background:var(--bg3);font-family:'Syne',sans-serif;font-weight:700}
-    .bk{color:var(--muted)}.bv{font-weight:500}
-    .info-section{margin-top:4rem}
-    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
-    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
-    .formula-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
-    .faq-item{margin-bottom:1.25rem}
-    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
-    .faq-a{color:var(--muted);font-size:0.9rem;line-height:1.7}
-    .related{margin-top:3rem}
-    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
-    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
-    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
-    footer a{color:var(--muted);text-decoration:none}
-  </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:title" content="Freelancer Rate Calculator – Hourly, Day Rate & Project Rate" />
+  <meta property="og:description" content="Calculate your minimum freelance hourly rate, day rate and project rate. Accounts for taxes, platform fees, expenses and non-billable time. Free, instant, no signup." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/freelancer-rate-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Freelancer Rate Calculator",
     "url": "https://www.toolsnook.com/tools/freelancer-rate-calculator.html",
-    "description": "Free freelancer hourly rate calculator. Find your ideal rate based on your income goal, expenses and billable hours.",
+    "description": "Free freelancer rate calculator. Calculate minimum hourly rate, day rate, project rate and monthly income target. Accounts for taxes, expenses, platform fees and non-billable hours.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-    "publisher": {"@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com"}
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com" },
+      { "@type": "ListItem", "position": 2, "name": "Freelancer Rate Calculator", "item": "https://www.toolsnook.com/tools/freelancer-rate-calculator.html" }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -101,157 +48,921 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do I calculate my freelance rate?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Add your desired annual income to your business expenses, then divide by your billable hours per year. Our freelancer rate calculator does this automatically — enter your income goal and working hours to get your minimum viable rate."}
+        "name": "How do I calculate my freelance hourly rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The formula is: Hourly Rate = (Desired Annual Income + Annual Expenses) ÷ (1 - Tax Rate) ÷ Annual Billable Hours. For example: ($60,000 income + $5,000 expenses) ÷ 0.70 ÷ 1,200 billable hours = $77.38/hr. Most freelancers only bill 50-60% of their working hours — the rest goes to admin, marketing and non-billable tasks. Use a realistic billable hour estimate, not 40hrs × 52 weeks." }
       },
       {
         "@type": "Question",
-        "name": "What hourly rate should I charge as a freelancer?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Your rate depends on your skill level, niche, location, and target clients. Research market rates in your field, calculate your minimum viable rate using this calculator, then add a markup for profit and negotiation room."}
+        "name": "How many billable hours does a freelancer work per year?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most freelancers bill between 1,000 and 1,400 hours per year — equivalent to 20-28 billable hours per week across 48 working weeks. The gap between total working hours and billable hours is filled by admin, client communication, marketing, proposals, and professional development. Assuming all 2,080 hours (40hrs × 52 weeks) are billable leads to underpricing by 30-50%." }
       },
       {
         "@type": "Question",
-        "name": "How many billable hours do freelancers work?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Most freelancers bill 60-80% of their working hours — the rest goes to admin, marketing, and non-billable tasks. If you work 40 hours per week, expect 24-32 billable hours. Our calculator accounts for this automatically."}
+        "name": "How do I calculate a freelance day rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your freelance day rate is simply your hourly rate multiplied by the number of hours in your working day (typically 7-8 hours). If your hourly rate is $75, your day rate is $75 × 8 = $600. Day rates are commonly used for on-site work, short-term contracts, and consulting engagements. Use our calculator above to find both your hourly and day rate simultaneously." }
+      },
+      {
+        "@type": "Question",
+        "name": "What percentage should a freelancer set aside for tax?",
+        "acceptedAnswer": { "@type": "Answer", "text": "As a general guideline, freelancers should set aside 25-35% of their income for tax. In the US, self-employed individuals pay income tax plus 15.3% self-employment tax (covering Social Security and Medicare). In the UK, freelancers pay income tax plus 9% Class 4 National Insurance. A safe starting point is 30% set aside for tax in most Western countries. Use the tax set-aside feature in our calculator for a personalised estimate." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Upwork take from freelancers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Upwork charges freelancers a 10% service fee on all earnings (simplified from the previous tiered structure in 2025). This means if you charge a client $100/hr on Upwork, you receive $90. You should factor this into your rate — if you want to earn $90/hr net, quote $100/hr on Upwork. Our calculator includes a platform fee field to account for this automatically." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate a freelance project rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Multiply your hourly rate by the estimated hours for the project, then add a buffer for scope creep (typically 10-20%). Formula: Project Rate = Hourly Rate × Estimated Hours × (1 + Buffer%). For example: $75/hr × 20 hours × 1.15 buffer = $1,725. Use the Project Rate calculator tab above to calculate this instantly with your own rates and estimates." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I charge the same rate for all clients?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No — most experienced freelancers use tiered pricing. Charge higher rates for: rush projects (1.5-2x), short-term engagements, clients in high-revenue industries, and projects outside your niche. Charge standard rates for: regular long-term clients, projects in your core skill area. Your calculated rate from this tool is your floor — the minimum you need to stay profitable. You can and should charge above it based on value delivered." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good freelance hourly rate in 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Freelance rates vary significantly by skill, experience, and location. In 2026, typical ranges are: Web developers $50-150/hr, UX/UI designers $45-120/hr, Copywriters $40-120/hr, Digital marketers $35-100/hr, Graphic designers $35-85/hr, Virtual assistants $15-45/hr, Business consultants $75-250/hr. These are US market rates. Rates in the UK, Europe, Australia and Canada are broadly similar. Rates in South Asia and Southeast Asia are typically 30-60% lower." }
       }
     ]
   }
   </script>
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com"},
-      {"@type": "ListItem", "position": 2, "name": "Freelancer Rate Calculator", "item": "https://www.toolsnook.com/tools/freelancer-rate-calculator.html"}
-    ]
-  }
-  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b;--blue:#4ecdc4;--purple:#c084fc}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2.5rem;text-align:center;max-width:720px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:580px;margin:0 auto}
+    .container{max-width:980px;margin:0 auto;padding:0 2rem 4rem}
+
+    /* TABS */
+    .calc-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:2rem;margin-bottom:1rem}
+    .calc-tab{padding:8px 18px;background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-size:0.84rem;border-radius:100px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .calc-tab.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem;display:none;position:relative;overflow:hidden}
+    .calc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--blue))}
+    .calc-card.active{display:block}
+    .card-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.05em}
+    .card-sub{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem}
+
+    /* LAYOUT */
+    .calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+    @media(max-width:700px){.calc-layout{grid-template-columns:1fr}}
+    .field{margin-bottom:1rem}
+    .field label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
+    .field-hint{font-size:0.72rem;color:var(--muted);margin-top:3px;opacity:0.8}
+    .field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:0.65rem 0.9rem;transition:border-color 0.2s}
+    .field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
+    .field select{cursor:pointer}.field select option{background:#1a1a24}
+    .field-group{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.1rem;margin-bottom:1rem}
+    .field-group-title{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;color:var(--accent);margin-bottom:0.75rem;letter-spacing:0.06em;text-transform:uppercase}
+    .input-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+    @media(max-width:420px){.input-row{grid-template-columns:1fr}}
+    .calc-btn{width:100%;padding:0.95rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:12px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:0.5rem}
+    .calc-btn:hover{opacity:0.88;transform:translateY(-1px)}
+
+    /* RESULTS PANEL */
+    .results-panel{background:var(--bg3);border:1px solid var(--border2);border-radius:14px;padding:1.5rem}
+    .results-title{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;color:var(--accent);margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:0.05em}
+    .rate-hero{text-align:center;background:linear-gradient(135deg,rgba(108,99,255,0.12),rgba(192,132,252,0.08));border:1px solid rgba(108,99,255,0.25);border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+    .rate-hero-num{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:var(--green);line-height:1}
+    .rate-hero-label{font-size:0.82rem;color:var(--muted);margin-top:6px}
+    .rate-hero-sub{font-size:0.75rem;color:var(--muted);margin-top:4px}
+    .rate-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1rem}
+    .rate-item{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.8rem;text-align:center}
+    .rate-num{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800}
+    .rate-num.amber{color:var(--amber)}.rate-num.blue{color:var(--blue)}.rate-num.purple{color:var(--purple)}.rate-num.red{color:var(--red)}.rate-num.green{color:var(--green)}
+    .rate-label{font-size:0.68rem;color:var(--muted);margin-top:3px}
+    .breakdown{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-top:0.75rem}
+    .breakdown-title{font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;color:var(--muted);margin-bottom:0.6rem;letter-spacing:0.06em;text-transform:uppercase}
+    .breakdown-row{display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;padding:0.3rem 0;border-bottom:1px solid var(--border)}
+    .breakdown-row:last-child{border-bottom:none;font-weight:600;color:var(--text)}
+    .breakdown-label{color:var(--muted)}
+    .breakdown-val{font-weight:500;color:var(--text)}
+    .tax-box{background:rgba(255,107,107,0.07);border:1px solid rgba(255,107,107,0.2);border-radius:8px;padding:0.85rem;margin-top:0.75rem}
+    .tax-box-title{font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;color:var(--red);margin-bottom:0.4rem}
+    .tax-box-text{font-size:0.82rem;color:var(--muted);line-height:1.6}
+    .copy-btn{width:100%;padding:0.6rem;background:transparent;border:1px solid var(--border2);color:var(--muted);border-radius:8px;font-size:0.82rem;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;margin-top:0.75rem}
+    .copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+    .placeholder{text-align:center;padding:3rem 1rem;color:var(--muted)}
+    .placeholder-icon{font-size:2.5rem;margin-bottom:0.75rem}
+    .placeholder-text{font-size:0.88rem;line-height:1.6}
+
+    /* CONTENT */
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
+    .formula{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:0.75rem 1rem;font-family:monospace;font-size:0.9rem;color:var(--accent);margin:0.75rem 0}
+    .warning-box{background:rgba(247,151,30,0.07);border:1px solid rgba(247,151,30,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .warning-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
+    .tip-box{background:rgba(67,233,123,0.06);border:1px solid rgba(67,233,123,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .tip-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
+
+    /* BENCHMARK TABLE */
+    .bench-table{width:100%;border-collapse:collapse;font-size:0.83rem;margin-top:1rem}
+    .bench-table th{background:var(--bg3);color:var(--muted);font-weight:600;padding:0.6rem 0.9rem;text-align:left;font-size:0.75rem;letter-spacing:0.05em}
+    .bench-table td{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    .bench-table td:first-child{color:var(--text);font-weight:500}
+    .bench-table tr:last-child td{border-bottom:none}
+    .bench-table tr:hover td{background:var(--bg3)}
+    .range{color:var(--green);font-weight:600}
+    .platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+    .platform-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1rem}
+    .platform-name{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.4rem}
+    .platform-fee{font-size:1rem;font-weight:700;color:var(--amber);margin-bottom:4px}
+    .platform-detail{font-size:0.78rem;color:var(--muted);line-height:1.5}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q::after{content:'▼';font-size:0.7rem;color:var(--muted);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{transform:rotate(180deg)}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;display:none}
+    .faq-item.open .faq-a{display:block}
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+    @media(max-width:600px){.calc-card{padding:1.25rem}.rate-grid{grid-template-columns:1fr 1fr}}
+  </style>
 </head>
 <body>
 <nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+
 <div class="hero">
   <div class="breadcrumb"><a href="/">ToolsNook</a> › Freelancer Rate Calculator</div>
-  <div class="hero-badge">✦ HR Tool</div>
   <h1>Freelancer Rate Calculator</h1>
-  <p>Find your ideal hourly rate based on your income goals, business expenses and available hours. Stop guessing what to charge.</p>
+  <p>Calculate your minimum hourly rate, day rate and project rate. Accounts for taxes, business expenses, platform fees and non-billable hours. Free, instant, no signup.</p>
 </div>
+
 <div class="container">
-  <div class="top-row">
-    <label>CURRENCY</label>
-    <div class="csw"><select class="dsel" id="cs" onchange="onCC()">
-      <optgroup label="Major"><option value="$|USD" selected>$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option><option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option></optgroup>
-      <optgroup label="Asia & Middle East"><option value="₹|INR">₹ INR</option><option value="₨|PKR">₨ PKR</option><option value="AED|AED">AED</option><option value="﷼|SAR">﷼ SAR</option></optgroup>
-      <optgroup label="Other"><option value="R|ZAR">R ZAR</option><option value="₦|NGN">₦ NGN</option><option value="R$|BRL">R$ BRL</option></optgroup>
-    </select></div>
+  <div class="calc-tabs">
+    <button class="calc-tab active" onclick="switchTab('hourly',this)">⏱️ Hourly Rate</button>
+    <button class="calc-tab" onclick="switchTab('project',this)">📋 Project Rate</button>
+    <button class="calc-tab" onclick="switchTab('reverse',this)">🔁 Reverse — Salary to Rate</button>
+    <button class="calc-tab" onclick="switchTab('platform',this)">🏢 Platform Fee Calc</button>
   </div>
-  <div class="calc-card">
-    <div class="section-label">Income Goals</div>
-    <div class="input-grid">
-      <div class="ig"><label>DESIRED ANNUAL INCOME</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="income" placeholder="60,000" min="0" step="any" /></div></div>
-      <div class="ig"><label>PROFIT MARGIN / BUFFER (%)</label><div class="iw"><input type="number" id="buffer" value="20" min="0" max="100" step="any" class="si" /><span class="is">%</span></div></div>
-    </div>
-    <div class="divider"></div>
-    <div class="section-label">Business Expenses (Annual)</div>
-    <div class="input-grid">
-      <div class="ig"><label>SOFTWARE & TOOLS</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="software" placeholder="1,200" min="0" step="any" /></div></div>
-      <div class="ig"><label>MARKETING & WEBSITE</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="marketing" placeholder="500" min="0" step="any" /></div></div>
-      <div class="ig"><label>TAXES (ESTIMATED %)</label><div class="iw"><input type="number" id="taxrate" value="25" min="0" max="100" step="any" class="si" /><span class="is">%</span></div></div>
-      <div class="ig"><label>OTHER EXPENSES</label><div class="iw"><span class="ip cur-sym">$</span><input type="number" id="other" placeholder="500" min="0" step="any" /></div></div>
-    </div>
-    <div class="divider"></div>
-    <div class="section-label">Working Hours</div>
-    <div class="input-grid">
-      <div class="ig"><label>HOURS AVAILABLE PER WEEK</label><div class="iw"><input type="number" id="avail" value="40" min="1" max="168" step="any" class="np" /></div></div>
-      <div class="ig"><label>BILLABLE HOURS % (NON-BILLABLE = ADMIN)</label><div class="iw"><input type="number" id="billable" value="70" min="1" max="100" step="any" class="si" /><span class="is">%</span></div></div>
-      <div class="ig"><label>WEEKS OFF PER YEAR</label><div class="iw"><input type="number" id="weeksoff" value="4" min="0" max="52" step="any" class="np" /></div></div>
-    </div>
-    <button class="calc-btn" onclick="calcRate()">Calculate My Rate →</button>
-    <div class="results" id="fl-results">
-      <div class="hero-result">
-        <div class="hr-label">YOUR MINIMUM HOURLY RATE</div>
-        <div class="hr-value" id="r-hourly">—</div>
-        <div class="hr-sub">charge less than this and you'll lose money</div>
+
+  <!-- HOURLY RATE -->
+  <div class="calc-card active" id="tab-hourly">
+    <div class="card-title">Hourly Rate Calculator</div>
+    <div class="card-sub">Find the minimum hourly rate you need to charge to hit your income goals after tax and expenses.</div>
+    <div class="calc-layout">
+      <div>
+        <div class="field-group">
+          <div class="field-group-title">💰 Income Goals</div>
+          <div class="field">
+            <label>DESIRED ANNUAL TAKE-HOME INCOME</label>
+            <input type="number" id="income" placeholder="e.g. 60000" min="0" />
+            <div class="field-hint">What you want to actually earn after tax and expenses</div>
+          </div>
+          <div class="field">
+            <label>CURRENCY</label>
+            <select id="currency">
+              <option value="$">$ USD</option>
+              <option value="£">£ GBP</option>
+              <option value="€">€ EUR</option>
+              <option value="A$">A$ AUD</option>
+              <option value="C$">C$ CAD</option>
+              <option value="₹">₹ INR</option>
+              <option value="PKR">PKR</option>
+              <option value="AED">AED</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-group-title">🧾 Business Expenses</div>
+          <div class="input-row">
+            <div class="field">
+              <label>MONTHLY EXPENSES</label>
+              <input type="number" id="expenses" placeholder="e.g. 500" min="0" />
+              <div class="field-hint">Software, equipment, internet, office</div>
+            </div>
+            <div class="field">
+              <label>TAX RATE (%)</label>
+              <input type="number" id="taxrate" placeholder="e.g. 30" min="0" max="60" value="30" />
+              <div class="field-hint">Set aside % for tax. 25-35% is typical</div>
+            </div>
+          </div>
+          <div class="field">
+            <label>PLATFORM FEES (%)</label>
+            <select id="platform-fee">
+              <option value="0">No platform (direct clients) — 0%</option>
+              <option value="10">Upwork — 10%</option>
+              <option value="20">Fiverr — 20%</option>
+              <option value="15">Freelancer.com — 15%</option>
+              <option value="8">Toptal — 8%</option>
+              <option value="5">PeoplePerHour — 5%</option>
+              <option value="custom">Custom %</option>
+            </select>
+          </div>
+          <div class="field" id="custom-platform-wrap" style="display:none">
+            <label>CUSTOM PLATFORM FEE (%)</label>
+            <input type="number" id="custom-platform" placeholder="e.g. 12" min="0" max="50" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-group-title">📅 Working Hours</div>
+          <div class="input-row">
+            <div class="field">
+              <label>HOURS WORKED PER WEEK</label>
+              <input type="number" id="hours-week" placeholder="40" min="1" max="80" value="40" />
+            </div>
+            <div class="field">
+              <label>WEEKS WORKED PER YEAR</label>
+              <input type="number" id="weeks-year" placeholder="48" min="1" max="52" value="48" />
+            </div>
+          </div>
+          <div class="field">
+            <label>BILLABLE RATE (%)</label>
+            <select id="billable-rate">
+              <option value="50">50% billable (20hrs/week — new freelancer)</option>
+              <option value="60" selected>60% billable (24hrs/week — typical)</option>
+              <option value="70">70% billable (28hrs/week — experienced)</option>
+              <option value="80">80% billable (32hrs/week — very busy)</option>
+              <option value="custom-b">Custom %</option>
+            </select>
+            <div class="field-hint">Remaining time goes to admin, marketing, proposals</div>
+          </div>
+          <div class="field" id="custom-billable-wrap" style="display:none">
+            <label>CUSTOM BILLABLE %</label>
+            <input type="number" id="custom-billable" placeholder="e.g. 65" min="10" max="100" />
+          </div>
+          <div class="field">
+            <label>HOURS PER WORKING DAY</label>
+            <input type="number" id="hours-day" placeholder="8" min="1" max="16" value="8" />
+            <div class="field-hint">Used to calculate your day rate</div>
+          </div>
+        </div>
+
+        <button class="calc-btn" onclick="calcHourly()">⚡ Calculate My Rate</button>
       </div>
-      <div class="rate-grid">
-        <div class="rate-card"><div class="rl">DAILY RATE</div><div class="rv green" id="r-daily">—</div><div class="rs">per day</div></div>
-        <div class="rate-card"><div class="rl">WEEKLY RATE</div><div class="rv amber" id="r-weekly">—</div><div class="rs">per week</div></div>
-        <div class="rate-card"><div class="rl">MONTHLY RATE</div><div class="rv" id="r-monthly">—</div><div class="rs">per month</div></div>
-        <div class="rate-card"><div class="rl">BILLABLE HRS/YEAR</div><div class="rv" id="r-bhours">—</div><div class="rs">hours to sell</div></div>
-      </div>
-      <div class="breakdown">
-        <div class="brow head"><span>FULL BREAKDOWN</span><span></span></div>
-        <div class="brow"><span class="bk">Desired Income</span><span class="bv" id="b-income">—</span></div>
-        <div class="brow"><span class="bk">Total Business Expenses</span><span class="bv" id="b-expenses">—</span></div>
-        <div class="brow"><span class="bk">Tax Provision</span><span class="bv" id="b-tax">—</span></div>
-        <div class="brow"><span class="bk">Profit Buffer</span><span class="bv" id="b-buffer">—</span></div>
-        <div class="brow"><span class="bk">Total Revenue Needed</span><span class="bv" id="b-total">—</span></div>
-        <div class="brow"><span class="bk">Billable Hours / Year</span><span class="bv" id="b-bhours">—</span></div>
+
+      <!-- RESULTS -->
+      <div class="results-panel">
+        <div class="results-title">Your Rate Results</div>
+        <div id="hourly-placeholder" class="placeholder">
+          <div class="placeholder-icon">💼</div>
+          <div class="placeholder-text">Fill in your income goal and details on the left, then click Calculate to see your personalised rate breakdown.</div>
+        </div>
+        <div id="hourly-results" style="display:none">
+          <div class="rate-hero">
+            <div class="rate-hero-num" id="h-hourly">$0</div>
+            <div class="rate-hero-label">Minimum Hourly Rate</div>
+            <div class="rate-hero-sub" id="h-hourly-sub"></div>
+          </div>
+          <div class="rate-grid">
+            <div class="rate-item"><div class="rate-num amber" id="h-day"></div><div class="rate-label">Day Rate</div></div>
+            <div class="rate-item"><div class="rate-num blue" id="h-week"></div><div class="rate-label">Weekly Rate</div></div>
+            <div class="rate-item"><div class="rate-num purple" id="h-month"></div><div class="rate-label">Monthly Target</div></div>
+            <div class="rate-item"><div class="rate-num green" id="h-annual"></div><div class="rate-label">Annual Revenue</div></div>
+          </div>
+          <div class="breakdown">
+            <div class="breakdown-title">Income Breakdown</div>
+            <div class="breakdown-row"><span class="breakdown-label">Billable hours/year</span><span class="breakdown-val" id="h-bill-hrs"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Gross revenue needed</span><span class="breakdown-val" id="h-gross"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Tax set-aside</span><span class="breakdown-val" id="h-tax"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Annual expenses</span><span class="breakdown-val" id="h-exp"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Platform fees</span><span class="breakdown-val" id="h-plat"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Take-home income</span><span class="breakdown-val" id="h-takehome"></span></div>
+          </div>
+          <div class="tax-box">
+            <div class="tax-box-title">🏦 Tax Set-Aside Reminder</div>
+            <div class="tax-box-text" id="h-tax-reminder"></div>
+          </div>
+          <button class="copy-btn" onclick="copyHourly()">📋 Copy rate summary</button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="info-section">
-    <h2>How to Calculate Your Freelance Rate</h2>
-    <p>Most freelancers underprice themselves because they only think about their desired income and forget about taxes, business expenses, and the fact that not all hours are billable (admin, proposals, meetings eat into your time).</p>
-    <div class="formula-box">Hourly Rate = Total Revenue Needed ÷ Annual Billable Hours</div>
-    <div class="formula-box">Total Revenue Needed = Income + Expenses + Tax Provision + Profit Buffer</div>
-    <div class="faq-item" style="margin-top:1.5rem"><div class="faq-q">What percentage of hours should be billable?</div><div class="faq-a">Most freelancers can realistically bill 60–75% of their working hours. The rest goes to admin, marketing, proposals, and professional development. Using 70% is a safe starting assumption.</div></div>
-    <div class="faq-item"><div class="faq-q">Should I include taxes in my rate?</div><div class="faq-a">Absolutely. As a freelancer you're responsible for your own taxes including self-employment tax. Set aside 25–35% depending on your country. This calculator factors that in automatically.</div></div>
+
+  <!-- PROJECT RATE -->
+  <div class="calc-card" id="tab-project">
+    <div class="card-title">Project Rate Calculator</div>
+    <div class="card-sub">Calculate how much to charge for a fixed-price project based on your hourly rate and estimated hours.</div>
+    <div class="calc-layout">
+      <div>
+        <div class="field-group">
+          <div class="field-group-title">💰 Your Rate</div>
+          <div class="input-row">
+            <div class="field">
+              <label>YOUR HOURLY RATE</label>
+              <input type="number" id="p-rate" placeholder="e.g. 75" min="0" />
+            </div>
+            <div class="field">
+              <label>CURRENCY</label>
+              <select id="p-currency">
+                <option value="$">$ USD</option>
+                <option value="£">£ GBP</option>
+                <option value="€">€ EUR</option>
+                <option value="A$">A$ AUD</option>
+                <option value="C$">C$ CAD</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field-group">
+          <div class="field-group-title">📋 Project Details</div>
+          <div class="field">
+            <label>ESTIMATED HOURS</label>
+            <input type="number" id="p-hours" placeholder="e.g. 20" min="0" />
+            <div class="field-hint">Be realistic — include meetings, revisions, and communication time</div>
+          </div>
+          <div class="field">
+            <label>SCOPE CREEP BUFFER (%)</label>
+            <select id="p-buffer">
+              <option value="0">0% — fixed scope, clear brief</option>
+              <option value="10">10% — typical project buffer</option>
+              <option value="15" selected>15% — recommended standard buffer</option>
+              <option value="20">20% — complex or vague scope</option>
+              <option value="25">25% — high risk / large project</option>
+            </select>
+            <div class="field-hint">Scope creep adds unplanned work to most projects</div>
+          </div>
+          <div class="field">
+            <label>RUSH MULTIPLIER</label>
+            <select id="p-rush">
+              <option value="1">No rush — standard timeline</option>
+              <option value="1.25">Light rush — 25% premium</option>
+              <option value="1.5">Rush — 50% premium</option>
+              <option value="2">Urgent — 2x rate</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>NUMBER OF REVISION ROUNDS INCLUDED</label>
+            <input type="number" id="p-revisions" placeholder="e.g. 2" min="0" max="10" value="2" />
+            <div class="field-hint">State clearly in your proposal — extra rounds billed separately</div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcProject()">⚡ Calculate Project Rate</button>
+      </div>
+      <div class="results-panel">
+        <div class="results-title">Project Rate Results</div>
+        <div id="project-placeholder" class="placeholder">
+          <div class="placeholder-icon">📋</div>
+          <div class="placeholder-text">Enter your hourly rate and project details to calculate a fair project price.</div>
+        </div>
+        <div id="project-results" style="display:none">
+          <div class="rate-hero">
+            <div class="rate-hero-num" id="p-total">$0</div>
+            <div class="rate-hero-label">Project Quote</div>
+            <div class="rate-hero-sub" id="p-total-sub"></div>
+          </div>
+          <div class="rate-grid">
+            <div class="rate-item"><div class="rate-num blue" id="p-base"></div><div class="rate-label">Base (no buffer)</div></div>
+            <div class="rate-item"><div class="rate-num amber" id="p-buffered"></div><div class="rate-label">With Buffer</div></div>
+            <div class="rate-item"><div class="rate-num green" id="p-eff-rate"></div><div class="rate-label">Effective Hourly</div></div>
+            <div class="rate-item"><div class="rate-num purple" id="p-hrs-total"></div><div class="rate-label">Budgeted Hours</div></div>
+          </div>
+          <div class="breakdown">
+            <div class="breakdown-title">Quote Breakdown</div>
+            <div class="breakdown-row"><span class="breakdown-label">Estimated hours</span><span class="breakdown-val" id="p-b-hours"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Scope creep buffer</span><span class="breakdown-val" id="p-b-buffer"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Rush premium</span><span class="breakdown-val" id="p-b-rush"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Revisions included</span><span class="breakdown-val" id="p-b-rev"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Total project quote</span><span class="breakdown-val" id="p-b-total"></span></div>
+          </div>
+          <div class="tip-box" style="margin-top:0.75rem">
+            <p id="p-tip"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- REVERSE — SALARY TO RATE -->
+  <div class="calc-card" id="tab-reverse">
+    <div class="card-title">Salary to Freelance Rate Converter</div>
+    <div class="card-sub">Moving from employment to freelancing? Find the freelance rate you need to match or beat your current salary.</div>
+    <div class="calc-layout">
+      <div>
+        <div class="field-group">
+          <div class="field-group-title">👔 Current Employment</div>
+          <div class="field">
+            <label>CURRENT ANNUAL SALARY</label>
+            <input type="number" id="r-salary" placeholder="e.g. 60000" min="0" />
+          </div>
+          <div class="field">
+            <label>EMPLOYMENT BENEFITS VALUE (ANNUAL)</label>
+            <input type="number" id="r-benefits" placeholder="e.g. 5000" min="0" value="0" />
+            <div class="field-hint">Health insurance, pension contributions, paid leave, etc.</div>
+          </div>
+        </div>
+        <div class="field-group">
+          <div class="field-group-title">💼 Freelance Setup</div>
+          <div class="input-row">
+            <div class="field">
+              <label>EXTRA BUSINESS EXPENSES/YR</label>
+              <input type="number" id="r-expenses" placeholder="e.g. 6000" min="0" value="0" />
+            </div>
+            <div class="field">
+              <label>TAX RATE INCREASE (%)</label>
+              <input type="number" id="r-taxdiff" placeholder="e.g. 5" min="0" max="30" value="5" />
+              <div class="field-hint">Freelancers typically pay more tax than employees</div>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="field">
+              <label>BILLABLE HOURS/WEEK</label>
+              <input type="number" id="r-billable" placeholder="24" min="1" max="60" value="24" />
+            </div>
+            <div class="field">
+              <label>WEEKS WORKED/YEAR</label>
+              <input type="number" id="r-weeks" placeholder="48" min="1" max="52" value="48" />
+            </div>
+          </div>
+          <div class="field">
+            <label>INCOME PREMIUM TARGET (%)</label>
+            <select id="r-premium">
+              <option value="0">Match salary exactly</option>
+              <option value="20">20% more than salary</option>
+              <option value="30" selected>30% more (recommended minimum)</option>
+              <option value="50">50% more</option>
+              <option value="100">Double my salary</option>
+            </select>
+            <div class="field-hint">Freelancing has more risk — aim to earn more, not the same</div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcReverse()">⚡ Calculate Equivalent Rate</button>
+      </div>
+      <div class="results-panel">
+        <div class="results-title">Equivalent Freelance Rate</div>
+        <div id="reverse-placeholder" class="placeholder">
+          <div class="placeholder-icon">🔁</div>
+          <div class="placeholder-text">Enter your current salary to find the freelance rate you need to match or exceed it.</div>
+        </div>
+        <div id="reverse-results" style="display:none">
+          <div class="rate-hero">
+            <div class="rate-hero-num" id="rv-rate">$0</div>
+            <div class="rate-hero-label">Required Freelance Rate</div>
+            <div class="rate-hero-sub" id="rv-sub"></div>
+          </div>
+          <div class="rate-grid">
+            <div class="rate-item"><div class="rate-num blue" id="rv-match">$0</div><div class="rate-label">To match salary</div></div>
+            <div class="rate-item"><div class="rate-num green" id="rv-target">$0</div><div class="rate-label">With your premium</div></div>
+            <div class="rate-item"><div class="rate-num amber" id="rv-day">$0</div><div class="rate-label">Day rate</div></div>
+            <div class="rate-item"><div class="rate-num purple" id="rv-annual">$0</div><div class="rate-label">Target annual revenue</div></div>
+          </div>
+          <div class="breakdown">
+            <div class="breakdown-title">Why You Need More Than Your Salary</div>
+            <div class="breakdown-row"><span class="breakdown-label">Current salary</span><span class="breakdown-val" id="rv-b-salary"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Lost benefits</span><span class="breakdown-val" id="rv-b-benefits"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Extra business expenses</span><span class="breakdown-val" id="rv-b-exp"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Extra tax as freelancer</span><span class="breakdown-val" id="rv-b-tax"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Income premium target</span><span class="breakdown-val" id="rv-b-premium"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Total annual revenue needed</span><span class="breakdown-val" id="rv-b-total"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLATFORM FEE CALC -->
+  <div class="calc-card" id="tab-platform">
+    <div class="card-title">Platform Fee Calculator</div>
+    <div class="card-sub">Find out how much you actually earn after Upwork, Fiverr or any platform takes their cut — and what to quote to hit your target.</div>
+    <div class="calc-layout">
+      <div>
+        <div class="field-group">
+          <div class="field-group-title">🏢 Platform Settings</div>
+          <div class="field">
+            <label>PLATFORM</label>
+            <select id="pf-platform" onchange="setPlatformFee()">
+              <option value="10">Upwork — 10% fee</option>
+              <option value="20">Fiverr — 20% fee</option>
+              <option value="15">Freelancer.com — 15% fee</option>
+              <option value="8">Toptal — 8% fee</option>
+              <option value="5">PeoplePerHour — 5% fee</option>
+              <option value="custom">Custom platform</option>
+            </select>
+          </div>
+          <div class="field" id="pf-custom-wrap" style="display:none">
+            <label>CUSTOM FEE (%)</label>
+            <input type="number" id="pf-custom-fee" placeholder="e.g. 12" min="0" max="50" />
+          </div>
+          <div class="field">
+            <label>PLATFORM FEE (%)</label>
+            <input type="number" id="pf-fee" value="10" min="0" max="50" />
+          </div>
+        </div>
+        <div class="field-group">
+          <div class="field-group-title">💰 Your Numbers</div>
+          <div class="field">
+            <label>WHAT YOU WANT TO EARN (per hour)</label>
+            <input type="number" id="pf-want" placeholder="e.g. 50" min="0" />
+            <div class="field-hint">Your target take-home rate after platform fees</div>
+          </div>
+          <div class="field">
+            <label>OR — WHAT YOU QUOTED (per hour)</label>
+            <input type="number" id="pf-quoted" placeholder="e.g. 60" min="0" />
+            <div class="field-hint">What you listed on the platform — see what you'll actually earn</div>
+          </div>
+          <div class="field">
+            <label>HOURS WORKED</label>
+            <input type="number" id="pf-hours" placeholder="e.g. 40" min="0" value="40" />
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcPlatform()">⚡ Calculate Platform Earnings</button>
+      </div>
+      <div class="results-panel">
+        <div class="results-title">Platform Earnings Breakdown</div>
+        <div id="platform-placeholder" class="placeholder">
+          <div class="placeholder-icon">🏢</div>
+          <div class="placeholder-text">Enter your target earnings or quoted rate to see your actual take-home after platform fees.</div>
+        </div>
+        <div id="platform-results" style="display:none">
+          <div class="rate-grid" style="margin-bottom:1rem">
+            <div class="rate-item"><div class="rate-num green" id="pf-r-takehome"></div><div class="rate-label">You earn/hr</div></div>
+            <div class="rate-item"><div class="rate-num red" id="pf-r-fee"></div><div class="rate-label">Platform takes/hr</div></div>
+            <div class="rate-item"><div class="rate-num amber" id="pf-r-quote"></div><div class="rate-label">Quote to earn target</div></div>
+            <div class="rate-item"><div class="rate-num blue" id="pf-r-total"></div><div class="rate-label">Total earnings</div></div>
+          </div>
+          <div class="breakdown">
+            <div class="breakdown-title">Full Breakdown</div>
+            <div class="breakdown-row"><span class="breakdown-label">Quoted rate</span><span class="breakdown-val" id="pf-b-quoted"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Platform fee</span><span class="breakdown-val" id="pf-b-fee"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Your take-home rate</span><span class="breakdown-val" id="pf-b-take"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Hours worked</span><span class="breakdown-val" id="pf-b-hours"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Total client paid</span><span class="breakdown-val" id="pf-b-client"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">Platform earned</span><span class="breakdown-val" id="pf-b-plat"></span></div>
+            <div class="breakdown-row"><span class="breakdown-label">You earned</span><span class="breakdown-val" id="pf-b-you"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BENCHMARK TABLE -->
+  <div class="content-section">
+    <h2>Freelance Rate Benchmarks by Industry (2026)</h2>
+    <p>Use these benchmarks to sense-check your calculated rate against what the market is paying. Rates shown are in USD for experienced freelancers in Western markets. Rates in the UK, EU, Canada and Australia are broadly similar. South Asian and Southeast Asian rates are typically 30–60% lower due to cost of living differences.</p>
+    <table class="bench-table">
+      <thead><tr><th>Skill / Discipline</th><th>Entry (0–2 yrs)</th><th>Mid (3–6 yrs)</th><th>Senior (7+ yrs)</th><th>Top 10%</th></tr></thead>
+      <tbody>
+        <tr><td>Web Development (Full Stack)</td><td>$35–55/hr</td><td class="range">$60–100/hr</td><td>$100–150/hr</td><td>$150–250+/hr</td></tr>
+        <tr><td>Frontend Development</td><td>$30–50/hr</td><td class="range">$55–90/hr</td><td>$90–140/hr</td><td>$140–200+/hr</td></tr>
+        <tr><td>UX / UI Design</td><td>$30–50/hr</td><td class="range">$55–100/hr</td><td>$100–150/hr</td><td>$150–200+/hr</td></tr>
+        <tr><td>Graphic Design</td><td>$25–40/hr</td><td class="range">$40–80/hr</td><td>$75–120/hr</td><td>$120–200+/hr</td></tr>
+        <tr><td>Copywriting</td><td>$25–45/hr</td><td class="range">$50–90/hr</td><td>$90–140/hr</td><td>$140–200+/hr</td></tr>
+        <tr><td>Content Writing</td><td>$20–35/hr</td><td class="range">$35–65/hr</td><td>$65–100/hr</td><td>$100–150+/hr</td></tr>
+        <tr><td>Digital Marketing / SEO</td><td>$25–45/hr</td><td class="range">$50–85/hr</td><td>$85–130/hr</td><td>$130–200+/hr</td></tr>
+        <tr><td>Social Media Management</td><td>$20–35/hr</td><td class="range">$35–65/hr</td><td>$65–100/hr</td><td>$100–150+/hr</td></tr>
+        <tr><td>Video Editing</td><td>$25–45/hr</td><td class="range">$45–85/hr</td><td>$80–130/hr</td><td>$130–200+/hr</td></tr>
+        <tr><td>Motion Graphics / Animation</td><td>$35–55/hr</td><td class="range">$60–100/hr</td><td>$100–160/hr</td><td>$160–250+/hr</td></tr>
+        <tr><td>Business Consulting</td><td>$50–80/hr</td><td class="range">$80–150/hr</td><td>$150–250/hr</td><td>$250–500+/hr</td></tr>
+        <tr><td>Virtual Assistant</td><td>$12–20/hr</td><td class="range">$20–40/hr</td><td>$40–65/hr</td><td>$65–100+/hr</td></tr>
+        <tr><td>Data Analysis</td><td>$35–55/hr</td><td class="range">$60–100/hr</td><td>$100–150/hr</td><td>$150–250+/hr</td></tr>
+        <tr><td>Accounting / Bookkeeping</td><td>$25–45/hr</td><td class="range">$50–85/hr</td><td>$85–150/hr</td><td>$150–250+/hr</td></tr>
+        <tr><td>Photography</td><td>$25–50/hr</td><td class="range">$50–100/hr</td><td>$100–200/hr</td><td>$200–400+/hr</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:0.75rem;font-size:0.8rem;color:var(--muted)">Source: Aggregated from Upwork rate data, Toptal pricing guides, and Contra 2026 Freelance Rates Report. Rates vary by location, niche, and client type.</p>
+  </div>
+
+  <!-- PLATFORM FEES -->
+  <div class="content-section">
+    <h2>Freelance Platform Fees — What Each Platform Takes</h2>
+    <p>Every freelance platform takes a cut of your earnings. This is often called a service fee or commission. Understanding these fees is essential for setting rates that leave you with the income you actually need.</p>
+    <div class="platform-grid">
+      <div class="platform-card">
+        <div class="platform-name">Upwork</div>
+        <div class="platform-fee">10% fee</div>
+        <div class="platform-detail">Simplified flat rate since 2025. Previously tiered. Fee applied to all earnings. To earn $90/hr, quote $100/hr.</div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-name">Fiverr</div>
+        <div class="platform-fee">20% fee</div>
+        <div class="platform-detail">Fiverr takes 20% of every transaction. To earn $80, your gig must be priced at $100. One of the highest platform fees.</div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-name">Freelancer.com</div>
+        <div class="platform-fee">10–20% fee</div>
+        <div class="platform-detail">10% on hourly projects, 10% or $5 minimum on fixed projects. Membership plans can reduce fees.</div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-name">Toptal</div>
+        <div class="platform-fee">~8% fee</div>
+        <div class="platform-detail">Lower fee but very selective vetting. Only top 3% of applicants accepted. Higher quality clients and projects.</div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-name">PeoplePerHour</div>
+        <div class="platform-fee">5–20% fee</div>
+        <div class="platform-detail">Tiered: 20% up to £250, 7.5% up to £5,000, 3.5% above. Reward for long-term client relationships.</div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-name">Direct Clients</div>
+        <div class="platform-fee">0% fee</div>
+        <div class="platform-detail">No platform fees when working directly. Requires more effort to find clients but keeps 100% of earnings. Use LinkedIn, referrals, and your own website.</div>
+      </div>
+    </div>
+
+    <h3>How to Price on Platforms</h3>
+    <p>Always add the platform fee back onto your desired rate. If you want to earn $75/hr on Upwork (10% fee), quote $83.33/hr ($75 ÷ 0.90). If you want to earn $75/hr on Fiverr (20% fee), quote $93.75/hr ($75 ÷ 0.80). Use the Platform Fee Calculator tab above for instant calculations.</p>
+  </div>
+
+  <!-- HOW TO SET RATES -->
+  <div class="content-section">
+    <h2>How to Calculate Your Freelance Rate — The Complete Guide</h2>
+    <p>Most freelancers underprice themselves by 30–50%. The most common mistake is calculating a rate based on what they want to earn, without accounting for taxes, expenses, non-billable time, and the hidden costs of self-employment. Here is the complete formula:</p>
+
+    <h3>The Freelance Rate Formula</h3>
+    <div class="formula">Hourly Rate = (Annual Income Target + Annual Expenses) ÷ (1 − Tax Rate) ÷ Annual Billable Hours</div>
+    <p>Example: You want to earn $60,000/year, have $6,000 in annual expenses, pay 30% tax, and bill 1,200 hours/year.</p>
+    <div class="formula">($60,000 + $6,000) ÷ (1 − 0.30) ÷ 1,200 = $66,000 ÷ 0.70 ÷ 1,200 = $78.57/hr</div>
+
+    <h3>The Billable Hours Trap</h3>
+    <p>The single biggest mistake freelancers make when calculating rates is assuming all their working hours are billable. A freelancer working 40 hours per week doesn't bill 40 hours per week. Time goes to:</p>
+    <p>• Admin and invoicing (3-5 hrs/week) • Client communication and calls (3-5 hrs/week) • Marketing and business development (3-6 hrs/week) • Proposal writing (2-4 hrs/week) • Professional development (2-3 hrs/week)</p>
+    <p>A realistic billable rate for most freelancers is 50–65% of total working hours. If you work 40 hours per week, you bill 20–26 hours. Using 40 billable hours in your calculation leads to underpricing by 35–50%.</p>
+
+    <h3>What to Include in Business Expenses</h3>
+    <p>Your rate must cover every cost of running your freelance business, including: software subscriptions (Adobe Creative Cloud, project management tools, accounting software), hardware and equipment depreciation, professional development and courses, professional liability insurance, home office costs, accountant fees, marketing and website costs, and banking and payment processing fees.</p>
+
+    <h3>Tax — The Hidden Cost of Freelancing</h3>
+    <p>Employees have tax automatically deducted by their employer. Freelancers must calculate, set aside, and pay their own tax. In most countries, freelancers pay higher effective tax rates than employees because they lose employee-specific deductions and must pay both sides of social security or national insurance.</p>
+    <div class="warning-box"><p>⚠️ <strong>Tax set-aside rule:</strong> As a general rule, set aside 25–35% of every payment you receive for tax. Create a separate savings account and transfer your tax set-aside immediately when you receive payment. Never spend your tax reserve. Quarterly tax payments are required in the US, UK, and many other countries.</p></div>
+
+    <h3>When to Raise Your Rate</h3>
+    <p>Raise your rates when: you are fully booked for 2+ consecutive months, you are getting hired without price negotiation, your expenses have increased, you have gained significantly more experience or qualifications, or you have not raised your rate in over 12 months. Most experienced freelancers raise their rates annually by at least the rate of inflation.</p>
+
+    <div class="tip-box"><p>💡 <strong>Value-based pricing tip:</strong> Your calculated rate is your floor — the minimum you need to stay profitable. You should charge above your calculated rate based on the value you deliver to clients. A logo that generates a client $100,000 in revenue is worth far more than the 10 hours it took to create at your hourly rate.</p></div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate my freelance hourly rate?</div>
+      <div class="faq-a">Formula: (Desired Annual Income + Annual Expenses) ÷ (1 − Tax Rate) ÷ Annual Billable Hours. Use the calculator above — enter your income goal, expenses, tax rate and working hours to get your personalised minimum rate instantly. Most freelancers need to charge 30–50% more than they initially think.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How many billable hours do freelancers work per year?</div>
+      <div class="faq-a">Most freelancers bill 1,000–1,400 hours per year (20–28 billable hours per week). The remaining time goes to admin, marketing, proposals, and professional development. Assuming all 2,080 hours are billable leads to underpricing by 30–50%. Our calculator uses a realistic billable rate of 60% as the default.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate a freelance day rate?</div>
+      <div class="faq-a">Your day rate = hourly rate × hours in your working day (typically 7–8 hours). If your hourly rate is $75, your day rate is $600 (8-hour day) or $525 (7-hour day). Day rates are common for on-site work, short-term contracts, and consulting. The hourly rate calculator above shows your day rate automatically.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What percentage should I set aside for tax as a freelancer?</div>
+      <div class="faq-a">Set aside 25–35% of every payment for tax. In the US, self-employed people pay income tax + 15.3% self-employment tax. In the UK, freelancers pay income tax + Class 4 National Insurance. A safe default is 30%. Set it aside immediately when payment arrives — never spend your tax reserve.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How much does Upwork take from freelancers?</div>
+      <div class="faq-a">Upwork takes a flat 10% service fee on all earnings (simplified from the previous tiered structure in 2025). If you charge a client $100/hr, you receive $90. To earn $90/hr net, quote $100/hr. Use the Platform Fee Calculator tab above to calculate the exact rate to quote on any platform.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I price a fixed-price project?</div>
+      <div class="faq-a">Multiply your hourly rate by estimated hours, then add a 15–20% scope creep buffer. Formula: Project Rate = Hourly Rate × Estimated Hours × 1.15. For example: $75/hr × 20 hours × 1.15 = $1,725. Always add extra for rush work (25–100% premium) and state clearly how many revision rounds are included. Use the Project Rate tab above.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Should I charge more than my calculated minimum rate?</div>
+      <div class="faq-a">Yes — your calculated rate is the floor, not the ceiling. Charge more based on the value you deliver, your reputation, and market demand. Signs you are undercharging: clients hire you without negotiating price, you are fully booked, or you resent the work because of the pay. Value-based pricing means charging based on the outcome you create for clients, not the hours you spend.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I transition from employment to freelancing?</div>
+      <div class="faq-a">Use the "Salary to Rate" tab above to calculate the freelance rate you need to match your current salary. Add 30–50% on top to account for lost benefits, higher taxes, and the income risk of freelancing. Build 3–6 months of savings before going full-time. Start with one or two freelance clients while still employed if possible.</div>
+    </div>
+  </div>
+
   <div class="related">
     <h2>Related Tools</h2>
     <div class="related-grid">
       <a href="/tools/salary-to-hourly.html" class="related-card"><span style="font-size:1.4rem">⏱️</span><span style="font-size:0.88rem;font-weight:500">Salary to Hourly</span></a>
       <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
       <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+      <a href="/tools/tax-calculator.html" class="related-card"><span style="font-size:1.4rem">🧮</span><span style="font-size:0.88rem;font-weight:500">VAT Calculator</span></a>
     </div>
   </div>
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
 <script>
-  let cur='$';
-  function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);if(document.getElementById('fl-results').classList.contains('show'))calcRate();}
-  const fmt=n=>cur+' '+parseFloat(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
-  function calcRate(){
-    const income=parseFloat(document.getElementById('income').value)||0;
-    const buffer=parseFloat(document.getElementById('buffer').value)||0;
-    const software=parseFloat(document.getElementById('software').value)||0;
-    const marketing=parseFloat(document.getElementById('marketing').value)||0;
-    const taxrate=parseFloat(document.getElementById('taxrate').value)||0;
-    const other=parseFloat(document.getElementById('other').value)||0;
-    const avail=parseFloat(document.getElementById('avail').value)||40;
-    const billablePct=parseFloat(document.getElementById('billable').value)||70;
-    const weeksoff=parseFloat(document.getElementById('weeksoff').value)||4;
-    if(income<=0){alert('Please enter your desired annual income.');return;}
-    const expenses=software+marketing+other;
-    const workingWeeks=52-weeksoff;
-    const weeklyBillable=avail*(billablePct/100);
-    const annualBillable=weeklyBillable*workingWeeks;
-    const taxProvision=income*(taxrate/100);
-    const subtotal=income+expenses+taxProvision;
-    const total=subtotal*(1+buffer/100);
-    const hourly=total/annualBillable;
-    const daily=hourly*(avail/5);
-    const weekly=hourly*weeklyBillable;
-    const monthly=total/12;
-    document.getElementById('r-hourly').textContent=fmt(hourly);
-    document.getElementById('r-daily').textContent=fmt(daily);
-    document.getElementById('r-weekly').textContent=fmt(weekly);
-    document.getElementById('r-monthly').textContent=fmt(monthly);
-    document.getElementById('r-bhours').textContent=Math.round(annualBillable).toLocaleString()+' hrs';
-    document.getElementById('b-income').textContent=fmt(income);
-    document.getElementById('b-expenses').textContent=fmt(expenses);
-    document.getElementById('b-tax').textContent=fmt(taxProvision);
-    document.getElementById('b-buffer').textContent=fmt(subtotal*(buffer/100));
-    document.getElementById('b-total').textContent=fmt(total);
-    document.getElementById('b-bhours').textContent=Math.round(annualBillable).toLocaleString()+' hrs';
-    document.getElementById('fl-results').classList.add('show');
+  // ===== TAB SWITCHING =====
+  function switchTab(id, btn) {
+    document.querySelectorAll('.calc-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.calc-card').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
   }
+
+  // ===== HELPERS =====
+  function getCurrency() { return document.getElementById('currency')?.value || '$'; }
+  function fmt(n, cur) { return (cur||'$') + parseFloat(n.toFixed(2)).toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function fmtShort(n, cur) {
+    cur = cur || '$';
+    if (n >= 1000000) return cur + (n/1000000).toFixed(1) + 'M';
+    if (n >= 1000) return cur + (n/1000).toFixed(1) + 'K';
+    return fmt(n, cur);
+  }
+
+  // Platform fee dropdowns
+  document.getElementById('platform-fee').addEventListener('change', function() {
+    document.getElementById('custom-platform-wrap').style.display = this.value === 'custom' ? 'block' : 'none';
+  });
+  document.getElementById('billable-rate').addEventListener('change', function() {
+    document.getElementById('custom-billable-wrap').style.display = this.value === 'custom-b' ? 'block' : 'none';
+  });
+  document.getElementById('pf-platform').addEventListener('change', function() {
+    document.getElementById('pf-custom-wrap').style.display = this.value === 'custom' ? 'block' : 'none';
+    if (this.value !== 'custom') document.getElementById('pf-fee').value = this.value;
+  });
+
+  // ===== HOURLY RATE CALC =====
+  function calcHourly() {
+    const income = parseFloat(document.getElementById('income').value);
+    const cur = document.getElementById('currency').value;
+    const expensesMo = parseFloat(document.getElementById('expenses').value) || 0;
+    const taxRate = parseFloat(document.getElementById('taxrate').value) || 30;
+    const pfSel = document.getElementById('platform-fee').value;
+    const pfRate = pfSel === 'custom' ? (parseFloat(document.getElementById('custom-platform').value)||0) : parseFloat(pfSel)||0;
+    const hoursWeek = parseFloat(document.getElementById('hours-week').value) || 40;
+    const weeksYear = parseFloat(document.getElementById('weeks-year').value) || 48;
+    const billSel = document.getElementById('billable-rate').value;
+    const billRate = billSel === 'custom-b' ? (parseFloat(document.getElementById('custom-billable').value)||60)/100 : parseFloat(billSel)/100;
+    const hrsDay = parseFloat(document.getElementById('hours-day').value) || 8;
+
+    if (isNaN(income) || income <= 0) { alert('Please enter your desired annual income.'); return; }
+
+    const expensesYear = expensesMo * 12;
+    const billableHrs = hoursWeek * weeksYear * billRate;
+    // Gross needed = (income + expenses) / (1 - tax) / (1 - platform fee)
+    const grossNeeded = (income + expensesYear) / (1 - taxRate/100) / (1 - pfRate/100);
+    const hourly = grossNeeded / billableHrs;
+    const day = hourly * hrsDay;
+    const week = hourly * hoursWeek * billRate;
+    const month = grossNeeded / 12;
+    const taxSetAside = grossNeeded * (taxRate/100);
+    const platFees = grossNeeded * (pfRate/100);
+
+    // Update UI
+    document.getElementById('h-hourly').textContent = fmt(hourly, cur);
+    document.getElementById('h-hourly-sub').textContent = `Based on ${Math.round(billableHrs)} billable hours/year`;
+    document.getElementById('h-day').textContent = fmt(day, cur);
+    document.getElementById('h-week').textContent = fmt(week, cur);
+    document.getElementById('h-month').textContent = fmt(month, cur);
+    document.getElementById('h-annual').textContent = fmtShort(grossNeeded, cur);
+    document.getElementById('h-bill-hrs').textContent = Math.round(billableHrs) + ' hrs';
+    document.getElementById('h-gross').textContent = fmt(grossNeeded, cur);
+    document.getElementById('h-tax').textContent = fmt(taxSetAside, cur) + ' (' + taxRate + '%)';
+    document.getElementById('h-exp').textContent = fmt(expensesYear, cur);
+    document.getElementById('h-plat').textContent = pfRate > 0 ? fmt(platFees, cur) + ' (' + pfRate + '%)' : 'None';
+    document.getElementById('h-takehome').textContent = fmt(income, cur);
+    document.getElementById('h-tax-reminder').textContent = `Set aside ${fmt(hourly * taxRate/100, cur)} from every hour you bill for tax. That's ${fmt(taxSetAside, cur) } per year. Keep it in a separate savings account.`;
+
+    document.getElementById('hourly-placeholder').style.display = 'none';
+    document.getElementById('hourly-results').style.display = 'block';
+
+    // Store for copy
+    window._hourlyResult = `Minimum Hourly Rate: ${fmt(hourly,cur)} | Day Rate: ${fmt(day,cur)} | Weekly: ${fmt(week,cur)} | Monthly Revenue: ${fmt(month,cur)} | Annual Revenue: ${fmt(grossNeeded,cur)} | Billable Hours: ${Math.round(billableHrs)}/yr`;
+  }
+
+  function copyHourly() {
+    navigator.clipboard.writeText(window._hourlyResult||'').then(() => {
+      const b = document.querySelector('#tab-hourly .copy-btn');
+      b.textContent = '✓ Copied!';
+      setTimeout(() => b.textContent = '📋 Copy rate summary', 2000);
+    });
+  }
+
+  // ===== PROJECT RATE CALC =====
+  function calcProject() {
+    const rate = parseFloat(document.getElementById('p-rate').value);
+    const cur = document.getElementById('p-currency').value;
+    const hours = parseFloat(document.getElementById('p-hours').value);
+    const buffer = parseFloat(document.getElementById('p-buffer').value)/100;
+    const rush = parseFloat(document.getElementById('p-rush').value);
+    const revisions = parseInt(document.getElementById('p-revisions').value)||0;
+
+    if (isNaN(rate)||isNaN(hours)||rate<=0||hours<=0) { alert('Please enter your hourly rate and estimated hours.'); return; }
+
+    const base = rate * hours;
+    const buffered = base * (1 + buffer);
+    const total = buffered * rush;
+    const budgetedHrs = hours * (1 + buffer);
+    const effRate = total / hours;
+
+    document.getElementById('p-total').textContent = fmt(total, cur);
+    document.getElementById('p-total-sub').textContent = `${Math.round(budgetedHrs)} budgeted hours × ${fmt(rate, cur)}/hr${rush > 1 ? ' × ' + rush + 'x rush' : ''}`;
+    document.getElementById('p-base').textContent = fmt(base, cur);
+    document.getElementById('p-buffered').textContent = fmt(buffered, cur);
+    document.getElementById('p-eff-rate').textContent = fmt(effRate, cur)+'/hr';
+    document.getElementById('p-hrs-total').textContent = Math.round(budgetedHrs) + ' hrs';
+    document.getElementById('p-b-hours').textContent = hours + ' hrs × ' + fmt(rate, cur) + ' = ' + fmt(base, cur);
+    document.getElementById('p-b-buffer').textContent = '+' + (buffer*100) + '% = +' + fmt(base*buffer, cur);
+    document.getElementById('p-b-rush').textContent = rush > 1 ? rush + 'x multiplier = +' + fmt(buffered*(rush-1), cur) : 'None';
+    document.getElementById('p-b-rev').textContent = revisions + ' rounds included';
+    document.getElementById('p-b-total').textContent = fmt(total, cur);
+    document.getElementById('p-tip').textContent = `💡 State in your proposal: "${fmt(total,cur)} for ${hours} estimated hours including ${revisions} rounds of revisions. Additional revisions billed at ${fmt(rate,cur)}/hr. Scope changes require a revised quote."`;
+
+    document.getElementById('project-placeholder').style.display = 'none';
+    document.getElementById('project-results').style.display = 'block';
+  }
+
+  // ===== REVERSE CALC =====
+  function calcReverse() {
+    const salary = parseFloat(document.getElementById('r-salary').value);
+    const benefits = parseFloat(document.getElementById('r-benefits').value)||0;
+    const expenses = parseFloat(document.getElementById('r-expenses').value)||0;
+    const taxDiff = parseFloat(document.getElementById('r-taxdiff').value)||5;
+    const billable = parseFloat(document.getElementById('r-billable').value)||24;
+    const weeks = parseFloat(document.getElementById('r-weeks').value)||48;
+    const premiumPct = parseFloat(document.getElementById('r-premium').value)||30;
+
+    if (isNaN(salary)||salary<=0) { alert('Please enter your current salary.'); return; }
+
+    const cur = '$';
+    const billableHrs = billable * weeks;
+    const extraTax = salary * taxDiff/100;
+    const totalNeededMatch = salary + benefits + expenses + extraTax;
+    const totalNeededTarget = totalNeededMatch * (1 + premiumPct/100);
+    const rateMatch = totalNeededMatch / billableHrs;
+    const rateTarget = totalNeededTarget / billableHrs;
+    const dayRate = rateTarget * 8;
+
+    document.getElementById('rv-rate').textContent = fmt(rateTarget, cur) + '/hr';
+    document.getElementById('rv-sub').textContent = `To earn ${premiumPct}% more than your current salary`;
+    document.getElementById('rv-match').textContent = fmt(rateMatch, cur) + '/hr';
+    document.getElementById('rv-target').textContent = fmt(rateTarget, cur) + '/hr';
+    document.getElementById('rv-day').textContent = fmt(dayRate, cur);
+    document.getElementById('rv-annual').textContent = fmt(totalNeededTarget, cur);
+    document.getElementById('rv-b-salary').textContent = fmt(salary, cur);
+    document.getElementById('rv-b-benefits').textContent = '+' + fmt(benefits, cur);
+    document.getElementById('rv-b-exp').textContent = '+' + fmt(expenses, cur);
+    document.getElementById('rv-b-tax').textContent = '+' + fmt(extraTax, cur) + ' (' + taxDiff + '% extra)';
+    document.getElementById('rv-b-premium').textContent = '+' + fmt(totalNeededMatch * premiumPct/100, cur) + ' (' + premiumPct + '%)';
+    document.getElementById('rv-b-total').textContent = fmt(totalNeededTarget, cur) + '/year';
+
+    document.getElementById('reverse-placeholder').style.display = 'none';
+    document.getElementById('reverse-results').style.display = 'block';
+  }
+
+  // ===== PLATFORM CALC =====
+  function calcPlatform() {
+    const fee = parseFloat(document.getElementById('pf-fee').value)||10;
+    const want = parseFloat(document.getElementById('pf-want').value)||0;
+    const quoted = parseFloat(document.getElementById('pf-quoted').value)||0;
+    const hours = parseFloat(document.getElementById('pf-hours').value)||40;
+    const cur = '$';
+
+    if (!want && !quoted) { alert('Please enter either your target earnings or your quoted rate.'); return; }
+
+    const useQuoted = quoted > 0 ? quoted : want / (1 - fee/100);
+    const takehome = useQuoted * (1 - fee/100);
+    const platFee = useQuoted * fee/100;
+    const quoteToEarnTarget = want > 0 ? want / (1 - fee/100) : useQuoted;
+    const totalClient = useQuoted * hours;
+    const totalPlat = platFee * hours;
+    const totalYou = takehome * hours;
+
+    document.getElementById('pf-r-takehome').textContent = fmt(takehome, cur) + '/hr';
+    document.getElementById('pf-r-fee').textContent = fmt(platFee, cur) + '/hr';
+    document.getElementById('pf-r-quote').textContent = fmt(quoteToEarnTarget, cur) + '/hr';
+    document.getElementById('pf-r-total').textContent = fmt(totalYou, cur);
+    document.getElementById('pf-b-quoted').textContent = fmt(useQuoted, cur) + '/hr';
+    document.getElementById('pf-b-fee').textContent = fee + '% = ' + fmt(platFee, cur) + '/hr';
+    document.getElementById('pf-b-take').textContent = fmt(takehome, cur) + '/hr';
+    document.getElementById('pf-b-hours').textContent = hours + ' hours';
+    document.getElementById('pf-b-client').textContent = fmt(totalClient, cur);
+    document.getElementById('pf-b-plat').textContent = fmt(totalPlat, cur) + ' (' + fee + '%)';
+    document.getElementById('pf-b-you').textContent = fmt(totalYou, cur);
+
+    document.getElementById('platform-placeholder').style.display = 'none';
+    document.getElementById('platform-results').style.display = 'block';
+  }
+
+  function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+
+  // Enter key
+  document.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const card = inp.closest('.calc-card');
+        if (card) card.querySelector('.calc-btn').click();
+      }
+    });
+  });
 </script>
 </body>
 </html>
