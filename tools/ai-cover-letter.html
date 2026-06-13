@@ -146,13 +146,24 @@
       </div>
     </div>
   </div>
+  
+  <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">
+    <h2>Related Tools</h2>
+    <p style="color:var(--muted);font-size:0.92rem;line-height:2">
+      → <a href="/tools/ai-bio-generator.html" style="color:var(--accent)">AI Bio Generator</a> — Write professional bios for LinkedIn, Twitter and your website.<br>
+      → <a href="/tools/freelancer-rate-calculator.html" style="color:var(--accent)">Freelancer Rate Calculator</a> — Calculate your minimum hourly rate for freelance and contract work.<br>
+      → <a href="/tools/salary-to-hourly.html" style="color:var(--accent)">Salary to Hourly Calculator</a> — Convert annual salary to hourly, daily and weekly rates.<br>
+      → <a href="/tools/word-counter.html" style="color:var(--accent)">Word Counter</a> — Check your cover letter word count and reading time instantly.
+    </p>
+  </div>
+
   <div class="related"><h2>Related Tools</h2><div class="related-grid">
     <a href="/tools/ai-bio-generator.html" class="related-card"><span style="font-size:1.4rem">👤</span><span style="font-size:0.88rem;font-weight:500">AI Bio Generator</span></a>
     <a href="/tools/salary-to-hourly.html" class="related-card"><span style="font-size:1.4rem">⏱️</span><span style="font-size:0.88rem;font-weight:500">Salary to Hourly</span></a>
     <a href="/tools/freelancer-rate-calculator.html" class="related-card"><span style="font-size:1.4rem">🧑‍💻</span><span style="font-size:0.88rem;font-weight:500">Freelancer Rate Calculator</span></a>
   </div></div>
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
 <script>
 const TOOL='cover-letter';const LIMIT=3;
 function getUsage(){const t=new Date().toDateString();const d=JSON.parse(localStorage.getItem('tn_'+TOOL)||'{}');return d.date!==t?{date:t,count:0}:d;}
