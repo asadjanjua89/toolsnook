@@ -1,74 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Product Description Writer – Free eCommerce Tool | ToolsNook</title>
-  <meta name="description" content="Generate compelling product descriptions for Shopify, Amazon, Etsy and more with AI. Free, 3 uses per day."/>
-  <link rel="canonical" href="https://www.toolsnook.com/tools/ai-product-description.html"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
-    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
-    .hero{padding:7rem 2rem 2rem;text-align:center;max-width:700px;margin:0 auto}
-    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
-    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
-    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(247,151,30,0.1);border:1px solid rgba(247,151,30,0.25);color:var(--amber);font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
-    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
-    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
-    .container{max-width:960px;margin:0 auto;padding:0 2rem 4rem}
-    .usage-wrap{margin-top:1.5rem;margin-bottom:1rem}
-    .layout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-    @media(max-width:700px){.layout{grid-template-columns:1fr}}
-    .card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem}
-    .card-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:1.25rem}
-    .field{margin-bottom:1rem}
-    .field label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
-    .field input,.field textarea,.field select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;padding:0.65rem 0.9rem;transition:border-color 0.2s}
-    .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
-    .field textarea{resize:vertical;min-height:80px}
-    .field select{cursor:pointer}.field select option{background:#1a1a24}
-    .gen-btn{width:100%;padding:0.9rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;margin-top:0.25rem;display:flex;align-items:center;justify-content:center;gap:8px}
-    .gen-btn:hover{opacity:0.9}.gen-btn:disabled{opacity:0.5;cursor:not-allowed}
-    .placeholder-state{text-align:center;padding:3rem 1rem;color:var(--muted)}
-    .placeholder-icon{font-size:3rem;margin-bottom:1rem}
-    .loading-state{display:none;text-align:center;padding:3rem 1rem}.loading-state.show{display:block}
-    .spinner{width:32px;height:32px;border:3px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 1rem}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    .output-tabs{display:flex;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap}
-    .ot{padding:4px 12px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.78rem;border-radius:6px;cursor:pointer;transition:all 0.15s}
-    .ot.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
-    .output-text{display:none;white-space:pre-wrap;font-size:0.9rem;line-height:1.8;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1.25rem;max-height:380px;overflow-y:auto}
-    .output-text.show{display:block}
-    .copy-btn{width:100%;padding:0.65rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;margin-top:0.75rem}
-    .copy-btn:hover{opacity:0.88}
-    .related{margin-top:3rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
-    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
-    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
-    footer a{color:var(--muted);text-decoration:none}
-  </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Product Description Generator – Free for Shopify, Amazon, Etsy & More | ToolsNook</title>
+  <meta name="description" content="Free AI product description generator. Write high-converting descriptions for Shopify, Amazon, Etsy, eBay and WooCommerce instantly. Get full description, bullet points and meta description. No signup required." />
+  <meta name="keywords" content="AI product description generator, product description writer, AI product description, free product description generator, Shopify product description generator, Amazon product description AI, Etsy product description generator, ecommerce product description writer, product description AI tool, write product descriptions AI, AI description writer, product listing generator, product copywriter AI, ecommerce copywriting AI, product description maker, generate product descriptions, automatic product description, product description template, how to write product descriptions, product description examples, WooCommerce product description, eBay product description generator, product description for SEO, conversion focused product description, AI copywriting tool free, product description generator no signup" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/ai-product-description.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:title" content="AI Product Description Generator – Free for Shopify, Amazon & Etsy" />
+  <meta property="og:description" content="Generate high-converting product descriptions instantly. Full description, bullet points, meta description and SEO title. Works for Shopify, Amazon, Etsy, eBay and more. Free, no signup." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/ai-product-description.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "AI Product Description Writer",
+    "name": "AI Product Description Generator",
     "url": "https://www.toolsnook.com/tools/ai-product-description.html",
-    "description": "Free AI product description generator for Shopify, Amazon, Etsy and more. Get full, short and bullet point descriptions instantly.",
-    "applicationCategory": "UtilityApplication",
+    "description": "Free AI product description generator. Write high-converting descriptions for Shopify, Amazon, Etsy, eBay and WooCommerce. Get full description, bullet points, meta description and SEO title instantly.",
+    "applicationCategory": "BusinessApplication",
     "operatingSystem": "Any",
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-    "publisher": {"@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com"}
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com" },
+      { "@type": "ListItem", "position": 2, "name": "AI Product Description Generator", "item": "https://www.toolsnook.com/tools/ai-product-description.html" }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -76,125 +46,482 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I write a product description that sells?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Focus on benefits, not just features. Speak directly to your target customer, use sensory language, address objections, and end with a clear call to action. Our AI Product Description Writer generates conversion-focused copy for any platform."}
-      },
-      {
-        "@type": "Question",
-        "name": "How long should a product description be?",
-        "acceptedAnswer": {"@type": "Answer", "text": "For Shopify and general ecommerce: 150-300 words. For Amazon: 150-200 words plus 5 bullet points. For Etsy: 150-300 words with a personal touch. Our generator creates the right length for each platform."}
-      },
-      {
-        "@type": "Question",
-        "name": "What should I include in a product description?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Include the key features and benefits, materials or ingredients, dimensions or specs, who it is for, and how it solves their problem. Always lead with the most important benefit, not a list of features."}
-      }
+      { "@type": "Question", "name": "How do I write a good product description?", "acceptedAnswer": { "@type": "Answer", "text": "A good product description focuses on benefits over features, speaks directly to the target customer, uses sensory and emotional language, addresses objections, includes relevant keywords naturally, and ends with a clear call to action. Lead with the most important benefit, not a list of specifications. Use the AI Product Description Generator above to create a conversion-focused description instantly." } },
+      { "@type": "Question", "name": "How long should a product description be?", "acceptedAnswer": { "@type": "Answer", "text": "Ideal product description length varies by platform: Shopify and general ecommerce: 150-300 words for the main description, plus 5 bullet points. Amazon: 150-200 words in the product description field, plus 5 bullet points (each under 200 characters). Etsy: 150-300 words with a personal, story-driven tone. eBay: 100-200 words, clear and factual. Our generator creates platform-optimised lengths automatically." } },
+      { "@type": "Question", "name": "What should I include in a product description?", "acceptedAnswer": { "@type": "Answer", "text": "Include: the key benefit (what problem it solves), main features and specifications, who it is for (target customer), materials or ingredients, dimensions or size, how to use it, and a call to action. Always lead with the benefit, not the feature. Example: instead of 'Made from 100% merino wool', write 'Stay warm without the itch — our merino wool blend regulates temperature naturally.'" } },
+      { "@type": "Question", "name": "How do I write Amazon product descriptions that rank?", "acceptedAnswer": { "@type": "Answer", "text": "For Amazon SEO: include your primary keyword in the first sentence of the description. Use all 5 bullet points — start each with a capitalised benefit keyword. Keep bullet points under 200 characters each. Include backend search terms in Seller Central. Amazon's A9 algorithm prioritises click-through rate and conversion rate, so write for the customer first and keywords second." } },
+      { "@type": "Question", "name": "How do I write Etsy product descriptions that sell?", "acceptedAnswer": { "@type": "Answer", "text": "Etsy buyers respond to storytelling and authenticity. Start with who made it and why. Describe the materials and craftsmanship in sensory detail. Include dimensions and care instructions. End with personalisation options if available. Use your primary keyword in the first 40 characters since Etsy truncates search results. Our AI generator has a dedicated Etsy mode that captures this tone automatically." } },
+      { "@type": "Question", "name": "Can AI write product descriptions?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — AI can write high-quality product descriptions that are ready to use or need only minor edits. The best AI-generated descriptions are produced when you provide detailed input: product name, key features, target customer, tone, and platform. Our free AI Product Description Generator uses this approach to create platform-specific descriptions optimised for conversion and SEO." } },
+      { "@type": "Question", "name": "What tone should I use for product descriptions?", "acceptedAnswer": { "@type": "Answer", "text": "Match your tone to your target customer and product type. Professional and authoritative works for B2B, tech, and premium products. Friendly and conversational works for lifestyle, fashion, and everyday consumer goods. Luxurious and aspirational works for high-end items. Playful and fun works for gifts, toys, and novelty items. Our generator lets you select your preferred tone before generating." } },
+      { "@type": "Question", "name": "How do I make my product descriptions SEO-friendly?", "acceptedAnswer": { "@type": "Answer", "text": "Include your primary keyword naturally in the first sentence. Use semantic variations of your keyword throughout. Write for humans first — Google's algorithm rewards descriptions that have high conversion rates and low bounce rates. Include long-tail keywords that match how customers search. Add structured data (schema markup) to your product pages. Avoid keyword stuffing — use each keyword once or twice at most." } }
     ]
   }
   </script>
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com"},
-      {"@type": "ListItem", "position": 2, "name": "AI Product Description Writer", "item": "https://www.toolsnook.com/tools/ai-product-description.html"}
-    ]
-  }
-  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b;--blue:#4ecdc4;--purple:#c084fc}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2.5rem;text-align:center;max-width:720px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:580px;margin:0 auto}
+    .hero-badges{display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.25rem}
+    .hbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;padding:4px 12px;border-radius:100px}
+    .container{max-width:960px;margin:0 auto;padding:0 2rem 4rem}
+    .gen-card{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;padding:2rem;margin-top:2rem;position:relative;overflow:hidden}
+    .gen-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--blue))}
+    .usage-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem}
+    .usage-text{font-size:0.82rem;color:var(--muted)}
+    .usage-count{font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:700;color:var(--accent)}
+    .platform-tabs{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.5rem}
+    .ptab{padding:6px 14px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.8rem;border-radius:8px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:5px}
+    .ptab.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+    .field{margin-bottom:1.1rem}
+    .field label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
+    .field input,.field textarea,.field select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:0.7rem 1rem;transition:border-color 0.2s}
+    .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
+    .field textarea{resize:vertical;min-height:90px;line-height:1.6}
+    .field select{cursor:pointer}.field select option{background:#1a1a24}
+    .field-hint{font-size:0.72rem;color:var(--muted);margin-top:3px}
+    .input-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:560px){.input-row{grid-template-columns:1fr}}
+    .gen-btn{width:100%;padding:1rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:12px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s,transform 0.2s;display:flex;align-items:center;justify-content:center;gap:8px}
+    .gen-btn:hover{opacity:0.88;transform:translateY(-1px)}
+    .gen-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+    .output-section{display:none;margin-top:1.75rem}
+    .output-section.show{display:block}
+    .output-block{background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:1.25rem;margin-bottom:1rem}
+    .output-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem}
+    .output-label{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em}
+    .copy-small{padding:4px 12px;background:transparent;border:1px solid var(--border2);color:var(--muted);border-radius:6px;font-size:0.75rem;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .copy-small:hover{border-color:var(--accent);color:var(--accent)}
+    .output-text{font-size:0.9rem;color:var(--text);line-height:1.8;white-space:pre-wrap}
+    .regen-btn{width:100%;padding:0.7rem;background:transparent;border:1px solid var(--border2);color:var(--muted);border-radius:10px;font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.2s;margin-top:0.5rem}
+    .regen-btn:hover{border-color:var(--accent);color:var(--accent)}
+    .spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 0.7s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
+    .platform-guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .platform-guide-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+    .platform-guide-name{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+    .platform-guide-list{list-style:none;font-size:0.82rem;color:var(--muted);line-height:2}
+    .platform-guide-list li::before{content:'✓ ';color:var(--green)}
+    .example-card{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:1.1rem;margin:1rem 0}
+    .example-label{font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem}
+    .example-text{font-size:0.88rem;color:var(--muted);line-height:1.7}
+    .tip-box{background:rgba(67,233,123,0.06);border:1px solid rgba(67,233,123,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .tip-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q::after{content:'▼';font-size:0.7rem;color:var(--muted);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{transform:rotate(180deg)}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;display:none}
+    .faq-item.open .faq-a{display:block}
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+    @media(max-width:600px){.gen-card{padding:1.25rem}.platform-tabs{gap:0.3rem}}
+  </style>
 </head>
 <body>
 <nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
 <div class="hero">
-  <div class="breadcrumb"><a href="/">ToolsNook</a> › AI Product Description Writer</div>
-  <div class="hero-badge">✨ AI Powered</div>
-  <h1>AI Product Description Writer</h1>
-  <p>Generate compelling, conversion-focused product descriptions for Shopify, Amazon, Etsy and more.</p>
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › AI Product Description Generator</div>
+  <h1>AI Product Description Generator</h1>
+  <p>Write high-converting product descriptions for Shopify, Amazon, Etsy, eBay and WooCommerce in seconds. Get a full description, bullet points, meta description and SEO title — all at once.</p>
+  <div class="hero-badges">
+    <span class="hbadge">✨ AI-powered</span>
+    <span class="hbadge">🛍️ Shopify ready</span>
+    <span class="hbadge">📦 Amazon format</span>
+    <span class="hbadge">🏺 Etsy optimised</span>
+    <span class="hbadge">🚫 No signup</span>
+  </div>
 </div>
+
 <div class="container">
-  <div class="usage-wrap" id="usage-wrap"></div>
-  <div class="layout">
-    <div class="card">
-      <div class="card-title">PRODUCT DETAILS</div>
-      <div class="field"><label>PRODUCT NAME</label><input type="text" id="pname" placeholder="Handmade Leather Wallet"/></div>
-      <div class="field"><label>KEY FEATURES / SPECS</label><textarea id="features" placeholder="Full-grain leather, 8 card slots, RFID blocking, available in 3 colors..."></textarea></div>
-      <div class="field"><label>TARGET CUSTOMER</label><input type="text" id="audience" placeholder="Professionals who value quality accessories"/></div>
-      <div class="field"><label>PLATFORM</label>
-        <select id="platform"><option value="shopify">Shopify / General ecommerce</option><option value="amazon">Amazon listing</option><option value="etsy">Etsy handmade</option><option value="instagram">Instagram caption</option></select>
-      </div>
-      <div class="field"><label>TONE</label>
-        <select id="tone"><option value="professional">Professional</option><option value="luxury">Luxury & Premium</option><option value="friendly">Friendly</option><option value="exciting">Exciting & Energetic</option></select>
-      </div>
-      <button class="gen-btn" id="gen-btn" onclick="generate()">✨ Generate Description</button>
+  <div class="gen-card">
+    <div class="usage-bar">
+      <span class="usage-text">✨ AI-powered · 3 free generations per day</span>
+      <span class="usage-count" id="usage-count">3 remaining today</span>
     </div>
-    <div class="card">
-      <div class="card-title">YOUR DESCRIPTION</div>
-      <div class="placeholder-state" id="placeholder"><div class="placeholder-icon">🛍️</div><p>Enter product details to generate descriptions.</p></div>
-      <div class="loading-state" id="loading"><div class="spinner"></div><p style="color:var(--muted)">Writing your product description...</p></div>
-      <div id="output-content" style="display:none">
-        <div class="output-tabs" id="output-tabs"></div>
-        <div class="output-text" id="output-text"></div>
-        <button class="copy-btn" onclick="copyDesc()">📋 Copy Description</button>
+
+    <!-- PLATFORM TABS -->
+    <div style="font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.6rem;letter-spacing:0.04em">SELECT PLATFORM</div>
+    <div class="platform-tabs">
+      <button class="ptab active" onclick="setPlatform('shopify',this)">🛍️ Shopify</button>
+      <button class="ptab" onclick="setPlatform('amazon',this)">📦 Amazon</button>
+      <button class="ptab" onclick="setPlatform('etsy',this)">🏺 Etsy</button>
+      <button class="ptab" onclick="setPlatform('ebay',this)">🔨 eBay</button>
+      <button class="ptab" onclick="setPlatform('woocommerce',this)">🛒 WooCommerce</button>
+      <button class="ptab" onclick="setPlatform('general',this)">📝 General</button>
+    </div>
+
+    <!-- FIELDS -->
+    <div class="field">
+      <label>PRODUCT NAME *</label>
+      <input type="text" id="product-name" placeholder="e.g. Handmade Ceramic Coffee Mug" maxlength="100" />
+    </div>
+
+    <div class="field">
+      <label>KEY FEATURES & BENEFITS *</label>
+      <textarea id="product-features" placeholder="e.g. 12oz capacity, dishwasher safe, microwave safe, speckled glaze finish, hand-thrown by local artisan, lead-free ceramic, comes in gift box"></textarea>
+      <div class="field-hint">The more detail you give, the better the description. Include materials, size, use cases, unique selling points.</div>
+    </div>
+
+    <div class="input-row">
+      <div class="field">
+        <label>TARGET CUSTOMER</label>
+        <input type="text" id="target-customer" placeholder="e.g. coffee lovers, gift buyers" />
+      </div>
+      <div class="field">
+        <label>TONE OF VOICE</label>
+        <select id="tone">
+          <option value="professional">Professional</option>
+          <option value="friendly" selected>Friendly & Conversational</option>
+          <option value="luxury">Luxury & Premium</option>
+          <option value="playful">Playful & Fun</option>
+          <option value="minimalist">Minimalist & Clean</option>
+          <option value="urgent">Urgent & Sales-focused</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="input-row">
+      <div class="field">
+        <label>PRIMARY KEYWORD (FOR SEO)</label>
+        <input type="text" id="keyword" placeholder="e.g. handmade ceramic mug" />
+        <div class="field-hint">Include this keyword naturally in the description</div>
+      </div>
+      <div class="field">
+        <label>DESCRIPTION LENGTH</label>
+        <select id="length">
+          <option value="short">Short (100-150 words)</option>
+          <option value="medium" selected>Medium (150-250 words)</option>
+          <option value="long">Long (250-400 words)</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="gen-btn" id="gen-btn" onclick="generate()">
+      ✨ Generate Product Description
+    </button>
+
+    <!-- OUTPUT -->
+    <div class="output-section" id="output-section">
+      <div class="output-block">
+        <div class="output-header">
+          <span class="output-label">📝 Product Description</span>
+          <button class="copy-small" onclick="copyOutput('main-desc')">Copy</button>
+        </div>
+        <div class="output-text" id="main-desc"></div>
+      </div>
+      <div class="output-block">
+        <div class="output-header">
+          <span class="output-label">• Bullet Points</span>
+          <button class="copy-small" onclick="copyOutput('bullet-points')">Copy</button>
+        </div>
+        <div class="output-text" id="bullet-points"></div>
+      </div>
+      <div class="output-block">
+        <div class="output-header">
+          <span class="output-label">🔍 SEO Meta Description</span>
+          <button class="copy-small" onclick="copyOutput('meta-desc')">Copy</button>
+        </div>
+        <div class="output-text" id="meta-desc"></div>
+      </div>
+      <div class="output-block">
+        <div class="output-header">
+          <span class="output-label">📌 SEO Title Tag</span>
+          <button class="copy-small" onclick="copyOutput('seo-title')">Copy</button>
+        </div>
+        <div class="output-text" id="seo-title"></div>
+      </div>
+      <button class="regen-btn" onclick="generate()">↻ Generate Another Version</button>
+    </div>
+  </div>
+
+  <!-- PLATFORM GUIDES -->
+  <div class="content-section">
+    <h2>Platform-Specific Product Description Guide</h2>
+    <p>Each selling platform has different requirements, character limits, and customer expectations. Our AI generator automatically formats output for your chosen platform — but here's what you need to know about each one.</p>
+    <div class="platform-guide-grid">
+      <div class="platform-guide-card">
+        <div class="platform-guide-name">🛍️ Shopify</div>
+        <ul class="platform-guide-list">
+          <li>150-300 words ideal</li>
+          <li>Lead with the main benefit</li>
+          <li>Use short paragraphs (2-3 sentences)</li>
+          <li>Include keyword in first sentence</li>
+          <li>Add bullet points for scannability</li>
+          <li>End with a clear CTA</li>
+        </ul>
+      </div>
+      <div class="platform-guide-card">
+        <div class="platform-guide-name">📦 Amazon</div>
+        <ul class="platform-guide-list">
+          <li>Description: 150-200 words</li>
+          <li>5 bullet points mandatory</li>
+          <li>Bullet points under 200 chars each</li>
+          <li>Start bullets with CAPS benefit</li>
+          <li>Include primary keyword early</li>
+          <li>No HTML in standard description</li>
+        </ul>
+      </div>
+      <div class="platform-guide-card">
+        <div class="platform-guide-name">🏺 Etsy</div>
+        <ul class="platform-guide-list">
+          <li>Lead with who made it and why</li>
+          <li>Story-driven, personal tone</li>
+          <li>Keyword in first 40 characters</li>
+          <li>Include materials & dimensions</li>
+          <li>Mention care instructions</li>
+          <li>State personalisation options</li>
+        </ul>
+      </div>
+      <div class="platform-guide-card">
+        <div class="platform-guide-name">🔨 eBay</div>
+        <ul class="platform-guide-list">
+          <li>100-200 words, factual tone</li>
+          <li>Lead with brand, model, condition</li>
+          <li>Include all specs and dimensions</li>
+          <li>State what's included in the box</li>
+          <li>Mention compatibility if relevant</li>
+          <li>Clear, scannable format</li>
+        </ul>
+      </div>
+      <div class="platform-guide-card">
+        <div class="platform-guide-name">🛒 WooCommerce</div>
+        <ul class="platform-guide-list">
+          <li>Short description: 2-3 sentences</li>
+          <li>Long description: 200-400 words</li>
+          <li>Use H2/H3 headings in long desc</li>
+          <li>Include schema markup on page</li>
+          <li>Add FAQs for SEO rich snippets</li>
+          <li>Optimise for Google Shopping</li>
+        </ul>
+      </div>
+      <div class="platform-guide-card">
+        <div class="platform-guide-name">📝 General / Other</div>
+        <ul class="platform-guide-list">
+          <li>Adaptable length 150-300 words</li>
+          <li>Focus on benefits over features</li>
+          <li>Use sensory and emotional language</li>
+          <li>Include social proof if available</li>
+          <li>One clear call to action</li>
+          <li>Mobile-first formatting</li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="related"><h2>Related Tools</h2><div class="related-grid">
-    <a href="/tools/ai-email-subject.html" class="related-card"><span style="font-size:1.4rem">📧</span><span style="font-size:0.88rem;font-weight:500">Email Subject Generator</span></a>
-    <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
-    <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
-  </div></div>
+
+  <!-- HOW TO WRITE -->
+  <div class="content-section">
+    <h2>How to Write Product Descriptions That Convert</h2>
+    <p>Most product descriptions fail because they describe the product instead of selling it. A list of features tells the customer what something is — a great description makes them feel why they need it. Here's how to write descriptions that actually drive sales.</p>
+
+    <h3>Lead with benefits, not features</h3>
+    <p>The most common mistake in product copywriting is listing features instead of communicating benefits. A feature is what a product has. A benefit is what it does for the customer.</p>
+    <div class="example-card">
+      <div class="example-label">❌ Feature-focused (weak)</div>
+      <div class="example-text">"Made from 100% merino wool. 200g weight. Machine washable at 30°C."</div>
+    </div>
+    <div class="example-card">
+      <div class="example-label">✅ Benefit-focused (strong)</div>
+      <div class="example-text">"Stay warm without the itch — our merino wool blend regulates your body temperature naturally, so you're comfortable from morning meetings to evening walks. Throws in the machine at 30°C when life gets messy."</div>
+    </div>
+
+    <h3>Write for your specific customer</h3>
+    <p>The best product descriptions speak directly to one person — your ideal buyer. Before writing, ask: who is buying this? What problem does it solve for them? What objection might they have? What would make them trust this product? Use the AI generator above and fill in the "target customer" field — this is the single biggest factor in description quality.</p>
+
+    <h3>Use sensory and emotional language</h3>
+    <p>People buy emotionally and justify rationally. Words that engage the senses — smell, texture, sound, weight, taste — make products feel real to someone reading a screen. Words that trigger emotions — comfort, confidence, joy, nostalgia, safety — make products feel necessary.</p>
+
+    <h3>Address the main objection</h3>
+    <p>Every product has a common customer objection. For clothing: "Will it fit?" For electronics: "Is it easy to set up?" For food: "Does it taste good?" Identifying and addressing the number one objection directly in your description removes the barrier to purchase.</p>
+
+    <h3>How to write Amazon bullet points that rank</h3>
+    <p>Amazon's A9 algorithm gives significant weight to bullet points. Best practices: start each bullet with a CAPITALISED benefit keyword (e.g. "DISHWASHER SAFE:"), keep each bullet under 200 characters, include your primary keyword in bullet 1 or 2, address a different benefit or feature in each bullet, and end bullet 5 with a risk reducer (guarantee, returns policy, or warranty).</p>
+
+    <div class="tip-box"><p>💡 <strong>Pro tip:</strong> Always read your product description out loud before publishing. If it sounds unnatural or robotic, it will read that way to customers too. The best descriptions sound like a knowledgeable friend describing a product they love.</p></div>
+
+    <h3>SEO for product descriptions</h3>
+    <p>Product description SEO works differently from blog SEO. Your primary keyword should appear naturally in the first sentence. Use semantic variations throughout — not just your exact keyword phrase. Google's algorithm for product pages gives heavy weight to click-through rate and add-to-cart rate, so write for conversion first and SEO second. A description that converts well will rank well over time because Google measures user engagement signals.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I write a good product description?</div><div class="faq-a">Focus on benefits over features, speak directly to your target customer, use sensory and emotional language, address the main objection, and end with a clear call to action. Lead with the most important benefit — not a list of specifications. Use the AI generator above with detailed product information for the best results.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long should a product description be?</div><div class="faq-a">Shopify and general ecommerce: 150-300 words. Amazon: 150-200 words plus 5 bullet points. Etsy: 150-300 words with a personal, story-driven tone. eBay: 100-200 words, clear and factual. Our generator automatically matches the ideal length for your chosen platform.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can AI write product descriptions?</div><div class="faq-a">Yes — AI produces high-quality product descriptions when given detailed input. The key is providing the product name, key features, target customer, tone preference, and platform. Our generator uses all of this to create platform-specific, conversion-focused descriptions that are ready to use or need minimal editing.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I write Amazon product descriptions that rank?</div><div class="faq-a">Include your primary keyword in the first sentence. Use all 5 bullet points — start each with a capitalised benefit keyword. Keep bullets under 200 characters. Amazon's algorithm prioritises conversion rate, so write for the buyer first. Add backend search terms in Seller Central for additional keyword coverage.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I write Etsy descriptions that sell?</div><div class="faq-a">Start with who made it and why. Describe materials and craftsmanship in sensory detail. Include dimensions and care instructions. State personalisation options. Use your primary keyword in the first 40 characters — Etsy truncates search results. Our Etsy mode generates descriptions with this storytelling tone automatically.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What tone should I use for product descriptions?</div><div class="faq-a">Match your tone to your customer. Professional for B2B and premium products. Friendly and conversational for lifestyle and everyday goods. Luxurious for high-end items. Playful for gifts and novelty products. Our generator has 6 tone options — select the one that matches your brand before generating.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I make product descriptions SEO-friendly?</div><div class="faq-a">Include your primary keyword naturally in the first sentence. Use semantic variations throughout. Avoid keyword stuffing — use each keyword once or twice. Write for conversion first — Google rewards high-converting pages. Add structured data (schema markup) to your product pages for rich snippets in search results.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How many free uses do I get per day?</div><div class="faq-a">You get 3 free product description generations per day. This resets every 24 hours. Each generation produces a full description, 5 bullet points, a meta description, and an SEO title — giving you everything you need in one click.</div></div>
+  </div>
+
+  <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">
+    <h2>Related AI Writing Tools</h2>
+    <p style="color:var(--muted);font-size:0.92rem;line-height:2">
+      → <a href="/tools/ai-email-subject.html" style="color:var(--accent)">Email Subject Line Generator</a> — Generate 10 high-converting subject lines for product launch emails and promotions.<br>
+      → <a href="/tools/ai-business-name-generator.html" style="color:var(--accent)">Business Name Generator</a> — Generate unique brand names with taglines and domain suggestions.<br>
+      → <a href="/tools/ai-bio-generator.html" style="color:var(--accent)">AI Bio Generator</a> — Write professional bios for your seller profile on Etsy, Amazon, and LinkedIn.<br>
+      → <a href="/tools/ai-cover-letter.html" style="color:var(--accent)">AI Cover Letter Writer</a> — Write tailored cover letters for any job application instantly.
+    </p>
+  </div>
+
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/ai-email-subject.html" class="related-card"><span style="font-size:1.4rem">📧</span><span style="font-size:0.88rem;font-weight:500">Email Subject Generator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
+      <a href="/tools/ai-business-name-generator.html" class="related-card"><span style="font-size:1.4rem">✨</span><span style="font-size:0.88rem;font-weight:500">Business Name Generator</span></a>
+    </div>
+  </div>
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · Free tools for people who mean business.</p></footer>
+
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
 <script>
-let outputs={};let activeTab='full';
-const TOOL='prod-desc';const LIMIT=3;
-function getUsage(){const t=new Date().toDateString();const d=JSON.parse(localStorage.getItem('tn_'+TOOL)||'{}');return d.date!==t?{date:t,count:0}:d;}
-function saveUsage(){const u=getUsage();localStorage.setItem('tn_'+TOOL,JSON.stringify({date:new Date().toDateString(),count:u.count+1}));}
-function initUI(){
-  const u=getUsage();const rem=LIMIT-u.count;
-  const reset=new Date();reset.setHours(24,0,0,0);
-  const hrs=Math.floor((reset-new Date())/3600000);const mins=Math.floor(((reset-new Date())%3600000)/60000);
-  document.getElementById('usage-wrap').innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:0.85rem 1.25rem"><div><div style="font-size:0.8rem;color:var(--muted)">Daily free generations — <strong style="color:var(--text)">${rem} of ${LIMIT} remaining</strong></div><div style="font-size:0.72rem;color:var(--muted);margin-top:2px">Resets in ${hrs}h ${mins}m</div></div><div style="display:flex;gap:6px">${Array.from({length:LIMIT},(_,i)=>`<div style="width:10px;height:10px;border-radius:50%;background:${i<u.count?'var(--accent)':'var(--bg3)'};border:1px solid ${i<u.count?'var(--accent)':'var(--border2)'}"></div>`).join('')}</div></div>`;
-  document.getElementById('gen-btn').disabled=rem<=0;
-}
-async function generate(){
-  const u=getUsage();if(u.count>=LIMIT){alert('Daily limit reached. Come back tomorrow!');return;}
-  const pname=document.getElementById('pname').value.trim();if(!pname){alert('Please enter a product name.');return;}
-  document.getElementById('gen-btn').disabled=true;
-  document.getElementById('placeholder').style.display='none';
-  document.getElementById('loading').classList.add('show');
-  document.getElementById('output-content').style.display='none';
-  const prompt=`Write product descriptions for: ${pname}
-Features: ${document.getElementById('features').value||'N/A'}
-Audience: ${document.getElementById('audience').value||'General'}
-Platform: ${document.getElementById('platform').value}
-Tone: ${document.getElementById('tone').value}
-Focus on BENEFITS not just features. Make it persuasive and conversion-focused.
-Respond ONLY with JSON: {"full":"150-200 word description","short":"50-75 word description","bullets":"5 bullet points with • character"}`;
-  try{
-    const res=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,max_tokens:700})});
-    if(!res.ok){const e=await res.json();throw new Error(e.error||'API '+res.status);}
-      const data=await res.json();
-    outputs=JSON.parse(data.text.replace(/```json|```/g,'').trim());
-    saveUsage();initUI();renderOutputs();
-  }catch(e){console.error('API error:',e.message);alert('Error: '+e.message);document.getElementById('gen-btn').disabled=false;}
-  finally{document.getElementById('loading').classList.remove('show');}
-}
-function renderOutputs(){
-  document.getElementById('output-tabs').innerHTML=[{id:'full',label:'Full'},{id:'short',label:'Short'},{id:'bullets',label:'Bullets'}].map(t=>`<button class="ot ${t.id===activeTab?'active':''}" onclick="showTab('${t.id}',this)">${t.label}</button>`).join('');
-  showTabText(activeTab);document.getElementById('output-content').style.display='block';
-}
-function showTab(id,btn){activeTab=id;document.querySelectorAll('.ot').forEach(b=>b.classList.remove('active'));btn.classList.add('active');showTabText(id);}
-function showTabText(id){document.getElementById('output-text').textContent=outputs[id]||'';document.getElementById('output-text').classList.add('show');}
-function copyDesc(){navigator.clipboard.writeText(outputs[activeTab]||'').then(()=>{const b=document.querySelector('.copy-btn');b.textContent='✓ Copied!';setTimeout(()=>b.textContent='📋 Copy Description',2000);});}
-initUI();
+  let selectedPlatform = 'shopify';
+  const STORAGE_KEY = 'tn_ai-product-description';
+  const MAX_USES = 3;
+
+  function getUsage() {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"count":0,"date":""}');
+    const today = new Date().toDateString();
+    if (data.date !== today) return { count: 0, date: today };
+    return data;
+  }
+
+  function updateUsageDisplay() {
+    const usage = getUsage();
+    const remaining = Math.max(0, MAX_USES - usage.count);
+    document.getElementById('usage-count').textContent = remaining + ' remaining today';
+    document.getElementById('gen-btn').disabled = remaining === 0;
+    if (remaining === 0) document.getElementById('gen-btn').textContent = '⏳ Daily limit reached — resets tomorrow';
+  }
+
+  function setPlatform(p, btn) {
+    selectedPlatform = p;
+    document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  async function generate() {
+    const usage = getUsage();
+    if (usage.count >= MAX_USES) { alert('Daily limit reached. Resets tomorrow.'); return; }
+
+    const name = document.getElementById('product-name').value.trim();
+    const features = document.getElementById('product-features').value.trim();
+    if (!name || !features) { alert('Please enter a product name and key features.'); return; }
+
+    const customer = document.getElementById('target-customer').value.trim();
+    const tone = document.getElementById('tone').value;
+    const keyword = document.getElementById('keyword').value.trim();
+    const length = document.getElementById('length').value;
+
+    const btn = document.getElementById('gen-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<div class="spinner"></div> Generating...';
+
+    const platformInstructions = {
+      shopify: 'Write for a Shopify product page. Include a compelling opening paragraph, 2-3 body paragraphs, and a closing call to action. Format with short paragraphs.',
+      amazon: 'Write for Amazon. The description should be 150-200 words. Also provide exactly 5 bullet points formatted as "• BENEFIT KEYWORD: detail..." with each bullet under 200 characters.',
+      etsy: 'Write for Etsy. Use a personal, story-driven tone. Start with who made it and why. Include materials, dimensions, and care instructions. Warm and authentic voice.',
+      ebay: 'Write for eBay. Clear, factual and informative tone. Include condition, specs, what is included, and compatibility where relevant.',
+      woocommerce: 'Write for WooCommerce. Provide a short description (2-3 sentences) followed by a longer full description (200-300 words) with subheadings.',
+      general: 'Write a general product description suitable for any platform or website.'
+    };
+
+    const lengthGuide = { short: '100-150 words', medium: '150-250 words', long: '250-400 words' };
+
+    const prompt = `You are an expert ecommerce copywriter. Generate a complete product listing package for the following product.
+
+Product Name: ${name}
+Key Features/Details: ${features}
+Target Customer: ${customer || 'general consumers'}
+Tone: ${tone}
+Primary SEO Keyword: ${keyword || name}
+Description Length: ${lengthGuide[length]}
+Platform: ${selectedPlatform.toUpperCase()} — ${platformInstructions[selectedPlatform]}
+
+Respond ONLY with a JSON object in this exact format, no other text, no markdown:
+{
+  "description": "The full product description here",
+  "bullets": "• Bullet point 1\n• Bullet point 2\n• Bullet point 3\n• Bullet point 4\n• Bullet point 5",
+  "meta": "Meta description under 160 characters",
+  "title": "SEO title tag under 60 characters"
+}`;
+
+    try {
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-6',
+          max_tokens: 1000,
+          messages: [{ role: 'user', content: prompt }]
+        })
+      });
+
+      const data = await response.json();
+      const text = data.content?.[0]?.text || '';
+      const clean = text.replace(/```json|```/g, '').trim();
+      const parsed = JSON.parse(clean);
+
+      document.getElementById('main-desc').textContent = parsed.description || '';
+      document.getElementById('bullet-points').textContent = parsed.bullets || '';
+      document.getElementById('meta-desc').textContent = parsed.meta || '';
+      document.getElementById('seo-title').textContent = parsed.title || '';
+      document.getElementById('output-section').classList.add('show');
+
+      // Update usage
+      usage.count += 1;
+      usage.date = new Date().toDateString();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(usage));
+      updateUsageDisplay();
+
+    } catch(err) {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = '✨ Generate Product Description';
+      updateUsageDisplay();
+    }
+  }
+
+  function copyOutput(id) {
+    const text = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = event.target;
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = 'Copy', 2000);
+    });
+  }
+
+  function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+
+  updateUsageDisplay();
 </script>
 </body>
 </html>
