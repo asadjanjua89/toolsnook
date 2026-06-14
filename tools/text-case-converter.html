@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Case Converter – UPPERCASE, camelCase, snake_case & 15 More | ToolsNook</title>
+  <meta name="description" content="Free text case converter. Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and 15 case types instantly. Plus text utilities: remove duplicates, sort lines, slugify. No signup." />
+  <meta name="keywords" content="text case converter, case converter, convert text case, uppercase to lowercase converter, lowercase to uppercase converter, title case converter, sentence case converter, camelCase converter, PascalCase converter, snake_case converter, kebab-case converter, CONSTANT_CASE converter, toggle case, alternating case converter, capitalize each word, change text case online, caps lock fix, slugify converter, text to slug, convert to camelCase, convert to snake_case, what is camelCase, what is snake_case, what is kebab-case, AP style title case converter, programming naming conventions, free case converter online, remove duplicate lines, sort lines alphabetically, online text formatter" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/text-case-converter.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <meta property="og:title" content="Text Case Converter – UPPERCASE, camelCase, snake_case & 15 More" />
+  <meta property="og:description" content="Free text case converter with 15 case types plus text utilities — remove duplicates, sort lines, slugify, and more. Real-time, private, no signup." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/text-case-converter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Text Case Converter",
+    "url": "https://www.toolsnook.com/tools/text-case-converter.html",
+    "description": "Free text case converter with 15 case types including UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, plus text utilities like remove duplicate lines, sort lines, and slugify.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "featureList": ["UPPERCASE","lowercase","Title Case","Sentence case","camelCase","PascalCase","snake_case","kebab-case","CONSTANT_CASE","dot.case","Train-Case","Alternating Case","Inverse Case","Random Case","Remove duplicate lines","Sort lines","Slugify","Remove extra spaces"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com" },
+      { "@type": "ListItem", "position": 2, "name": "Text Case Converter", "item": "https://www.toolsnook.com/tools/text-case-converter.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How do I convert text to a different case?", "acceptedAnswer": { "@type": "Answer", "text": "Paste or type your text into the box above. All 15 case conversions update instantly — UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and more. Click the copy button next to any result to copy it to your clipboard." } },
+      { "@type": "Question", "name": "What is camelCase and where is it used?", "acceptedAnswer": { "@type": "Answer", "text": "camelCase joins words together with no spaces, where the first word is lowercase and every subsequent word starts with a capital letter (e.g. helloWorldExample). It's the standard naming convention for variables and functions in JavaScript, Java, and C#. The name comes from the visual resemblance to a camel's humps." } },
+      { "@type": "Question", "name": "What is snake_case and where is it used?", "acceptedAnswer": { "@type": "Answer", "text": "snake_case is all lowercase with words separated by underscores (e.g. hello_world_example). It's the standard naming convention for variables and functions in Python and Ruby, and is commonly used for database column names and file names." } },
+      { "@type": "Question", "name": "What is kebab-case and where is it used?", "acceptedAnswer": { "@type": "Answer", "text": "kebab-case is all lowercase with words separated by hyphens (e.g. hello-world-example). It's the standard format for URL slugs, CSS class names, and HTML attributes, because hyphens are SEO-friendly and URL-safe. Also called dash-case or hyphen-case." } },
+      { "@type": "Question", "name": "What is the difference between camelCase and PascalCase?", "acceptedAnswer": { "@type": "Answer", "text": "Both join words with no spaces and capitalize each word boundary. The difference is the first letter: camelCase starts with a lowercase letter (helloWorld), while PascalCase starts with an uppercase letter (HelloWorld). camelCase is typically used for variables and functions. PascalCase is typically used for class names and components." } },
+      { "@type": "Question", "name": "How do I fix text that's stuck in ALL CAPS from Caps Lock?", "acceptedAnswer": { "@type": "Answer", "text": "Paste the all-caps text into the converter above. The 'Sentence case' or 'Title Case' output will fix it automatically — converting ACCIDENTALLY TYPED IN CAPS to a normal, readable format. Sentence case capitalizes only the first letter of each sentence, which is usually what you want for fixing caps-lock mistakes." } },
+      { "@type": "Question", "name": "What words are not capitalized in Title Case?", "acceptedAnswer": { "@type": "Answer", "text": "Following AP and Chicago style guides, Title Case capitalizes all major words but keeps short articles (a, an, the), coordinating conjunctions (and, but, or, nor), and short prepositions (in, on, at, to, for, of, with) lowercase — unless they are the first or last word of the title. For example: 'The Lord of the Rings' follows this rule, while 'Capitalize Each Word' capitalizes literally every word with no exceptions." } },
+      { "@type": "Question", "name": "Is my text sent to a server when I use this tool?", "acceptedAnswer": { "@type": "Answer", "text": "No. All text case conversion happens entirely in your browser using JavaScript. Your text is never sent to, stored on, or processed by any server. This makes it safe to use for sensitive documents, code, and confidential text." } },
+      { "@type": "Question", "name": "What is a slug and how do I create one?", "acceptedAnswer": { "@type": "Answer", "text": "A slug is the URL-friendly version of a title — lowercase, with spaces replaced by hyphens, and special characters removed. For example, 'My Blog Post: 2026 Edition!' becomes 'my-blog-post-2026-edition'. Use the Slugify utility below the case converter to generate SEO-friendly URL slugs from any text." } }
+    ]
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b;--blue:#4ecdc4;--purple:#c084fc}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:580px;margin:0 auto}
+    .container{max-width:1080px;margin:0 auto;padding:0 2rem 4rem}
+
+    .input-card{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;overflow:hidden;margin-top:2rem;position:relative}
+    .input-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--blue))}
+    .input-toolbar{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 1.25rem;border-bottom:1px solid var(--border)}
+    .input-label{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em}
+    .input-stats{font-size:0.78rem;color:var(--muted)}
+    .case-textarea{width:100%;min-height:160px;background:transparent;border:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:1.25rem;resize:vertical;line-height:1.7;outline:none}
+    .case-textarea::placeholder{color:var(--muted)}
+    .input-footer{display:flex;align-items:center;gap:0.5rem;padding:0.85rem 1.25rem;border-top:1px solid var(--border);flex-wrap:wrap}
+    .tbtn{padding:6px 14px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.78rem;border-radius:6px;cursor:pointer;transition:all 0.15s;font-family:'DM Sans',sans-serif}
+    .tbtn:hover{border-color:var(--accent);color:var(--accent)}
+
+    .section-title{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin:2rem 0 1rem}
+    .case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.85rem}
+    .case-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem}
+    .case-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
+    .case-name{font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;color:var(--text)}
+    .case-copy{padding:3px 10px;background:transparent;border:1px solid var(--border2);color:var(--muted);border-radius:6px;font-size:0.7rem;cursor:pointer;transition:all 0.15s;font-family:'DM Sans',sans-serif}
+    .case-copy:hover{border-color:var(--accent);color:var(--accent)}
+    .case-output{font-size:0.86rem;color:var(--muted);word-break:break-word;min-height:1.4em;line-height:1.6;font-family:'DM Sans',sans-serif}
+    .case-output.empty{color:var(--border2);font-style:italic}
+    .case-card.mono .case-output{font-family:monospace;color:var(--blue)}
+
+    .util-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.6rem}
+    .util-btn{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0.85rem 1rem;cursor:pointer;transition:all 0.2s;text-align:left}
+    .util-btn:hover{border-color:var(--accent);background:var(--bg3)}
+    .util-name{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:2px}
+    .util-desc{font-size:0.75rem;color:var(--muted);line-height:1.4}
+
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
+    .case-table{width:100%;border-collapse:collapse;font-size:0.83rem;margin-top:1rem}
+    .case-table th{background:var(--bg3);color:var(--muted);font-weight:600;padding:0.6rem 0.9rem;text-align:left;font-size:0.75rem;letter-spacing:0.05em}
+    .case-table td{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    .case-table td:first-child{color:var(--text);font-weight:500}
+    .case-table td.example{font-family:monospace;color:var(--blue)}
+    .case-table tr:last-child td{border-bottom:none}
+    .case-table tr:hover td{background:var(--bg3)}
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q::after{content:'▼';font-size:0.7rem;color:var(--muted);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{transform:rotate(180deg)}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;display:none}
+    .faq-item.open .faq-a{display:block}
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+    @media(max-width:600px){.case-grid,.util-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:420px){.case-grid,.util-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Text Case Converter</div>
+  <h1>Text Case Converter</h1>
+  <p>Convert text to UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case and 15 case types instantly — plus text utilities to clean and format your text. 100% private, runs in your browser.</p>
+</div>
+
+<div class="container">
+  <div class="input-card">
+    <div class="input-toolbar">
+      <span class="input-label">📝 Your Text</span>
+      <span class="input-stats" id="input-stats">0 words · 0 characters</span>
+    </div>
+    <textarea class="case-textarea" id="case-input" placeholder="Type or paste your text here — all 15 case conversions below update instantly as you type." oninput="convertAll()" spellcheck="true"></textarea>
+    <div class="input-footer">
+      <button class="tbtn" onclick="document.getElementById('case-input').value='';convertAll()">✕ Clear</button>
+      <button class="tbtn" onclick="pasteSample()">📄 Try sample text</button>
+      <button class="tbtn" onclick="copyMain()">📋 Copy input</button>
+    </div>
+  </div>
+
+  <div class="section-title">🔤 All Case Conversions (15 types)</div>
+  <div class="case-grid" id="case-grid">
+    <div class="case-card"><div class="case-card-head"><span class="case-name">UPPERCASE</span><button class="case-copy" onclick="copyCase('upper')">Copy</button></div><div class="case-output empty" id="out-upper">Start typing above…</div></div>
+    <div class="case-card"><div class="case-card-head"><span class="case-name">lowercase</span><button class="case-copy" onclick="copyCase('lower')">Copy</button></div><div class="case-output empty" id="out-lower">Start typing above…</div></div>
+    <div class="case-card"><div class="case-card-head"><span class="case-name">Title Case</span><button class="case-copy" onclick="copyCase('title')">Copy</button></div><div class="case-output empty" id="out-title">Start typing above…</div></div>
+    <div class="case-card"><div class="case-card-head"><span class="case-name">Sentence case</span><button class="case-copy" onclick="copyCase('sentence')">Copy</button></div><div class="case-output empty" id="out-sentence">Start typing above…</div></div>
+    <div class="case-card"><div class="case-card-head"><span class="case-name">Capitalize Each Word</span><button class="case-copy" onclick="copyCase('capitalize')">Copy</button></div><div class="case-output empty" id="out-capitalize">Start typing above…</div></div>
+    <div class="case-card"><div class="case-card-head"><span class="case-name">aLtErNaTiNg cAsE</span><button class="case-copy" onclick="copyCase('alternating')">Copy</button></div><div class="case-output empty" id="out-alternating">Start typing above…</div></div>
+    <div class="case-card"><div class="case-card-head"><span class="case-name">InVeRsE CaSe</span><button class="case-copy" onclick="copyCase('inverse')">Copy</button></div><div class="case-output empty" id="out-inverse">Start typing above…</div></div>
+    <div class="case-card"><div class="case-card-head"><span class="case-name">RaNdOm CaSe</span><button class="case-copy" onclick="copyCase('random')">Copy</button></div><div class="case-output empty" id="out-random">Start typing above…</div></div>
+    <div class="case-card mono"><div class="case-card-head"><span class="case-name">camelCase</span><button class="case-copy" onclick="copyCase('camel')">Copy</button></div><div class="case-output empty" id="out-camel">Start typing above…</div></div>
+    <div class="case-card mono"><div class="case-card-head"><span class="case-name">PascalCase</span><button class="case-copy" onclick="copyCase('pascal')">Copy</button></div><div class="case-output empty" id="out-pascal">Start typing above…</div></div>
+    <div class="case-card mono"><div class="case-card-head"><span class="case-name">snake_case</span><button class="case-copy" onclick="copyCase('snake')">Copy</button></div><div class="case-output empty" id="out-snake">Start typing above…</div></div>
+    <div class="case-card mono"><div class="case-card-head"><span class="case-name">CONSTANT_CASE</span><button class="case-copy" onclick="copyCase('constant')">Copy</button></div><div class="case-output empty" id="out-constant">Start typing above…</div></div>
+    <div class="case-card mono"><div class="case-card-head"><span class="case-name">kebab-case</span><button class="case-copy" onclick="copyCase('kebab')">Copy</button></div><div class="case-output empty" id="out-kebab">Start typing above…</div></div>
+    <div class="case-card mono"><div class="case-card-head"><span class="case-name">Train-Case</span><button class="case-copy" onclick="copyCase('train')">Copy</button></div><div class="case-output empty" id="out-train">Start typing above…</div></div>
+    <div class="case-card mono"><div class="case-card-head"><span class="case-name">dot.case</span><button class="case-copy" onclick="copyCase('dot')">Copy</button></div><div class="case-output empty" id="out-dot">Start typing above…</div></div>
+  </div>
+
+  <div class="section-title">🧰 Text Utilities — Apply Directly to Your Text</div>
+  <div class="util-grid">
+    <div class="util-btn" onclick="applyUtil('trimSpaces')"><div class="util-name">Remove Extra Spaces</div><div class="util-desc">Collapse multiple spaces/tabs into one</div></div>
+    <div class="util-btn" onclick="applyUtil('removeLineBreaks')"><div class="util-name">Remove Line Breaks</div><div class="util-desc">Join all lines into one paragraph</div></div>
+    <div class="util-btn" onclick="applyUtil('removeEmptyLines')"><div class="util-name">Remove Empty Lines</div><div class="util-desc">Strip blank lines from your text</div></div>
+    <div class="util-btn" onclick="applyUtil('removeDuplicates')"><div class="util-name">Remove Duplicate Lines</div><div class="util-desc">Keep only the first occurrence of each line</div></div>
+    <div class="util-btn" onclick="applyUtil('sortAZ')"><div class="util-name">Sort Lines A → Z</div><div class="util-desc">Alphabetical order, ascending</div></div>
+    <div class="util-btn" onclick="applyUtil('sortZA')"><div class="util-name">Sort Lines Z → A</div><div class="util-desc">Alphabetical order, descending</div></div>
+    <div class="util-btn" onclick="applyUtil('sortLength')"><div class="util-name">Sort by Line Length</div><div class="util-desc">Shortest lines first</div></div>
+    <div class="util-btn" onclick="applyUtil('reverseLines')"><div class="util-name">Reverse Line Order</div><div class="util-desc">Flip the order of all lines</div></div>
+    <div class="util-btn" onclick="applyUtil('reverseText')"><div class="util-name">Reverse Text</div><div class="util-desc">Reverse every character (mirror text)</div></div>
+    <div class="util-btn" onclick="applyUtil('removeSpecial')"><div class="util-name">Remove Special Characters</div><div class="util-desc">Keep only letters, numbers and spaces</div></div>
+    <div class="util-btn" onclick="applyUtil('addLineNumbers')"><div class="util-name">Add Line Numbers</div><div class="util-desc">Prefix each line with 1. 2. 3. …</div></div>
+    <div class="util-btn" onclick="applyUtil('slugify')"><div class="util-name">Slugify (URL Slug)</div><div class="util-desc">Convert to a clean URL-friendly slug</div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Case Types Explained — What They're Used For</h2>
+    <p>Different case formats exist for different reasons — readability, programming conventions, and URL safety. Here's a complete reference for all 15 case types and where each one is used.</p>
+    <table class="case-table">
+      <thead><tr><th>Case Type</th><th>Example</th><th>Used In</th></tr></thead>
+      <tbody>
+        <tr><td>UPPERCASE</td><td class="example">HELLO WORLD</td><td>Headlines, emphasis, acronyms, warning labels</td></tr>
+        <tr><td>lowercase</td><td class="example">hello world</td><td>Casual text, usernames, email addresses, URLs</td></tr>
+        <tr><td>Title Case</td><td class="example">Hello World</td><td>Article titles, headings (AP/Chicago style — minor words stay lowercase)</td></tr>
+        <tr><td>Sentence case</td><td class="example">Hello world</td><td>Normal prose, fixing accidental ALL CAPS</td></tr>
+        <tr><td>Capitalize Each Word</td><td class="example">Hello World</td><td>Proper nouns, names, every-word emphasis (no exceptions)</td></tr>
+        <tr><td>aLtErNaTiNg cAsE</td><td class="example">hElLo WoRlD</td><td>Sarcasm/mocking text style (meme format)</td></tr>
+        <tr><td>InVeRsE CaSe</td><td class="example">hELLO wORLD</td><td>Toggling existing capitalization, stylistic text</td></tr>
+        <tr><td>RaNdOm CaSe</td><td class="example">HeLlo WorLD</td><td>Stylized decorative text, social media posts</td></tr>
+        <tr><td>camelCase</td><td class="example">helloWorld</td><td>JavaScript, Java, C# — variable & function names</td></tr>
+        <tr><td>PascalCase</td><td class="example">HelloWorld</td><td>Class names, React components, C# types</td></tr>
+        <tr><td>snake_case</td><td class="example">hello_world</td><td>Python, Ruby — variables, functions, database columns</td></tr>
+        <tr><td>CONSTANT_CASE</td><td class="example">HELLO_WORLD</td><td>Constants, environment variables, config keys</td></tr>
+        <tr><td>kebab-case</td><td class="example">hello-world</td><td>URL slugs, CSS classes, HTML attributes</td></tr>
+        <tr><td>Train-Case</td><td class="example">Hello-World</td><td>HTTP headers (e.g. Content-Type), some C# namespaces</td></tr>
+        <tr><td>dot.case</td><td class="example">hello.world</td><td>Config file keys, package/module namespacing</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content-section">
+    <h2>Programming Naming Conventions by Language</h2>
+    <p>Each programming language has conventions for naming variables, functions, and classes. Using the wrong convention won't break your code, but it will make it look unprofessional and inconsistent with the ecosystem. Here's a quick reference:</p>
+    <table class="case-table">
+      <thead><tr><th>Language</th><th>Variables/Functions</th><th>Classes/Types</th><th>Constants</th></tr></thead>
+      <tbody>
+        <tr><td>JavaScript / TypeScript</td><td class="example">camelCase</td><td class="example">PascalCase</td><td class="example">CONSTANT_CASE</td></tr>
+        <tr><td>Python</td><td class="example">snake_case</td><td class="example">PascalCase</td><td class="example">CONSTANT_CASE</td></tr>
+        <tr><td>Java / Kotlin</td><td class="example">camelCase</td><td class="example">PascalCase</td><td class="example">CONSTANT_CASE</td></tr>
+        <tr><td>C# / .NET</td><td class="example">camelCase / PascalCase</td><td class="example">PascalCase</td><td class="example">PascalCase</td></tr>
+        <tr><td>Ruby</td><td class="example">snake_case</td><td class="example">PascalCase</td><td class="example">CONSTANT_CASE</td></tr>
+        <tr><td>CSS / HTML</td><td class="example">kebab-case</td><td class="example">kebab-case</td><td class="example">--kebab-case</td></tr>
+        <tr><td>URL slugs / SEO</td><td class="example">kebab-case</td><td class="example">—</td><td class="example">—</td></tr>
+        <tr><td>Environment variables</td><td class="example">CONSTANT_CASE</td><td class="example">—</td><td class="example">CONSTANT_CASE</td></tr>
+        <tr><td>File names (general)</td><td class="example">kebab-case / snake_case</td><td class="example">PascalCase</td><td class="example">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content-section">
+    <h2>How to Use the Text Case Converter</h2>
+    <p>Paste or type your text into the box at the top of the page. All 15 case conversions update instantly below — no buttons to click, no waiting. Each result has its own copy button so you can grab exactly the format you need.</p>
+
+    <h3>Title Case vs Capitalize Each Word — What's the Difference?</h3>
+    <p>This is the most commonly confused pair. <strong style="color:var(--text)">Title Case</strong> follows AP/Chicago style guide rules: major words are capitalized, but short articles (a, an, the), coordinating conjunctions (and, but, or), and short prepositions (in, on, at, to, for, of, with) stay lowercase — unless they're the first or last word. Example: "the lord of the rings" becomes "The Lord of the Rings".</p>
+    <p><strong style="color:var(--text)">Capitalize Each Word</strong> simply capitalizes the first letter of every single word with no exceptions. Example: "the lord of the rings" becomes "The Lord Of The Rings". Use Title Case for proper headlines and article titles. Use Capitalize Each Word for names, codes, or when you want every word emphasized.</p>
+
+    <h3>Fixing Accidental Caps Lock Text</h3>
+    <p>If you've ever typed a whole paragraph with Caps Lock on by accident, paste it into the converter and use the <strong style="color:var(--text)">Sentence case</strong> result — it converts "I CANT BELIEVE I TYPED THIS WHOLE EMAIL IN CAPS" into "I cant believe i typed this whole email in caps", capitalizing only the first letter of each sentence.</p>
+
+    <h3>Why Privacy Matters for Text Tools</h3>
+    <p>All conversions on this page happen entirely in your browser using JavaScript — your text is never uploaded to a server, logged, or stored anywhere. This makes it safe to use for source code, internal documents, or any text you'd rather not paste into a cloud-based tool.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I convert text to a different case?</div><div class="faq-a">Paste or type your text into the box above. All 15 case conversions — UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and more — update instantly. Click the copy button next to any result to copy it to your clipboard.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is camelCase and where is it used?</div><div class="faq-a">camelCase joins words with no spaces — the first word lowercase, every following word capitalized (helloWorldExample). It's the standard for variables and functions in JavaScript, Java, and C#. The name comes from its resemblance to a camel's humps.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is snake_case and where is it used?</div><div class="faq-a">snake_case is all lowercase with underscores between words (hello_world_example). It's the standard for variables and functions in Python and Ruby, and is commonly used for database column names and file names.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is kebab-case and where is it used?</div><div class="faq-a">kebab-case is all lowercase with hyphens between words (hello-world-example). It's the standard for URL slugs, CSS class names, and HTML attributes — hyphens are SEO-friendly and URL-safe. Also called dash-case.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between camelCase and PascalCase?</div><div class="faq-a">Both join words with no spaces. camelCase starts with a lowercase letter (helloWorld) and is used for variables/functions. PascalCase starts with an uppercase letter (HelloWorld) and is used for class names and React components.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I fix text stuck in ALL CAPS from Caps Lock?</div><div class="faq-a">Paste the all-caps text into the converter. The "Sentence case" result fixes it automatically — converting ACCIDENTALLY TYPED IN CAPS into a normal readable sentence, capitalizing only the first letter of each sentence.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What words are not capitalized in Title Case?</div><div class="faq-a">Following AP/Chicago style: short articles (a, an, the), coordinating conjunctions (and, but, or, nor), and short prepositions (in, on, at, to, for, of, with) stay lowercase unless they're the first or last word. "Capitalize Each Word" instead capitalizes literally every word with no exceptions.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is my text sent to a server?</div><div class="faq-a">No. All conversions happen entirely in your browser using JavaScript. Your text is never sent to, stored on, or processed by any server — safe for sensitive documents and code.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a slug and how do I create one?</div><div class="faq-a">A slug is the URL-friendly version of a title — lowercase, spaces replaced with hyphens, special characters removed. "My Blog Post: 2026 Edition!" becomes "my-blog-post-2026-edition". Use the Slugify utility above to generate one instantly.</div></div>
+  </div>
+
+  <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">
+    <h2>Related Tools</h2>
+    <p style="color:var(--muted);font-size:0.92rem;line-height:2">
+      → <a href="/tools/word-counter.html" style="color:var(--accent)">Word Counter</a> — Count words, characters, reading time, AI tokens and check social media limits.<br>
+      → <a href="/tools/ai-product-description.html" style="color:var(--accent)">AI Product Description Generator</a> — Generate high-converting product descriptions for Shopify, Amazon and Etsy.<br>
+      → <a href="/tools/ai-bio-generator.html" style="color:var(--accent)">AI Bio Generator</a> — Write professional bios for LinkedIn, Twitter and your website.<br>
+      → <a href="/tools/ai-email-subject.html" style="color:var(--accent)">Email Subject Generator</a> — Generate 10 high-converting subject lines for any campaign.
+    </p>
+  </div>
+
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/word-counter.html" class="related-card"><span style="font-size:1.4rem">📝</span><span style="font-size:0.88rem;font-weight:500">Word Counter</span></a>
+      <a href="/tools/ai-product-description.html" class="related-card"><span style="font-size:1.4rem">🛍️</span><span style="font-size:0.88rem;font-weight:500">Product Description Writer</span></a>
+      <a href="/tools/ai-bio-generator.html" class="related-card"><span style="font-size:1.4rem">👤</span><span style="font-size:0.88rem;font-weight:500">Bio Generator</span></a>
+      <a href="/tools/ai-cover-letter.html" class="related-card"><span style="font-size:1.4rem">📝</span><span style="font-size:0.88rem;font-weight:500">Cover Letter Writer</span></a>
+    </div>
+  </div>
+</div>
+
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
+<script>
+  const SAMPLE = "The Quick Brown Fox Jumps Over The Lazy Dog";
+
+  function pasteSample() {
+    document.getElementById('case-input').value = SAMPLE;
+    convertAll();
+  }
+
+  function copyMain() {
+    const text = document.getElementById('case-input').value;
+    navigator.clipboard.writeText(text).then(() => flashBtn(event.target, '📋 Copy input'));
+  }
+
+  function flashBtn(btn, original) {
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = original, 1500);
+  }
+
+  function copyCase(key) {
+    const text = document.getElementById('out-'+key).textContent;
+    navigator.clipboard.writeText(text).then(() => flashBtn(event.target, 'Copy'));
+  }
+
+  function words(text) {
+    return text.split(/\s+/).filter(w => w.length > 0);
+  }
+
+  const SMALL_WORDS = new Set(['a','an','the','and','but','or','nor','as','at','by','for','in','of','on','to','with','from','into','onto','over','per','via','vs']);
+
+  function toTitleCase(text) {
+    const w = text.toLowerCase().split(/(\s+)/);
+    let wordIndex = -1;
+    const totalWords = w.filter(x => !/^\s+$/.test(x) && x.length>0).length;
+    return w.map((token) => {
+      if (/^\s+$/.test(token) || token.length===0) return token;
+      wordIndex++;
+      const isFirst = wordIndex === 0;
+      const isLast = wordIndex === totalWords - 1;
+      if (!isFirst && !isLast && SMALL_WORDS.has(token)) return token;
+      return token.charAt(0).toUpperCase() + token.slice(1);
+    }).join('');
+  }
+
+  function toSentenceCase(text) {
+    const lower = text.toLowerCase();
+    return lower.replace(/(^\s*\w|[.!?]\s+\w)/g, c => c.toUpperCase());
+  }
+
+  function toCapitalizeEach(text) {
+    return text.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function toAlternating(text) {
+    let result = '';
+    let i = 0;
+    for (const ch of text) {
+      if (/[a-zA-Z]/.test(ch)) {
+        result += i % 2 === 0 ? ch.toLowerCase() : ch.toUpperCase();
+        i++;
+      } else result += ch;
+    }
+    return result;
+  }
+
+  function toInverse(text) {
+    return text.split('').map(c => c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()).join('');
+  }
+
+  function toRandomCase(text) {
+    return text.split('').map(c => Math.random() > 0.5 ? c.toUpperCase() : c.toLowerCase()).join('');
+  }
+
+  function getWordList(text) {
+    return text.match(/[A-Za-z0-9]+/g) || [];
+  }
+
+  function toCamel(text) {
+    const w = getWordList(text);
+    return w.map((word, i) => i===0 ? word.toLowerCase() : word.charAt(0).toUpperCase()+word.slice(1).toLowerCase()).join('');
+  }
+
+  function toPascal(text) {
+    const w = getWordList(text);
+    return w.map(word => word.charAt(0).toUpperCase()+word.slice(1).toLowerCase()).join('');
+  }
+
+  function toSnake(text) {
+    const w = getWordList(text);
+    return w.map(word => word.toLowerCase()).join('_');
+  }
+
+  function toConstant(text) {
+    const w = getWordList(text);
+    return w.map(word => word.toUpperCase()).join('_');
+  }
+
+  function toKebab(text) {
+    const w = getWordList(text);
+    return w.map(word => word.toLowerCase()).join('-');
+  }
+
+  function toTrain(text) {
+    const w = getWordList(text);
+    return w.map(word => word.charAt(0).toUpperCase()+word.slice(1).toLowerCase()).join('-');
+  }
+
+  function toDot(text) {
+    const w = getWordList(text);
+    return w.map(word => word.toLowerCase()).join('.');
+  }
+
+  let debounceTimer;
+  function convertAll() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(doConvert, 30);
+  }
+
+  function doConvert() {
+    const text = document.getElementById('case-input').value;
+    const isEmpty = text.trim().length === 0;
+
+    const wordCount = words(text).length;
+    const charCount = text.length;
+    document.getElementById('input-stats').textContent = wordCount.toLocaleString() + ' words · ' + charCount.toLocaleString() + ' characters';
+
+    const conversions = {
+      upper: text.toUpperCase(),
+      lower: text.toLowerCase(),
+      title: toTitleCase(text),
+      sentence: toSentenceCase(text),
+      capitalize: toCapitalizeEach(text),
+      alternating: toAlternating(text),
+      inverse: toInverse(text),
+      random: toRandomCase(text),
+      camel: toCamel(text),
+      pascal: toPascal(text),
+      snake: toSnake(text),
+      constant: toConstant(text),
+      kebab: toKebab(text),
+      train: toTrain(text),
+      dot: toDot(text)
+    };
+
+    Object.entries(conversions).forEach(([key, val]) => {
+      const el = document.getElementById('out-'+key);
+      if (isEmpty) {
+        el.textContent = 'Start typing above…';
+        el.classList.add('empty');
+      } else {
+        el.textContent = val || '(empty)';
+        el.classList.remove('empty');
+      }
+    });
+  }
+
+  function applyUtil(type) {
+    const ta = document.getElementById('case-input');
+    let text = ta.value;
+    if (!text) return;
+
+    switch(type) {
+      case 'trimSpaces':
+        text = text.replace(/[ \t]+/g, ' ').replace(/^[ \t]+|[ \t]+$/gm, '');
+        break;
+      case 'removeLineBreaks':
+        text = text.replace(/\r?\n+/g, ' ').replace(/\s+/g, ' ').trim();
+        break;
+      case 'removeEmptyLines':
+        text = text.split('\n').filter(l => l.trim().length > 0).join('\n');
+        break;
+      case 'removeDuplicates': {
+        const seen = new Set();
+        text = text.split('\n').filter(l => {
+          const key = l.trim();
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        }).join('\n');
+        break;
+      }
+      case 'sortAZ':
+        text = text.split('\n').sort((a,b) => a.localeCompare(b)).join('\n');
+        break;
+      case 'sortZA':
+        text = text.split('\n').sort((a,b) => b.localeCompare(a)).join('\n');
+        break;
+      case 'sortLength':
+        text = text.split('\n').sort((a,b) => a.length - b.length).join('\n');
+        break;
+      case 'reverseLines':
+        text = text.split('\n').reverse().join('\n');
+        break;
+      case 'reverseText':
+        text = text.split('').reverse().join('');
+        break;
+      case 'removeSpecial':
+        text = text.replace(/[^a-zA-Z0-9\s]/g, '');
+        break;
+      case 'addLineNumbers':
+        text = text.split('\n').map((l,i) => `${i+1}. ${l}`).join('\n');
+        break;
+      case 'slugify':
+        text = text.toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-');
+        break;
+    }
+    ta.value = text;
+    convertAll();
+  }
+
+  function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+</script>
+</body>
+</html>
