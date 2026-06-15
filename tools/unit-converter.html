@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter – Length, Weight, Temperature, Volume, Area, Speed, Time & Data | ToolsNook</title>
+  <meta name="description" content="Free online unit converter. Convert length, weight, temperature, volume, area, speed, time and data storage instantly. See conversions to every unit at once. km to miles, kg to lbs, °C to °F, cups to mL, GB to GiB and more. No signup." />
+  <meta name="keywords" content="unit converter, online unit converter, free unit converter, measurement converter, length converter, weight converter, mass converter, temperature converter, volume converter, area converter, speed converter, time converter, data storage converter, km to miles, miles to km, kg to lbs, lbs to kg, celsius to fahrenheit, fahrenheit to celsius, celsius to kelvin, liters to gallons, gallons to liters, cups to ml, tablespoons to ml, square feet to square meters, mph to kmh, bytes to gb, gb to gib, kb vs kib, metric to imperial converter, convert units online, unit conversion calculator, cm to inches, inches to cm" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/unit-converter.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <meta property="og:title" content="Unit Converter – Length, Weight, Temperature, Volume & More" />
+  <meta property="og:description" content="Free unit converter covering 8 categories and 60+ units. See conversions to every unit at once. km to miles, kg to lbs, °C to °F, cups to mL, GB to GiB and more." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/unit-converter.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Unit Converter",
+    "url": "https://www.toolsnook.com/tools/unit-converter.html",
+    "description": "Free online unit converter covering length, weight, temperature, volume, area, speed, time and data storage with over 60 units. Shows conversions to every unit at once.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "featureList": ["Length conversion","Weight and mass conversion","Temperature conversion","Volume conversion","Area conversion","Speed conversion","Time conversion","Data storage conversion (SI and IEC)","All-units conversion table","Unit swap"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com" },
+      { "@type": "ListItem", "position": 2, "name": "Unit Converter", "item": "https://www.toolsnook.com/tools/unit-converter.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How do I convert kilometers to miles?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the number of kilometers by 0.621371 to get miles. For example, 10 km × 0.621371 = 6.21 miles. To convert miles to kilometers, multiply by 1.609344. Our converter above does this instantly — just select Length, choose km and miles, and enter your value." } },
+      { "@type": "Question", "name": "How do I convert Celsius to Fahrenheit?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the Celsius temperature by 9/5 (1.8), then add 32. Formula: °F = (°C × 9/5) + 32. For example, 20°C × 1.8 = 36, plus 32 = 68°F. To convert Fahrenheit to Celsius, subtract 32 then multiply by 5/9: °C = (°F − 32) × 5/9." } },
+      { "@type": "Question", "name": "What is the difference between a US gallon and a UK gallon?", "acceptedAnswer": { "@type": "Answer", "text": "A US gallon is 3.785 liters, while a UK (Imperial) gallon is 4.546 liters — about 20% larger. This difference also applies to pints, quarts, and fluid ounces. Recipes, fuel economy figures, and product volumes can differ significantly depending on which gallon is used, so always check which measurement system a source is using." } },
+      { "@type": "Question", "name": "What is the difference between KB and KiB?", "acceptedAnswer": { "@type": "Answer", "text": "KB (kilobyte) uses the decimal (SI) definition: 1 KB = 1,000 bytes. KiB (kibibyte) uses the binary (IEC) definition: 1 KiB = 1,024 bytes. Storage manufacturers (hard drives, SSDs) typically use the decimal definition (1 TB = 1,000,000,000,000 bytes), while operating systems often display sizes using the binary definition but label them as KB, MB, GB — which is why a '1 TB' drive shows as roughly 931 GB in Windows. The correct binary terms are KiB, MiB, GiB, and TiB." } },
+      { "@type": "Question", "name": "How many tablespoons are in a cup?", "acceptedAnswer": { "@type": "Answer", "text": "There are 16 tablespoons in 1 US cup. There are also 48 teaspoons in a cup, and 8 fluid ounces in a cup. For metric conversions, 1 US cup equals approximately 236.6 mL, and 1 tablespoon equals approximately 14.8 mL." } },
+      { "@type": "Question", "name": "What is the difference between mass and weight?", "acceptedAnswer": { "@type": "Answer", "text": "Mass is the amount of matter in an object and stays constant everywhere (measured in kilograms or pounds-mass). Weight is the force of gravity acting on that mass and changes depending on location (measured in newtons). In everyday use, 'weight' and 'mass' are used interchangeably and kilograms/pounds are used for both — our converter handles this common usage." } },
+      { "@type": "Question", "name": "How do I convert square feet to square meters?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the area in square feet by 0.092903 to get square meters. For example, 1,000 sq ft × 0.092903 = 92.9 m². To convert square meters to square feet, multiply by 10.7639. This is commonly needed when comparing property listings between countries that use different units." } },
+      { "@type": "Question", "name": "Why do temperature conversions need formulas instead of simple multiplication?", "acceptedAnswer": { "@type": "Answer", "text": "Most unit conversions (like length or weight) start from zero in every system — 0 meters equals 0 feet. But temperature scales have different zero points: 0°C is 32°F, and 0 K is -273.15°C. Because the scales don't share a zero point, you can't just multiply — you need a formula that accounts for both the scale factor and the offset. Our converter applies the correct formula for each temperature conversion automatically." } }
+    ]
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b;--blue:#4ecdc4;--purple:#c084fc}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:580px;margin:0 auto}
+    .container{max-width:1080px;margin:0 auto;padding:0 2rem 4rem}
+
+    /* CATEGORY TABS */
+    .cat-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:2rem;margin-bottom:1.25rem}
+    .cat-tab{padding:9px 16px;background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-size:0.85rem;border-radius:100px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:6px}
+    .cat-tab.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+
+    /* CONVERTER CARD */
+    .conv-card{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;padding:2rem;position:relative;overflow:hidden}
+    .conv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--blue))}
+    .conv-layout{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:end}
+    @media(max-width:680px){.conv-layout{grid-template-columns:1fr;gap:0.75rem}}
+    .conv-field label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
+    .conv-field input,.conv-field select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1.05rem;padding:0.8rem 1rem;transition:border-color 0.2s}
+    .conv-field input:focus,.conv-field select:focus{outline:none;border-color:var(--accent)}
+    .conv-field select{cursor:pointer}.conv-field select option{background:#1a1a24}
+    .swap-btn{width:44px;height:44px;border-radius:50%;background:var(--bg3);border:1px solid var(--border2);color:var(--accent);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;margin:0 auto}
+    .swap-btn:hover{background:rgba(108,99,255,0.15);border-color:var(--accent);transform:rotate(180deg)}
+    @media(max-width:680px){.swap-btn{transform:rotate(90deg)}.swap-btn:hover{transform:rotate(270deg)}}
+
+    .result-box{margin-top:1.5rem;background:linear-gradient(135deg,rgba(108,99,255,0.12),rgba(192,132,252,0.08));border:1px solid rgba(108,99,255,0.25);border-radius:14px;padding:1.5rem;text-align:center}
+    .result-value{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--green);word-break:break-all}
+    .result-label{font-size:0.85rem;color:var(--muted);margin-top:4px}
+    .result-formula{font-size:0.78rem;color:var(--muted);margin-top:10px;font-family:monospace}
+    .copy-result{margin-top:0.85rem;padding:6px 16px;background:transparent;border:1px solid var(--border2);color:var(--muted);border-radius:8px;font-size:0.78rem;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .copy-result:hover{border-color:var(--accent);color:var(--accent)}
+
+    /* ALL CONVERSIONS TABLE */
+    .section-title{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin:2rem 0 1rem}
+    .all-conv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.7rem}
+    .all-conv-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0.9rem 1.1rem;display:flex;justify-content:space-between;align-items:center;gap:0.5rem;transition:border-color 0.2s}
+    .all-conv-card:hover{border-color:var(--border2)}
+    .all-conv-card.active{border-color:var(--accent);background:rgba(108,99,255,0.06)}
+    .acc-name{font-size:0.82rem;color:var(--muted)}
+    .acc-value{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text);text-align:right}
+
+    /* CONTENT */
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
+    .formula{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:0.75rem 1rem;font-family:monospace;font-size:0.9rem;color:var(--accent);margin:0.75rem 0}
+    .ref-table{width:100%;border-collapse:collapse;font-size:0.83rem;margin-top:1rem}
+    .ref-table th{background:var(--bg3);color:var(--muted);font-weight:600;padding:0.6rem 0.9rem;text-align:left;font-size:0.75rem;letter-spacing:0.05em}
+    .ref-table td{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    .ref-table td:first-child{color:var(--text);font-weight:500}
+    .ref-table td.example{font-family:monospace;color:var(--blue)}
+    .ref-table tr:last-child td{border-bottom:none}
+    .ref-table tr:hover td{background:var(--bg3)}
+    .tip-box{background:rgba(67,233,123,0.06);border:1px solid rgba(67,233,123,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .tip-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
+    .warning-box{background:rgba(247,151,30,0.07);border:1px solid rgba(247,151,30,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .warning-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q::after{content:'▼';font-size:0.7rem;color:var(--muted);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{transform:rotate(180deg)}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;display:none}
+    .faq-item.open .faq-a{display:block}
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+    @media(max-width:600px){.conv-card{padding:1.25rem}}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Unit Converter</div>
+  <h1>Unit Converter</h1>
+  <p>Convert length, weight, temperature, volume, area, speed, time and data storage instantly. See your value converted to every unit at once. Free, accurate, no signup.</p>
+</div>
+
+<div class="container">
+  <div class="cat-tabs" id="cat-tabs">
+    <button class="cat-tab active" data-cat="length" onclick="switchCategory('length',this)">📏 Length</button>
+    <button class="cat-tab" data-cat="weight" onclick="switchCategory('weight',this)">⚖️ Weight</button>
+    <button class="cat-tab" data-cat="temperature" onclick="switchCategory('temperature',this)">🌡️ Temperature</button>
+    <button class="cat-tab" data-cat="volume" onclick="switchCategory('volume',this)">🧪 Volume</button>
+    <button class="cat-tab" data-cat="area" onclick="switchCategory('area',this)">📐 Area</button>
+    <button class="cat-tab" data-cat="speed" onclick="switchCategory('speed',this)">🚀 Speed</button>
+    <button class="cat-tab" data-cat="time" onclick="switchCategory('time',this)">⏱️ Time</button>
+    <button class="cat-tab" data-cat="data" onclick="switchCategory('data',this)">💾 Data Storage</button>
+  </div>
+
+  <div class="conv-card">
+    <div class="conv-layout">
+      <div class="conv-field">
+        <label>FROM</label>
+        <input type="number" id="conv-input" value="1" oninput="convert()" />
+        <select id="from-unit" onchange="convert()" style="margin-top:0.5rem"></select>
+      </div>
+      <button class="swap-btn" onclick="swapUnits()" title="Swap units">⇄</button>
+      <div class="conv-field">
+        <label>TO</label>
+        <input type="text" id="conv-output" value="" readonly style="background:var(--bg3);color:var(--green);font-weight:700" />
+        <select id="to-unit" onchange="convert()" style="margin-top:0.5rem"></select>
+      </div>
+    </div>
+
+    <div class="result-box">
+      <div class="result-value" id="result-main">—</div>
+      <div class="result-label" id="result-label">Enter a value to convert</div>
+      <div class="result-formula" id="result-formula"></div>
+      <button class="copy-result" onclick="copyResult()">📋 Copy result</button>
+    </div>
+  </div>
+
+  <div class="section-title">🔢 All Units at Once</div>
+  <div class="all-conv-grid" id="all-conv-grid"></div>
+
+  <!-- INTRO -->
+  <div class="content-section">
+    <h2>The Complete Unit Converter — 8 Categories, 60+ Units</h2>
+    <p>Unit conversion comes up constantly — comparing a recipe in cups to grams, checking if your luggage is under the airline's kilogram limit, converting a US job salary's mileage reimbursement to your local currency's distance unit, or figuring out why your "1 TB" hard drive shows less space than advertised. Most converters online cover three or four basic categories. This tool covers eight: Length, Weight/Mass, Temperature, Volume, Area, Speed, Time, and Data Storage — over 60 individual units in total.</p>
+    <p>Every category includes both metric (SI) and imperial/US customary units, so you can convert in either direction. The "All Units at Once" table updates live as you type, showing your value converted to every unit in the category simultaneously — handy when you're not sure exactly which unit you need, or when you want to sanity-check a conversion against a familiar unit.</p>
+
+    <h3>Metric vs Imperial — A Quick History</h3>
+    <p>The metric system (now formalized as the International System of Units, or SI) was developed in France in the 1790s, designed around powers of 10 for simplicity — 1 kilometer = 1,000 meters, 1 kilogram = 1,000 grams. It's used as the primary system in nearly every country in the world.</p>
+    <p>The imperial system, and its close relative the US customary system, evolved from older English units of measurement — feet, inches, pounds, gallons — many of which trace back centuries and were based on practical references (a foot was literally based on human foot length in some historical versions). The United States continues to use US customary units for most everyday purposes, while the UK officially uses metric but retains imperial units in common speech (miles for road distances, pints for beer, stone for body weight).</p>
+    <p>This mix is why unit conversion remains a daily necessity — international business, travel, cooking, engineering, science, and even casual conversations between people from different countries regularly require converting between these two systems.</p>
+  </div>
+
+  <!-- COMMON CONVERSIONS REFERENCE -->
+  <div class="content-section">
+    <h2>Common Conversions Reference Table</h2>
+    <p>The most frequently searched conversions, calculated to 4 decimal places. Use these as quick reference, or use the converter above for any custom value.</p>
+    <table class="ref-table">
+      <thead><tr><th>Conversion</th><th>Result</th><th>Formula / Factor</th></tr></thead>
+      <tbody>
+        <tr><td>1 kilometer</td><td class="example">0.6214 miles</td><td>km × 0.621371</td></tr>
+        <tr><td>1 mile</td><td class="example">1.6093 km</td><td>mi × 1.609344</td></tr>
+        <tr><td>1 meter</td><td class="example">3.2808 feet</td><td>m × 3.28084</td></tr>
+        <tr><td>1 inch</td><td class="example">2.54 cm</td><td>in × 2.54</td></tr>
+        <tr><td>1 kilogram</td><td class="example">2.2046 lbs</td><td>kg × 2.20462</td></tr>
+        <tr><td>1 pound</td><td class="example">0.4536 kg</td><td>lb × 0.453592</td></tr>
+        <tr><td>0°C</td><td class="example">32°F</td><td>(°C × 9/5) + 32</td></tr>
+        <tr><td>100°C</td><td class="example">212°F</td><td>(°C × 9/5) + 32</td></tr>
+        <tr><td>1 liter</td><td class="example">0.2642 US gal</td><td>L × 0.264172</td></tr>
+        <tr><td>1 US gallon</td><td class="example">3.7854 liters</td><td>gal × 3.78541</td></tr>
+        <tr><td>1 square meter</td><td class="example">10.7639 sq ft</td><td>m² × 10.7639</td></tr>
+        <tr><td>1 acre</td><td class="example">4,046.86 m²</td><td>acre × 4046.8564</td></tr>
+        <tr><td>60 mph</td><td class="example">96.5606 km/h</td><td>mph × 1.609344</td></tr>
+        <tr><td>1 GB (decimal)</td><td class="example">0.9313 GiB</td><td>GB ÷ 1.073742</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- COOKING CONVERSIONS -->
+  <div class="content-section">
+    <h2>Cooking & Recipe Measurement Conversions</h2>
+    <p>Recipe conversions trip people up more than almost any other unit conversion — especially when following recipes from a different country. Here's the reference you need for kitchen measurements.</p>
+    <table class="ref-table">
+      <thead><tr><th>US Measurement</th><th>Metric Equivalent</th><th>Other US Equivalents</th></tr></thead>
+      <tbody>
+        <tr><td>1 teaspoon (tsp)</td><td class="example">4.93 mL</td><td>1/3 tablespoon</td></tr>
+        <tr><td>1 tablespoon (tbsp)</td><td class="example">14.79 mL</td><td>3 teaspoons</td></tr>
+        <tr><td>1 fluid ounce (fl oz)</td><td class="example">29.57 mL</td><td>2 tablespoons</td></tr>
+        <tr><td>1 cup</td><td class="example">236.59 mL</td><td>16 tbsp · 8 fl oz · 48 tsp</td></tr>
+        <tr><td>1 pint</td><td class="example">473.18 mL</td><td>2 cups · 16 fl oz</td></tr>
+        <tr><td>1 quart</td><td class="example">946.35 mL</td><td>2 pints · 4 cups</td></tr>
+        <tr><td>1 US gallon</td><td class="example">3.785 L</td><td>4 quarts · 16 cups</td></tr>
+      </tbody>
+    </table>
+    <div class="warning-box"><p>⚠️ <strong>US vs UK measurements:</strong> A US cup (236.6 mL) is different from a "metric cup" used in Australia and the UK (250 mL). UK recipes that use "pints" or "gallons" usually mean Imperial measurements, which are about 20% larger than US measurements for the same unit name. Always check which system a recipe uses before converting — when in doubt, look for the metric (mL/g) measurement if provided, as it's unambiguous.</p></div>
+  </div>
+
+  <!-- DATA STORAGE GUIDE -->
+  <div class="content-section">
+    <h2>Data Storage: Why "1 TB" Drives Show as 931 GB</h2>
+    <p>This is one of the most common sources of confusion in computing — and it's caused by two competing definitions of the same prefixes.</p>
+    <table class="ref-table">
+      <thead><tr><th>Unit</th><th>Definition</th><th>Bytes</th><th>Used By</th></tr></thead>
+      <tbody>
+        <tr><td>KB (kilobyte)</td><td class="example">Decimal (SI)</td><td>1,000</td><td>Storage manufacturers, file sizes on macOS</td></tr>
+        <tr><td>KiB (kibibyte)</td><td class="example">Binary (IEC)</td><td>1,024</td><td>Memory (RAM), correct technical term</td></tr>
+        <tr><td>MB (megabyte)</td><td class="example">Decimal (SI)</td><td>1,000,000</td><td>Storage manufacturers</td></tr>
+        <tr><td>MiB (mebibyte)</td><td class="example">Binary (IEC)</td><td>1,048,576</td><td>RAM, correct technical term</td></tr>
+        <tr><td>GB (gigabyte)</td><td class="example">Decimal (SI)</td><td>1,000,000,000</td><td>Storage manufacturers</td></tr>
+        <tr><td>GiB (gibibyte)</td><td class="example">Binary (IEC)</td><td>1,073,741,824</td><td>RAM, correct technical term</td></tr>
+        <tr><td>TB (terabyte)</td><td class="example">Decimal (SI)</td><td>1×10¹²</td><td>Storage manufacturers</td></tr>
+        <tr><td>TiB (tebibyte)</td><td class="example">Binary (IEC)</td><td>1.0995×10¹²</td><td>RAM, correct technical term</td></tr>
+      </tbody>
+    </table>
+    <p>Storage manufacturers advertise drives using the decimal definition — a "1 TB" drive contains 1,000,000,000,000 bytes. But Windows displays storage using binary math while still labeling it "GB" — so that same drive shows as roughly 931 "GB" (which is actually GiB) in Windows. The drive isn't smaller than advertised — it's a labeling inconsistency between the storage industry (decimal) and operating systems (binary, mislabeled).</p>
+    <div class="tip-box"><p>💡 <strong>Quick way to remember:</strong> If you see "-ibi" in the name (kibi, mebi, gibi, tebi), it's binary (×1024). If it's just "kilo, mega, giga, tera", it's technically decimal (×1000) — even though many programs mislabel binary values this way. Use the Data Storage tab above to convert between both systems instantly.</p></div>
+  </div>
+
+  <!-- TEMPERATURE FORMULAS -->
+  <div class="content-section">
+    <h2>Temperature Conversion Formulas</h2>
+    <p>Unlike most units, temperature scales don't share a common zero point — so conversions require formulas, not simple multiplication.</p>
+    <div class="formula">°F = (°C × 9/5) + 32</div>
+    <div class="formula">°C = (°F − 32) × 5/9</div>
+    <div class="formula">K = °C + 273.15</div>
+    <div class="formula">°C = K − 273.15</div>
+    <div class="formula">°F = (K × 9/5) − 459.67</div>
+    <p>Kelvin is the SI base unit for temperature and has no negative values — 0 K ("absolute zero") is the coldest possible temperature, equal to -273.15°C or -459.67°F. Kelvin is used in scientific and engineering contexts. Celsius is used for everyday temperatures in most of the world. Fahrenheit is primarily used in the United States.</p>
+  </div>
+
+  <!-- HOW TO USE -->
+  <div class="content-section">
+    <h2>How to Use the Unit Converter</h2>
+    <p>Select a category from the tabs at the top — Length, Weight, Temperature, Volume, Area, Speed, Time, or Data Storage. Enter your value, choose your "From" and "To" units, and the result updates instantly. Use the swap button (⇄) to quickly reverse the conversion direction.</p>
+    <p>The "All Units at Once" table below the converter shows your input value converted to every unit in the selected category simultaneously — useful when you're not sure which unit you need, or when you want to compare multiple representations of the same measurement at a glance.</p>
+    <h3>Accuracy</h3>
+    <p>All conversion factors used are based on internationally recognized standards from the International Bureau of Weights and Measures (BIPM) and NIST. Results are displayed with appropriate precision for the magnitude of the number — small numbers show more decimal places, large numbers are rounded sensibly. All calculations happen in your browser — nothing is sent to a server.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I convert kilometers to miles?</div><div class="faq-a">Multiply kilometers by 0.621371 to get miles. Example: 10 km × 0.621371 = 6.21 miles. To go the other way, multiply miles by 1.609344. Use the Length tab above for instant results with any value.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I convert Celsius to Fahrenheit?</div><div class="faq-a">°F = (°C × 9/5) + 32. Example: 20°C × 1.8 = 36, + 32 = 68°F. To convert Fahrenheit to Celsius: °C = (°F − 32) × 5/9. Use the Temperature tab above for instant conversion.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between a US gallon and a UK gallon?</div><div class="faq-a">A US gallon is 3.785 liters. A UK (Imperial) gallon is 4.546 liters — about 20% larger. The same difference applies to pints and fluid ounces. Always check which system a source uses, especially for fuel economy or recipe measurements.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between KB and KiB?</div><div class="faq-a">KB (kilobyte) = 1,000 bytes (decimal/SI definition, used by storage manufacturers). KiB (kibibyte) = 1,024 bytes (binary/IEC definition, the correct term for what operating systems often mislabel as "KB"). This is why a "1 TB" drive shows as about 931 GB in Windows — Windows uses binary math but decimal labels.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How many tablespoons are in a cup?</div><div class="faq-a">There are 16 tablespoons in 1 US cup (also 48 teaspoons, or 8 fluid ounces). In metric, 1 US cup ≈ 236.6 mL and 1 tablespoon ≈ 14.8 mL. Use the Volume tab above for any custom conversion.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between mass and weight?</div><div class="faq-a">Mass is the amount of matter in an object and is constant (kg, lbs). Weight is the force of gravity on that mass and varies by location (measured in newtons). In everyday language and on this converter, "weight" and "mass" are used interchangeably, which matches how kilograms and pounds are used in daily life.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I convert square feet to square meters?</div><div class="faq-a">Multiply square feet by 0.092903 to get square meters. Example: 1,000 sq ft × 0.092903 = 92.9 m². To go the other way, multiply square meters by 10.7639. This is especially useful when comparing real estate listings between countries.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why do temperature conversions need formulas instead of simple multiplication?</div><div class="faq-a">Because temperature scales don't share a zero point — 0°C is 32°F, and 0 K is -273.15°C. Since the scales are offset from each other (not just scaled), conversion requires both a multiplication and an addition/subtraction step. Our converter applies the correct formula automatically for every temperature conversion.</div></div>
+  </div>
+
+  <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">
+    <h2>Related Tools</h2>
+    <p style="color:var(--muted);font-size:0.92rem;line-height:2">
+      → <a href="/tools/currency-converter.html" style="color:var(--accent)">Currency Converter</a> — Convert between world currencies with live exchange rates.<br>
+      → <a href="/tools/percentage-calculator.html" style="color:var(--accent)">Percentage Calculator</a> — Calculate percentages, percentage change and more.<br>
+      → <a href="/tools/word-counter.html" style="color:var(--accent)">Word Counter</a> — Count words, characters, reading time and check social media limits.<br>
+      → <a href="/tools/text-case-converter.html" style="color:var(--accent)">Text Case Converter</a> — Convert text to 15 case types including camelCase and snake_case.
+    </p>
+  </div>
+
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/currency-converter.html" class="related-card"><span style="font-size:1.4rem">💱</span><span style="font-size:0.88rem;font-weight:500">Currency Converter</span></a>
+      <a href="/tools/percentage-calculator.html" class="related-card"><span style="font-size:1.4rem">📊</span><span style="font-size:0.88rem;font-weight:500">Percentage Calculator</span></a>
+      <a href="/tools/word-counter.html" class="related-card"><span style="font-size:1.4rem">📝</span><span style="font-size:0.88rem;font-weight:500">Word Counter</span></a>
+      <a href="/tools/text-case-converter.html" class="related-card"><span style="font-size:1.4rem">🔤</span><span style="font-size:0.88rem;font-weight:500">Text Case Converter</span></a>
+    </div>
+  </div>
+</div>
+
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
+<script>
+  // ===== UNIT DEFINITIONS =====
+  // Each unit: [key, label, factor relative to base unit]
+  const CATEGORIES = {
+    length: {
+      base: 'meter',
+      units: [
+        ['millimeter','Millimeter (mm)',0.001],
+        ['centimeter','Centimeter (cm)',0.01],
+        ['meter','Meter (m)',1],
+        ['kilometer','Kilometer (km)',1000],
+        ['inch','Inch (in)',0.0254],
+        ['foot','Foot (ft)',0.3048],
+        ['yard','Yard (yd)',0.9144],
+        ['mile','Mile (mi)',1609.344],
+        ['nauticalmile','Nautical Mile (nmi)',1852]
+      ]
+    },
+    weight: {
+      base: 'kilogram',
+      units: [
+        ['milligram','Milligram (mg)',0.000001],
+        ['gram','Gram (g)',0.001],
+        ['kilogram','Kilogram (kg)',1],
+        ['metricton','Metric Ton (t)',1000],
+        ['ounce','Ounce (oz)',0.028349523125],
+        ['pound','Pound (lb)',0.45359237],
+        ['stone','Stone (st)',6.35029318],
+        ['ustonshort','US Ton (short)',907.18474],
+        ['uktonlong','UK Ton (long)',1016.0469088]
+      ]
+    },
+    volume: {
+      base: 'liter',
+      units: [
+        ['milliliter','Milliliter (mL)',0.001],
+        ['liter','Liter (L)',1],
+        ['cubicmeter','Cubic Meter (m³)',1000],
+        ['ustsp','US Teaspoon (tsp)',0.00492892],
+        ['ustbsp','US Tablespoon (tbsp)',0.0147868],
+        ['usfloz','US Fluid Ounce (fl oz)',0.0295735],
+        ['uscup','US Cup',0.236588],
+        ['uspint','US Pint',0.473176],
+        ['usquart','US Quart',0.946353],
+        ['usgallon','US Gallon',3.78541],
+        ['ukgallon','UK Gallon (Imperial)',4.54609],
+        ['cubicinch','Cubic Inch (in³)',0.0163871],
+        ['cubicfoot','Cubic Foot (ft³)',28.3168]
+      ]
+    },
+    area: {
+      base: 'sqmeter',
+      units: [
+        ['sqmillimeter','Square Millimeter (mm²)',0.000001],
+        ['sqcentimeter','Square Centimeter (cm²)',0.0001],
+        ['sqmeter','Square Meter (m²)',1],
+        ['sqkilometer','Square Kilometer (km²)',1000000],
+        ['hectare','Hectare (ha)',10000],
+        ['acre','Acre',4046.8564224],
+        ['sqinch','Square Inch (in²)',0.00064516],
+        ['sqfoot','Square Foot (ft²)',0.09290304],
+        ['sqyard','Square Yard (yd²)',0.83612736],
+        ['sqmile','Square Mile (mi²)',2589988.110336]
+      ]
+    },
+    speed: {
+      base: 'mps',
+      units: [
+        ['mps','Meters/sec (m/s)',1],
+        ['kmh','Kilometers/hour (km/h)',0.27777777778],
+        ['mph','Miles/hour (mph)',0.44704],
+        ['knot','Knot',0.51444444444],
+        ['fps','Feet/sec (ft/s)',0.3048]
+      ]
+    },
+    time: {
+      base: 'second',
+      units: [
+        ['millisecond','Millisecond (ms)',0.001],
+        ['second','Second (s)',1],
+        ['minute','Minute (min)',60],
+        ['hour','Hour (h)',3600],
+        ['day','Day',86400],
+        ['week','Week',604800],
+        ['month','Month (avg)',2629743.83],
+        ['year','Year (365.25 days)',31556952]
+      ]
+    },
+    data: {
+      base: 'byte',
+      units: [
+        ['bit','Bit',0.125],
+        ['byte','Byte (B)',1],
+        ['kb','Kilobyte (KB)',1000],
+        ['mb','Megabyte (MB)',1000000],
+        ['gb','Gigabyte (GB)',1000000000],
+        ['tb','Terabyte (TB)',1000000000000],
+        ['kib','Kibibyte (KiB)',1024],
+        ['mib','Mebibyte (MiB)',1048576],
+        ['gib','Gibibyte (GiB)',1073741824],
+        ['tib','Tebibyte (TiB)',1099511627776]
+      ]
+    },
+    temperature: {
+      base: 'celsius',
+      units: [
+        ['celsius','Celsius (°C)',null],
+        ['fahrenheit','Fahrenheit (°F)',null],
+        ['kelvin','Kelvin (K)',null]
+      ]
+    }
+  };
+
+  let currentCategory = 'length';
+
+  function tempToCelsius(value, unit) {
+    if (unit === 'celsius') return value;
+    if (unit === 'fahrenheit') return (value - 32) * 5/9;
+    if (unit === 'kelvin') return value - 273.15;
+  }
+  function celsiusToTemp(value, unit) {
+    if (unit === 'celsius') return value;
+    if (unit === 'fahrenheit') return (value * 9/5) + 32;
+    if (unit === 'kelvin') return value + 273.15;
+  }
+
+  function convertValue(value, fromUnit, toUnit, cat) {
+    if (cat === 'temperature') {
+      const c = tempToCelsius(value, fromUnit);
+      return celsiusToTemp(c, toUnit);
+    }
+    const units = CATEGORIES[cat].units;
+    const fromFactor = units.find(u => u[0] === fromUnit)[2];
+    const toFactor = units.find(u => u[0] === toUnit)[2];
+    const baseValue = value * fromFactor;
+    return baseValue / toFactor;
+  }
+
+  function formatResult(num) {
+    if (!isFinite(num)) return '—';
+    if (num === 0) return '0';
+    const abs = Math.abs(num);
+    let result;
+    if (abs >= 1e9 || (abs < 0.0001 && abs > 0)) {
+      result = num.toExponential(4);
+    } else if (abs >= 1000) {
+      result = num.toLocaleString('en-US', {maximumFractionDigits: 2});
+    } else if (abs >= 1) {
+      result = parseFloat(num.toFixed(6)).toString();
+    } else {
+      result = parseFloat(num.toFixed(8)).toString();
+    }
+    return result;
+  }
+
+  function getFormulaText(fromUnit, toUnit, cat, fromLabel, toLabel) {
+    if (cat === 'temperature') {
+      if (fromUnit === 'celsius' && toUnit === 'fahrenheit') return '°F = (°C × 9/5) + 32';
+      if (fromUnit === 'fahrenheit' && toUnit === 'celsius') return '°C = (°F − 32) × 5/9';
+      if (fromUnit === 'celsius' && toUnit === 'kelvin') return 'K = °C + 273.15';
+      if (fromUnit === 'kelvin' && toUnit === 'celsius') return '°C = K − 273.15';
+      if (fromUnit === 'fahrenheit' && toUnit === 'kelvin') return 'K = (°F − 32) × 5/9 + 273.15';
+      if (fromUnit === 'kelvin' && toUnit === 'fahrenheit') return '°F = (K − 273.15) × 9/5 + 32';
+      return '';
+    }
+    const units = CATEGORIES[cat].units;
+    const fromFactor = units.find(u => u[0] === fromUnit)[2];
+    const toFactor = units.find(u => u[0] === toUnit)[2];
+    const ratio = fromFactor / toFactor;
+    return `1 ${fromLabel.split(' (')[0]} = ${formatResult(ratio)} ${toLabel.split(' (')[0]}`;
+  }
+
+  function populateSelects() {
+    const fromSel = document.getElementById('from-unit');
+    const toSel = document.getElementById('to-unit');
+    fromSel.innerHTML = '';
+    toSel.innerHTML = '';
+    const units = CATEGORIES[currentCategory].units;
+    units.forEach((u, i) => {
+      const opt1 = document.createElement('option');
+      opt1.value = u[0]; opt1.textContent = u[1];
+      const opt2 = document.createElement('option');
+      opt2.value = u[0]; opt2.textContent = u[1];
+      fromSel.appendChild(opt1);
+      toSel.appendChild(opt2);
+    });
+    // sensible defaults
+    const defaults = {
+      length: ['kilometer','mile'],
+      weight: ['kilogram','pound'],
+      temperature: ['celsius','fahrenheit'],
+      volume: ['liter','usgallon'],
+      area: ['sqmeter','sqfoot'],
+      speed: ['kmh','mph'],
+      time: ['hour','minute'],
+      data: ['gb','gib']
+    };
+    const [f, t] = defaults[currentCategory];
+    fromSel.value = f;
+    toSel.value = t;
+  }
+
+  function switchCategory(cat, btn) {
+    currentCategory = cat;
+    document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    populateSelects();
+    document.getElementById('conv-input').value = 1;
+    convert();
+  }
+
+  function convert() {
+    const input = parseFloat(document.getElementById('conv-input').value);
+    const fromUnit = document.getElementById('from-unit').value;
+    const toUnit = document.getElementById('to-unit').value;
+    const units = CATEGORIES[currentCategory].units;
+    const fromLabel = units.find(u => u[0] === fromUnit)[1];
+    const toLabel = units.find(u => u[0] === toUnit)[1];
+
+    if (isNaN(input)) {
+      document.getElementById('result-main').textContent = '—';
+      document.getElementById('result-label').textContent = 'Enter a value to convert';
+      document.getElementById('conv-output').value = '';
+      document.getElementById('result-formula').textContent = '';
+      renderAllConversions(0, fromUnit);
+      return;
+    }
+
+    const result = convertValue(input, fromUnit, toUnit, currentCategory);
+    const formatted = formatResult(result);
+
+    document.getElementById('result-main').textContent = formatted;
+    document.getElementById('result-label').textContent = `${input} ${fromLabel} = ${formatted} ${toLabel}`;
+    document.getElementById('conv-output').value = formatted;
+    document.getElementById('result-formula').textContent = getFormulaText(fromUnit, toUnit, currentCategory, fromLabel, toLabel);
+
+    renderAllConversions(input, fromUnit);
+  }
+
+  function renderAllConversions(input, fromUnit) {
+    const grid = document.getElementById('all-conv-grid');
+    grid.innerHTML = '';
+    const units = CATEGORIES[currentCategory].units;
+    const toUnit = document.getElementById('to-unit').value;
+    units.forEach(u => {
+      const val = isNaN(input) ? 0 : convertValue(input, fromUnit, u[0], currentCategory);
+      const card = document.createElement('div');
+      card.className = 'all-conv-card' + (u[0] === toUnit ? ' active' : '');
+      card.innerHTML = `<span class="acc-name">${u[1]}</span><span class="acc-value">${formatResult(val)}</span>`;
+      card.style.cursor = 'pointer';
+      card.onclick = () => { document.getElementById('to-unit').value = u[0]; convert(); };
+      grid.appendChild(card);
+    });
+  }
+
+  function swapUnits() {
+    const fromSel = document.getElementById('from-unit');
+    const toSel = document.getElementById('to-unit');
+    const tmp = fromSel.value;
+    fromSel.value = toSel.value;
+    toSel.value = tmp;
+    convert();
+  }
+
+  function copyResult() {
+    const text = document.getElementById('result-main').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = event.target;
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = orig, 1500);
+    });
+  }
+
+  function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+
+  // Init
+  populateSelects();
+  convert();
+</script>
+</body>
+</html>
