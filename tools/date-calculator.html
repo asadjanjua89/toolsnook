@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Calculator – Days Between Dates, Add/Subtract Days & Business Days | ToolsNook</title>
+  <meta name="description" content="Free date calculator. Calculate days between two dates, add or subtract days/weeks/months/years from a date, and count business days excluding weekends and holidays. Handles leap years automatically. No signup." />
+  <meta name="keywords" content="date calculator, days between dates, days between two dates calculator, add days to date, subtract days from date, business days calculator, working days calculator, date difference calculator, how many days between dates, date duration calculator, days until calculator, days since calculator, add weeks to date, add months to date, countdown calculator, age in days calculator, weekday calculator, leap year calculator, days from today, business day counter, date math calculator, calendar calculator, time between dates" />
+  <link rel="canonical" href="https://www.toolsnook.com/tools/date-calculator.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <meta property="og:title" content="Date Calculator – Days Between Dates, Add/Subtract & Business Days" />
+  <meta property="og:description" content="Calculate days between two dates, add or subtract time from any date, and count business days excluding weekends and holidays. Free, instant, handles leap years." />
+  <meta property="og:url" content="https://www.toolsnook.com/tools/date-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Date Calculator",
+    "url": "https://www.toolsnook.com/tools/date-calculator.html",
+    "description": "Free date calculator with days between dates, add/subtract days/weeks/months/years, and business day counting that excludes weekends and US holidays. Handles leap years automatically.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "featureList": ["Days between two dates","Add or subtract days/weeks/months/years","Business day calculator","Holiday-aware counting","Inclusive/exclusive date counting","Leap year handling","Countdown to a date"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com" },
+      { "@type": "ListItem", "position": 2, "name": "Date Calculator", "item": "https://www.toolsnook.com/tools/date-calculator.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How do I calculate the number of days between two dates?", "acceptedAnswer": { "@type": "Answer", "text": "Enter your start date and end date into the Days Between Dates calculator above. It automatically accounts for varying month lengths and leap years. You can choose 'inclusive' counting (counts both the start and end date, e.g. Jan 1 to Jan 3 = 3 days) or 'exclusive' counting (counts only the gap between them, e.g. Jan 1 to Jan 3 = 2 days) depending on what your situation requires." } },
+      { "@type": "Question", "name": "What is the difference between inclusive and exclusive date counting?", "acceptedAnswer": { "@type": "Answer", "text": "Exclusive counting measures only the gap between two dates — January 1 to January 3 is 2 days. Inclusive counting counts both endpoints — January 1 to January 3 is 3 days. Legal documents, billing cycles, and rental agreements often specify which method applies, so always check the relevant contract or rule. Hotel bookings typically use exclusive counting (nights stayed), while eligibility periods often use inclusive counting." } },
+      { "@type": "Question", "name": "How do I calculate business days between two dates?", "acceptedAnswer": { "@type": "Answer", "text": "Business days exclude Saturdays and Sundays (and optionally public holidays). Use the Business Days tab above, which automatically subtracts weekends from the total calendar days and lets you optionally exclude US federal holidays for accurate project planning and deadline calculations." } },
+      { "@type": "Question", "name": "How are leap years calculated?", "acceptedAnswer": { "@type": "Answer", "text": "A year is a leap year if it's divisible by 4, except for century years (divisible by 100), which are only leap years if also divisible by 400. So 2024 and 2028 are leap years, but 2100 will not be despite being divisible by 4, while 2000 was a leap year because it's divisible by 400. This calculator handles all leap year rules automatically when calculating date differences." } },
+      { "@type": "Question", "name": "How do I add or subtract months from a date when the day doesn't exist in the target month?", "acceptedAnswer": { "@type": "Answer", "text": "When adding months lands on a day that doesn't exist in the target month (e.g., adding 1 month to January 31, but February only has 28 or 29 days), standard convention rolls over to the next valid date — January 31 + 1 month becomes March 3 (or March 2 in a leap year) in JavaScript's native date handling, though some calculators instead clamp to the last day of the target month (February 28). Our calculator uses the clamping method, treating January 31 + 1 month as February 28 (or 29 in a leap year), which matches how most calendar and billing systems handle this edge case." } },
+      { "@type": "Question", "name": "What date format should I use for international dates?", "acceptedAnswer": { "@type": "Answer", "text": "Use ISO 8601 format (YYYY-MM-DD) whenever there's potential ambiguity, such as in international communication or technical documents. The format 03/04/2026 means March 4th in the US but April 3rd in the UK and most of the world — this ambiguity causes real errors in contracts, flight bookings, and software. ISO 8601 (2026-04-03) is unambiguous and sorts correctly as text, which is why it's the international standard." } },
+      { "@type": "Question", "name": "How many days are in each month?", "acceptedAnswer": { "@type": "Answer", "text": "January (31), February (28, or 29 in a leap year), March (31), April (30), May (31), June (30), July (31), August (31), September (30), October (31), November (30), December (31). A simple memory trick: months with 31 days are January, March, May, July, August, October, and December — easy to remember using the 'knuckle method' where each knuckle on your fist represents a 31-day month." } }
+    ]
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b;--blue:#4ecdc4;--purple:#c084fc}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2rem;text-align:center;max-width:700px;margin:0 auto}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:580px;margin:0 auto}
+    .container{max-width:1000px;margin:0 auto;padding:0 2rem 4rem}
+
+    .calc-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:2rem;margin-bottom:1.25rem}
+    .calc-tab{padding:9px 16px;background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-size:0.85rem;border-radius:100px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .calc-tab.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+
+    .calc-card{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;padding:2rem;display:none;position:relative;overflow:hidden}
+    .calc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--blue))}
+    .calc-card.active{display:block}
+    .card-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:0.3rem;text-transform:uppercase;letter-spacing:0.05em}
+    .card-sub{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem}
+
+    .field{margin-bottom:1.1rem}
+    .field label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.4rem;letter-spacing:0.04em}
+    .field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;padding:0.75rem 1rem;transition:border-color 0.2s}
+    .field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
+    .field select option{background:#1a1a24}
+    .field-hint{font-size:0.72rem;color:var(--muted);margin-top:3px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+    @media(max-width:560px){.two-col,.three-col{grid-template-columns:1fr}}
+
+    .toggle-row{display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap}
+    .toggle-btn{padding:7px 14px;background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:0.8rem;border-radius:8px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .toggle-btn.active{background:rgba(108,99,255,0.15);border-color:var(--accent);color:var(--accent)}
+
+    .check-row{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.85rem;font-size:0.88rem}
+    .check-row input[type="checkbox"]{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+
+    .calc-btn{padding:0.85rem 2rem;background:linear-gradient(135deg,var(--accent),#9c5cff);color:#fff;border:none;border-radius:12px;font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;transition:opacity 0.2s,transform 0.2s}
+    .calc-btn:hover{opacity:0.88;transform:translateY(-1px)}
+
+    .result-hero{background:linear-gradient(135deg,rgba(108,99,255,0.12),rgba(192,132,252,0.08));border:1px solid rgba(108,99,255,0.25);border-radius:14px;padding:1.75rem;text-align:center;margin-top:1.5rem;display:none}
+    .result-hero.show{display:block}
+    .result-num{font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;color:var(--green);line-height:1}
+    .result-label{font-size:0.9rem;color:var(--muted);margin-top:6px}
+    .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0.6rem;margin-top:1.25rem}
+    .result-item{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center}
+    .result-item-num{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700}
+    .result-item-num.green{color:var(--green)}.result-item-num.amber{color:var(--amber)}.result-item-num.blue{color:var(--blue)}.result-item-num.purple{color:var(--purple)}.result-item-num.red{color:var(--red)}
+    .result-item-lbl{font-size:0.7rem;color:var(--muted);margin-top:2px}
+    .result-date-line{font-size:0.95rem;color:var(--text);margin-top:0.75rem}
+
+    .content-section{margin-top:2.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem}
+    .content-section h2{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+    .content-section h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-section p{color:var(--muted);font-size:0.92rem;margin-bottom:0.75rem;line-height:1.8}
+    .ref-table{width:100%;border-collapse:collapse;font-size:0.83rem;margin-top:1rem}
+    .ref-table th{background:var(--bg3);color:var(--muted);font-weight:600;padding:0.6rem 0.9rem;text-align:left;font-size:0.75rem;letter-spacing:0.05em}
+    .ref-table td{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    .ref-table td:first-child{color:var(--text);font-weight:500}
+    .ref-table td.highlight{color:var(--accent);font-weight:600}
+    .ref-table tr:last-child td{border-bottom:none}
+    .ref-table tr:hover td{background:var(--bg3)}
+    .tip-box{background:rgba(67,233,123,0.06);border:1px solid rgba(67,233,123,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .tip-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
+    .warning-box{background:rgba(247,151,30,0.07);border:1px solid rgba(247,151,30,0.2);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0}
+    .warning-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
+    .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+    .faq-item:last-child{border-bottom:none;padding-bottom:0}
+    .faq-q{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q::after{content:'▼';font-size:0.7rem;color:var(--muted);flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-q::after{transform:rotate(180deg)}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;display:none}
+    .faq-item.open .faq-a{display:block}
+    .related{margin-top:2.5rem}.related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
+    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    footer a{color:var(--muted);text-decoration:none}
+    @media(max-width:600px){.calc-card{padding:1.25rem}.result-num{font-size:2.5rem}}
+  </style>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Date Calculator</div>
+  <h1>Date Calculator</h1>
+  <p>Calculate days between dates, add or subtract time from any date, and count business days excluding weekends and holidays. Free, instant, handles leap years automatically.</p>
+</div>
+
+<div class="container">
+  <div class="calc-tabs">
+    <button class="calc-tab active" onclick="switchTab('between',this)">📅 Days Between Dates</button>
+    <button class="calc-tab" onclick="switchTab('addsub',this)">➕ Add / Subtract Days</button>
+    <button class="calc-tab" onclick="switchTab('business',this)">💼 Business Days</button>
+  </div>
+
+  <!-- DAYS BETWEEN -->
+  <div class="calc-card active" id="tab-between">
+    <div class="card-title">Days Between Dates</div>
+    <div class="card-sub">Find the exact number of days, weeks, months and years between any two dates.</div>
+
+    <div class="two-col">
+      <div class="field">
+        <label>START DATE</label>
+        <input type="date" id="bt-start" />
+      </div>
+      <div class="field">
+        <label>END DATE</label>
+        <input type="date" id="bt-end" />
+      </div>
+    </div>
+
+    <div style="font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em">COUNTING METHOD</div>
+    <div class="toggle-row">
+      <button class="toggle-btn active" id="bt-exclusive-btn" onclick="setCountMode('exclusive',this)">Exclusive (gap only)</button>
+      <button class="toggle-btn" id="bt-inclusive-btn" onclick="setCountMode('inclusive',this)">Inclusive (both dates count)</button>
+    </div>
+
+    <button class="calc-btn" onclick="calcBetween()">⚡ Calculate Difference</button>
+
+    <div class="result-hero" id="between-result">
+      <div class="result-num" id="bt-days">0</div>
+      <div class="result-label">Total Days</div>
+      <div class="result-date-line" id="bt-summary"></div>
+      <div class="result-grid">
+        <div class="result-item"><div class="result-item-num green" id="bt-years">0</div><div class="result-item-lbl">Years</div></div>
+        <div class="result-item"><div class="result-item-num blue" id="bt-months">0</div><div class="result-item-lbl">Months</div></div>
+        <div class="result-item"><div class="result-item-num purple" id="bt-weeks">0</div><div class="result-item-lbl">Weeks</div></div>
+        <div class="result-item"><div class="result-item-num amber" id="bt-ymd">—</div><div class="result-item-lbl">Y / M / D</div></div>
+        <div class="result-item"><div class="result-item-num" id="bt-weekdaystart">—</div><div class="result-item-lbl">Start Weekday</div></div>
+        <div class="result-item"><div class="result-item-num" id="bt-weekdayend">—</div><div class="result-item-lbl">End Weekday</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD / SUBTRACT -->
+  <div class="calc-card" id="tab-addsub">
+    <div class="card-title">Add or Subtract from a Date</div>
+    <div class="card-sub">Find the date that results from adding or subtracting days, weeks, months, or years.</div>
+
+    <div class="field">
+      <label>STARTING DATE</label>
+      <input type="date" id="as-start" />
+    </div>
+
+    <div class="toggle-row">
+      <button class="toggle-btn active" id="as-add-btn" onclick="setAddMode('add',this)">➕ Add</button>
+      <button class="toggle-btn" id="as-sub-btn" onclick="setAddMode('subtract',this)">➖ Subtract</button>
+    </div>
+
+    <div class="three-col">
+      <div class="field">
+        <label>YEARS</label>
+        <input type="number" id="as-years" value="0" min="0" />
+      </div>
+      <div class="field">
+        <label>MONTHS</label>
+        <input type="number" id="as-months" value="0" min="0" />
+      </div>
+      <div class="field">
+        <label>WEEKS</label>
+        <input type="number" id="as-weeks" value="0" min="0" />
+      </div>
+    </div>
+    <div class="field">
+      <label>DAYS</label>
+      <input type="number" id="as-days" value="0" min="0" />
+    </div>
+
+    <button class="calc-btn" onclick="calcAddSub()">⚡ Calculate New Date</button>
+
+    <div class="result-hero" id="addsub-result">
+      <div class="result-num" id="as-result-date" style="font-size:2.2rem">—</div>
+      <div class="result-label">Resulting Date</div>
+      <div class="result-grid">
+        <div class="result-item"><div class="result-item-num blue" id="as-weekday">—</div><div class="result-item-lbl">Day of Week</div></div>
+        <div class="result-item"><div class="result-item-num green" id="as-daynum">—</div><div class="result-item-lbl">Day of Year</div></div>
+        <div class="result-item"><div class="result-item-num purple" id="as-weeknum">—</div><div class="result-item-lbl">Week Number</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUSINESS DAYS -->
+  <div class="calc-card" id="tab-business">
+    <div class="card-title">Business Days Calculator</div>
+    <div class="card-sub">Count working days between two dates, excluding weekends and optionally US federal holidays.</div>
+
+    <div class="two-col">
+      <div class="field">
+        <label>START DATE</label>
+        <input type="date" id="bd-start" />
+      </div>
+      <div class="field">
+        <label>END DATE</label>
+        <input type="date" id="bd-end" />
+      </div>
+    </div>
+
+    <div class="check-row">
+      <input type="checkbox" id="bd-holidays" checked />
+      <label for="bd-holidays" style="margin:0;color:var(--text);font-weight:400">Exclude US federal holidays</label>
+    </div>
+    <div class="check-row">
+      <input type="checkbox" id="bd-include-end" />
+      <label for="bd-include-end" style="margin:0;color:var(--text);font-weight:400">Include end date in count</label>
+    </div>
+
+    <button class="calc-btn" onclick="calcBusiness()">⚡ Calculate Business Days</button>
+
+    <div class="result-hero" id="business-result">
+      <div class="result-num" id="bd-days">0</div>
+      <div class="result-label">Business Days</div>
+      <div class="result-grid">
+        <div class="result-item"><div class="result-item-num blue" id="bd-total-days">0</div><div class="result-item-lbl">Total Calendar Days</div></div>
+        <div class="result-item"><div class="result-item-num amber" id="bd-weekend-days">0</div><div class="result-item-lbl">Weekend Days</div></div>
+        <div class="result-item"><div class="result-item-num red" id="bd-holiday-days">0</div><div class="result-item-lbl">Holidays Excluded</div></div>
+        <div class="result-item"><div class="result-item-num purple" id="bd-weeks-full">0</div><div class="result-item-lbl">Full Weeks</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNDERSTANDING DATE COUNTING -->
+  <div class="content-section">
+    <h2>Inclusive vs Exclusive Date Counting — Why It Matters</h2>
+    <p>This is the single most common source of "off by one" errors in date calculations. The two methods give genuinely different answers, and which one applies depends entirely on context.</p>
+    <table class="ref-table">
+      <thead><tr><th>Method</th><th>Jan 1 to Jan 3 equals</th><th>Used For</th></tr></thead>
+      <tbody>
+        <tr><td>Exclusive (gap only)</td><td class="highlight">2 days</td><td>Hotel nights, elapsed time, "how many days until"</td></tr>
+        <tr><td>Inclusive (both count)</td><td class="highlight">3 days</td><td>Eligibility periods, legal notice periods, billing cycles</td></tr>
+      </tbody>
+    </table>
+    <p>Hotel bookings almost always use exclusive counting — checking in on Jan 1 and checking out on Jan 3 means 2 nights stayed. Legal notice periods and eligibility windows often use inclusive counting — "you have 3 days from January 1st" typically means January 1, 2, and 3 all count. Always read the specific contract, rule, or policy carefully rather than assuming. The calculator above lets you toggle between both methods.</p>
+  </div>
+
+  <!-- BUSINESS DAYS BY COUNTRY -->
+  <div class="content-section">
+    <h2>Business Days Across Different Countries</h2>
+    <p>"Business days" isn't universal — different countries have different weekend days and different public holiday calendars, which matters for international contracts and shipping estimates.</p>
+    <table class="ref-table">
+      <thead><tr><th>Country/Region</th><th>Weekend Days</th><th>Typical Annual Public Holidays</th></tr></thead>
+      <tbody>
+        <tr><td>United States</td><td class="highlight">Saturday, Sunday</td><td>11 federal holidays</td></tr>
+        <tr><td>United Kingdom</td><td class="highlight">Saturday, Sunday</td><td>8 bank holidays</td></tr>
+        <tr><td>Canada</td><td class="highlight">Saturday, Sunday</td><td>9-10 (varies by province)</td></tr>
+        <tr><td>Australia</td><td class="highlight">Saturday, Sunday</td><td>8-13 (varies by state)</td></tr>
+        <tr><td>UAE / Saudi Arabia</td><td class="highlight">Friday, Saturday</td><td>varies, often Islamic calendar-based</td></tr>
+        <tr><td>Israel</td><td class="highlight">Friday, Saturday</td><td>varies, Hebrew calendar-based</td></tr>
+      </tbody>
+    </table>
+    <p>Our Business Days calculator above uses the standard Saturday/Sunday weekend and optionally excludes the 11 major US federal holidays. For countries with different weekend conventions or holiday calendars, manually adjust the total by the relevant difference.</p>
+  </div>
+
+  <!-- LEAP YEARS -->
+  <div class="content-section">
+    <h2>How Leap Years Work</h2>
+    <p>A leap year adds February 29th to keep the calendar aligned with Earth's orbit, which takes approximately 365.2422 days. Without leap years, the calendar would drift by about 1 day every 4 years.</p>
+    <div class="warning-box"><p><strong>The leap year rule:</strong> A year is a leap year if divisible by 4 — EXCEPT century years (divisible by 100), which are NOT leap years — UNLESS also divisible by 400. So 2024 and 2028 are leap years. 2100 will NOT be a leap year despite being divisible by 4. 2000 WAS a leap year because it's divisible by 400.</p></div>
+    <table class="ref-table">
+      <thead><tr><th>Year</th><th>Leap Year?</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>2024</td><td class="highlight">Yes</td><td>Divisible by 4, not a century year</td></tr>
+        <tr><td>2026 (current)</td><td>No</td><td>Not divisible by 4</td></tr>
+        <tr><td>2028</td><td class="highlight">Yes</td><td>Divisible by 4, not a century year</td></tr>
+        <tr><td>2000</td><td class="highlight">Yes</td><td>Divisible by 400</td></tr>
+        <tr><td>2100</td><td>No</td><td>Divisible by 100, but not 400</td></tr>
+      </tbody>
+    </table>
+    <p>Our calculator handles all leap year logic automatically — every "days between dates" and "add/subtract" calculation correctly accounts for February having 29 days in leap years and 28 in regular years.</p>
+  </div>
+
+  <!-- DATE FORMAT GUIDE -->
+  <div class="content-section">
+    <h2>Avoiding Date Format Confusion (ISO 8601)</h2>
+    <p>One of the most common sources of real-world errors — missed flights, contract disputes, software bugs — is date format ambiguity between countries.</p>
+    <table class="ref-table">
+      <thead><tr><th>Format</th><th>03/04/2026 means</th><th>Used In</th></tr></thead>
+      <tbody>
+        <tr><td>MM/DD/YYYY</td><td class="highlight">March 4, 2026</td><td>United States</td></tr>
+        <tr><td>DD/MM/YYYY</td><td class="highlight">April 3, 2026</td><td>UK, Europe, most of the world</td></tr>
+        <tr><td>YYYY-MM-DD (ISO 8601)</td><td class="highlight">Unambiguous</td><td>International standard, technical/legal documents</td></tr>
+      </tbody>
+    </table>
+    <div class="tip-box"><p>💡 <strong>Best practice:</strong> Whenever writing a date for an international audience, a contract, or any technical context, use ISO 8601 format (YYYY-MM-DD) — for example, 2026-04-03. It's unambiguous, and as a bonus, it sorts correctly alphabetically/numerically, which is why it's the standard for filenames, databases, and APIs worldwide.</p></div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I calculate the number of days between two dates?</div><div class="faq-a">Enter your start and end dates in the Days Between Dates calculator above. It automatically accounts for varying month lengths and leap years. Choose "inclusive" to count both endpoints, or "exclusive" to count only the gap between them.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between inclusive and exclusive date counting?</div><div class="faq-a">Exclusive counts only the gap — Jan 1 to Jan 3 = 2 days. Inclusive counts both endpoints — Jan 1 to Jan 3 = 3 days. Legal documents, billing cycles, and rental agreements often specify which applies — always check the relevant contract. Hotel bookings typically use exclusive (nights stayed); eligibility periods often use inclusive.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I calculate business days between two dates?</div><div class="faq-a">Business days exclude Saturdays and Sundays, and optionally public holidays. Use the Business Days tab above — it automatically subtracts weekends and lets you exclude US federal holidays for accurate project and deadline planning.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How are leap years calculated?</div><div class="faq-a">A year is a leap year if divisible by 4, except century years (divisible by 100) — unless also divisible by 400. 2024 and 2028 are leap years. 2100 will not be, despite being divisible by 4. 2000 was a leap year because it's divisible by 400. This calculator handles all leap year rules automatically.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What happens when adding months lands on a day that doesn't exist?</div><div class="faq-a">For example, adding 1 month to January 31 — February only has 28 or 29 days. Our calculator clamps to the last valid day of the target month (February 28, or 29 in a leap year), matching how most calendar and billing systems handle this edge case.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What date format should I use for international dates?</div><div class="faq-a">Use ISO 8601 format (YYYY-MM-DD) whenever there's potential ambiguity. 03/04/2026 means March 4 in the US but April 3 in the UK and most of the world. ISO 8601 (2026-04-03) is unambiguous and is the international standard for technical and legal documents.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How many days are in each month?</div><div class="faq-a">Jan (31), Feb (28/29), Mar (31), Apr (30), May (31), Jun (30), Jul (31), Aug (31), Sep (30), Oct (31), Nov (30), Dec (31). Memory trick: months with 31 days are Jan, Mar, May, Jul, Aug, Oct, Dec — easy to remember using the "knuckle method" on your fist.</div></div>
+  </div>
+
+  <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">
+    <h2>Related Tools</h2>
+    <p style="color:var(--muted);font-size:0.92rem;line-height:2">
+      → <a href="/tools/age-calculator.html" style="color:var(--accent)">Age Calculator</a> — Calculate exact age in years, months and days from a birth date.<br>
+      → <a href="/tools/gpa-calculator.html" style="color:var(--accent)">GPA Calculator</a> — Calculate semester, cumulative and weighted GPA instantly.<br>
+      → <a href="/tools/unit-converter.html" style="color:var(--accent)">Unit Converter</a> — Convert length, weight, temperature, time and more.<br>
+      → <a href="/tools/percentage-calculator.html" style="color:var(--accent)">Percentage Calculator</a> — Calculate any percentage, percentage change and more.
+    </p>
+  </div>
+
+  <div class="related">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="/tools/age-calculator.html" class="related-card"><span style="font-size:1.4rem">🎂</span><span style="font-size:0.88rem;font-weight:500">Age Calculator</span></a>
+      <a href="/tools/gpa-calculator.html" class="related-card"><span style="font-size:1.4rem">🎓</span><span style="font-size:0.88rem;font-weight:500">GPA Calculator</span></a>
+      <a href="/tools/unit-converter.html" class="related-card"><span style="font-size:1.4rem">📏</span><span style="font-size:0.88rem;font-weight:500">Unit Converter</span></a>
+      <a href="/tools/percentage-calculator.html" class="related-card"><span style="font-size:1.4rem">📊</span><span style="font-size:0.88rem;font-weight:500">Percentage Calculator</span></a>
+    </div>
+  </div>
+</div>
+
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
+<script>
+  const WEEKDAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  let countMode = 'exclusive';
+  let addMode = 'add';
+
+  function setCountMode(mode, btn) {
+    countMode = mode;
+    document.getElementById('bt-exclusive-btn').classList.toggle('active', mode === 'exclusive');
+    document.getElementById('bt-inclusive-btn').classList.toggle('active', mode === 'inclusive');
+  }
+
+  function setAddMode(mode, btn) {
+    addMode = mode;
+    document.getElementById('as-add-btn').classList.toggle('active', mode === 'add');
+    document.getElementById('as-sub-btn').classList.toggle('active', mode === 'subtract');
+  }
+
+  function parseDate(str) {
+    if (!str) return null;
+    const [y,m,d] = str.split('-').map(Number);
+    return new Date(y, m-1, d);
+  }
+
+  function formatDate(date) {
+    return MONTH_NAMES[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+  }
+
+  function daysBetweenRaw(d1, d2) {
+    const msPerDay = 1000 * 60 * 60 * 24;
+    const utc1 = Date.UTC(d1.getFullYear(), d1.getMonth(), d1.getDate());
+    const utc2 = Date.UTC(d2.getFullYear(), d2.getMonth(), d2.getDate());
+    return Math.round((utc2 - utc1) / msPerDay);
+  }
+
+  function calcYMD(start, end) {
+    let y = end.getFullYear() - start.getFullYear();
+    let m = end.getMonth() - start.getMonth();
+    let d = end.getDate() - start.getDate();
+    if (d < 0) {
+      m--;
+      const daysInPrevMonth = new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+      d += daysInPrevMonth;
+    }
+    if (m < 0) {
+      y--;
+      m += 12;
+    }
+    return { y, m, d };
+  }
+
+  // ===== DAYS BETWEEN =====
+  function calcBetween() {
+    const startStr = document.getElementById('bt-start').value;
+    const endStr = document.getElementById('bt-end').value;
+    if (!startStr || !endStr) { alert('Please select both dates.'); return; }
+    let start = parseDate(startStr);
+    let end = parseDate(endStr);
+    let swapped = false;
+    if (start > end) { [start, end] = [end, start]; swapped = true; }
+
+    let totalDays = daysBetweenRaw(start, end);
+    if (countMode === 'inclusive') totalDays += 1;
+
+    const weeks = Math.floor(totalDays / 7);
+    const ymd = calcYMD(start, end);
+    const totalMonths = ymd.y * 12 + ymd.m;
+    const totalYears = (totalDays / 365.25).toFixed(2);
+
+    document.getElementById('bt-days').textContent = totalDays.toLocaleString();
+    document.getElementById('bt-summary').textContent = `${formatDate(start)} → ${formatDate(end)}${swapped ? ' (dates were reordered)' : ''}`;
+    document.getElementById('bt-years').textContent = totalYears;
+    document.getElementById('bt-months').textContent = totalMonths.toLocaleString();
+    document.getElementById('bt-weeks').textContent = weeks.toLocaleString();
+    document.getElementById('bt-ymd').textContent = `${ymd.y}y ${ymd.m}m ${ymd.d}d`;
+    document.getElementById('bt-weekdaystart').textContent = WEEKDAY_NAMES[start.getDay()].slice(0,3);
+    document.getElementById('bt-weekdayend').textContent = WEEKDAY_NAMES[end.getDay()].slice(0,3);
+    document.getElementById('between-result').classList.add('show');
+  }
+
+  // ===== ADD / SUBTRACT =====
+  function addMonthsClamped(date, monthsToAdd) {
+    const d = new Date(date);
+    const targetMonth = d.getMonth() + monthsToAdd;
+    const targetDate = new Date(d.getFullYear(), targetMonth, 1);
+    const daysInTargetMonth = new Date(targetDate.getFullYear(), targetDate.getMonth()+1, 0).getDate();
+    const day = Math.min(d.getDate(), daysInTargetMonth);
+    return new Date(targetDate.getFullYear(), targetDate.getMonth(), day);
+  }
+
+  function calcAddSub() {
+    const startStr = document.getElementById('as-start').value;
+    if (!startStr) { alert('Please select a starting date.'); return; }
+    let date = parseDate(startStr);
+
+    const years = parseInt(document.getElementById('as-years').value) || 0;
+    const months = parseInt(document.getElementById('as-months').value) || 0;
+    const weeks = parseInt(document.getElementById('as-weeks').value) || 0;
+    const days = parseInt(document.getElementById('as-days').value) || 0;
+
+    const sign = addMode === 'add' ? 1 : -1;
+    const totalMonths = (years * 12 + months) * sign;
+    date = addMonthsClamped(date, totalMonths);
+
+    const totalDays = (weeks * 7 + days) * sign;
+    date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + totalDays);
+
+    const startOfYear = new Date(date.getFullYear(), 0, 1);
+    const dayOfYear = daysBetweenRaw(startOfYear, date) + 1;
+    const weekNum = Math.ceil(dayOfYear / 7);
+
+    document.getElementById('as-result-date').textContent = formatDate(date);
+    document.getElementById('as-weekday').textContent = WEEKDAY_NAMES[date.getDay()];
+    document.getElementById('as-daynum').textContent = dayOfYear;
+    document.getElementById('as-weeknum').textContent = weekNum;
+    document.getElementById('addsub-result').classList.add('show');
+  }
+
+  // ===== BUSINESS DAYS =====
+  function getUSHolidays(year) {
+    // Returns array of Date objects for major US federal holidays in given year
+    const holidays = [];
+    holidays.push(new Date(year, 0, 1));   // New Year's Day
+    holidays.push(nthWeekdayOfMonth(year, 0, 1, 3));  // MLK Day - 3rd Monday of Jan
+    holidays.push(nthWeekdayOfMonth(year, 1, 1, 3));  // Presidents Day - 3rd Monday of Feb
+    holidays.push(lastWeekdayOfMonth(year, 4, 1));    // Memorial Day - last Monday of May
+    holidays.push(new Date(year, 5, 19));  // Juneteenth
+    holidays.push(new Date(year, 6, 4));   // Independence Day
+    holidays.push(nthWeekdayOfMonth(year, 8, 1, 1));  // Labor Day - 1st Monday of Sep
+    holidays.push(nthWeekdayOfMonth(year, 9, 1, 2));  // Columbus Day - 2nd Monday of Oct
+    holidays.push(new Date(year, 10, 11)); // Veterans Day
+    holidays.push(nthWeekdayOfMonth(year, 10, 4, 4)); // Thanksgiving - 4th Thursday of Nov
+    holidays.push(new Date(year, 11, 25)); // Christmas
+    return holidays;
+  }
+
+  function nthWeekdayOfMonth(year, month, weekday, n) {
+    const first = new Date(year, month, 1);
+    let day = 1 + ((weekday - first.getDay() + 7) % 7);
+    day += (n - 1) * 7;
+    return new Date(year, month, day);
+  }
+
+  function lastWeekdayOfMonth(year, month, weekday) {
+    const last = new Date(year, month + 1, 0);
+    let day = last.getDate() - ((last.getDay() - weekday + 7) % 7);
+    return new Date(year, month, day);
+  }
+
+  function isSameDate(d1, d2) {
+    return d1.getFullYear() === d2.getFullYear() && d1.getMonth() === d2.getMonth() && d1.getDate() === d2.getDate();
+  }
+
+  function calcBusiness() {
+    const startStr = document.getElementById('bd-start').value;
+    const endStr = document.getElementById('bd-end').value;
+    if (!startStr || !endStr) { alert('Please select both dates.'); return; }
+    let start = parseDate(startStr);
+    let end = parseDate(endStr);
+    if (start > end) [start, end] = [end, start];
+
+    const excludeHolidays = document.getElementById('bd-holidays').checked;
+    const includeEnd = document.getElementById('bd-include-end').checked;
+
+    let holidaySet = [];
+    if (excludeHolidays) {
+      for (let y = start.getFullYear(); y <= end.getFullYear(); y++) {
+        holidaySet = holidaySet.concat(getUSHolidays(y));
+      }
+    }
+
+    let totalCalendarDays = 0, weekendDays = 0, holidayDays = 0, businessDays = 0;
+    let cursor = new Date(start);
+    const endExclusive = includeEnd ? new Date(end.getFullYear(), end.getMonth(), end.getDate()+1) : end;
+
+    while (cursor < endExclusive) {
+      totalCalendarDays++;
+      const dow = cursor.getDay();
+      const isWeekend = dow === 0 || dow === 6;
+      const isHoliday = excludeHolidays && holidaySet.some(h => isSameDate(h, cursor));
+      if (isWeekend) weekendDays++;
+      else if (isHoliday) holidayDays++;
+      else businessDays++;
+      cursor = new Date(cursor.getFullYear(), cursor.getMonth(), cursor.getDate()+1);
+    }
+
+    document.getElementById('bd-days').textContent = businessDays.toLocaleString();
+    document.getElementById('bd-total-days').textContent = totalCalendarDays.toLocaleString();
+    document.getElementById('bd-weekend-days').textContent = weekendDays.toLocaleString();
+    document.getElementById('bd-holiday-days').textContent = holidayDays.toLocaleString();
+    document.getElementById('bd-weeks-full').textContent = Math.floor(totalCalendarDays / 7).toLocaleString();
+    document.getElementById('business-result').classList.add('show');
+  }
+
+  // ===== TABS =====
+  function switchTab(id, btn) {
+    document.querySelectorAll('.calc-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.calc-card').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
+  }
+
+  function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
+
+  // ===== INIT — default to today's date =====
+  (function init() {
+    const today = new Date();
+    const todayStr = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
+    document.getElementById('bt-start').value = todayStr;
+    document.getElementById('as-start').value = todayStr;
+    document.getElementById('bd-start').value = todayStr;
+    const future = new Date(today.getFullYear(), today.getMonth(), today.getDate()+30);
+    const futureStr = future.getFullYear() + '-' + String(future.getMonth()+1).padStart(2,'0') + '-' + String(future.getDate()).padStart(2,'0');
+    document.getElementById('bt-end').value = futureStr;
+    document.getElementById('bd-end').value = futureStr;
+  })();
+</script>
+</body>
+</html>
