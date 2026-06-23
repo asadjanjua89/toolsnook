@@ -293,6 +293,21 @@
       .popular-grid { grid-template-columns: repeat(2, 1fr); }
       h1 { font-size: 1.9rem; }
     }
+
+    /* NEW TOOL STRIP */
+    .new-tool-strip { display: flex; align-items: center; gap: 1rem; background: var(--bg2); border: 1px solid rgba(67,233,123,0.25); border-radius: 14px; padding: 1rem 1.5rem; margin-bottom: 2.5rem; text-decoration: none; color: var(--text); transition: border-color 0.2s, transform 0.2s; }
+    .new-tool-strip:hover { border-color: var(--green); transform: translateY(-2px); }
+    .new-tool-strip-badge { background: rgba(67,233,123,0.12); border: 1px solid rgba(67,233,123,0.3); color: var(--green); font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; white-space: nowrap; letter-spacing: 0.06em; flex-shrink: 0; }
+    .new-tool-strip-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .new-tool-strip-content { flex: 1; min-width: 0; }
+    .new-tool-strip-name { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; }
+    .new-tool-strip-desc { font-size: 0.8rem; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .new-tool-strip-cta { color: var(--green); font-size: 0.82rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+    @media (max-width: 640px) {
+      .new-tool-strip { padding: 0.85rem 1rem; gap: 0.75rem; }
+      .new-tool-strip-cta { display: none; }
+      .new-tool-strip-desc { display: none; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -398,6 +413,17 @@
     </a>
   </div>
 
+  <!-- NEW TOOL STRIP -->
+  <a href="/tools/hours-calculator.html" class="new-tool-strip" onclick="trackRecent('Hours Calculator','⏱️',this.href)">
+    <span class="new-tool-strip-badge">🆕 JUST ADDED</span>
+    <span class="new-tool-strip-icon">⏱️</span>
+    <div class="new-tool-strip-content">
+      <div class="new-tool-strip-name">Hours Calculator</div>
+      <div class="new-tool-strip-desc">Time between two times, weekly timesheet, break deductions & pay with overtime</div>
+    </div>
+    <span class="new-tool-strip-cta">Try it →</span>
+  </a>
+
   <!-- MOST POPULAR -->
   <div style="margin-bottom:3rem">
     <div class="section-label">🔥 Most Popular</div>
@@ -423,7 +449,8 @@
     <button class="cat-tab" onclick="filterCat('hr', this)">👥 HR & Salary <span class="cat-count">2</span></button>
     <button class="cat-tab" onclick="filterCat('startup', this)">🚀 Startup <span class="cat-count">2</span></button>
     <button class="cat-tab" onclick="filterCat('ai', this)">✨ AI Writing <span class="cat-count">7</span></button>
-    <button class="cat-tab" onclick="filterCat('math', this)">🔢 Math & Everyday <span class="cat-count">5</span></button>
+    <button class="cat-tab" onclick="filterCat('math', this)">🔢 Math & Everyday <span class="cat-count">9</span></button>
+    <button class="cat-tab" onclick="filterCat('convert', this)">🔄 Converters <span class="cat-count">2</span></button>
   </div>
 
   <!-- FINANCE -->
@@ -485,7 +512,7 @@
 
   <!-- MATH -->
   <div class="cat-section" data-cat="math">
-    <div class="cat-heading"><span class="cat-icon">🔢</span><span class="cat-name">Math & Everyday</span><span class="cat-badge badge-math">8 tools</span></div>
+    <div class="cat-heading"><span class="cat-icon">🔢</span><span class="cat-name">Math & Everyday</span><span class="cat-badge badge-math">9 tools</span></div>
     <div class="tools-grid">
       <a href="/tools/percentage-calculator.html" class="tool-card" onclick="trackRecent('Percentage Calculator','%',this.href)"><span class="tool-icon">%</span><div class="tool-name">Percentage Calculator</div><div class="tool-desc">What is X% of Y, percentage change, increase & decrease.</div><span class="tool-tag tag-math">Math</span></a>
       <a href="/tools/age-calculator.html" class="tool-card" onclick="trackRecent('Age Calculator','🎂',this.href)"><span class="tool-icon">🎂</span><div class="tool-name">Age Calculator</div><div class="tool-desc">How old am I? Age in years, months, days, hours. Age difference & future age.</div><span class="tool-tag tag-math">Math</span></a>
