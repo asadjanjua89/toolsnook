@@ -105,7 +105,6 @@
     .cat-tab { padding: 8px 18px; background: var(--bg2); border: 1px solid var(--border2); color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; border-radius: 100px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
     .cat-tab:hover { color: var(--text); border-color: var(--accent); }
     .cat-tab.active { background: rgba(108,99,255,0.15); border-color: var(--accent); color: var(--accent); }
-    /* FIX: was rgba(108,99,255,0.2) with var(--accent) text — failed contrast; now darkened bg + lightened text */
     .cat-count { background: rgba(108,99,255,0.35); color: #c4bfff; font-size: 0.7rem; padding: 1px 6px; border-radius: 10px; font-weight: 600; }
     .cat-tab.active .cat-count { background: var(--accent); color: #fff; }
 
@@ -122,6 +121,8 @@
     .badge-billing { background: rgba(247,151,30,0.12); color: var(--amber); }
     .badge-ai { background: rgba(255,107,107,0.12); color: var(--red); }
     .badge-math { background: rgba(100,200,255,0.12); color: #64c8ff; }
+    .badge-convert { background: rgba(192,132,252,0.12); color: #c084fc; }
+    .tag-convert { background: rgba(192,132,252,0.1); color: #c084fc; }
     .badge-convert { background: rgba(192,132,252,0.12); color: #c084fc; }
     .tag-convert { background: rgba(192,132,252,0.1); color: #c084fc; }
 
@@ -181,6 +182,7 @@
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
 
+
     /* IMAGE CONVERTER HERO BANNER */
     .hero-tool-banner{margin-bottom:2.5rem}
     .hero-tool-link{display:block;text-decoration:none;position:relative;overflow:hidden;background:linear-gradient(135deg,#111118,#18181f);border:1px solid rgba(192,132,252,0.35);border-radius:20px;padding:2rem 2.5rem;transition:transform 0.2s,box-shadow 0.2s}
@@ -206,7 +208,7 @@
       .hero-tool-link{padding:1.25rem}
       .hero-tool-icon-wrap{display:none}
       .hero-tool-title{font-size:1.4rem}
-    }
+    } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 767px) {
       /* NAV */
@@ -328,7 +330,7 @@
 </head>
 <body>
 
-<nav aria-label="Main navigation">
+<nav>
   <a href="/" class="logo">Tools<span>Nook</span></a>
   <div class="nav-actions">
     <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle light/dark mode">🌙</button>
@@ -353,8 +355,6 @@
     <div class="stat"><div class="stat-num">∞</div><div class="stat-label">No Limits</div></div>
   </div>
 </div>
-
-<main id="main-content">
 
 <section class="tools-section" id="tools">
 
@@ -416,15 +416,14 @@
   <div class="section-label">All Tools</div>
   <h2 style="margin-bottom:0.75rem">Browse by category</h2>
   <p class="section-sub">Pick a category or browse everything. No account required.</p>
-  <div class="cat-tabs" role="tablist" aria-label="Tool categories">
-    <button class="cat-tab active" onclick="filterCat('all', this)" role="tab" aria-selected="true">🗂 All Tools <span class="cat-count">32</span></button>
-    <button class="cat-tab" onclick="filterCat('finance', this)" role="tab" aria-selected="false">💰 Finance <span class="cat-count">9</span></button>
-    <button class="cat-tab" onclick="filterCat('billing', this)" role="tab" aria-selected="false">🧾 Billing <span class="cat-count">2</span></button>
-    <button class="cat-tab" onclick="filterCat('hr', this)" role="tab" aria-selected="false">👥 HR & Salary <span class="cat-count">2</span></button>
-    <button class="cat-tab" onclick="filterCat('startup', this)" role="tab" aria-selected="false">🚀 Startup <span class="cat-count">2</span></button>
-    <button class="cat-tab" onclick="filterCat('ai', this)" role="tab" aria-selected="false">✨ AI Writing <span class="cat-count">7</span></button>
-    <button class="cat-tab" onclick="filterCat('math', this)" role="tab" aria-selected="false">🔢 Math & Everyday <span class="cat-count">8</span></button>
-    <button class="cat-tab" onclick="filterCat('convert', this)" role="tab" aria-selected="false">🔄 Converters <span class="cat-count">2</span></button>
+  <div class="cat-tabs">
+    <button class="cat-tab active" onclick="filterCat('all', this)">🗂 All Tools <span class="cat-count">32</span></button>
+    <button class="cat-tab" onclick="filterCat('finance', this)">💰 Finance <span class="cat-count">9</span></button>
+    <button class="cat-tab" onclick="filterCat('billing', this)">🧾 Billing <span class="cat-count">2</span></button>
+    <button class="cat-tab" onclick="filterCat('hr', this)">👥 HR & Salary <span class="cat-count">2</span></button>
+    <button class="cat-tab" onclick="filterCat('startup', this)">🚀 Startup <span class="cat-count">2</span></button>
+    <button class="cat-tab" onclick="filterCat('ai', this)">✨ AI Writing <span class="cat-count">7</span></button>
+    <button class="cat-tab" onclick="filterCat('math', this)">🔢 Math & Everyday <span class="cat-count">5</span></button>
   </div>
 
   <!-- FINANCE -->
@@ -520,9 +519,9 @@
     <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">Works everywhere</div><div class="feature-desc">Every tool is fully responsive. Use on your phone, tablet, or desktop without issues.</div></div>
     <div class="feature-card"><div class="feature-icon">🌍</div><div class="feature-title">Built for global use</div><div class="feature-desc">Tools support 30+ currencies, global tax rates, and use cases across different countries.</div></div>
   </div>
-</section>
+  
 
-</main>
+</section>
 
 <footer>
   <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
@@ -530,7 +529,7 @@
 </footer>
 
 <!-- MOBILE BOTTOM NAV -->
-<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+<nav class="mobile-bottom-nav">
   <div class="mobile-nav-items">
     <a href="/" class="mobile-nav-item active"><span class="mobile-nav-icon">🏠</span>Home</a>
     <button class="mobile-nav-item" onclick="document.getElementById('search-input').focus();document.getElementById('search-input').scrollIntoView({behavior:'smooth'})"><span class="mobile-nav-icon">🔍</span>Search</button>
@@ -590,7 +589,6 @@
     {name:'Discount Calculator',icon:'🏷️',cat:'Math',url:'/tools/discount-calculator.html',tags:'discount percent off sale price original stacked'},
     {name:'Tip Calculator',icon:'🍽️',cat:'Math',url:'/tools/tip-calculator.html',tags:'tip calculator restaurant gratuity split bill per person'},
     {name:'BMI Calculator',icon:'⚖️',cat:'Math',url:'/tools/bmi-calculator.html',tags:'bmi body mass index weight height healthy overweight'},
-    {name:'Image Converter',icon:'🖼️',cat:'Converter',url:'/tools/image-converter.html',tags:'image converter png jpg webp heic gif bmp tiff bulk zip convert'},
   ];
 
   // ============ SEARCH ============
@@ -639,12 +637,8 @@
 
   // ============ CATEGORY FILTER ============
   function filterCat(cat, btn) {
-    document.querySelectorAll('.cat-tab').forEach(b => {
-      b.classList.remove('active');
-      b.setAttribute('aria-selected', 'false');
-    });
+    document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
     document.querySelectorAll('.cat-section').forEach(section => {
       if (cat === 'all') { section.classList.remove('hidden'); return; }
       const sc = section.getAttribute('data-cat');
