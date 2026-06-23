@@ -105,7 +105,7 @@
     .cat-tab { padding: 8px 18px; background: var(--bg2); border: 1px solid var(--border2); color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; border-radius: 100px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
     .cat-tab:hover { color: var(--text); border-color: var(--accent); }
     .cat-tab.active { background: rgba(108,99,255,0.15); border-color: var(--accent); color: var(--accent); }
-    .cat-count { background: rgba(108,99,255,0.35); color: #c4bfff; font-size: 0.7rem; padding: 1px 6px; border-radius: 10px; font-weight: 600; }
+    .cat-count { background: rgba(108,99,255,0.2); color: var(--accent); font-size: 0.7rem; padding: 1px 6px; border-radius: 10px; font-weight: 600; }
     .cat-tab.active .cat-count { background: var(--accent); color: #fff; }
 
     /* CATEGORY SECTIONS */
@@ -338,7 +338,7 @@
 </nav>
 
 <div class="hero">
-  <div class="hero-badge">✦ 25+ Free Business Tools</div>
+  <div class="hero-badge">✦ 33 Free Business Tools</div>
   <h1>Your nook for<br /><em>smart tools</em></h1>
   <p>Free calculators and AI-powered tools for entrepreneurs, freelancers, and small business owners. No signup. No cost. Ever.</p>
 
@@ -350,7 +350,7 @@
   </div>
 
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num">25+</div><div class="stat-label">Free Tools</div></div>
+    <div class="stat"><div class="stat-num">33</div><div class="stat-label">Free Tools</div></div>
     <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Always Free</div></div>
     <div class="stat"><div class="stat-num">∞</div><div class="stat-label">No Limits</div></div>
   </div>
@@ -417,7 +417,7 @@
   <h2 style="margin-bottom:0.75rem">Browse by category</h2>
   <p class="section-sub">Pick a category or browse everything. No account required.</p>
   <div class="cat-tabs">
-    <button class="cat-tab active" onclick="filterCat('all', this)">🗂 All Tools <span class="cat-count">32</span></button>
+    <button class="cat-tab active" onclick="filterCat('all', this)">🗂 All Tools <span class="cat-count">33</span></button>
     <button class="cat-tab" onclick="filterCat('finance', this)">💰 Finance <span class="cat-count">9</span></button>
     <button class="cat-tab" onclick="filterCat('billing', this)">🧾 Billing <span class="cat-count">2</span></button>
     <button class="cat-tab" onclick="filterCat('hr', this)">👥 HR & Salary <span class="cat-count">2</span></button>
@@ -495,6 +495,7 @@
       <a href="/tools/password-generator.html" class="tool-card" onclick="trackRecent('Password Generator','🔒',this.href)"><span class="tool-icon">🔒</span><div class="tool-name">Password Generator</div><div class="tool-desc">Strong random passwords, passphrases & PINs with entropy meter and strength checker.</div><span class="tool-tag tag-math">Security</span></a>
       <a href="/tools/gpa-calculator.html" class="tool-card" onclick="trackRecent('GPA Calculator','🎓',this.href)"><span class="tool-icon">🎓</span><div class="tool-name">GPA Calculator</div><div class="tool-desc">Semester GPA, cumulative GPA, weighted GPA with AP/IB/Honors, and grade needed on final.</div><span class="tool-tag tag-math">Education</span></a>
       <a href="/tools/date-calculator.html" class="tool-card" onclick="trackRecent('Date Calculator','📅',this.href)"><span class="tool-icon">📅</span><div class="tool-name">Date Calculator</div><div class="tool-desc">Days between dates, add/subtract days, and business days calculator with US holidays.</div><span class="tool-tag tag-math">Math</span></a>
+      <a href="/tools/hours-calculator.html" class="tool-card" onclick="trackRecent('Hours Calculator','⏱️',this.href)"><span class="tool-icon">⏱️</span><div class="tool-name">Hours Calculator</div><div class="tool-desc">Time between two times, weekly timesheet, break deductions & pay calculator with overtime.</div><span class="tool-tag tag-math">Time</span></a>
     </div>
   </div>
 
