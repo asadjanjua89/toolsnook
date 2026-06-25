@@ -3,37 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profit Margin Calculator – Free Online Tool | ToolsNook</title>
-  <meta name="description" content="Calculate gross profit margin, net profit margin, and operating margin instantly. Free online profit margin calculator for businesses, freelancers and entrepreneurs." />
-  <meta name="keywords" content="profit margin calculator, gross profit margin, net profit margin, profit calculator, margin calculator online, free business calculator" />
-  <meta property="og:title" content="Profit Margin Calculator – ToolsNook" />
-  <meta property="og:description" content="Calculate gross, net and operating profit margins instantly. Free, no signup required." />
+  <title>Profit Margin Calculator – Gross, Net & Operating Margin | ToolsNook</title>
+  <meta name="description" content="Free profit margin calculator. Calculate gross, net and operating profit margins instantly. Includes industry margin benchmarks so you can see how your margins compare. No signup." />
+  <meta property="og:title" content="Profit Margin Calculator – Gross, Net & Operating Margin + Industry Benchmarks" />
+  <meta property="og:description" content="Calculate gross, net and operating profit margins. See how your margins compare to industry benchmarks. Free, instant, no signup." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/profit-margin-calculator.html" />
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9QNZ1FF31E');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Profit Margin Calculator",
-    "description": "Free online profit margin calculator. Calculate gross profit margin, net profit margin, and operating margin instantly.",
-    "url": "https://www.toolsnook.com/tools/profit-margin-calculator.html",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-  }
-  </script>
   <style>
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #0a0a0f; --bg2: #111118; --bg3: #18181f;
@@ -145,52 +133,68 @@
     footer { border-top: 1px solid var(--border); text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; margin-top: 4rem; }
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
+  
+    .content-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.5rem;margin-top:2rem}
+    .content-box h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.85rem;letter-spacing:-0.02em}
+    .content-box h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-box p{color:var(--muted);font-size:0.95rem;margin-bottom:1rem;line-height:1.75}
+    .content-box ul{color:var(--muted);font-size:0.95rem;padding-left:1.5rem;margin-bottom:1rem;line-height:1.9}
+    .formula-box{background:var(--bg3);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    /* MARGIN HEALTH INDICATOR — UNIQUE */
+    .health-section{background:rgba(67,233,123,0.04);border:1px solid rgba(67,233,123,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin-top:2rem;margin-bottom:1.5rem}
+    .health-badge{background:rgba(67,233,123,0.12);color:var(--green);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.06em;display:inline-block;margin-bottom:0.75rem}
+    .health-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:1rem}
+    .industry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.6rem}
+    .ind-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0.85rem}
+    .ind-name{font-size:0.8rem;color:var(--text);font-weight:600;margin-bottom:6px}
+    .ind-bars{display:flex;flex-direction:column;gap:3px}
+    .ind-bar-row{display:flex;align-items:center;gap:6px;font-size:0.7rem;color:var(--muted)}
+    .ind-bar-wrap{flex:1;background:var(--bg3);border-radius:3px;height:5px;overflow:hidden}
+    .ind-bar-fill{height:100%;border-radius:3px}
+    .bar-green{background:var(--green)}
+    .bar-amber{background:var(--amber)}
+    .bar-blue{background:var(--blue)}
+    .ind-pct{width:36px;text-align:right;font-size:0.7rem;color:var(--muted)}
+    .related-section{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:20px;padding:1.75rem 2rem;margin:2rem 0}
+    .related-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+    .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem}
+    .rel-card{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;transition:border-color 0.2s,transform 0.2s}
+    .rel-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .faq-outer{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden}
+    .faq-btn{width:100%;background:var(--bg2);border:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.93rem;font-weight:500;padding:1rem 1.25rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-btn:hover{background:var(--bg3)}
+    .faq-ans{display:none;padding:0 1.25rem 1rem;background:var(--bg2);color:var(--muted);font-size:0.88rem;line-height:1.75}
+    .faq-ico{color:var(--accent);font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+    @media(max-width:640px){.content-box{padding:1.25rem}.industry-grid{grid-template-columns:1fr 1fr}.rel-grid{grid-template-columns:1fr 1fr}}
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com"},
-      {"@type": "ListItem", "position": 2, "name": "Profit Margin Calculator", "item": "https://www.toolsnook.com/tools/profit-margin-calculator.html"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Profit Margin Calculator","url":"https://www.toolsnook.com/tools/profit-margin-calculator.html","description":"Free profit margin calculator. Calculate gross, net and operating profit margins with industry benchmarks.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"ToolsNook","url":"https://www.toolsnook.com"}}
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What is profit margin?","acceptedAnswer":{"@type":"Answer","text":"Profit margin is the percentage of revenue that remains as profit after costs are deducted. Gross margin deducts cost of goods sold. Net margin deducts all expenses including tax. Formula: Profit Margin % = (Profit ÷ Revenue) × 100."}},
-      {"@type":"Question","name":"What is a good profit margin?","acceptedAnswer":{"@type":"Answer","text":"A good profit margin varies by industry. Retail: 2-10% net margin is typical. Software/SaaS: 20-40%+. Restaurants: 3-9%. Services: 15-30%. Compare your margin against industry averages rather than a single benchmark."}},
-      {"@type":"Question","name":"What is the difference between gross margin and net margin?","acceptedAnswer":{"@type":"Answer","text":"Gross margin deducts only the cost of goods sold (COGS) from revenue. Net margin deducts all costs including operating expenses, interest and tax. Gross margin shows production efficiency. Net margin shows overall profitability."}}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ToolsNook","item":"https://www.toolsnook.com"},{"@type":"ListItem","position":2,"name":"Profit Margin Calculator","item":"https://www.toolsnook.com/tools/profit-margin-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is profit margin?","acceptedAnswer":{"@type":"Answer","text":"Profit margin is the percentage of revenue that becomes profit after costs. Gross margin = (Revenue - COGS) / Revenue × 100. Net margin = Net Profit / Revenue × 100. A 20% net margin means for every $100 of revenue, $20 is profit after all costs."}},
+    {"@type":"Question","name":"What is the difference between gross margin and net margin?","acceptedAnswer":{"@type":"Answer","text":"Gross margin deducts only the direct cost of goods sold (COGS) from revenue. Net margin deducts all costs — COGS, operating expenses, interest, and taxes. Gross margin shows pricing efficiency; net margin shows overall business profitability. A business can have high gross margin but low net margin if operating costs are high."}},
+    {"@type":"Question","name":"What is a good profit margin?","acceptedAnswer":{"@type":"Answer","text":"It varies significantly by industry. Software and SaaS typically achieves 60-80% gross margin. Professional services target 40-60% gross margin. Retail operates at 25-50% gross margin. Restaurants typically achieve 60-70% gross margin on food but 5-10% net margin after all costs. Compare your margin to your specific industry rather than a universal benchmark."}},
+    {"@type":"Question","name":"What is operating margin?","acceptedAnswer":{"@type":"Answer","text":"Operating margin = Operating Income / Revenue × 100. Operating income is revenue minus COGS minus operating expenses (rent, salaries, utilities, marketing) but before interest and taxes. It measures how efficiently the core business operations generate profit, excluding financing and tax effects. It sits between gross margin and net margin."}},
+    {"@type":"Question","name":"How do I improve my profit margin?","acceptedAnswer":{"@type":"Answer","text":"There are two levers: increase revenue without proportionally increasing costs, or reduce costs without reducing revenue. Specific strategies include: raising prices (even 5-10% can dramatically improve margins if demand is inelastic), reducing COGS through better supplier negotiations or product redesign, cutting operating overhead, improving sales mix toward higher-margin products, and reducing customer churn to lower acquisition cost per customer served."}},
+    {"@type":"Question","name":"What is the difference between margin and markup?","acceptedAnswer":{"@type":"Answer","text":"Margin is profit as a percentage of selling price. Markup is profit as a percentage of cost. A 50% markup equals a 33.3% margin — they are not interchangeable. Margin = Markup / (100 + Markup) × 100. Confusing the two leads to systematic under-pricing. Use our Markup Calculator to convert between the two."}},
+    {"@type":"Question","name":"How do I calculate gross margin?","acceptedAnswer":{"@type":"Answer","text":"Gross Margin % = (Revenue - Cost of Goods Sold) / Revenue × 100. Example: Revenue $500,000, COGS $300,000. Gross Profit = $200,000. Gross Margin = $200,000 / $500,000 × 100 = 40%. COGS includes direct materials, direct labour, and manufacturing overhead — but not operating expenses like rent, marketing, or management salaries."}},
+    {"@type":"Question","name":"What costs are included in COGS vs operating expenses?","acceptedAnswer":{"@type":"Answer","text":"COGS (Cost of Goods Sold) includes direct costs: raw materials, direct labour, manufacturing costs, and freight-in. Operating expenses are indirect costs: rent, office salaries, utilities, marketing and advertising, insurance, and depreciation. The distinction matters for gross margin calculations. Including operating costs in COGS understates gross margin; excluding direct costs from COGS overstates it."}},
+    {"@type":"Question","name":"Why might a business have high gross margin but low net margin?","acceptedAnswer":{"@type":"Answer","text":"High operating costs are the most common cause. A SaaS company might have 75% gross margin but only 5% net margin because of heavy sales and marketing spend, engineering headcount, and G&A overhead. High interest payments on debt, significant depreciation from capital-heavy assets, or high tax rates can also compress net margin well below gross margin. Tracking all three margins — gross, operating, and net — reveals where profitability is being eroded."}}
+  ]}
   </script>
 </head>
 <body>
-
-<nav>
-  <a href="/" class="logo">Tools<span>Nook</span></a>
-  <a href="/" class="nav-back">← All Tools</a>
-</nav>
-
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
 <div class="hero">
   <div class="breadcrumb"><a href="/">ToolsNook</a> › Profit Margin Calculator</div>
   <div class="hero-badge">✦ Finance Tool</div>
   <h1>Profit Margin Calculator</h1>
-  <p>Calculate gross, net and operating profit margins instantly. Works in any currency. Free, no signup needed.</p>
+  <p>Calculate gross, net and operating profit margins instantly. See how your margins compare to industry benchmarks — and understand what's driving the gap.</p>
 </div>
-
 <div class="container">
 
   <!-- CURRENCY DROPDOWN -->
@@ -411,9 +415,123 @@
   </div>
 </div>
 
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
 
+
+  <!-- INDUSTRY MARGIN BENCHMARKS — UNIQUE FEATURE -->
+  <div class="health-section">
+    <span class="health-badge">📊 UNIQUE — Industry Margin Benchmarks</span>
+    <div class="health-title">How Do Your Margins Compare? Industry Benchmarks at a Glance</div>
+    <div class="industry-grid">
+      <div class="ind-card"><div class="ind-name">Software / SaaS</div><div class="ind-bars">
+        <div class="ind-bar-row">Gross<div class="ind-bar-wrap"><div class="ind-bar-fill bar-green" style="width:75%"></div></div><span class="ind-pct">75%</span></div>
+        <div class="ind-bar-row">Net<div class="ind-bar-wrap"><div class="ind-bar-fill bar-amber" style="width:20%"></div></div><span class="ind-pct">20%</span></div>
+      </div></div>
+      <div class="ind-card"><div class="ind-name">Professional Services</div><div class="ind-bars">
+        <div class="ind-bar-row">Gross<div class="ind-bar-wrap"><div class="ind-bar-fill bar-green" style="width:60%"></div></div><span class="ind-pct">60%</span></div>
+        <div class="ind-bar-row">Net<div class="ind-bar-wrap"><div class="ind-bar-fill bar-amber" style="width:15%"></div></div><span class="ind-pct">15%</span></div>
+      </div></div>
+      <div class="ind-card"><div class="ind-name">E-commerce / Retail</div><div class="ind-bars">
+        <div class="ind-bar-row">Gross<div class="ind-bar-wrap"><div class="ind-bar-fill bar-amber" style="width:40%"></div></div><span class="ind-pct">40%</span></div>
+        <div class="ind-bar-row">Net<div class="ind-bar-wrap"><div class="ind-bar-fill bar-blue" style="width:5%"></div></div><span class="ind-pct">5%</span></div>
+      </div></div>
+      <div class="ind-card"><div class="ind-name">Restaurant / Food</div><div class="ind-bars">
+        <div class="ind-bar-row">Gross<div class="ind-bar-wrap"><div class="ind-bar-fill bar-green" style="width:65%"></div></div><span class="ind-pct">65%</span></div>
+        <div class="ind-bar-row">Net<div class="ind-bar-wrap"><div class="ind-bar-fill bar-blue" style="width:7%"></div></div><span class="ind-pct">7%</span></div>
+      </div></div>
+      <div class="ind-card"><div class="ind-name">Manufacturing</div><div class="ind-bars">
+        <div class="ind-bar-row">Gross<div class="ind-bar-wrap"><div class="ind-bar-fill bar-amber" style="width:35%"></div></div><span class="ind-pct">35%</span></div>
+        <div class="ind-bar-row">Net<div class="ind-bar-wrap"><div class="ind-bar-fill bar-blue" style="width:8%"></div></div><span class="ind-pct">8%</span></div>
+      </div></div>
+      <div class="ind-card"><div class="ind-name">Construction</div><div class="ind-bars">
+        <div class="ind-bar-row">Gross<div class="ind-bar-wrap"><div class="ind-bar-fill bar-amber" style="width:20%"></div></div><span class="ind-pct">20%</span></div>
+        <div class="ind-bar-row">Net<div class="ind-bar-wrap"><div class="ind-bar-fill bar-blue" style="width:5%"></div></div><span class="ind-pct">5%</span></div>
+      </div></div>
+    </div>
+    <div style="font-size:0.72rem;color:var(--muted);margin-top:0.75rem">Based on industry median data 2025–2026. Compare against your specific sector. Green = gross margin, amber/blue = net margin.</div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-box">
+    <h2>Understanding Profit Margins: Gross, Operating, and Net</h2>
+    <p>Profit margin is one of the most important metrics in business — it tells you what percentage of your revenue actually becomes profit after costs. But "profit margin" is not a single number. There are three distinct margin measures, each telling a different part of the story, and understanding all three is essential for diagnosing where profitability is being created or destroyed in your business.</p>
+
+    <h3>Gross Profit Margin</h3>
+    <div class="formula-box">Gross Margin % = (Revenue − COGS) / Revenue × 100</div>
+    <p>Gross margin measures pricing efficiency — the profit left after deducting only the direct cost of producing or delivering your product or service. COGS includes raw materials, direct labour, and manufacturing overhead. It does not include operating expenses like rent, management salaries, or marketing. A software company with $1M revenue and $200K in server and support costs has an 80% gross margin. A retailer with $1M revenue and $600K in product costs has a 40% gross margin.</p>
+    <p>Gross margin is the foundation — you cannot have a healthy business without a gross margin that is high enough to cover all your operating costs and still leave a net profit. If your gross margin is 20% and your operating costs are 25% of revenue, you are running at a structural loss regardless of how much revenue you grow.</p>
+
+    <h3>Operating Profit Margin</h3>
+    <div class="formula-box">Operating Margin % = (Revenue − COGS − Operating Expenses) / Revenue × 100</div>
+    <p>Operating margin adds operating expenses — rent, salaries, utilities, marketing, depreciation — to the picture. It measures how efficiently the core business operations generate profit, independent of how the business is financed (debt interest) or taxed. It sits between gross and net margin and is often the best indicator of operational efficiency. Two companies with the same gross margin can have very different operating margins depending on their overhead structure.</p>
+
+    <h3>Net Profit Margin</h3>
+    <div class="formula-box">Net Margin % = Net Profit / Revenue × 100</div>
+    <p>Net margin is the bottom line — profit after every cost, including interest payments on debt, tax, and any one-off items. It is the most complete measure of overall profitability. A high net margin means the business retains a large fraction of each pound or dollar of revenue as profit. A low net margin means costs are high relative to revenue, which makes the business fragile — any revenue dip quickly turns profit into loss.</p>
+
+    <h3>Why the Three Margins Together Tell a Complete Story</h3>
+    <p>Consider a company with 70% gross margin, 15% operating margin, and 8% net margin. The 55-point gap between gross and operating margin tells you the business spends heavily on sales, marketing, or overhead. The 7-point gap between operating and net margin tells you there is significant interest or tax burden. Tracking all three identifies exactly where to focus margin improvement efforts — pricing and COGS (gross), operational efficiency (operating), or financing and tax structure (net).</p>
+  </div>
+
+  <div class="content-box">
+    <h2>How to Improve Profit Margins: Practical Strategies</h2>
+    <p>Every margin improvement strategy falls into one of two categories: increase revenue without proportionally increasing costs, or reduce costs without proportionally reducing revenue. Within those two buckets, there are specific levers worth pulling depending on which margin you are trying to improve.</p>
+
+    <h3>Improving Gross Margin</h3>
+    <ul>
+      <li><strong>Raise prices:</strong> The single most powerful lever for improving gross margin. A 5% price increase on $500K revenue with no volume loss adds $25K directly to gross profit. Even a 10% volume loss from a 10% price increase is net-positive if your gross margin is above 50%.</li>
+      <li><strong>Reduce COGS through supplier negotiation:</strong> Volume commitments, longer contract terms, or alternative suppliers can reduce direct costs by 5–15% without changing your product.</li>
+      <li><strong>Improve product mix:</strong> Shift sales toward higher-margin products or services within your existing portfolio. This often requires no new investment — just prioritising what you sell.</li>
+      <li><strong>Reduce waste and defects:</strong> In product businesses, quality improvement reduces the cost of rework, returns, and warranty claims that inflate COGS invisibly.</li>
+    </ul>
+
+    <h3>Improving Operating Margin</h3>
+    <ul>
+      <li><strong>Control headcount growth:</strong> Staff costs typically represent 50–70% of operating expenses. Hiring before revenue justifies it is the most common cause of operating margin compression in growing businesses.</li>
+      <li><strong>Automate repetitive processes:</strong> Tools that replace manual hours improve the revenue-per-employee ratio, which directly expands operating margin as revenue grows without proportional cost growth.</li>
+      <li><strong>Renegotiate fixed overhead:</strong> Rent, software subscriptions, and recurring service contracts often go unreviewed for years. Annual reviews of fixed overhead identify savings that flow directly to operating profit.</li>
+    </ul>
+
+    <h3>Improving Net Margin</h3>
+    <ul>
+      <li><strong>Refinance high-rate debt:</strong> Reducing interest expense improves net margin directly. If you carry high-rate debt, refinancing at a lower rate saves money that flows straight to net profit.</li>
+      <li><strong>Tax planning:</strong> Legitimate tax planning — appropriate use of allowable deductions, R&D credits, capital allowances, and corporate structure — can significantly improve net margin without changing the underlying business.</li>
+      <li><strong>Eliminate unprofitable products or customers:</strong> Some customers cost more to serve than they generate in gross profit. Identifying and exiting the least profitable 10–20% of your customer base often improves both gross and operating margin simultaneously.</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Profit Margin vs Markup: The Most Important Pricing Distinction</h2>
+    <p>Margin and markup both measure the relationship between cost and selling price — but they use different denominators and produce different numbers for the same profit. Confusing them is one of the most common and costly pricing errors in business.</p>
+    <p>Margin uses selling price as the base: Margin = Profit / Selling Price × 100. Markup uses cost as the base: Markup = Profit / Cost × 100. The same $20 profit on a $100 product that cost $80 is simultaneously a 20% margin and a 25% markup. They are not interchangeable — a 50% markup equals a 33.3% margin, not 50% margin.</p>
+    <p>In financial reporting and investor conversations, use margin — it is the standard language of business analysis. In pricing decisions, be explicit about which measure you are using to avoid systematic under-pricing. Use our Markup Calculator to convert between the two instantly.</p>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related-section">
+    <h3>🔗 Related Tools</h3>
+    <div class="rel-grid">
+      <a href="/tools/markup-calculator.html" class="rel-card"><span>🏷️</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Markup Calculator</span></a>
+      <a href="/tools/break-even-calculator.html" class="rel-card"><span>⚖️</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Break-Even Calculator</span></a>
+      <a href="/tools/roi-calculator.html" class="rel-card"><span>💰</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">ROI Calculator</span></a>
+      <a href="/tools/invoice-generator.html" class="rel-card"><span>🧾</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Invoice Generator</span></a>
+      <a href="/tools/loan-calculator.html" class="rel-card"><span>🏦</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Business Loan Calculator</span></a>
+      <a href="/tools/startup-cost-estimator.html" class="rel-card"><span>🚀</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Startup Cost Estimator</span></a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:1rem">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>
+    <div id="faq-wrap"></div>
+  </div>
+
+</div>
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
+</footer>
 <script>
+
   let curSymbol = '$';
 
   function onCurrencyChange() {
@@ -500,6 +618,11 @@
     document.getElementById('mu-profit').textContent = fmt(price - cost);
     document.getElementById('markup-results').classList.add('show');
   }
+
+  var FAQS=[["What is profit margin?","Profit margin is the percentage of revenue that becomes profit after costs. Gross margin = (Revenue - COGS) / Revenue x 100. Net margin = Net Profit / Revenue x 100. A 20% net margin means for every $100 of revenue, $20 is profit after all costs."],["What is the difference between gross margin and net margin?","Gross margin deducts only the direct cost of goods sold from revenue. Net margin deducts all costs including operating expenses, interest, and taxes. Gross margin shows pricing efficiency; net margin shows overall business profitability. A business can have high gross margin but low net margin if operating costs are high."],["What is a good profit margin?","It varies by industry. Software and SaaS typically achieves 60-80% gross margin. Professional services target 40-60%. Retail operates at 25-50%. Restaurants typically achieve 60-70% gross margin on food but only 5-10% net margin after all costs. Compare your margin to your specific industry using the benchmarks above."],["What is operating margin?","Operating margin = Operating Income / Revenue x 100. Operating income is revenue minus COGS minus operating expenses, but before interest and taxes. It measures how efficiently core business operations generate profit, excluding financing and tax effects. It sits between gross and net margin."],["How do I improve my profit margin?","Two levers: increase revenue without proportionally increasing costs, or reduce costs without reducing revenue. Key strategies: raise prices (even 5-10% on inelastic demand dramatically improves margins), negotiate lower COGS with suppliers, shift sales toward higher-margin products, reduce operating overhead, and eliminate unprofitable customers."],["What is the difference between margin and markup?","Margin is profit as a percentage of selling price. Markup is profit as a percentage of cost. A 50% markup equals a 33.3% margin. They are not interchangeable. Confusing the two leads to systematic under-pricing. Use our Markup Calculator to convert between the two."],["How do I calculate gross margin?","Gross Margin % = (Revenue - COGS) / Revenue x 100. Example: Revenue $500,000, COGS $300,000. Gross Profit = $200,000. Gross Margin = $200,000 / $500,000 x 100 = 40%."],["What costs are included in COGS vs operating expenses?","COGS includes direct costs: raw materials, direct labour, and manufacturing overhead. Operating expenses are indirect costs: rent, office salaries, utilities, marketing, and insurance. Including operating costs in COGS understates gross margin; excluding direct costs overstates it."],["Why might a business have high gross margin but low net margin?","High operating costs are the most common cause. A SaaS company might have 75% gross margin but only 5% net margin because of heavy sales, marketing, and engineering headcount costs. High interest payments on debt or significant tax burden can also compress net margin well below gross margin."]];
+  var fw=document.getElementById("faq-wrap");
+  if(fw){fw.innerHTML=FAQS.map(function(q,i){return "<div class='faq-outer'><button class='faq-btn' onclick='xF("+i+")'>" +q[0]+ "<span class='faq-ico' id='fi"+i+"'>+</span></button><div class='faq-ans' id='fa"+i+"'>"+q[1]+"</div></div>";}).join("");}
+  function xF(i){var a=document.getElementById("fa"+i);var ic=document.getElementById("fi"+i);var o=a.style.display==="block";a.style.display=o?"none":"block";ic.style.transform=o?"":"rotate(45deg)";}
 </script>
 </body>
 </html>

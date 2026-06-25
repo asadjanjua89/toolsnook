@@ -3,37 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROI Calculator – Free Return on Investment Calculator | ToolsNook</title>
-  <meta name="description" content="Calculate return on investment (ROI) instantly. Free online ROI calculator for marketing campaigns, business investments, and projects. Works in any currency." />
-  <meta name="keywords" content="ROI calculator, return on investment calculator, marketing ROI, investment calculator, ROI formula, free ROI calculator online" />
-  <meta property="og:title" content="ROI Calculator – ToolsNook" />
-  <meta property="og:description" content="Calculate return on investment instantly. Free, works in any currency, no signup needed." />
+  <title>ROI Calculator – Return on Investment for Any Project | ToolsNook</title>
+  <meta name="description" content="Free ROI calculator. Calculate return on investment, payback period, and annualised ROI for any project, campaign, or purchase. Includes a break-even timeline. No signup." />
+  <meta property="og:title" content="ROI Calculator – Return on Investment + Payback Period & Break-Even Timeline" />
+  <meta property="og:description" content="Calculate ROI, payback period, and annualised return for any investment. See exactly when your investment breaks even month by month. Free, instant." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/roi-calculator.html" />
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9QNZ1FF31E');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "ROI Calculator",
-    "description": "Free online ROI calculator. Calculate return on investment for any business, marketing campaign or project.",
-    "url": "https://www.toolsnook.com/tools/roi-calculator.html",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-  }
-  </script>
   <style>
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #0a0a0f; --bg2: #111118; --bg3: #18181f;
@@ -145,52 +133,68 @@
     footer { border-top: 1px solid var(--border); text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; margin-top: 4rem; }
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
+  
+    .content-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.5rem;margin-top:2rem}
+    .content-box h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.85rem;letter-spacing:-0.02em}
+    .content-box h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-box p{color:var(--muted);font-size:0.95rem;margin-bottom:1rem;line-height:1.75}
+    .content-box ul{color:var(--muted);font-size:0.95rem;padding-left:1.5rem;margin-bottom:1rem;line-height:1.9}
+    .formula-box{background:var(--bg3);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    /* BREAK-EVEN TIMELINE — UNIQUE */
+    .timeline-section{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin-top:2rem;margin-bottom:1.5rem}
+    .tl-badge{background:rgba(108,99,255,0.15);color:#a59fff;font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.06em;display:inline-block;margin-bottom:0.75rem}
+    .tl-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:1rem}
+    .tl-inputs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-bottom:0.75rem}
+    .tl-field label{font-size:0.72rem;color:var(--muted);font-weight:600;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em}
+    .tl-input{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.88rem;padding:0.6rem 0.75rem;transition:border-color 0.2s}
+    .tl-input:focus{outline:none;border-color:var(--accent)}
+    .tl-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;padding:0.6rem 1.25rem;cursor:pointer;margin-bottom:0.75rem}
+    .tl-result{display:none;overflow-x:auto}
+    .tl-table{width:100%;border-collapse:collapse;font-size:0.82rem}
+    .tl-table th{text-align:left;padding:0.5rem 0.75rem;font-size:0.7rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;border-bottom:1px solid var(--border2)}
+    .tl-table td{padding:0.5rem 0.75rem;border-bottom:1px solid var(--border)}
+    .tl-table tr:last-child td{border-bottom:none}
+    .tl-be-row td{background:rgba(67,233,123,0.06);color:var(--green);font-weight:700}
+    .related-section{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:20px;padding:1.75rem 2rem;margin:2rem 0}
+    .related-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+    .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem}
+    .rel-card{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;transition:border-color 0.2s,transform 0.2s}
+    .rel-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .faq-outer{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden}
+    .faq-btn{width:100%;background:var(--bg2);border:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.93rem;font-weight:500;padding:1rem 1.25rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-btn:hover{background:var(--bg3)}
+    .faq-ans{display:none;padding:0 1.25rem 1rem;background:var(--bg2);color:var(--muted);font-size:0.88rem;line-height:1.75}
+    .faq-ico{color:var(--accent);font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+    @media(max-width:640px){.content-box{padding:1.25rem}.tl-inputs{grid-template-columns:1fr}.rel-grid{grid-template-columns:1fr 1fr}}
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "ToolsNook", "item": "https://www.toolsnook.com"},
-      {"@type": "ListItem", "position": 2, "name": "ROI Calculator", "item": "https://www.toolsnook.com/tools/roi-calculator.html"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"WebApplication","name":"ROI Calculator","url":"https://www.toolsnook.com/tools/roi-calculator.html","description":"Free ROI calculator. Calculate return on investment, payback period, and annualised ROI for any project or campaign.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"ToolsNook","url":"https://www.toolsnook.com"}}
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"How do I calculate ROI?","acceptedAnswer":{"@type":"Answer","text":"ROI = (Net Profit ÷ Cost of Investment) × 100. Example: invest $1,000, earn $1,300. Net profit = $300. ROI = ($300 ÷ $1,000) × 100 = 30%."}},
-      {"@type":"Question","name":"What is a good ROI?","acceptedAnswer":{"@type":"Answer","text":"A good ROI depends on the type of investment and industry. Stock market: 7-10% annually is considered good. Real estate: 8-12%. Digital marketing: 200-400%+ is typical for well-run campaigns. Always compare against the cost of capital and alternative investments."}},
-      {"@type":"Question","name":"What is the difference between ROI and profit margin?","acceptedAnswer":{"@type":"Answer","text":"ROI measures the return relative to the cost of an investment. Profit margin measures profit as a percentage of revenue. ROI is used to evaluate the efficiency of an investment. Profit margin is used to evaluate the profitability of a business or product."}}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ToolsNook","item":"https://www.toolsnook.com"},{"@type":"ListItem","position":2,"name":"ROI Calculator","item":"https://www.toolsnook.com/tools/roi-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is ROI?","acceptedAnswer":{"@type":"Answer","text":"ROI (Return on Investment) measures the financial return on a cost or investment relative to what was spent. Formula: ROI % = (Net Return / Cost of Investment) x 100. A 50% ROI means for every $100 invested, you got back $150 — a $50 net return. ROI can be applied to marketing campaigns, equipment purchases, hiring decisions, software subscriptions, or any other business expenditure."}},
+    {"@type":"Question","name":"What is a good ROI?","acceptedAnswer":{"@type":"Answer","text":"A good ROI depends on the context, risk level, and time horizon. For marketing campaigns, 3:1 to 5:1 ROI (200-400%) is considered strong for most channels. For equipment or capital investments, 15-25% annual ROI is typically considered healthy. For stock market investments, 7-10% annual return is the historical average for broad index funds. Any ROI above your cost of capital (the rate you pay to borrow money) creates value for the business."}},
+    {"@type":"Question","name":"What is payback period?","acceptedAnswer":{"@type":"Answer","text":"Payback period is the time it takes to recover the initial investment from the returns it generates. Formula: Payback Period = Investment / Annual Return. If you invest $10,000 and it generates $2,500 per year, the payback period is 4 years. Shorter payback periods mean faster capital recovery and lower risk. Most businesses target payback periods under 2-3 years for discretionary investments."}},
+    {"@type":"Question","name":"What is annualised ROI and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"Annualised ROI converts a total ROI percentage into an equivalent annual rate, allowing fair comparison of investments with different time horizons. A 100% ROI over 5 years is much less impressive than a 100% ROI in 1 year. Annualised ROI formula: ((1 + ROI/100)^(1/years) - 1) x 100. This makes it the most useful measure for comparing different investment options on an equal basis."}},
+    {"@type":"Question","name":"How do I calculate marketing ROI?","acceptedAnswer":{"@type":"Answer","text":"Marketing ROI = (Revenue from Campaign - Campaign Cost) / Campaign Cost x 100. If a $5,000 ad campaign generates $20,000 in attributed revenue, Marketing ROI = ($20,000 - $5,000) / $5,000 x 100 = 300%. The challenge is attribution — accurately measuring which revenue was generated by which campaign. Use a consistent attribution model and compare against a baseline or control group for the most accurate results."}},
+    {"@type":"Question","name":"What is the difference between ROI and ROE, ROA, and ROCE?","acceptedAnswer":{"@type":"Answer","text":"ROI is a general measure of return on any specific investment. ROE (Return on Equity) measures profit generated from shareholders equity. ROA (Return on Assets) measures profit generated from total assets. ROCE (Return on Capital Employed) measures profit from all capital including debt. ROI is the most flexible and widely used for evaluating specific decisions. The others are accounting ratios for measuring overall business efficiency and are used in financial reporting and investor analysis."}},
+    {"@type":"Question","name":"How do I use ROI to compare two investments?","acceptedAnswer":{"@type":"Answer","text":"Calculate the annualised ROI for both investments and compare. An investment with 80% total ROI over 4 years (annualised: ~15.9%) is worse than one with 60% total ROI over 2 years (annualised: ~26.5%). Also compare payback period and risk level — a higher ROI investment that takes 5 years to pay back ties up capital that could be deployed elsewhere. Use our calculator to run both scenarios side by side."}},
+    {"@type":"Question","name":"What is the break-even timeline for an investment?","acceptedAnswer":{"@type":"Answer","text":"The break-even timeline shows the exact month when cumulative returns first exceed the initial investment cost — when the investment has fully paid for itself. After break-even, all returns are pure profit. Use the Break-Even Timeline feature above: enter your investment amount and expected monthly return to see a month-by-month table of cumulative returns and the exact break-even month highlighted in green."}},
+    {"@type":"Question","name":"What costs should I include when calculating ROI?","acceptedAnswer":{"@type":"Answer","text":"Include all costs directly associated with the investment: purchase price or implementation cost, ongoing maintenance or subscription fees, staff time to implement or manage (at their loaded hourly cost), any training costs, and opportunity cost if applicable. Under-counting costs inflates ROI and leads to poor decisions. Over-counting by including sunk costs (already spent regardless of the decision) also distorts the analysis — include only incremental costs from this point forward."}}
+  ]}
   </script>
 </head>
 <body>
-
-<nav>
-  <a href="/" class="logo">Tools<span>Nook</span></a>
-  <a href="/" class="nav-back">← All Tools</a>
-</nav>
-
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
 <div class="hero">
   <div class="breadcrumb"><a href="/">ToolsNook</a> › ROI Calculator</div>
   <div class="hero-badge">✦ Finance Tool</div>
   <h1>ROI Calculator</h1>
-  <p>Calculate return on investment for any business, project or marketing campaign. Instant results, any currency, no signup.</p>
+  <p>Calculate return on investment, payback period, and annualised ROI for any project, campaign, or purchase. See your break-even month on a timeline — instantly.</p>
 </div>
-
 <div class="container">
 
   <div class="currency-row">
@@ -466,9 +470,101 @@
   </div>
 </div>
 
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
 
+
+  <!-- BREAK-EVEN TIMELINE — UNIQUE FEATURE -->
+  <div class="timeline-section">
+    <span class="tl-badge">📅 UNIQUE — Break-Even Timeline</span>
+    <div class="tl-title">Month-by-Month: When Does Your Investment Pay Back?</div>
+    <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.75rem">Enter your investment amount and expected monthly return to see a month-by-month cumulative return table. The break-even month is highlighted in green.</p>
+    <div class="tl-inputs">
+      <div class="tl-field"><label>Investment ($)</label><input type="number" id="tl-inv" class="tl-input" placeholder="10000" /></div>
+      <div class="tl-field"><label>Monthly Return ($)</label><input type="number" id="tl-ret" class="tl-input" placeholder="500" /></div>
+      <div class="tl-field"><label>Show (months)</label><input type="number" id="tl-mo" class="tl-input" placeholder="24" max="60" /></div>
+    </div>
+    <button class="tl-btn" onclick="buildTimeline()">Generate Timeline</button>
+    <div class="tl-result" id="tl-result">
+      <table class="tl-table">
+        <thead><tr>
+          <th>Month</th><th>Monthly Return</th><th>Cumulative Return</th><th>ROI %</th><th>Status</th>
+        </tr></thead>
+        <tbody id="tl-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-box">
+    <h2>What is ROI and How Do You Calculate It?</h2>
+    <p>ROI — Return on Investment — is the most universally applied measure of financial performance in business. It answers a single, critical question: for every pound or dollar I spent, how much did I get back? The simplicity of the concept belies its power: ROI applies to marketing campaigns, equipment purchases, hiring decisions, software tools, training programmes, real estate, and any other deployment of capital.</p>
+
+    <div class="formula-box">ROI % = (Net Return / Cost of Investment) × 100<br>Net Return = Total Return − Cost of Investment<br>Annualised ROI = ((1 + ROI/100)^(1/years) − 1) × 100</div>
+
+    <p>A $5,000 investment that returns $7,500 has a net return of $2,500 and an ROI of 50%. If that return took 1 year, the annualised ROI is also 50%. If it took 2 years, the annualised ROI is approximately 22.5%. If it took 5 years, the annualised ROI drops to roughly 8.4%. Time changes everything — which is why annualised ROI is the more meaningful comparison metric when evaluating investments with different time horizons.</p>
+
+    <h3>Payback Period: How Long Before You Break Even?</h3>
+    <p>The payback period is the time until cumulative returns equal the initial investment — the exact point where the investment has fully paid for itself. Every return after that point is pure profit. For a $10,000 investment generating $2,000 per year: Payback Period = $10,000 / $2,000 = 5 years. For $1,500 per month: Payback = $10,000 / $1,500 = 6.7 months.</p>
+    <p>Shorter payback periods are always preferable — they return capital faster, reduce risk, and free up resources for the next investment. Most businesses target payback periods under 2–3 years for discretionary capital investments. The Break-Even Timeline above shows this month by month for any investment and return combination.</p>
+
+    <h3>ROI vs Annualised ROI: Why the Distinction Matters</h3>
+    <p>A 200% ROI sounds impressive — until you learn it took 20 years to achieve. Annualised ROI puts all investments on the same footing. The rule of thumb: for investments with different time horizons, always compare annualised ROI. For investments in the same time period, total ROI is sufficient. The most common mistake is comparing a short-term high total ROI against a long-term lower total ROI without annualising — which consistently leads to overvaluing quick-win investments and undervaluing long-term compounding ones.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>ROI in Practice: Marketing, Equipment, and Hiring Decisions</h2>
+    <p>ROI analysis applies to virtually every spending decision in a business. Here is how to think about it in the three most common contexts where it gets applied.</p>
+
+    <h3>Marketing ROI</h3>
+    <p>Marketing ROI = (Revenue Attributed to Campaign − Campaign Cost) / Campaign Cost × 100. If a £3,000 Google Ads campaign generates £12,000 in traced revenue, Marketing ROI = (£12,000 − £3,000) / £3,000 × 100 = 300%. A 3:1 return is a common minimum threshold for paid marketing — anything below that and you are likely better off reallocating the budget. Above 5:1 is considered strong for most channels.</p>
+    <p>The hardest part of marketing ROI is attribution — determining which revenue was actually caused by which campaign rather than coincidentally occurring at the same time. Consistent attribution models (last click, first click, linear, or data-driven), baseline comparison periods, and control groups all help get closer to the real number. Using gross profit rather than revenue as the return figure gives a more honest picture of true marketing ROI.</p>
+
+    <h3>Equipment and Capital Investment ROI</h3>
+    <p>For physical equipment, software, or infrastructure: ROI = (Annual Benefit − Annual Cost) / Initial Investment × 100. Annual Benefit includes increased revenue, cost savings, or productivity gains. Annual Cost includes maintenance, licensing, and running costs. A £20,000 machine that saves £6,000 per year in labour costs (with £500 annual maintenance) has an annual net benefit of £5,500 and a first-year ROI of 27.5%. Payback period: £20,000 / £5,500 = 3.6 years.</p>
+
+    <h3>Hiring ROI</h3>
+    <p>Hiring ROI is often underestimated because it is harder to measure than marketing or equipment ROI. The cost side includes salary, employer payroll taxes (typically 13–20% of salary), recruitment fees (20–30% of first-year salary for agency hires), onboarding, training, and the management time consumed by a new hire. The return side is the incremental revenue or cost saving the hire generates above what was possible without them. A salesperson hired at £50,000 total package who generates £180,000 in new annual gross profit has a hiring ROI of roughly 260% — clearly positive. A hire who generates £60,000 in incremental benefit at £70,000 total cost is destroying value.</p>
+
+    <h3>Minimum Acceptable ROI: Your Cost of Capital</h3>
+    <p>Every investment decision should be evaluated against your cost of capital — the rate at which you can borrow money or the return you could otherwise earn on the capital. If your business can borrow at 8% and a proposed investment returns 6% annualised ROI, it is destroying value even though it is technically profitable. Any investment with annualised ROI above your cost of capital creates value; below it destroys value. This is why high-growth companies with access to cheap capital can justify investments that would be unacceptable for businesses paying high interest rates on their debt.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Common ROI Mistakes and How to Avoid Them</h2>
+    <ul>
+      <li><strong>Using revenue instead of profit:</strong> Marketing ROI calculated on revenue rather than gross profit overstates returns significantly. If your gross margin is 40%, a campaign that generates £10,000 in revenue generates only £4,000 in gross profit. ROI on £10,000 looks far better than ROI on £4,000.</li>
+      <li><strong>Ignoring time value of money:</strong> £1,000 received today is worth more than £1,000 received in 3 years. For longer-term investment analysis, use discounted cash flow (DCF) or Net Present Value (NPV) methods rather than simple ROI to account for this.</li>
+      <li><strong>Including sunk costs:</strong> Costs already spent should not factor into future ROI decisions. The question is always whether the incremental returns from this point forward justify the incremental costs from this point forward.</li>
+      <li><strong>Not accounting for ongoing costs:</strong> One-time purchase price is only part of the cost. Software with a £500 licence also has staff time for implementation, annual maintenance, training, and integration costs. Total cost of ownership (TCO) gives a more accurate ROI denominator.</li>
+      <li><strong>Comparing total ROI across different time periods:</strong> Always annualise ROI before comparing investments with different timelines. A 50% ROI in 6 months is dramatically better than a 50% ROI in 4 years — but both look the same without annualisation.</li>
+    </ul>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related-section">
+    <h3>🔗 Related Tools</h3>
+    <div class="rel-grid">
+      <a href="/tools/profit-margin-calculator.html" class="rel-card"><span>📈</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Profit Margin Calculator</span></a>
+      <a href="/tools/break-even-calculator.html" class="rel-card"><span>⚖️</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Break-Even Calculator</span></a>
+      <a href="/tools/startup-cost-estimator.html" class="rel-card"><span>🚀</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Startup Cost Estimator</span></a>
+      <a href="/tools/loan-calculator.html" class="rel-card"><span>🏦</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Business Loan Calculator</span></a>
+      <a href="/tools/compound-interest-calculator.html" class="rel-card"><span>📊</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Compound Interest</span></a>
+      <a href="/tools/markup-calculator.html" class="rel-card"><span>🏷️</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Markup Calculator</span></a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:1rem">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>
+    <div id="faq-wrap"></div>
+  </div>
+
+</div>
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
+</footer>
 <script>
+
   let curSymbol = '$';
 
   function onCurrencyChange() {
@@ -563,6 +659,33 @@
     document.getElementById('a-payback').textContent = payback.toFixed(1) + ' yrs';
     document.getElementById('annualized-results').classList.add('show');
   }
+
+  function buildTimeline(){
+    var inv=parseFloat(document.getElementById("tl-inv").value);
+    var ret=parseFloat(document.getElementById("tl-ret").value);
+    var mo=parseInt(document.getElementById("tl-mo").value)||24;
+    if(!inv||!ret)return;
+    mo=Math.min(mo,60);
+    var tbody=document.getElementById("tl-tbody");
+    var beFound=false;
+    var rows="";
+    var fmt=function(n){return "$"+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",");};
+    for(var i=1;i<=mo;i++){
+      var cum=ret*i;
+      var roi=((cum-inv)/inv*100).toFixed(1);
+      var isBE=!beFound&&cum>=inv;
+      if(isBE)beFound=true;
+      var cls=isBE?" class='tl-be-row'":"";
+      var status=isBE?"✅ Break-even!":cum>=inv?"✅ Profit (+"+(cum-inv).toFixed(0)+")":"⏳ "+(inv-cum).toFixed(0)+" to go";
+      rows+="<tr"+cls+"><td style='color:"+(isBE?"var(--green)":"var(--text)")+"'>"+i+"</td><td>"+fmt(ret)+"</td><td style='color:"+(cum>=inv?"var(--green)":"var(--muted)")+"'>"+fmt(cum)+"</td><td style='color:"+(parseFloat(roi)>=0?"var(--green)":"var(--red)")+"'>"+roi+"%</td><td style='font-size:0.78rem'>"+status+"</td></tr>";
+    }
+    tbody.innerHTML=rows;
+    document.getElementById("tl-result").style.display="block";
+  }
+  var FAQS=[["What is ROI?","ROI (Return on Investment) measures the financial return on a cost or investment relative to what was spent. Formula: ROI % = (Net Return / Cost) x 100. A 50% ROI means for every $100 invested, you got back $150. ROI applies to marketing campaigns, equipment, hiring, software, or any business expenditure."],["What is a good ROI?","It depends on context, risk, and time horizon. For marketing, 3:1 to 5:1 ROI (200-400%) is strong for most channels. For equipment or capital investments, 15-25% annual ROI is typically healthy. For stock market investments, 7-10% annual return is the historical average. Any ROI above your cost of capital creates business value."],["What is payback period?","Payback period is the time to recover the initial investment from returns. Formula: Investment / Annual Return. A $10,000 investment generating $2,500 per year has a 4-year payback. Shorter payback means faster capital recovery and lower risk. Most businesses target under 2-3 years for discretionary investments."],["What is annualised ROI and why does it matter?","Annualised ROI converts total ROI to an equivalent annual rate for fair comparison across different time horizons. A 100% ROI over 5 years is much less valuable than 100% ROI in 1 year. Formula: ((1 + ROI/100)^(1/years) - 1) x 100. Always annualise before comparing investments with different durations."],["How do I calculate marketing ROI?","Marketing ROI = (Revenue Attributed - Campaign Cost) / Campaign Cost x 100. If a $5,000 campaign generates $20,000 in attributed revenue, ROI = 300%. Use gross profit rather than revenue for a more accurate picture. The challenge is attribution - consistently measuring which revenue was actually caused by which campaign."],["What is the difference between ROI and payback period?","ROI measures the total percentage return on an investment. Payback period measures how long until the investment pays itself back. A high ROI investment with a long payback period ties up capital that could be deployed elsewhere. Both metrics together give a complete picture - high ROI with short payback is ideal."],["What costs should I include when calculating ROI?","Include all incremental costs: purchase price, implementation, ongoing maintenance, staff time (at loaded cost), training, and integration. Do not include sunk costs already spent. Under-counting costs inflates ROI and leads to poor decisions. Total cost of ownership (TCO) gives the most accurate ROI denominator."],["How do I compare two investments using ROI?","Annualise the ROI for both and compare. Also compare payback period and risk. An investment with 80% total ROI over 4 years (annualised 15.9%) is worse than 60% total ROI over 2 years (annualised 26.5%). Use the calculator to run both scenarios and see the exact numbers side by side."],["What is the Break-Even Timeline feature?","The Break-Even Timeline is a unique feature that shows month-by-month cumulative returns from your investment, highlighting in green the exact month when returns first exceed the initial cost. Enter your investment amount and expected monthly return, and the table updates instantly showing your break-even month and ROI progression."]];
+  var fw=document.getElementById("faq-wrap");
+  if(fw){fw.innerHTML=FAQS.map(function(q,i){return "<div class='faq-outer'><button class='faq-btn' onclick='xF("+i+")'>" +q[0]+ "<span class='faq-ico' id='fi"+i+"'>+</span></button><div class='faq-ans' id='fa"+i+"'>"+q[1]+"</div></div>";}).join("");}
+  function xF(i){var a=document.getElementById("fa"+i);var ic=document.getElementById("fi"+i);var o=a.style.display==="block";a.style.display=o?"none":"block";ic.style.transform=o?"":"rotate(45deg)";}
 </script>
 </body>
 </html>

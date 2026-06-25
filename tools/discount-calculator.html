@@ -55,6 +55,12 @@
       { "@type": "Question", "name": "Is it better to take percent off or dollars off?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the original price. Percent off is better on expensive items; fixed dollar off is better on cheaper items. Example: 20% off vs $15 off. On a $50 item: 20% saves $10 (dollar off wins). On a $100 item: 20% saves $20 (both equal at $75 crossover). Above $75, percent off wins. Use the Deal Comparison calculator to find the crossover point instantly." } },
       { "@type": "Question", "name": "How do I calculate discount percentage from two prices?", "acceptedAnswer": { "@type": "Answer", "text": "Formula: Discount % = ((Original Price − Sale Price) ÷ Original Price) × 100. Example: Original $120, sale price $90 → ((120 − 90) ÷ 120) × 100 = 25% off." } },
       { "@type": "Question", "name": "How does a BOGO deal work?", "acceptedAnswer": { "@type": "Answer", "text": "BOGO (Buy One Get One) Free means the second item is free — effectively 50% off per item when buying two. BOGO 50% off means the second item is half price — effectively 25% off your total. Buy 2 Get 1 Free gives 33% off per item when buying three. Use the BOGO calculator tab to compare any BOGO deal." } }
+    ,
+      {
+        "@type": "Question",
+        "name": "How do I calculate the original price before a discount?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide the sale price by (1 - discount%/100). If an item is £60 after a 25% discount: £60 / 0.75 = £80 original price. This reverse calculation is useful for finding the pre-sale price from a discounted tag. The calculator above handles this automatically in the reverse discount tab." }
+      }
     ]
   }
   </script>
@@ -519,7 +525,7 @@
   </div>
 </div>
 
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>
 
 <script>
   function switchTab(id, btn) {

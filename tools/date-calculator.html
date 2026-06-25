@@ -54,6 +54,18 @@
       { "@type": "Question", "name": "How do I add or subtract months from a date when the day doesn't exist in the target month?", "acceptedAnswer": { "@type": "Answer", "text": "When adding months lands on a day that doesn't exist in the target month (e.g., adding 1 month to January 31, but February only has 28 or 29 days), standard convention rolls over to the next valid date — January 31 + 1 month becomes March 3 (or March 2 in a leap year) in JavaScript's native date handling, though some calculators instead clamp to the last day of the target month (February 28). Our calculator uses the clamping method, treating January 31 + 1 month as February 28 (or 29 in a leap year), which matches how most calendar and billing systems handle this edge case." } },
       { "@type": "Question", "name": "What date format should I use for international dates?", "acceptedAnswer": { "@type": "Answer", "text": "Use ISO 8601 format (YYYY-MM-DD) whenever there's potential ambiguity, such as in international communication or technical documents. The format 03/04/2026 means March 4th in the US but April 3rd in the UK and most of the world — this ambiguity causes real errors in contracts, flight bookings, and software. ISO 8601 (2026-04-03) is unambiguous and sorts correctly as text, which is why it's the international standard." } },
       { "@type": "Question", "name": "How many days are in each month?", "acceptedAnswer": { "@type": "Answer", "text": "January (31), February (28, or 29 in a leap year), March (31), April (30), May (31), June (30), July (31), August (31), September (30), October (31), November (30), December (31). A simple memory trick: months with 31 days are January, March, May, July, August, October, and December — easy to remember using the 'knuckle method' where each knuckle on your fist represents a 31-day month." } }
+    ,
+      {
+        "@type": "Question",
+        "name": "How do I calculate business days excluding weekends and holidays?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Use the Business Days mode in the calculator above. It automatically excludes Saturdays and Sundays and accounts for US federal holidays. Enter your start date and number of business days to add, or enter two dates to find the business days between them — essential for contract deadlines, delivery windows, and payment terms like Net 30 business days." }
+      }
+    ,
+      {
+        "@type": "Question",
+        "name": "How many days are in each month?",
+        "acceptedAnswer": { "@type": "Answer", "text": "January: 31, February: 28 (29 in leap years), March: 31, April: 30, May: 31, June: 30, July: 31, August: 31, September: 30, October: 31, November: 30, December: 31. A useful mnemonic: knuckle months (Jan, Mar, May, Jul, Aug, Oct, Dec) have 31 days; the valleys between them have 30 days or 28." }
+      }
     ]
   }
   </script>
@@ -387,7 +399,7 @@
   </div>
 </div>
 
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>
 
 <script>
   const WEEKDAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
