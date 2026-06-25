@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Invoice Generator – Create & Download Invoices Online | ToolsNook</title>
-  <meta name="description" content="Create professional invoices online for free. Add your logo, line items, taxes and notes. Download as PDF instantly. No signup required." />
-  <meta name="keywords" content="free invoice generator, online invoice maker, create invoice online, invoice template, download invoice PDF, freelance invoice" />
+  <title>Invoice Generator – Free Online PDF Invoice Creator | ToolsNook</title>
+  <meta name="description" content="Free online invoice generator. Create and download professional PDF invoices instantly. Add your logo, line items, tax, and payment terms. No signup required." />
+  <meta property="og:title" content="Free Invoice Generator – Create Professional PDF Invoices Online" />
+  <meta property="og:description" content="Create professional invoices and download as PDF in seconds. Add logo, line items, tax rates, and payment terms. Free, no signup, no watermarks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/invoice-generator.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
+
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
     html{scroll-behavior:smooth}
@@ -70,52 +80,51 @@
     footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
     footer a{color:var(--muted);text-decoration:none}
     @media print{nav,footer,.action-row,.related,.info-section,.hero{display:none!important}.builder-card{background:white!important;color:black!important;border:none!important}.container{padding:0!important}}
+  
+    .content-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.5rem;margin-top:2rem}
+    .content-box h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.85rem;letter-spacing:-0.02em}
+    .content-box h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-box p{color:var(--muted);font-size:0.95rem;margin-bottom:1rem;line-height:1.75}
+    .content-box ul{color:var(--muted);font-size:0.95rem;padding-left:1.5rem;margin-bottom:1rem;line-height:1.9}
+    /* PAYMENT TERMS EXPLAINER — UNIQUE */
+    .terms-section{background:rgba(67,233,123,0.04);border:1px solid rgba(67,233,123,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin-top:2rem;margin-bottom:1.5rem}
+    .terms-badge{background:rgba(67,233,123,0.12);color:var(--green);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.06em;margin-bottom:0.75rem;display:inline-block}
+    .terms-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:1rem}
+    .terms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem}
+    .term-card{background:var(--bg2);border:1px solid var(--border2);border-radius:10px;padding:1rem;cursor:pointer;transition:border-color 0.2s}
+    .term-card:hover{border-color:var(--green)}
+    .term-name{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:4px}
+    .term-due{font-size:0.78rem;color:var(--green);font-weight:600;margin-bottom:4px}
+    .term-desc{font-size:0.75rem;color:var(--muted);line-height:1.5}
+    .related-section{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:20px;padding:1.75rem 2rem;margin:2rem 0}
+    .related-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+    .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem}
+    .rel-card{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;transition:border-color 0.2s,transform 0.2s}
+    .rel-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .faq-outer{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden}
+    .faq-btn{width:100%;background:var(--bg2);border:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.93rem;font-weight:500;padding:1rem 1.25rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-btn:hover{background:var(--bg3)}
+    .faq-ans{display:none;padding:0 1.25rem 1rem;background:var(--bg2);color:var(--muted);font-size:0.88rem;line-height:1.75}
+    .faq-ico{color:var(--accent);font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+    @media(max-width:640px){
+      .content-box{padding:1.25rem}
+      .terms-grid{grid-template-columns:1fr 1fr}
+      .rel-grid{grid-template-columns:1fr 1fr}
+    }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Invoice Generator",
     "url": "https://www.toolsnook.com/tools/invoice-generator.html",
-    "description": "Free online invoice generator. Create and download professional invoices as PDF instantly. No signup, no watermark.",
-    "applicationCategory": "BusinessApplication",
+    "description": "Free online invoice generator. Create and download professional PDF invoices with line items, tax, and payment terms.",
+    "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
     "publisher": {"@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com"}
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I create a professional invoice?",
-        "acceptedAnswer": {"@type": "Answer", "text": "A professional invoice includes your business name and contact details, the client name and address, a unique invoice number, the invoice date and due date, an itemised list of services or products with quantities and rates, subtotal, taxes, and total amount due."}
-      },
-      {
-        "@type": "Question",
-        "name": "What payment terms should I put on an invoice?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Common payment terms are Net 30 (payment due in 30 days), Net 15, or Due on Receipt. Always state your late payment policy. Our invoice generator includes a payment terms field for full customisation."}
-      },
-      {
-        "@type": "Question",
-        "name": "Can I download the invoice as a PDF?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Yes — our invoice generator creates a print-ready PDF that you can download, email to clients, or print directly. No signup or account required."}
-      }
-    ]
-  }
-  </script>
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -126,17 +135,32 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What should be included on an invoice?", "acceptedAnswer": {"@type": "Answer", "text": "A professional invoice must include: your business name and contact details, the client's name and billing address, a unique invoice number, the invoice date, the payment due date, an itemised list of products or services with quantities and rates, subtotal, any applicable tax with rate shown, total amount due, accepted payment methods and account details, and any late payment terms."}},
+      {"@type": "Question", "name": "What is Net 30 on an invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Net 30 means the invoice is due 30 calendar days from the invoice date. If you issue an invoice on June 1, Net 30 means payment is due by July 1. It is the most common payment term for B2B invoices. Other common terms include Net 15 (due in 15 days), Net 60 (due in 60 days), and Due on Receipt (payment expected immediately)."}},
+      {"@type": "Question", "name": "How do I create a professional invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Use the Invoice Generator above. Fill in your business name and contact details, enter your client's billing information, set the invoice date and due date, add your line items with descriptions and rates, apply any tax, and click Download PDF. The generator creates a professionally formatted PDF invoice instantly at no cost."}},
+      {"@type": "Question", "name": "What is the correct invoice number format?", "acceptedAnswer": {"@type": "Answer", "text": "There is no universal required format, but best practice is to use sequential numbering — either simple (001, 002, 003) or with a date prefix (INV-2026-001). The critical requirements are: every invoice must have a unique number, numbers must not be skipped or reused, and the sequence must be easy to track. Tax authorities use invoice numbers to audit completeness, so gaps in your sequence can raise questions."}},
+      {"@type": "Question", "name": "Do I need to charge VAT or GST on my invoice?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your country and registration status. In the UK, VAT-registered businesses must charge VAT (currently 20% standard rate) and show their VAT number on the invoice. In Australia, GST-registered businesses must include an ABN and show 10% GST. In the US, sales tax rules vary by state and product type. If you are not registered for VAT or GST, you do not charge it. Always consult an accountant if unsure."}},
+      {"@type": "Question", "name": "How quickly should I send an invoice after completing work?", "acceptedAnswer": {"@type": "Answer", "text": "Send invoices the same day you complete the work or delivery. Research consistently shows that every day you delay sending an invoice adds days to your payment timeline. Invoice promptly, use a specific due date rather than just payment terms (write the actual date, not just Net 30), and include all payment details so the client can pay immediately without needing to contact you."}},
+      {"@type": "Question", "name": "What do I do when an invoice is overdue?", "acceptedAnswer": {"@type": "Answer", "text": "First, send a polite reminder email with the original invoice attached the day after the due date. If unpaid after 7 days, send a firmer follow-up citing the overdue amount and any late fees specified in your terms. After 14 days overdue, consider a phone call or formal notice. If unpaid after 30 days, consider involving a collections agency or pursuing via small claims court. Always keep records of all invoices sent and payment dates received."}},
+      {"@type": "Question", "name": "Can I add a late payment fee to my invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if it is stated in your payment terms before work begins. Common late payment clauses include a fixed fee (e.g. £40 per overdue invoice under UK Late Payment legislation) or a percentage per month (e.g. 1.5% per month on the overdue balance). Including a late payment clause does not guarantee enforcement but it signals professionalism and creates a clear expectation. Never add a late fee that was not disclosed upfront."}},
+      {"@type": "Question", "name": "What is the difference between an invoice and a receipt?", "acceptedAnswer": {"@type": "Answer", "text": "An invoice is sent before payment — it is a request for payment listing what is owed. A receipt is issued after payment — it confirms that payment has been received. An invoice typically becomes a receipt once payment is marked. For accounting purposes, both documents serve different roles: invoices are accounts receivable records; receipts confirm the transaction is closed."}},
+      {"@type": "Question", "name": "How long should I keep copies of invoices?", "acceptedAnswer": {"@type": "Answer", "text": "Retention rules vary by country. In the UK, HMRC requires businesses to keep financial records including invoices for at least 6 years. In the US, the IRS recommends keeping records for at least 3–7 years depending on the situation. In Australia, the ATO requires records for 5 years. Best practice is to keep all invoices for at least 7 years, stored digitally in a secure, backed-up location."}}
+    ]
+  }
+  </script>
 </head>
 <body>
-<nav>
-  <a href="/" class="logo">Tools<span>Nook</span></a>
-  <a href="/" class="nav-back">← All Tools</a>
-</nav>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
 <div class="hero">
   <div class="breadcrumb"><a href="/">ToolsNook</a> › Invoice Generator</div>
-  <div class="hero-badge">✦ Business Tool</div>
+  <div class="hero-badge">🧾 Finance Tool</div>
   <h1>Invoice Generator</h1>
-  <p>Create professional invoices in seconds. Add items, set tax, download as PDF. Free, no account needed.</p>
+  <p>Create professional PDF invoices instantly. Add your business details, line items, tax, and payment terms — then download a clean PDF. Free, no signup, no watermarks.</p>
 </div>
 <div class="container">
   <div class="builder-card">
@@ -248,10 +272,101 @@
     </div>
   </div>
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- PAYMENT TERMS EXPLAINER — UNIQUE FEATURE -->
+  <div class="terms-section">
+    <span class="terms-badge">📅 UNIQUE FEATURE</span>
+    <div class="terms-title">Payment Terms Explainer — What Do They Actually Mean?</div>
+    <div class="terms-grid" id="terms-grid"></div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-box">
+    <h2>How to Write a Professional Invoice That Gets Paid Faster</h2>
+    <p>A professional invoice is more than a payment request — it is a legal document, a tax record, and a signal of how seriously you take your business. Research consistently shows that professionally formatted invoices with clear payment terms get paid faster than vague or incomplete ones. Here is what every invoice must include and why each element matters.</p>
+
+    <h3>The 10 Required Elements of a Professional Invoice</h3>
+    <ul>
+      <li><strong>Your business details:</strong> Full legal name or trading name, address, phone number, and email. If you have a logo, include it — it immediately makes the invoice look more professional and trustworthy.</li>
+      <li><strong>Client billing details:</strong> The client's full name or business name, billing address, and the name of the person or department the invoice is addressed to. Sending to the wrong contact is one of the most common reasons invoices get delayed in large organisations — confirm the AP contact before starting work.</li>
+      <li><strong>Unique invoice number:</strong> Every invoice must have a unique sequential number. Use a consistent format like INV-2026-001 or 001, 002, 003. Tax authorities use invoice numbers to audit completeness — gaps in the sequence can raise flags.</li>
+      <li><strong>Invoice date:</strong> The date the invoice is issued. This starts the payment term clock.</li>
+      <li><strong>Payment due date:</strong> Write the actual calendar date, not just "Net 30." "Due: July 1, 2026" creates urgency; "Net 30" allows clients to reset the clock. Always include both.</li>
+      <li><strong>Itemised line items:</strong> Each service or product as a separate line with description, quantity or hours, unit rate, and line total. Be specific enough that a stranger could approve it without needing to contact you. "Consulting services — $2,500" invites questions. "Brand strategy workshop, 4hrs @ $375/hr — $1,500" does not.</li>
+      <li><strong>Subtotal, tax, and total:</strong> Show the subtotal first, then any discounts, then tax with the rate explicitly shown (even if it is 0%), then the final total. Never combine these into a single number.</li>
+      <li><strong>Payment methods and details:</strong> Include every accepted payment method with the full details needed to pay — bank account number and sort code for bank transfers, PayPal address, Stripe link. Friction kills payment speed.</li>
+      <li><strong>Late payment terms:</strong> A clause like "1.5% per month on overdue balances" or a fixed fee creates a professional expectation. Only include it if you disclosed it before starting work.</li>
+      <li><strong>Tax registration number:</strong> Required in many countries once you are VAT/GST registered. In the UK, your VAT number must appear on every VAT invoice. In Australia, your ABN must appear on all tax invoices.</li>
+    </ul>
+
+    <h3>The Single Most Important Invoicing Habit: Send Same Day</h3>
+    <p>Invoice the same day you complete the work or deliver the goods. Every day you wait to send an invoice adds days to your payment timeline. A client who receives an invoice the day work is delivered is psychologically primed to pay — the work is fresh, the value is clear, and there is no ambiguity about what is being billed. An invoice sent three weeks later arrives cold, potentially after the client's next payment run, and with no connection to the fresh memory of the work delivered.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Invoice Payment Terms Explained</h2>
+    <p>Payment terms define when an invoice is due and set expectations for both parties. Choosing the right payment terms for your business type, client relationship, and cash flow needs is one of the most impactful decisions you can make for your financial health. Here is a complete breakdown of the most common payment terms and when to use each.</p>
+
+    <h3>Due on Receipt</h3>
+    <p>Payment is expected as soon as the client receives the invoice. This is the most aggressive payment term and works best for: one-time clients you do not have an established relationship with, small project amounts where a short delay would be disproportionately impactful, and any situation where you have completed all deliverables upfront. Be aware that many corporate accounts payable departments cannot process same-day payments regardless of terms — for large company clients, Due on Receipt often creates friction rather than speed.</p>
+
+    <h3>Net 7, Net 15, Net 30, Net 60, Net 90</h3>
+    <p>Net 30 is the most common standard for B2B invoicing — payment is due 30 calendar days from the invoice date. Net 15 is common for smaller freelance amounts or where faster cash flow is critical. Net 60 and Net 90 are typically dictated by large enterprise clients and should be factored into your pricing — if you wait 90 days for payment, you are effectively providing an interest-free loan. "Net 30" means 30 calendar days from the invoice date — always write the actual due date alongside the term to remove ambiguity.</p>
+
+    <h3>2/10 Net 30 (Early Payment Discount)</h3>
+    <p>This term offers a 2% discount if payment is made within 10 days, with the full amount due within 30 days. It is an effective way to incentivise faster payment without demanding it. For clients with cash-rich accounts payable departments, a 2% discount for paying 20 days early is worth roughly 37% annualised return — many finance teams will take it. The cost to you is 2% of the invoice in exchange for dramatically faster cash flow.</p>
+
+    <h3>Milestone Payments</h3>
+    <p>For large projects, structuring payments around deliverables rather than calendar dates protects both parties. A typical structure is 30–50% upfront before work begins, a second payment at a mid-project milestone, and the final balance on delivery. Milestone invoicing reduces your exposure to non-payment, aligns your client's cash outflow with visible progress, and gives you capital to fund work in progress.</p>
+
+    <h3>Retainer Invoices</h3>
+    <p>A monthly retainer is a fixed recurring fee invoiced at the same time each month, usually the first business day. Retainers are the gold standard for service providers because they create predictable cash flow, simplify the invoicing process, and align the client relationship around ongoing value rather than individual deliverables. If you do regular recurring work for a client, propose moving to a retainer — it benefits both parties.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Invoice Mistakes That Delay Payment</h2>
+    <p>Most delayed payments are caused by avoidable invoice errors. Here are the most common mistakes and exactly how to fix them:</p>
+    <ul>
+      <li><strong>Wrong or missing client details:</strong> Sending an invoice to the wrong entity, wrong address, or wrong contact is one of the top reasons invoices get rejected by AP departments. Confirm the legal billing name, billing address, and AP contact before starting any project.</li>
+      <li><strong>Vague line item descriptions:</strong> "Consulting services — $2,500" gives the client's AP team no context to approve without checking. Every line item should be specific enough to be approved independently.</li>
+      <li><strong>Relative due dates only:</strong> "Net 30" without a specific date allows the client to interpret when the 30 days starts. Always include the specific due date as a calendar date.</li>
+      <li><strong>Missing payment details:</strong> If you accept bank transfer but do not include the account number, sort code, and reference, you have just created a mandatory back-and-forth before payment can happen.</li>
+      <li><strong>Calculation errors:</strong> Even minor arithmetic errors cause invoices to be held for review. Double-check every total before sending. Our generator calculates everything automatically to eliminate this risk.</li>
+      <li><strong>Sending late:</strong> The longer you wait to send an invoice after completing work, the longer you will wait to receive payment. Invoice same-day, every time.</li>
+    </ul>
+
+    <h3>Following Up on Overdue Invoices</h3>
+    <p>Late payments are a normal part of business — but how you handle them matters. Send a polite reminder the day after the due date with the original invoice re-attached. If unpaid after 7 days, send a firmer follow-up citing the overdue amount and any late fees in your terms. After 14 days, consider a phone call or formal letter. For invoices over 30 days overdue, you have the right to charge statutory interest (UK: 8% over base rate under the Late Payment of Commercial Debts Act) or pursue via small claims court for amounts under your jurisdiction's threshold.</p>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related-section">
+    <h3>🔗 Related Tools</h3>
+    <div class="rel-grid">
+      <a href="/tools/currency-converter.html" class="rel-card"><span>💱</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Currency Converter</span></a>
+      <a href="/tools/vat-calculator.html" class="rel-card"><span>🧮</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">VAT Calculator</span></a>
+      <a href="/tools/freelancer-rate-calculator.html" class="rel-card"><span>🧑‍💻</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Freelancer Rate Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="rel-card"><span>📈</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Profit Margin Calculator</span></a>
+      <a href="/tools/hours-calculator.html" class="rel-card"><span>⏱️</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Hours Calculator</span></a>
+      <a href="/tools/salary-to-hourly.html" class="rel-card"><span>💰</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Salary to Hourly</span></a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:1rem">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>
+    <div id="faq-wrap"></div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
+</footer>
+
 <script>
+
   let items=[];
   let itemId=0;
 
@@ -396,6 +511,35 @@
 
   // Init with one item
   addItem();
+
+  // PAYMENT TERMS EXPLAINER — unique feature
+  function getDueDate(daysFromNow) {
+    var d = new Date();
+    d.setDate(d.getDate() + daysFromNow);
+    return d.toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'});
+  }
+  var TERMS = [
+    {name:'Due on Receipt', days:0, desc:'Payment expected immediately upon receiving the invoice. Best for one-time clients or small amounts.'},
+    {name:'Net 7', days:7, desc:'Payment due 7 days from invoice date. Common for small freelance projects with trusted clients.'},
+    {name:'Net 15', days:15, desc:'Payment due 15 days from invoice date. Faster than standard, works well for established client relationships.'},
+    {name:'Net 30', days:30, desc:'The most common B2B payment term. Payment due 30 calendar days from invoice date.'},
+    {name:'Net 60', days:60, desc:'Payment due 60 days from invoice date. Common with larger corporate clients — factor this into your pricing.'},
+    {name:'Net 90', days:90, desc:'Payment due 90 days. Enterprise standard. You are effectively providing an interest-free 3-month loan.'},
+    {name:'2/10 Net 30', days:30, desc:'2% discount if paid within 10 days; full amount due in 30 days. Incentivises faster payment effectively.'},
+    {name:'End of Month', days:null, desc:'Payment due on the last day of the month in which the invoice was issued. Common in some industries.'},
+  ];
+  var tg = document.getElementById('terms-grid');
+  if(tg){
+    tg.innerHTML = TERMS.map(function(t){
+      var dueStr = t.days === null ? 'Last day of this month' : t.days === 0 ? 'Today — ' + getDueDate(0) : 'Due: ' + getDueDate(t.days);
+      return '<div class="term-card"><div class="term-name">'+t.name+'</div><div class="term-due">'+dueStr+'</div><div class="term-desc">'+t.desc+'</div></div>';
+    }).join('');
+  }
+  // FAQ
+  var FAQS=[["What should be included on an invoice?","A professional invoice must include: your business name and contact details, the client billing name and address, a unique invoice number, the invoice date and payment due date, an itemised list of services or products with rates and totals, subtotal, tax with rate shown, total amount due, and accepted payment methods with full details."],["What is Net 30 on an invoice?","Net 30 means the invoice is due 30 calendar days from the invoice date. If you issue an invoice on June 1, Net 30 means payment is due by July 1. It is the most common B2B payment term. Always write the actual due date alongside the term to remove ambiguity."],["How do I create a professional invoice?","Use the Invoice Generator above. Fill in your business name and client details, set the invoice date and due date, add your line items with descriptions and rates, apply any tax, and click Download PDF. A professionally formatted PDF is created instantly at no cost."],["What is the correct invoice number format?","Any consistent sequential format works: 001, 002, 003 or INV-2026-001. The critical requirements are that every invoice has a unique number, numbers are never skipped or reused, and the sequence is easy to track. Tax authorities audit invoice completeness using sequential numbers."],["Do I need to charge VAT or GST on my invoice?","Only if you are registered for VAT or GST in your country. In the UK, VAT-registered businesses must charge 20% VAT and show their VAT number. In Australia, GST-registered businesses must include an ABN and show 10% GST. In the US, rules vary by state. If you are not registered, do not charge it."],["How quickly should I send an invoice after completing work?","Send it the same day. Every day you delay adds days to your payment timeline. Invoice the day work is completed, use a specific due date (not just Net 30), and include all payment details so the client can pay immediately."],["What do I do when an invoice is overdue?","Send a polite reminder with the original invoice re-attached the day after the due date. After 7 days, send a firmer follow-up citing the overdue amount and any late fees. After 14 days, consider a phone call. After 30 days, you may pursue statutory interest, a collections agency, or small claims court depending on the amount."],["Can I add a late payment fee to my invoice?","Yes, if it was stated in your payment terms before work began. Common clauses are a fixed fee (e.g. the UK statutory £40-£100 under the Late Payment of Commercial Debts Act) or a percentage per month on the overdue balance. Never add a late fee that was not disclosed upfront."],["What is the difference between an invoice and a receipt?","An invoice is sent before payment — it is a request for payment. A receipt is issued after payment — it confirms payment was received. An invoice becomes a receipt once payment is marked as received. Both serve different accounting roles: invoices are accounts receivable records; receipts confirm transactions are closed."],["How long should I keep copies of invoices?","In the UK, HMRC requires at least 6 years. In the US, the IRS recommends 3-7 years. In Australia, the ATO requires 5 years. Best practice is to keep all invoices for at least 7 years in a secure, backed-up digital location."]];
+  var fw=document.getElementById('faq-wrap');
+  if(fw){fw.innerHTML=FAQS.map(function(q,i){return '<div class="faq-outer"><button class="faq-btn" onclick="xF('+i+')">'+q[0]+'<span class="faq-ico" id="fi'+i+'">+</span></button><div class="faq-ans" id="fa'+i+'">'+q[1]+'</div></div>';}).join('');}
+  function xF(i){var a=document.getElementById('fa'+i);var ic=document.getElementById('fi'+i);var o=a.style.display==='block';a.style.display=o?'none':'block';ic.style.transform=o?'':'rotate(45deg)';}
 </script>
 </body>
 </html>
