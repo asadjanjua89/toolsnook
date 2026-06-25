@@ -3,34 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Currency Converter – Free Online Tool | ToolsNook</title>
-  <meta name="description" content="Convert between 150+ currencies with up-to-date exchange rates. Free online currency converter. No signup required." />
-  <meta name="keywords" content="currency converter, exchange rate calculator, USD to EUR, currency exchange, free currency converter online, foreign exchange calculator" />
+  <title>Currency Converter – Live Exchange Rates | ToolsNook</title>
+  <meta name="description" content="Free currency converter with live exchange rates. Convert 30+ currencies, see real bank fees vs mid-market rate, and convert to multiple currencies at once. No signup." />
+  <meta property="og:title" content="Currency Converter – Live Rates + Bank Fee Calculator" />
+  <meta property="og:description" content="Convert currencies with live exchange rates. See what your bank actually charges vs the mid-market rate. Convert to multiple currencies at once. Free, no signup." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/currency-converter.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b;--blue:#4ecdc4;--purple:#c084fc}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh;overflow-x:hidden}
     nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
     .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
-    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
-    .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
-    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(108,99,255,0.1) 0%,transparent 70%);pointer-events:none;z-index:-1}
-    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}
-    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:500;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s}.nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2rem;text-align:center;max-width:700px;margin:0 auto}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:1rem}.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--text)}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.25);color:#a59fff;font-size:0.75rem;font-weight:600;padding:5px 12px;border-radius:100px;margin-bottom:1.25rem;letter-spacing:0.05em}
     h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
-    .hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto}
-    .container{max-width:700px;margin:0 auto;padding:0 2rem 4rem}
-    .calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem;margin-top:2rem}
-    .converter-row{display:flex;align-items:flex-end;gap:1rem;margin-bottom:1rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto}
+    .container{max-width:760px;margin:0 auto;padding:0 2rem 4rem}
+
+    /* MAIN CONVERTER */
+    .calc-card{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;padding:2rem;margin-top:2rem;margin-bottom:1.5rem}
+    .status-row{display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+    .converter-row{display:flex;align-items:flex-end;gap:1rem;margin-bottom:1.25rem}
     @media(max-width:500px){.converter-row{flex-direction:column}}
     .conv-group{flex:1}
-    .conv-group label{display:block;font-size:0.75rem;color:var(--muted);font-weight:500;letter-spacing:0.04em;margin-bottom:0.5rem}
+    .conv-group label{display:block;font-size:0.72rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.5rem}
     .conv-group input[type=number]{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1.3rem;font-weight:600;padding:0.85rem 1rem;-moz-appearance:textfield;transition:border-color 0.2s}
     .conv-group input::-webkit-outer-spin-button,.conv-group input::-webkit-inner-spin-button{-webkit-appearance:none}
     .conv-group input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,0.15)}
@@ -40,72 +53,110 @@
     .swap-btn{background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-size:1.2rem;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;margin-bottom:0.5rem}
     .swap-btn:hover{color:var(--accent);border-color:var(--accent);transform:rotate(180deg)}
     .result-box{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;margin-bottom:1.5rem}
-    .result-label{font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em}
+    .result-label{font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.04em;text-transform:uppercase}
     .result-value{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;color:var(--green);line-height:1}
     .result-rate{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
-    .status-row{display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem}
-    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
-    .quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.75rem}
-    .quick-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem;cursor:pointer;transition:all 0.2s}
+
+    /* BANK FEE SIMULATOR — UNIQUE FEATURE */
+    .fee-section{background:rgba(247,151,30,0.06);border:1px solid rgba(247,151,30,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+    .fee-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem}
+    .fee-badge{background:rgba(247,151,30,0.15);color:var(--amber);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.06em}
+    .fee-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700}
+    .fee-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0.75rem}
+    .fee-group label{display:block;font-size:0.72rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.4rem}
+    .fee-input{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;padding:0.6rem 0.85rem;transition:border-color 0.2s}
+    .fee-input:focus{outline:none;border-color:var(--amber)}
+    .fee-results{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-top:0.75rem}
+    .fee-result-item{background:var(--bg2);border-radius:10px;padding:0.75rem;text-align:center}
+    .fee-result-val{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700}
+    .fee-result-label{font-size:0.68rem;color:var(--muted);margin-top:3px}
+    .fee-result-val.green{color:var(--green)}
+    .fee-result-val.amber{color:var(--amber)}
+    .fee-result-val.red{color:var(--red)}
+
+    /* MULTI-CURRENCY — UNIQUE FEATURE */
+    .multi-section{background:rgba(78,205,196,0.05);border:1px solid rgba(78,205,196,0.2);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+    .multi-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem}
+    .multi-badge{background:rgba(78,205,196,0.15);color:var(--blue);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.06em}
+    .multi-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700}
+    .multi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.6rem}
+    .multi-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0.85rem;transition:border-color 0.2s}
+    .multi-card:hover{border-color:var(--blue)}
+    .mc-flag{font-size:1.2rem;margin-bottom:4px}
+    .mc-code{font-size:0.7rem;color:var(--muted);font-weight:600;letter-spacing:0.05em}
+    .mc-val{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-top:2px}
+
+    /* QUICK GRID */
+    .quick-label{font-size:0.72rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.75rem}
+    .quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:0.6rem}
+    .quick-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.75rem;cursor:pointer;transition:all 0.2s}
     .quick-card:hover{border-color:var(--accent);background:rgba(108,99,255,0.08)}
-    .qc-pair{font-size:0.78rem;color:var(--muted);margin-bottom:4px}
-    .qc-rate{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text)}
-    .info-section{margin-top:4rem}
-    .info-section h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem}
-    .info-section p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}
-    .related{margin-top:3rem}
-    .related h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-    .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:var(--text);transition:background 0.2s,transform 0.2s;display:flex;align-items:center;gap:12px}
-    .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
-    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
+    .qc-pair{font-size:0.72rem;color:var(--muted);margin-bottom:3px}
+    .qc-rate{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text)}
+
+    /* CONTENT */
+    .content-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.5rem}
+    .content-box h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.85rem;letter-spacing:-0.02em}
+    .content-box h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-box p{color:var(--muted);font-size:0.95rem;margin-bottom:1rem;line-height:1.75}
+    .content-box ul,.content-box ol{color:var(--muted);font-size:0.95rem;padding-left:1.5rem;margin-bottom:1rem;line-height:1.9}
+
+    /* RATES TABLE */
+    .rates-table{width:100%;border-collapse:collapse;font-size:0.88rem;margin:1rem 0}
+    .rates-table th{text-align:left;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;border-bottom:1px solid var(--border2)}
+    .rates-table td{padding:0.65rem 0.75rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    .rates-table td:first-child{color:var(--text);font-weight:500}
+    .rates-table td:last-child{color:var(--red);font-weight:600}
+    .rates-table tr:last-child td{border-bottom:none}
+
+    /* RELATED */
+    .related-section{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:20px;padding:1.75rem 2rem;margin:2rem 0}
+    .related-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem}
+    .related-card{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);transition:border-color 0.2s,transform 0.2s;display:flex;align-items:center;gap:10px}
+    .related-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .related-icon{font-size:1.2rem}
+    .related-name{font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif}
+
+    /* FAQ */
+    .faq-section h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem}
+    .faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden}
+    .faq-q{width:100%;background:var(--bg2);border:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.93rem;font-weight:500;padding:1rem 1.25rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q:hover{background:var(--bg3)}
+    .faq-icon{color:var(--accent);font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-a{display:none;padding:0 1.25rem 1rem;background:var(--bg2);color:var(--muted);font-size:0.88rem;line-height:1.75}
+    .faq-item.open .faq-a{display:block}
+
+    footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.82rem;margin-top:2rem}
     footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{color:var(--text)}
+
+    @media(max-width:640px){
+      nav{padding:0.75rem 1rem}
+      .hero{padding:5.5rem 1rem 1.5rem}
+      .container{padding:0 1rem 3rem}
+      .calc-card{padding:1.25rem}
+      .fee-row{grid-template-columns:1fr}
+      .fee-results{grid-template-columns:1fr 1fr}
+      .multi-grid{grid-template-columns:repeat(3,1fr)}
+      .content-box{padding:1.25rem}
+      .related-grid{grid-template-columns:1fr 1fr}
+    }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Currency Converter",
     "url": "https://www.toolsnook.com/tools/currency-converter.html",
-    "description": "Free currency converter with live exchange rates. Convert between 30+ currencies including USD, GBP, EUR, PKR, INR, AED and more.",
+    "description": "Free currency converter with live exchange rates. Convert 30+ currencies, see bank fees vs mid-market rate, and convert to multiple currencies simultaneously.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
     "publisher": {"@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com"}
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I convert currencies?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Enter the amount you want to convert, select your base currency and target currency, and the converter shows the converted amount instantly using live exchange rates updated daily."}
-      },
-      {
-        "@type": "Question",
-        "name": "Are the exchange rates live?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Yes — our currency converter uses live exchange rates updated daily from the open exchange rates API. Rates reflect current market values but may differ slightly from bank or official rates."}
-      },
-      {
-        "@type": "Question",
-        "name": "What currencies does the converter support?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Our converter supports 30+ major and emerging market currencies including USD, GBP, EUR, JPY, CHF, CAD, AUD, NZD, PKR, INR, AED, SAR, BDT, NGN, ZAR, BRL, MXN, and more."}
-      }
-    ]
-  }
-  </script>
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -116,136 +167,459 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I convert currencies?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Enter the amount you want to convert, select your base currency and target currency from the dropdowns, and the converter shows the converted amount instantly using live exchange rates. You can also swap the currencies with the ⇄ button to reverse the conversion."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are the exchange rates live?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes — our currency converter fetches live exchange rates from a public forex data API. Rates are updated daily and reflect current market values. These are mid-market rates — the midpoint between buy and sell rates. Your bank or money transfer service will apply a spread on top of these rates, which is why we also include a bank fee simulator to show you the real cost."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the mid-market rate and why is it different from my bank's rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The mid-market rate (also called the interbank rate) is the midpoint between the global buy and sell prices for a currency pair at any given moment. It is the rate that banks and financial institutions use when trading with each other. When you exchange money at a bank or send money abroad, your provider applies a markup — typically 1.5% to 4% for traditional banks, and 0.3% to 1% for specialist transfer services like Wise. Our bank fee simulator lets you enter your bank's typical spread to see exactly how much you are paying above the mid-market rate."}
+      },
+      {
+        "@type": "Question",
+        "name": "What currencies does the converter support?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Our converter supports 30+ major and emerging market currencies including USD, GBP, EUR, JPY, CHF, CAD, AUD, NZD, PKR, INR, AED, SAR, SGD, HKD, KRW, TRY, BRL, MXN, ZAR, NGN, EGP, IDR, PHP, THB, SEK, NOK, DKK, PLN, MYR, and CNY."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much does my bank charge to exchange currency?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Traditional banks typically charge 2–4% above the mid-market rate on foreign currency exchange. This markup is usually hidden inside the exchange rate rather than charged as a visible fee. Specialist transfer services like Wise charge 0.3–1%. ATM withdrawals abroad typically incur 1.5–3% plus a fixed fee per transaction. Use our Bank Fee Simulator to enter your bank's typical spread percentage and see the exact cost for your specific conversion."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cheapest way to exchange currency?",
+        "acceptedAnswer": {"@type": "Answer", "text": "In 2026, specialist online transfer services like Wise (TransferWise), Revolut, and OFX consistently offer exchange rates closest to the mid-market rate — typically 0.3–1% above it. Traditional high street banks are the most expensive at 2–4% above mid-market. Airport currency exchange kiosks are typically the worst value at 5–10% above market rates. For travel, a Revolut or Wise multi-currency card gives you mid-market or near-mid-market rates on spending abroad. For large transfers, OFX and Wise offer the best combination of competitive rates and low fees."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the multi-currency converter feature?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The multi-currency view converts your entered amount into 12 major currencies simultaneously — useful for travelers visiting multiple countries, freelancers billing clients in different currencies, or anyone comparing purchasing power across markets. Enter your amount and select your base currency in the main converter, and the multi-currency section below updates instantly for all currencies at once."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why do exchange rates change so frequently?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Exchange rates fluctuate because currencies are traded on a global, 24-hour market called the forex (foreign exchange) market. Rates change based on economic data releases (inflation, employment, GDP), central bank interest rate decisions, geopolitical events, market sentiment, and supply and demand for each currency. Major currency pairs like EUR/USD can move hundreds of pips in a single day during high-volatility events. This is why real-time or daily-updated rates are important for accurate conversions."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I use the currency converter for freelance invoicing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Enter the invoice amount in your client's currency, select their currency as the base, and select your home currency as the target. The result shows exactly what you will receive at the current mid-market rate. Then use the Bank Fee Simulator to enter your payment processor's fee percentage (PayPal typically charges 3–4%, Wise charges 0.3–1%) to see your net receipt after fees. For setting your rates with international clients, use our Freelancer Rate Calculator to calculate your minimum hourly rate."}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+
+<nav>
+  <a href="/" class="logo">Tools<span>Nook</span></a>
+  <a href="/" class="nav-back">← All Tools</a>
+</nav>
+
 <div class="hero">
   <div class="breadcrumb"><a href="/">ToolsNook</a> › Currency Converter</div>
   <div class="hero-badge">✦ Finance Tool</div>
   <h1>Currency Converter</h1>
-  <p>Convert between 30+ major currencies with live exchange rates. Fast, free, no signup.</p>
+  <p>Live exchange rates for 30+ currencies — plus a bank fee simulator and multi-currency view that most converters don't have. Free, no signup.</p>
 </div>
+
 <div class="container">
+
+  <!-- MAIN CONVERTER -->
   <div class="calc-card">
     <div class="status-row"><div class="status-dot"></div><span id="rate-status">Fetching live rates...</span></div>
     <div class="converter-row">
       <div class="conv-group">
-        <label>AMOUNT</label>
+        <label>Amount</label>
         <input type="number" id="amount" value="1" min="0" step="any" oninput="convert()" />
         <div class="csw"><select class="csel" id="from-cur" onchange="convert()"></select></div>
       </div>
-      <button class="swap-btn" onclick="swapCurrencies()" title="Swap">⇄</button>
+      <button class="swap-btn" onclick="swapCurrencies()" title="Swap currencies">⇄</button>
       <div class="conv-group">
-        <label>CONVERTED TO</label>
+        <label>Converted To</label>
         <input type="number" id="result-input" readonly style="cursor:default;color:var(--green)" />
         <div class="csw"><select class="csel" id="to-cur" onchange="convert()"></select></div>
       </div>
     </div>
     <div class="result-box">
-      <div class="result-label" id="res-label">—</div>
+      <div class="result-label" id="res-label">Mid-market rate</div>
       <div class="result-value" id="res-value">—</div>
       <div class="result-rate" id="res-rate">—</div>
     </div>
-    <div style="font-size:0.75rem;color:var(--muted);margin-bottom:1rem;letter-spacing:0.04em">QUICK REFERENCE RATES (vs USD)</div>
+
+    <!-- BANK FEE SIMULATOR -->
+    <div class="fee-section">
+      <div class="fee-header">
+        <span class="fee-badge">🏦 UNIQUE</span>
+        <span class="fee-title">Bank Fee Simulator — See Your Real Cost</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee-group">
+          <label>Your Bank's Spread (%)</label>
+          <input type="number" class="fee-input" id="bank-spread" value="2.5" min="0" max="15" step="0.1" oninput="calcFees()" placeholder="e.g. 2.5" />
+        </div>
+        <div class="fee-group">
+          <label>Fixed Fee (optional)</label>
+          <input type="number" class="fee-input" id="fixed-fee" value="0" min="0" step="0.01" oninput="calcFees()" placeholder="e.g. 5.00" />
+        </div>
+      </div>
+      <div class="fee-results" id="fee-results">
+        <div class="fee-result-item"><div class="fee-result-val green" id="fee-midmarket">—</div><div class="fee-result-label">Mid-market</div></div>
+        <div class="fee-result-item"><div class="fee-result-val amber" id="fee-bank">—</div><div class="fee-result-label">After bank fees</div></div>
+        <div class="fee-result-item"><div class="fee-result-val red" id="fee-cost">—</div><div class="fee-result-label">You pay extra</div></div>
+      </div>
+    </div>
+
+    <!-- MULTI-CURRENCY VIEW -->
+    <div class="multi-section">
+      <div class="multi-header">
+        <span class="multi-badge">🌍 UNIQUE</span>
+        <span class="multi-title">Multi-Currency View — Convert to 12 Currencies at Once</span>
+      </div>
+      <div class="multi-grid" id="multi-grid"></div>
+    </div>
+
+    <!-- QUICK REFERENCE -->
+    <div class="quick-label">Popular pairs (vs <span id="base-label">USD</span>)</div>
     <div class="quick-grid" id="quick-grid"></div>
   </div>
-  <div class="info-section">
-    <h2>About Exchange Rates</h2>
-    <p>Exchange rates fluctuate constantly based on economic factors, interest rates, inflation, and market sentiment. The rates shown here are fetched from a live public API and are updated regularly.</p>
-    <p>For large financial transactions, always verify with your bank or financial institution as they may apply additional fees or spreads on top of the mid-market rate.</p>
-  </div>
-  
-  <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">
-    <h2>Related Tools</h2>
-    <p style="color:var(--muted);font-size:0.92rem">Useful alongside currency conversion for international business:</p>
-    <p style="color:var(--muted);font-size:0.92rem;line-height:2">
-      → <a href="/tools/vat-calculator.html" style="color:var(--accent)">VAT Calculator</a> — Calculate VAT/GST for 27+ countries when invoicing international clients.<br>
-      → <a href="/tools/invoice-generator.html" style="color:var(--accent)">Invoice Generator</a> — Create professional PDF invoices for clients in any country.<br>
-      → <a href="/tools/freelancer-rate-calculator.html" style="color:var(--accent)">Freelancer Rate Calculator</a> — Calculate your minimum hourly rate when working with international clients.<br>
-      → <a href="/tools/profit-margin-calculator.html" style="color:var(--accent)">Profit Margin Calculator</a> — See how currency fluctuations affect your profit margins on international sales.
-    </p>
+
+  <!-- CONTENT -->
+  <div class="content-box">
+    <h2>Understanding Exchange Rates: What You're Actually Paying</h2>
+    <p>Most people assume they get the exchange rate they see quoted online. They don't. The rate you see on Google, our converter, or XE is the mid-market rate — the true midpoint between the global buy and sell price for a currency pair at any given moment. This is the rate banks use when trading with each other in the interbank market. It is not the rate you receive.</p>
+    <p>Every time you exchange currency — whether at a bank, an airport kiosk, through a money transfer service, or via PayPal — the provider applies a markup on top of the mid-market rate. This markup is their profit margin. It is usually built into the exchange rate they show you rather than listed as a visible fee, which makes it invisible to most customers.</p>
+
+    <h3>The Hidden Cost: What Different Providers Charge</h3>
+    <p>The markup varies dramatically depending on how and where you exchange money:</p>
+
+    <table class="rates-table">
+      <thead>
+        <tr><th>Provider Type</th><th>Typical Spread Above Mid-Market</th><th>On £1,000 Exchange</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Airport Kiosk</td><td>5–10%</td><td>£50–£100 lost</td></tr>
+        <tr><td>Traditional High Street Bank</td><td>2.5–4%</td><td>£25–£40 lost</td></tr>
+        <tr><td>PayPal Currency Conversion</td><td>3–4%</td><td>£30–£40 lost</td></tr>
+        <tr><td>Credit Card Foreign Transaction</td><td>1.5–3%</td><td>£15–£30 lost</td></tr>
+        <tr><td>OFX / CurrencyFair</td><td>0.5–1.5%</td><td>£5–£15 lost</td></tr>
+        <tr><td>Wise (TransferWise)</td><td>0.3–0.7%</td><td>£3–£7 lost</td></tr>
+        <tr><td>Revolut (at mid-market hours)</td><td>0–0.5%</td><td>£0–£5 lost</td></tr>
+      </tbody>
+    </table>
+
+    <p>Use the Bank Fee Simulator above to enter your specific provider's spread and see exactly how much a conversion costs you. On a £10,000 international transfer, the difference between a 3% bank spread and a 0.5% specialist service is £250 — on the same transaction, for the same amount, moving the same direction.</p>
+
+    <h3>Mid-Market Rate vs. Interbank Rate vs. Retail Rate</h3>
+    <p>These three terms get used interchangeably but mean slightly different things. The interbank rate is the rate at which large financial institutions lend currencies to each other — it is only available in transactions of millions of dollars or equivalent. The mid-market rate is derived from this: it is the midpoint of the live buy and sell prices available to retail brokers. The retail rate is what you actually receive — the mid-market rate minus the provider's spread.</p>
+    <p>For everyday conversions and planning purposes, the mid-market rate is the right reference point. It tells you the true value of a currency exchange without any provider's margin built in. That is what our converter shows — and our bank fee simulator lets you layer in the real-world cost on top.</p>
   </div>
 
-  <div class="related">
-    <h2>Related Tools</h2>
+  <div class="content-box">
+    <h2>How Exchange Rates Work and What Moves Them</h2>
+    <p>Exchange rates are determined by the foreign exchange market — the largest and most liquid financial market in the world, with over $7.5 trillion traded daily in 2024. Unlike stock markets, forex operates 24 hours a day, five days a week, with trading sessions in Sydney, Tokyo, London, and New York overlapping around the clock.</p>
+
+    <h3>The Key Drivers of Currency Movement</h3>
+    <p>Exchange rates move based on a complex interaction of economic, political, and market factors. Understanding these helps you anticipate when rates might be favourable for a conversion:</p>
+    <ul>
+      <li><strong>Interest rate decisions:</strong> When a central bank raises interest rates, its currency typically strengthens because higher rates attract foreign capital seeking better returns. When the US Federal Reserve raises rates, the USD tends to appreciate against most other currencies.</li>
+      <li><strong>Inflation data:</strong> Higher inflation erodes a currency's purchasing power and typically weakens it relative to lower-inflation currencies. Countries with stable, low inflation — like Switzerland — tend to have stronger currencies over time.</li>
+      <li><strong>Economic growth and GDP:</strong> Strong economic growth signals confidence in a country's economic health and tends to attract investment, strengthening the currency. Recession or contraction has the opposite effect.</li>
+      <li><strong>Political stability:</strong> Political uncertainty — elections, geopolitical conflict, policy changes — tends to weaken a currency as investors reduce their exposure to risk. The British pound fell sharply around the Brexit vote and subsequent uncertainty periods.</li>
+      <li><strong>Trade balances:</strong> Countries that export more than they import create demand for their currency (since buyers need that currency to pay for goods), strengthening it over time. Large trade deficits can weaken a currency.</li>
+      <li><strong>Market sentiment:</strong> Currency markets are partly driven by investor sentiment and speculation. The US dollar often strengthens during global uncertainty because it is considered a "safe haven" currency.</li>
+    </ul>
+
+    <h3>Understanding Currency Pairs</h3>
+    <p>Exchange rates are always expressed as a pair: EUR/USD, GBP/JPY, USD/PKR. The first currency is the "base" — the one you are converting from. The second is the "quote" — the one you are converting into. An EUR/USD rate of 1.08 means one euro buys 1.08 US dollars. If you want to go the other direction (USD to EUR), you divide 1 by 1.08 to get 0.926.</p>
+    <p>Major pairs — those involving USD, EUR, GBP, JPY, CHF, CAD, or AUD — have the tightest spreads and most liquidity. Emerging market pairs like USD/PKR or USD/NGN typically have wider spreads because there is less trading volume, and providers charge more to offset their risk.</p>
+
+    <h3>When Is the Best Time to Exchange Currency?</h3>
+    <p>For day-to-day amounts under £1,000 or equivalent, timing is rarely worth optimising — the rate difference between a good and bad moment is usually less than the effort of monitoring it. For larger transfers — mortgages, international salaries, property purchases — timing matters more. Rates move most significantly around major economic data releases (US jobs report on the first Friday of each month, central bank announcements, and inflation releases). Avoiding these windows reduces volatility risk. Many specialist transfer services let you set a target rate alert and lock in the rate when it hits — our Date Calculator can help you plan around known announcement dates.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Currency Conversion for Freelancers and International Business</h2>
+    <p>For freelancers, consultants, and small businesses working with international clients, currency conversion is not just a travel consideration — it is a core part of pricing, invoicing, and cash flow management. Getting it wrong costs real money.</p>
+
+    <h3>Pricing International Clients</h3>
+    <p>When you quote a project in a foreign currency, you are taking on exchange rate risk. A project quoted at $5,000 USD to a UK-based freelancer billing in GBP could be worth anywhere from £3,800 to £4,200 depending on when the payment clears and the rate at that moment. There are three common approaches to managing this:</p>
+    <ul>
+      <li><strong>Invoice in your own currency:</strong> The client bears the exchange rate risk. This is the cleanest approach for freelancers but may make you less competitive in markets where clients prefer local-currency invoices.</li>
+      <li><strong>Invoice in client currency with a buffer:</strong> Add 3–5% to your quoted rate to cover potential adverse exchange rate movement and transfer fees. Be transparent that this covers currency costs.</li>
+      <li><strong>Lock in rates:</strong> Services like Wise Business and OFX let you lock in an exchange rate today for payment you will receive in 30, 60, or 90 days — eliminating currency risk for fixed-price projects.</li>
+    </ul>
+
+    <h3>Reducing Transfer Fees on International Payments</h3>
+    <p>If you receive international payments through PayPal, you are almost certainly losing 3–4% on every transaction to currency conversion fees — on top of any transaction fees. On £50,000 of annual international revenue, that is £1,500–£2,000 per year going to PayPal's currency conversion margin. Wise Business, OFX, and Payoneer all offer significantly better rates for freelancers receiving international payments. The one-time setup effort pays for itself quickly on any meaningful volume of international work.</p>
+
+    <h3>Multi-Currency Invoicing</h3>
+    <p>If you work with clients in multiple countries, our multi-currency view shows you the equivalent value of any amount across 12 currencies simultaneously — useful when comparing project offers denominated in different currencies, or checking whether a client rate in one currency is competitive with your other clients in different markets.</p>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related-section">
+    <h3>🔗 Related Tools</h3>
     <div class="related-grid">
-      <a href="/tools/vat-calculator.html" class="related-card"><span style="font-size:1.4rem">🧮</span><span style="font-size:0.88rem;font-weight:500">VAT Calculator</span></a>
-      <a href="/tools/invoice-generator.html" class="related-card"><span style="font-size:1.4rem">🧾</span><span style="font-size:0.88rem;font-weight:500">Invoice Generator</span></a>
-      <a href="/tools/profit-margin-calculator.html" class="related-card"><span style="font-size:1.4rem">📈</span><span style="font-size:0.88rem;font-weight:500">Profit Margin Calculator</span></a>
+      <a href="/tools/vat-calculator.html" class="related-card"><span class="related-icon">🧮</span><span class="related-name">VAT Calculator</span></a>
+      <a href="/tools/invoice-generator.html" class="related-card"><span class="related-icon">🧾</span><span class="related-name">Invoice Generator</span></a>
+      <a href="/tools/freelancer-rate-calculator.html" class="related-card"><span class="related-icon">🧑‍💻</span><span class="related-name">Freelancer Rate Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="related-card"><span class="related-icon">📈</span><span class="related-name">Profit Margin Calculator</span></a>
+      <a href="/tools/percentage-calculator.html" class="related-card"><span class="related-icon">%</span><span class="related-name">Percentage Calculator</span></a>
+      <a href="/tools/tip-calculator.html" class="related-card"><span class="related-icon">🍽️</span><span class="related-name">Tip Calculator</span></a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How do I convert currencies?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Enter the amount, select your base currency and target currency from the dropdowns, and the result appears instantly using live exchange rates. Hit ⇄ to swap currencies and reverse the conversion. The multi-currency view below the main converter shows your amount converted to 12 currencies simultaneously.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Are the exchange rates live?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes — rates are fetched from a live forex data API and updated daily. These are mid-market rates — the midpoint between global buy and sell prices. Your bank or transfer service applies a spread on top of these rates. Use our Bank Fee Simulator to enter your provider's typical spread and see the real cost of your conversion.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the mid-market rate and why is it different from my bank's rate?<span class="faq-icon">+</span></button>
+      <div class="faq-a">The mid-market rate is the true midpoint between global buy and sell prices — what banks charge each other. When you exchange money at a bank, they add a markup of 2–4% on top of this rate as their profit. This markup is hidden inside the exchange rate rather than shown as a separate fee. Our Bank Fee Simulator lets you enter your bank's spread to see exactly how much you are overpaying versus the mid-market rate.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How much does my bank charge to exchange currency?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Traditional banks typically charge 2–4% above the mid-market rate. Airport kiosks charge 5–10%. PayPal charges 3–4%. Specialist services like Wise charge 0.3–0.7% and Revolut at mid-market hours charges near 0%. On a £1,000 exchange, the difference between a bank (3%) and Wise (0.5%) is £25. On a £10,000 transfer, that difference is £250. Enter your provider's rate in our Bank Fee Simulator to see your specific cost.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the cheapest way to exchange currency?<span class="faq-icon">+</span></button>
+      <div class="faq-a">In 2026, Wise and Revolut consistently offer exchange rates closest to the mid-market rate for personal transfers. For business transfers, Wise Business and OFX are the most competitive. For travel spending abroad, a Revolut or Wise card charges near mid-market rates on purchases. Avoid airport exchange kiosks (worst rates), high-street bank exchanges (expensive), and PayPal currency conversion (hidden 3–4% margin).</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the multi-currency view?<span class="faq-icon">+</span></button>
+      <div class="faq-a">The multi-currency view converts your entered amount to 12 major currencies simultaneously — useful for travelers visiting multiple countries, freelancers with clients in different markets, or anyone comparing purchasing power across currencies. It updates automatically whenever you change the amount or base currency in the main converter.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Why do exchange rates change so frequently?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Exchange rates change because currencies are traded 24 hours a day on the global forex market — the world's largest financial market at over $7.5 trillion daily. Rates move based on interest rate decisions, inflation data, economic growth, political events, trade balances, and market sentiment. Major pairs can move hundreds of pips in a single day during high-volatility events like central bank announcements or geopolitical developments.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How do I use this for freelance invoicing?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Enter the invoice amount in your client's currency, select their currency as the base, and select your home currency as the target. The result shows what you will receive at the current mid-market rate. Then use the Bank Fee Simulator to enter your payment processor's fee percentage — PayPal charges 3–4%, Wise charges 0.3–1% — to see your net receipt after fees. For calculating your minimum rate when working with international clients, use our Freelancer Rate Calculator.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What currencies does the converter support?<span class="faq-icon">+</span></button>
+      <div class="faq-a">The converter supports 30+ major and emerging market currencies: USD, EUR, GBP, JPY, CHF, CAD, AUD, NZD, CNY, HKD, SGD, INR, PKR, AED, SAR, KRW, TRY, BRL, MXN, ZAR, NGN, EGP, IDR, PHP, THB, MYR, SEK, NOK, DKK, and PLN. The multi-currency view shows 12 of these simultaneously for quick comparison.</div>
     </div>
   </div>
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
+</footer>
+
 <script>
-  const CURRENCIES=[
-    {code:'USD',name:'US Dollar',symbol:'$'},{code:'EUR',name:'Euro',symbol:'€'},
-    {code:'GBP',name:'British Pound',symbol:'£'},{code:'JPY',name:'Japanese Yen',symbol:'¥'},
-    {code:'CAD',name:'Canadian Dollar',symbol:'C$'},{code:'AUD',name:'Australian Dollar',symbol:'A$'},
-    {code:'CHF',name:'Swiss Franc',symbol:'Fr'},{code:'CNY',name:'Chinese Yuan',symbol:'¥'},
-    {code:'INR',name:'Indian Rupee',symbol:'₹'},{code:'PKR',name:'Pakistani Rupee',symbol:'₨'},
-    {code:'AED',name:'UAE Dirham',symbol:'AED'},{code:'SAR',name:'Saudi Riyal',symbol:'﷼'},
-    {code:'SGD',name:'Singapore Dollar',symbol:'S$'},{code:'MYR',name:'Malaysian Ringgit',symbol:'RM'},
-    {code:'KRW',name:'South Korean Won',symbol:'₩'},{code:'TRY',name:'Turkish Lira',symbol:'₺'},
-    {code:'BRL',name:'Brazilian Real',symbol:'R$'},{code:'MXN',name:'Mexican Peso',symbol:'$'},
-    {code:'ZAR',name:'South African Rand',symbol:'R'},{code:'NGN',name:'Nigerian Naira',symbol:'₦'},
-    {code:'EGP',name:'Egyptian Pound',symbol:'£'},{code:'IDR',name:'Indonesian Rupiah',symbol:'Rp'},
-    {code:'PHP',name:'Philippine Peso',symbol:'₱'},{code:'THB',name:'Thai Baht',symbol:'฿'},
-    {code:'SEK',name:'Swedish Krona',symbol:'kr'},{code:'NOK',name:'Norwegian Krone',symbol:'kr'},
-    {code:'DKK',name:'Danish Krone',symbol:'kr'},{code:'PLN',name:'Polish Zloty',symbol:'zł'},
-    {code:'HKD',name:'Hong Kong Dollar',symbol:'HK$'},{code:'NZD',name:'New Zealand Dollar',symbol:'NZ$'},
-  ];
-  const QUICK=['EUR','GBP','JPY','CAD','AUD','INR','PKR','AED','SAR','CNY','BRL','ZAR'];
-  let rates={};
-  async function fetchRates(){
-    try{
-      const r=await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-      const data=await r.json();
-      rates=data.rates;
-      document.getElementById('rate-status').textContent='Live rates — updated '+new Date().toLocaleTimeString();
-      buildQuickGrid();convert();
-    }catch(e){
-      // Fallback static rates
-      rates={USD:1,EUR:0.92,GBP:0.79,JPY:149.5,CAD:1.36,AUD:1.53,CHF:0.89,CNY:7.24,INR:83.1,PKR:278,AED:3.67,SAR:3.75,SGD:1.34,MYR:4.71,KRW:1325,TRY:30.5,BRL:4.97,MXN:17.1,ZAR:18.6,NGN:1550,EGP:30.9,IDR:15600,PHP:56.5,THB:35.1,SEK:10.4,NOK:10.6,DKK:6.89,PLN:4.0,HKD:7.82,NZD:1.63};
-      document.getElementById('rate-status').textContent='Using approximate rates (offline)';
-      buildQuickGrid();convert();
-    }
-  }
-  function populateSelects(){
-    const opts=CURRENCIES.map(c=>`<option value="${c.code}">${c.symbol} ${c.code} — ${c.name}</option>`).join('');
-    document.getElementById('from-cur').innerHTML=opts;
-    document.getElementById('to-cur').innerHTML=opts;
-    document.getElementById('to-cur').value='EUR';
-  }
-  function convert(){
-    const amt=parseFloat(document.getElementById('amount').value)||0;
-    const from=document.getElementById('from-cur').value;
-    const to=document.getElementById('to-cur').value;
-    if(!rates[from]||!rates[to])return;
-    const rate=rates[to]/rates[from];
-    const result=amt*rate;
-    const fromC=CURRENCIES.find(c=>c.code===from);
-    const toC=CURRENCIES.find(c=>c.code===to);
-    document.getElementById('result-input').value=result.toFixed(4);
-    document.getElementById('res-label').textContent=`${amt} ${from} =`;
-    document.getElementById('res-value').textContent=`${toC.symbol} ${result.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4})}`;
-    document.getElementById('res-rate').textContent=`1 ${from} = ${rate.toFixed(6)} ${to} · 1 ${to} = ${(1/rate).toFixed(6)} ${from}`;
-  }
-  function swapCurrencies(){
-    const f=document.getElementById('from-cur').value;
-    const t=document.getElementById('to-cur').value;
-    document.getElementById('from-cur').value=t;
-    document.getElementById('to-cur').value=f;
+const CURRENCIES = [
+  {code:'USD',name:'US Dollar',symbol:'$',flag:'🇺🇸'},
+  {code:'EUR',name:'Euro',symbol:'€',flag:'🇪🇺'},
+  {code:'GBP',name:'British Pound',symbol:'£',flag:'🇬🇧'},
+  {code:'JPY',name:'Japanese Yen',symbol:'¥',flag:'🇯🇵'},
+  {code:'CAD',name:'Canadian Dollar',symbol:'C$',flag:'🇨🇦'},
+  {code:'AUD',name:'Australian Dollar',symbol:'A$',flag:'🇦🇺'},
+  {code:'CHF',name:'Swiss Franc',symbol:'Fr',flag:'🇨🇭'},
+  {code:'CNY',name:'Chinese Yuan',symbol:'¥',flag:'🇨🇳'},
+  {code:'INR',name:'Indian Rupee',symbol:'₹',flag:'🇮🇳'},
+  {code:'PKR',name:'Pakistani Rupee',symbol:'₨',flag:'🇵🇰'},
+  {code:'AED',name:'UAE Dirham',symbol:'د.إ',flag:'🇦🇪'},
+  {code:'SAR',name:'Saudi Riyal',symbol:'﷼',flag:'🇸🇦'},
+  {code:'SGD',name:'Singapore Dollar',symbol:'S$',flag:'🇸🇬'},
+  {code:'MYR',name:'Malaysian Ringgit',symbol:'RM',flag:'🇲🇾'},
+  {code:'KRW',name:'South Korean Won',symbol:'₩',flag:'🇰🇷'},
+  {code:'TRY',name:'Turkish Lira',symbol:'₺',flag:'🇹🇷'},
+  {code:'BRL',name:'Brazilian Real',symbol:'R$',flag:'🇧🇷'},
+  {code:'MXN',name:'Mexican Peso',symbol:'$',flag:'🇲🇽'},
+  {code:'ZAR',name:'South African Rand',symbol:'R',flag:'🇿🇦'},
+  {code:'NGN',name:'Nigerian Naira',symbol:'₦',flag:'🇳🇬'},
+  {code:'EGP',name:'Egyptian Pound',symbol:'£',flag:'🇪🇬'},
+  {code:'IDR',name:'Indonesian Rupiah',symbol:'Rp',flag:'🇮🇩'},
+  {code:'PHP',name:'Philippine Peso',symbol:'₱',flag:'🇵🇭'},
+  {code:'THB',name:'Thai Baht',symbol:'฿',flag:'🇹🇭'},
+  {code:'SEK',name:'Swedish Krona',symbol:'kr',flag:'🇸🇪'},
+  {code:'NOK',name:'Norwegian Krone',symbol:'kr',flag:'🇳🇴'},
+  {code:'DKK',name:'Danish Krone',symbol:'kr',flag:'🇩🇰'},
+  {code:'PLN',name:'Polish Zloty',symbol:'zł',flag:'🇵🇱'},
+  {code:'HKD',name:'Hong Kong Dollar',symbol:'HK$',flag:'🇭🇰'},
+  {code:'NZD',name:'New Zealand Dollar',symbol:'NZ$',flag:'🇳🇿'},
+];
+
+const QUICK_PAIRS = ['EUR','GBP','JPY','CAD','AUD','INR','PKR','AED','CNY','BRL','ZAR','SAR'];
+const MULTI_CURRENCIES = ['EUR','GBP','JPY','CAD','AUD','INR','PKR','AED','SAR','CNY','BRL','ZAR'];
+
+let rates = {};
+let ratesBase = 'USD';
+
+async function fetchRates() {
+  try {
+    const res = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+    const data = await res.json();
+    rates = data.rates;
+    ratesBase = 'USD';
+    document.getElementById('rate-status').textContent = 'Live rates · Updated ' + new Date().toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
+    populateSelects();
     convert();
+    buildQuickGrid();
+    buildMultiGrid();
+  } catch(e) {
+    document.getElementById('rate-status').textContent = 'Using cached rates';
+    // Fallback static rates
+    rates = {USD:1,EUR:0.92,GBP:0.79,JPY:149.5,CAD:1.36,AUD:1.53,CHF:0.89,CNY:7.24,INR:83.1,PKR:278.5,AED:3.67,SAR:3.75,SGD:1.34,MYR:4.72,KRW:1325,TRY:30.2,BRL:4.97,MXN:17.1,ZAR:18.6,NGN:1580,EGP:30.9,IDR:15700,PHP:56.3,THB:35.1,SEK:10.4,NOK:10.6,DKK:6.89,PLN:3.98,HKD:7.82,NZD:1.63};
+    populateSelects();
+    convert();
+    buildQuickGrid();
+    buildMultiGrid();
   }
-  function buildQuickGrid(){
-    const grid=document.getElementById('quick-grid');
-    grid.innerHTML=QUICK.map(code=>{
-      const rate=rates[code]?rates[code].toFixed(code==='JPY'||code==='KRW'||code==='IDR'?1:4):'—';
-      const c=CURRENCIES.find(x=>x.code===code);
-      return `<div class="quick-card" onclick="document.getElementById('to-cur').value='${code}';convert()"><div class="qc-pair">USD → ${code}</div><div class="qc-rate">${c.symbol} ${rate}</div></div>`;
-    }).join('');
-  }
-  populateSelects();fetchRates();
+}
+
+function getRateToUSD(code) {
+  if (code === 'USD') return 1;
+  return rates[code] || 1;
+}
+
+function getRate(from, to) {
+  const fromUSD = getRateToUSD(from);
+  const toUSD = getRateToUSD(to);
+  return toUSD / fromUSD;
+}
+
+function populateSelects() {
+  const fromSel = document.getElementById('from-cur');
+  const toSel = document.getElementById('to-cur');
+  const html = CURRENCIES.map(c => `<option value="${c.code}">${c.flag} ${c.code} – ${c.name}</option>`).join('');
+  fromSel.innerHTML = html;
+  toSel.innerHTML = html;
+  fromSel.value = 'USD';
+  toSel.value = 'GBP';
+}
+
+function convert() {
+  if (!Object.keys(rates).length) return;
+  const amount = parseFloat(document.getElementById('amount').value) || 0;
+  const from = document.getElementById('from-cur').value;
+  const to = document.getElementById('to-cur').value;
+  const rate = getRate(from, to);
+  const result = amount * rate;
+
+  document.getElementById('result-input').value = result.toFixed(4);
+  document.getElementById('res-label').textContent = `${amount} ${from} =`;
+  document.getElementById('res-value').textContent = formatCurrency(result, to);
+  document.getElementById('res-rate').textContent = `1 ${from} = ${rate.toFixed(6)} ${to} · 1 ${to} = ${(1/rate).toFixed(6)} ${from}`;
+  document.getElementById('base-label').textContent = from;
+
+  calcFees();
+  buildMultiGrid();
+}
+
+function formatCurrency(val, code) {
+  const c = CURRENCIES.find(x => x.code === code);
+  if (val >= 1000000) return (c ? c.symbol : '') + (val/1000000).toFixed(2) + 'M';
+  if (val >= 1000) return (c ? c.symbol : '') + val.toLocaleString('en', {minimumFractionDigits:2,maximumFractionDigits:2});
+  return (c ? c.symbol : '') + val.toFixed(4);
+}
+
+function calcFees() {
+  if (!Object.keys(rates).length) return;
+  const amount = parseFloat(document.getElementById('amount').value) || 0;
+  const from = document.getElementById('from-cur').value;
+  const to = document.getElementById('to-cur').value;
+  const spread = parseFloat(document.getElementById('bank-spread').value) || 0;
+  const fixedFee = parseFloat(document.getElementById('fixed-fee').value) || 0;
+  const rate = getRate(from, to);
+  const midResult = amount * rate;
+  const bankRate = rate * (1 - spread / 100);
+  const bankResult = (amount * bankRate) - fixedFee;
+  const cost = midResult - bankResult;
+
+  const c = CURRENCIES.find(x => x.code === to);
+  const sym = c ? c.symbol : '';
+  document.getElementById('fee-midmarket').textContent = sym + midResult.toFixed(2);
+  document.getElementById('fee-bank').textContent = sym + Math.max(0, bankResult).toFixed(2);
+  document.getElementById('fee-cost').textContent = '−' + sym + Math.max(0, cost).toFixed(2);
+}
+
+function buildQuickGrid() {
+  const from = document.getElementById('from-cur') ? document.getElementById('from-cur').value : 'USD';
+  const grid = document.getElementById('quick-grid');
+  grid.innerHTML = QUICK_PAIRS.filter(c => c !== from).slice(0,12).map(code => {
+    const rate = getRate(from, code);
+    const c = CURRENCIES.find(x => x.code === code);
+    return `<div class="quick-card" onclick="setToCurrency('${code}')">
+      <div class="qc-pair">${c ? c.flag : ''} ${from}/${code}</div>
+      <div class="qc-rate">${rate >= 100 ? rate.toFixed(2) : rate >= 1 ? rate.toFixed(4) : rate.toFixed(6)}</div>
+    </div>`;
+  }).join('');
+}
+
+function buildMultiGrid() {
+  if (!Object.keys(rates).length) return;
+  const amount = parseFloat(document.getElementById('amount').value) || 1;
+  const from = document.getElementById('from-cur') ? document.getElementById('from-cur').value : 'USD';
+  const grid = document.getElementById('multi-grid');
+  grid.innerHTML = MULTI_CURRENCIES.filter(c => c !== from).map(code => {
+    const rate = getRate(from, code);
+    const result = amount * rate;
+    const c = CURRENCIES.find(x => x.code === code);
+    const displayVal = result >= 10000 ? result.toLocaleString('en',{maximumFractionDigits:0}) :
+                       result >= 100 ? result.toFixed(2) :
+                       result >= 1 ? result.toFixed(3) : result.toFixed(4);
+    return `<div class="multi-card">
+      <div class="mc-flag">${c ? c.flag : ''}</div>
+      <div class="mc-code">${code}</div>
+      <div class="mc-val">${c ? c.symbol : ''}${displayVal}</div>
+    </div>`;
+  }).join('');
+}
+
+function setToCurrency(code) {
+  document.getElementById('to-cur').value = code;
+  convert();
+}
+
+function swapCurrencies() {
+  const fromSel = document.getElementById('from-cur');
+  const toSel = document.getElementById('to-cur');
+  const fromVal = fromSel.value;
+  fromSel.value = toSel.value;
+  toSel.value = fromVal;
+  const amountEl = document.getElementById('amount');
+  const resultEl = document.getElementById('result-input');
+  if (resultEl.value) amountEl.value = parseFloat(resultEl.value).toFixed(4);
+  convert();
+  buildQuickGrid();
+}
+
+function toggleFaq(btn) { btn.parentElement.classList.toggle('open'); }
+
+fetchRates();
 </script>
 </body>
 </html>
