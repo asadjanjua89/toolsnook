@@ -4,15 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Debt Payoff Calculator – Avalanche vs Snowball Method | ToolsNook</title>
-  <meta name="description" content="Calculate how long it will take to pay off your debt. Compare the avalanche method vs snowball method. Free debt payoff calculator, works in any currency." />
-  <meta name="keywords" content="debt payoff calculator, debt avalanche, debt snowball, pay off debt, credit card payoff calculator, debt free calculator" />
+  <meta name="description" content="Free debt payoff calculator. Compare avalanche vs snowball methods to pay off credit cards, loans and debt faster. See exactly how much interest you'll save and when you'll be debt-free." />
+  <meta property="og:title" content="Debt Payoff Calculator – Avalanche vs Snowball, Interest Savings" />
+  <meta property="og:description" content="Calculate your debt-free date using avalanche or snowball method. See total interest saved, payoff order, and month-by-month progress. Free, instant, no signup." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/debt-payoff-calculator.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
+
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
     body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
@@ -83,52 +92,52 @@
     .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
     footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
     footer a{color:var(--muted);text-decoration:none}
+  
+    .content-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.5rem;margin-top:2rem}
+    .content-box h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.85rem;letter-spacing:-0.02em}
+    .content-box h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-box p{color:var(--muted);font-size:0.95rem;margin-bottom:1rem;line-height:1.75}
+    .content-box ul{color:var(--muted);font-size:0.95rem;padding-left:1.5rem;margin-bottom:1rem;line-height:1.9}
+    /* METHOD COMPARISON — UNIQUE */
+    .compare-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+    .method-card{border-radius:14px;padding:1.25rem}
+    .method-card.avalanche{background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.25)}
+    .method-card.snowball{background:rgba(67,233,123,0.06);border:1px solid rgba(67,233,123,0.25)}
+    .method-name{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:8px}
+    .method-card.avalanche .method-name{color:var(--accent)}
+    .method-card.snowball .method-name{color:var(--green)}
+    .method-stat{font-size:0.82rem;color:var(--muted);margin-bottom:4px}
+    .method-stat strong{color:var(--text)}
+    .formula-box{background:var(--bg3);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:monospace;font-size:0.9rem;color:var(--text);margin:1rem 0}
+    .related-section{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:20px;padding:1.75rem 2rem;margin:2rem 0}
+    .related-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+    .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem}
+    .rel-card{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;transition:border-color 0.2s,transform 0.2s}
+    .rel-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .faq-outer{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden}
+    .faq-btn{width:100%;background:var(--bg2);border:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.93rem;font-weight:500;padding:1rem 1.25rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-btn:hover{background:var(--bg3)}
+    .faq-ans{display:none;padding:0 1.25rem 1rem;background:var(--bg2);color:var(--muted);font-size:0.88rem;line-height:1.75}
+    .faq-ico{color:var(--accent);font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+    @media(max-width:640px){
+      .content-box{padding:1.25rem}
+      .compare-cards{grid-template-columns:1fr}
+      .rel-grid{grid-template-columns:1fr 1fr}
+    }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Debt Payoff Calculator",
     "url": "https://www.toolsnook.com/tools/debt-payoff-calculator.html",
-    "description": "Free debt payoff calculator. Compare avalanche vs snowball methods to find the fastest and cheapest way to pay off your debt.",
+    "description": "Free debt payoff calculator. Compare avalanche vs snowball methods to pay off debt faster and see total interest savings.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
     "publisher": {"@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com"}
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the debt avalanche method?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The debt avalanche method pays off debts with the highest interest rate first, regardless of balance. This saves the most money in interest over time and is mathematically optimal."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is the debt snowball method?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The debt snowball method pays off the smallest debt balance first, regardless of interest rate. This provides psychological wins and motivation, though it costs more in interest than the avalanche method."}
-      },
-      {
-        "@type": "Question",
-        "name": "Which debt payoff method is better?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The avalanche method saves more money. The snowball method keeps you more motivated. The best method is the one you will actually stick to — use our calculator to compare both and see the difference."}
-      }
-    ]
-  }
-  </script>
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -139,6 +148,23 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is the debt avalanche method?", "acceptedAnswer": {"@type": "Answer", "text": "The debt avalanche method prioritises paying off debts with the highest interest rates first while making minimum payments on all others. Once the highest-rate debt is cleared, the freed-up payment is added to the next highest-rate debt. This method minimises the total interest paid and is mathematically optimal — it results in the fastest debt elimination and the greatest total savings."}},
+      {"@type": "Question", "name": "What is the debt snowball method?", "acceptedAnswer": {"@type": "Answer", "text": "The debt snowball method prioritises paying off the smallest balance first regardless of interest rate, while making minimum payments on larger debts. Once the smallest debt is cleared, the freed-up payment rolls into the next smallest balance. This method creates quick psychological wins through faster debt eliminations, which helps maintain motivation — but it typically results in paying more total interest than the avalanche method."}},
+      {"@type": "Question", "name": "Which is better — avalanche or snowball?", "acceptedAnswer": {"@type": "Answer", "text": "Mathematically, the avalanche method wins every time — it minimises total interest paid and clears debt faster in financial terms. However, the best method is the one you will actually stick to. Research shows that people who feel a sense of progress are significantly more likely to continue a debt repayment plan. If the psychological boost from clearing small debts quickly keeps you motivated, the snowball method may help you reach debt-free status even if it costs slightly more in interest. Use both calculations to see your actual numbers."}},
+      {"@type": "Question", "name": "How does the debt payoff calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "Enter each debt with its current balance, interest rate (APR), and minimum monthly payment. The calculator simulates both the avalanche method (highest rate first) and snowball method (lowest balance first), showing: total interest paid for each method, total months to debt-free, the payoff order, and how much you save by using each approach. Enter your total monthly budget to see how extra payments accelerate your timeline."}},
+      {"@type": "Question", "name": "How much can I save by paying more than the minimum?", "acceptedAnswer": {"@type": "Answer", "text": "Significantly more than most people realise. A $5,000 credit card balance at 20% APR with minimum payments of 2% monthly takes over 30 years to pay off and costs over $8,000 in interest. Paying a fixed $200 per month clears it in 3 years and costs under $2,000 in interest — saving over $6,000. The savings from even modest extra payments are dramatic on high-interest debt. Enter your debts above and try different monthly budget amounts to see the difference."}},
+      {"@type": "Question", "name": "What is APR and how does it affect debt payoff?", "acceptedAnswer": {"@type": "Answer", "text": "APR (Annual Percentage Rate) is the yearly interest rate on your debt, expressed as a percentage. Monthly interest is calculated as APR divided by 12. A 20% APR credit card charges 1.67% per month on the outstanding balance. Higher APR means more of each payment goes to interest rather than principal — which is why high-rate debt like credit cards should be prioritised in the avalanche method. Always use the APR figure shown on your statement, not the promotional or introductory rate."}},
+      {"@type": "Question", "name": "Should I pay off debt or invest?", "acceptedAnswer": {"@type": "Answer", "text": "The mathematically correct answer: if your debt's interest rate is higher than your expected investment return, pay off the debt first. Credit card APRs of 18-25% are almost certainly higher than long-term market returns. For low-rate mortgage or student loan debt at 3-5%, investing in a diversified index fund may produce better long-term returns. In practice, consider doing both — contribute enough to your employer pension to capture any matching, then aggressively pay down high-rate debt, then invest more once high-rate debt is cleared."}},
+      {"@type": "Question", "name": "What is a debt consolidation loan and is it worth it?", "acceptedAnswer": {"@type": "Answer", "text": "A debt consolidation loan combines multiple debts into a single loan, ideally at a lower interest rate. It simplifies payments and can reduce total interest if the new rate is genuinely lower than the weighted average of your existing debts. The risk is that consolidating credit card debt into a secured loan (against your home) converts unsecured debt into debt that could result in asset loss if you default. Consolidation also only helps if you do not continue accumulating new high-rate debt afterward."}},
+      {"@type": "Question", "name": "How does balance transfer affect debt payoff?", "acceptedAnswer": {"@type": "Answer", "text": "A 0% balance transfer card moves your credit card balance to a new card with no interest for a promotional period — typically 12-21 months. If you can pay off the balance within the promotional period, you save all interest charges on that balance. The risks: balance transfer fees (typically 1-3%), the deferred interest or high revert rate if not fully cleared by the end of the promotion, and the temptation to use the cleared original card again. Use the debt payoff calculator to check whether you can clear the balance within the 0% period."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 <nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
@@ -146,7 +172,7 @@
   <div class="breadcrumb"><a href="/">ToolsNook</a> › Debt Payoff Calculator</div>
   <div class="hero-badge">✦ Finance Tool</div>
   <h1>Debt Payoff Calculator</h1>
-  <p>Find the fastest path to debt freedom. Compare the avalanche and snowball methods to see which saves you more money.</p>
+  <p>Compare the avalanche and snowball methods side by side. See your debt-free date, total interest saved, and the exact payoff order for all your debts.</p>
 </div>
 <div class="container">
   <div class="top-row">
@@ -216,8 +242,94 @@
     </div>
   </div>
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
+
+  <!-- CONTENT -->
+  <div class="content-box">
+    <h2>Avalanche vs Snowball: Which Debt Payoff Method Is Right for You?</h2>
+    <p>There are two proven strategies for paying off multiple debts: the avalanche method and the snowball method. They agree on one critical principle — make minimum payments on all debts, then throw every extra dollar at a single target. Where they differ is in how that target is chosen.</p>
+
+    <div class="compare-cards">
+      <div class="method-card avalanche">
+        <div class="method-name">🏔 Debt Avalanche</div>
+        <div class="method-stat"><strong>Target:</strong> Highest interest rate first</div>
+        <div class="method-stat"><strong>Outcome:</strong> Minimum total interest paid</div>
+        <div class="method-stat"><strong>Best for:</strong> Mathematically optimal payoff</div>
+        <div class="method-stat"><strong>Downside:</strong> May take longer before first win</div>
+      </div>
+      <div class="method-card snowball">
+        <div class="method-name">⛄ Debt Snowball</div>
+        <div class="method-stat"><strong>Target:</strong> Smallest balance first</div>
+        <div class="method-stat"><strong>Outcome:</strong> Faster psychological wins</div>
+        <div class="method-stat"><strong>Best for:</strong> Motivation and momentum</div>
+        <div class="method-stat"><strong>Downside:</strong> More total interest paid</div>
+      </div>
+    </div>
+
+    <p>The mathematical case for the avalanche method is clear — it minimises interest and clears debt in the fewest total months. But the best debt payoff strategy is the one you actually follow. Research on debt repayment behaviour consistently shows that people who experience early wins — from the snowball method — are significantly more likely to stay the course and reach debt-free status. The small amount of extra interest you pay with the snowball method may be worth it if it keeps you motivated.</p>
+    <p>Use the calculator above to run both methods against your actual debts. In most cases, the difference in total interest is smaller than you expect — and seeing your specific numbers removes the guesswork.</p>
+
+    <h3>The Power of Extra Payments</h3>
+    <p>The single most impactful thing you can do to accelerate debt payoff is increase your monthly payment above the minimum. Credit card minimum payments are designed to keep you in debt as long as possible — they typically cover only 1–2% of the balance, which means most of each payment is absorbed by interest and the principal barely moves.</p>
+    <p>Consider a $5,000 credit card balance at 20% APR. At minimum payments (2% of balance, reducing as the balance falls), the payoff timeline extends beyond 30 years and total interest exceeds $8,000. A fixed payment of $200 per month clears it in 3 years and costs under $2,000 in interest — saving over $6,000 from the same $5,000 debt. Enter different monthly budget amounts in the calculator to see how dramatically extra payments change your timeline.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>How to Use the Debt Payoff Calculator Effectively</h2>
+    <p>Getting the most accurate results requires using the right inputs. Here is exactly what to enter for each field and where to find the numbers:</p>
+    <ul>
+      <li><strong>Balance:</strong> Your current outstanding balance — not the credit limit. Find this on your most recent statement or by logging into your account. Use the balance as of today for the most accurate calculation.</li>
+      <li><strong>Interest Rate (APR):</strong> The Annual Percentage Rate shown on your statement. Do not use a promotional or introductory rate if it is temporary — use the standard revert rate for accuracy. APR is divided by 12 to calculate monthly interest.</li>
+      <li><strong>Minimum Payment:</strong> The minimum payment shown on your current statement. This is usually calculated as a percentage of the balance (typically 1–2%) or a fixed floor amount (typically $25–$35), whichever is higher.</li>
+      <li><strong>Monthly Budget:</strong> The total amount you can dedicate to debt payments each month. This should be at least the sum of all minimum payments — anything above the minimums goes to your target debt as an extra payment.</li>
+    </ul>
+
+    <h3>Understanding APR vs Monthly Interest</h3>
+    <div class="formula-box">Monthly Interest = Outstanding Balance × (APR ÷ 12)</div>
+    <p>A credit card with a 20% APR charges 1.667% per month on the outstanding balance. On a $5,000 balance, that is $83.33 in interest in the first month. If your minimum payment is $100, only $16.67 goes toward reducing the principal — the rest covers the interest. This is why high-rate debt is so damaging and why the avalanche method targets it first.</p>
+
+    <h3>When to Consider Debt Consolidation</h3>
+    <p>If you have multiple high-rate debts, a debt consolidation loan or 0% balance transfer card can dramatically reduce total interest. A consolidation loan that combines $20,000 of credit card debt at 20% APR into a personal loan at 8% APR could save thousands of pounds or dollars in interest and simplify your payments to a single monthly amount. The key consideration: the new rate must be genuinely lower than your existing debts' weighted average rate, and you must not continue accumulating new high-rate debt after consolidating.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Debt Repayment Psychology: Why Most People Fail and How to Succeed</h2>
+    <p>Debt payoff is not primarily a maths problem — it is a behaviour problem. The numbers are simple. The difficulty is sustaining the behaviour over months and years of consistent extra payments. Here is what the research shows about what works:</p>
+    <ul>
+      <li><strong>Automate your payments:</strong> Set up automatic payments above the minimum on the day you get paid. Money that reaches your account and sits there gets spent. Money that leaves automatically before you see it does not.</li>
+      <li><strong>Track your progress visibly:</strong> Write your balances on a whiteboard, use a spreadsheet, or use the calculator monthly. Watching numbers decrease is motivating. Hidden progress feels like no progress.</li>
+      <li><strong>Celebrate payoffs:</strong> When you eliminate a debt completely, acknowledge it. The freed-up cash flow from a cleared minimum payment goes directly to the next target — that acceleration is satisfying and real.</li>
+      <li><strong>Stop adding new debt:</strong> No debt payoff strategy works if new high-rate debt accumulates faster than old debt is cleared. Freeze your credit cards, build a small emergency fund ($1,000–$2,000) to prevent emergency debt, and address the spending patterns that created the debt.</li>
+      <li><strong>Find extra income:</strong> One-off income — a bonus, a tax refund, selling unused items — applied directly to your target debt creates outsized progress. A $500 lump sum on a 20% APR balance saves more in interest than $500 spread over 12 months.</li>
+    </ul>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related-section">
+    <h3>🔗 Related Tools</h3>
+    <div class="rel-grid">
+      <a href="/tools/loan-calculator.html" class="rel-card"><span>🏦</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Business Loan Calculator</span></a>
+      <a href="/tools/compound-interest-calculator.html" class="rel-card"><span>📊</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Compound Interest Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="rel-card"><span>📈</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Profit Margin Calculator</span></a>
+      <a href="/tools/working-capital-calculator.html" class="rel-card"><span>🔄</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Working Capital Calculator</span></a>
+      <a href="/tools/percentage-calculator.html" class="rel-card"><span>%</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Percentage Calculator</span></a>
+      <a href="/tools/break-even-calculator.html" class="rel-card"><span>⚖️</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Break-Even Calculator</span></a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:1rem">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>
+    <div id="faq-wrap"></div>
+  </div>
+
+</div>
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
+</footer>
 <script>
+
   let cur='$';let method='avalanche';let debts=[];let debtId=0;
   function onCC(){cur=document.getElementById('cs').value.split('|')[0]||'$';document.querySelectorAll('.cur-sym').forEach(e=>e.textContent=cur);}
   const fmt=n=>cur+' '+parseFloat(n||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -256,6 +368,11 @@
   }
   addDebt('Credit Card',5000,19.9,100);
   addDebt('Car Loan',12000,7.5,250);
+
+  var FAQS=[["What is the debt avalanche method?","The avalanche method prioritises paying off debts with the highest interest rates first while making minimum payments on all others. Once the highest-rate debt is cleared, the freed-up payment adds to the next highest-rate debt. This minimises total interest paid and is mathematically optimal."],["What is the debt snowball method?","The snowball method prioritises the smallest balance first regardless of interest rate. Once the smallest debt is cleared, the payment rolls into the next smallest balance. This creates quick psychological wins and helps maintain motivation — but typically costs more in total interest than the avalanche method."],["Which is better — avalanche or snowball?","Mathematically, avalanche wins — it minimises total interest. But the best method is the one you will actually stick to. Research shows that quick wins from the snowball method keep people motivated. Use the calculator to see your actual numbers for both methods and choose based on your specific situation."],["How does the debt payoff calculator work?","Enter each debt with its balance, interest rate (APR), and minimum payment. Set your total monthly budget. The calculator simulates both avalanche and snowball methods, showing total interest paid, months to debt-free, payoff order, and interest savings for each approach."],["How much can I save by paying more than the minimum?","Significantly more than most people realise. A $5,000 credit card at 20% APR with minimum payments takes over 30 years and costs over $8,000 in interest. Paying a fixed $200 per month clears it in 3 years for under $2,000 in interest — saving over $6,000. Enter different monthly budgets above to see your specific savings."],["What is APR and how does it affect debt payoff?","APR is the Annual Percentage Rate — the yearly interest rate on your debt. Monthly interest is APR divided by 12. A 20% APR credit card charges 1.67% per month on the outstanding balance. Higher APR means more of each payment goes to interest, which is why high-rate debt should be targeted first with the avalanche method."],["Should I pay off debt or invest?","If your debt's interest rate is higher than your expected investment return, pay off the debt first. Credit card APRs of 18-25% are almost certainly higher than long-term market returns. For low-rate debt at 3-5%, investing may produce better returns. A practical approach: contribute enough to capture any employer pension matching, then aggressively clear high-rate debt, then invest more."],["What is a debt consolidation loan?","A debt consolidation loan combines multiple debts into a single loan, ideally at a lower interest rate. It simplifies payments and reduces total interest if the new rate is genuinely lower than your weighted average existing rate. The risk is converting unsecured credit card debt into a secured loan that puts assets at risk if you default."],["How does a balance transfer affect debt payoff?","A 0% balance transfer card moves your credit card balance to a new card with no interest for a promotional period. If you pay off the balance within the promotion, you save all interest. Risks include balance transfer fees of 1-3%, high revert rates if not fully cleared, and the temptation to spend on the original cleared card."]];
+  var fw=document.getElementById('faq-wrap');
+  if(fw){fw.innerHTML=FAQS.map(function(q,i){return '<div class="faq-outer"><button class="faq-btn" onclick="xF('+i+')">'+q[0]+'<span class="faq-ico" id="fi'+i+'">+</span></button><div class="faq-ans" id="fa'+i+'">'+q[1]+'</div></div>';}).join('');}
+  function xF(i){var a=document.getElementById('fa'+i);var ic=document.getElementById('fi'+i);var o=a.style.display==='block';a.style.display=o?'none':'block';ic.style.transform=o?'':'rotate(45deg)';}
 </script>
 </body>
 </html>
