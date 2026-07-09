@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markup vs Margin: The Pricing Mistake That Halves Your Profit | ToolsNook</title>
+  <meta name="description" content="A 50% markup is a 33.3% margin, not a 50% margin. Confusing the two silently under-prices everything you sell. Full conversion tables, the cost of the error, and how to price from a target margin." />
+  <meta property="og:title" content="Markup vs Margin: The Pricing Mistake That Halves Your Profit" />
+  <meta property="og:description" content="A 50% markup is a 33.3% margin. Here is what the confusion actually costs, with full conversion tables in both directions." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+  <link rel="canonical" href="https://www.toolsnook.com/guides/markup-vs-margin.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/toolsnook-favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/toolsnook-favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/toolsnook-apple-touch-180.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.02em}
+    .logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem}
+    .nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 1.5rem;max-width:780px;margin:0 auto}
+    .breadcrumb{font-size:0.82rem;color:var(--muted);margin-bottom:1rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .kicker{display:inline-block;background:rgba(108,99,255,0.14);color:#a59fff;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;padding:3px 9px;border-radius:5px;text-transform:uppercase;margin-bottom:0.9rem}
+    .hero h1{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.9rem;line-height:1.13}
+    .standfirst{color:var(--muted);font-size:1.06rem;line-height:1.7}
+    .container{max-width:780px;margin:0 auto;padding:0 2rem 3rem}
+    .container h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;margin:2.5rem 0 0.9rem}
+    .container h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin:1.8rem 0 0.55rem}
+    .container p{color:var(--muted);font-size:1rem;margin-bottom:1.1rem;line-height:1.8}
+    .container ul,.container ol{color:var(--muted);font-size:1rem;padding-left:1.4rem;margin-bottom:1.1rem;line-height:1.85}
+    .container li{margin-bottom:0.4rem}
+    .container strong{color:var(--text)}
+    .container a{color:var(--accent);text-decoration:none}
+    .container a:hover{text-decoration:underline}
+    .formula{background:var(--bg3);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9rem;color:var(--text);margin:1.2rem 0;line-height:1.9;overflow-x:auto}
+    table{width:100%;border-collapse:collapse;font-size:0.9rem;margin:1.2rem 0}
+    th{text-align:left;padding:0.6rem 0.75rem;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border2)}
+    td{padding:0.6rem 0.75rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    td:first-child{color:var(--text);font-weight:500}
+    tr:last-child td{border-bottom:none}
+    .hl td{background:rgba(108,99,255,0.07)}
+    .hl td:first-child{color:#a59fff;font-weight:700}
+    .pull{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:10px;padding:1.1rem 1.35rem;margin:1.6rem 0}
+    .pull p{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.75}
+    .pull strong{color:var(--text)}
+    .warn{background:rgba(255,107,107,0.05);border:1px solid rgba(255,107,107,0.25);border-left:3px solid var(--red);border-radius:10px;padding:1.1rem 1.35rem;margin:1.6rem 0}
+    .warn p{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.75}
+    .warn strong{color:var(--text)}
+    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid var(--amber);border-radius:10px;padding:1rem 1.25rem;margin:1.8rem 0;font-size:0.88rem;color:var(--muted);line-height:1.7}
+    .advice-note strong{color:var(--text)}
+    .toolcta{background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.22);border-radius:12px;padding:1rem 1.25rem;margin:1.4rem 0;font-size:0.92rem;color:var(--muted)}
+    .toolcta a{font-weight:600}
+    .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.18);border-radius:14px;padding:1rem 1.2rem;margin:2.5rem 0 1rem}
+    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:11px;background:linear-gradient(135deg,#6c63ff,#a575ff);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:#fff}
+    .pm-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text)}
+    .pm-name a{color:#a59fff;text-decoration:none}
+    .pm-sub{font-size:0.79rem;color:var(--muted);margin-top:2px;line-height:1.55}
+    .pm-sub a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+    .related{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:16px;padding:1.5rem 1.75rem;margin:2rem 0}
+    .related h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin:0 0 0.9rem}
+    .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0.7rem}
+    .rgrid a{background:var(--bg2);border:1px solid var(--border2);border-radius:11px;padding:0.85rem 1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:9px;font-size:0.86rem;font-weight:500}
+    .rgrid a:hover{border-color:var(--accent);text-decoration:none}
+    footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;color:var(--muted);font-size:0.86rem}
+    footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{color:var(--accent)}
+    @media(max-width:640px){.hero h1{font-size:1.85rem}.container,.hero{padding-left:1.1rem;padding-right:1.1rem}table{font-size:0.82rem}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Markup vs Margin: The Pricing Mistake That Halves Your Profit",
+    "description": "A 50% markup is a 33.3% margin, not a 50% margin. Confusing the two silently under-prices everything you sell.",
+    "url": "https://www.toolsnook.com/guides/markup-vs-margin.html",
+    "datePublished": "2026-07-10",
+    "dateModified": "2026-07-10",
+    "author": {
+      "@type": "Person",
+      "name": "Asad Janjua",
+      "url": "https://www.toolsnook.com/about.html",
+      "sameAs": ["https://pk.linkedin.com/in/asad-janjua-16580717a"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolsNook",
+      "url": "https://www.toolsnook.com",
+      "logo": "https://www.toolsnook.com/toolsnook-mark-512.png"
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.toolsnook.com/guides/markup-vs-margin.html" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ToolsNook","item":"https://www.toolsnook.com"},
+      {"@type":"ListItem","position":2,"name":"Guides","item":"https://www.toolsnook.com/guides/markup-vs-margin.html"},
+      {"@type":"ListItem","position":3,"name":"Markup vs Margin","item":"https://www.toolsnook.com/guides/markup-vs-margin.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Guides › Markup vs Margin</div>
+  <span class="kicker">Pricing Guide</span>
+  <h1>Markup vs margin: the pricing mistake that halves your profit</h1>
+  <p class="standfirst">A 50% markup is a 33.3% margin. Not a 50% margin. If you have ever set a price by multiplying cost by 1.5 while telling yourself you were making half your money back, you have been under-pricing every unit you sell — and the gap is larger than almost anyone guesses.</p>
+</div>
+
+<div class="container">
+
+  <p>Both numbers describe the same profit on the same product. They just divide it by different things. Markup divides profit by <em>cost</em>. Margin divides profit by <em>selling price</em>. Because the selling price is always the larger number, the margin percentage is always smaller than the markup percentage — and the divergence widens the further up you go.</p>
+
+  <p>That is the whole idea. It sounds trivial. It is responsible for more quiet, structural under-pricing in small businesses than any other single arithmetic error, because the mistake never announces itself. Nothing bounces. No invoice fails. Revenue simply arrives smaller than the spreadsheet promised, month after month, and the shortfall gets blamed on volume.</p>
+
+  <h2>The two formulas</h2>
+
+  <div class="formula">Markup %  =  (Price − Cost) ÷ <strong>Cost</strong> × 100
+Margin %  =  (Price − Cost) ÷ <strong>Price</strong> × 100</div>
+
+  <p>Take a product that costs you $40 and sells for $60. The profit is $20 either way. But:</p>
+
+  <ul>
+    <li>As a <strong>markup</strong>, $20 ÷ $40 = <strong>50%</strong></li>
+    <li>As a <strong>margin</strong>, $20 ÷ $60 = <strong>33.3%</strong></li>
+  </ul>
+
+  <p>Same product. Same profit. Same day. Two numbers, sixteen and a half percentage points apart, and both correct.</p>
+
+  <div class="pull">
+    <p><strong>The rule of thumb worth memorising:</strong> markup is what you add on. Margin is what you keep. Markup is always the bigger number, and it is always the one that flatters you.</p>
+  </div>
+
+  <h2>What the confusion actually costs</h2>
+
+  <p>Suppose you make leather bags. Each one costs you $40 in materials and labour. You decide you want a 50% margin — you want to keep half of every dollar that comes in — and you price it the way most people do, by adding 50% to cost.</p>
+
+  <div class="formula">Cost                       $40.00
+Price you set (cost × 1.50)  $60.00   ← 50% markup
+Price for a true 50% margin   $80.00   ← cost ÷ (1 − 0.50)
+
+Margin you actually achieved  33.3%
+Gross profit per unit         $20.00  (you expected $40.00)</div>
+
+  <p>You are not slightly off. <strong>You are collecting half the gross profit you planned for.</strong> On 5,000 units a year, that is $100,000 of gross profit instead of $200,000 — a shortfall of $100,000, from a single misplaced denominator.</p>
+
+  <div class="warn">
+    <p><strong>Why it never gets caught:</strong> the business still looks profitable. Every unit still makes money. The bank balance still grows. The error only surfaces when you compare the margin in your accounts against the margin you thought you had set — and most small businesses never do that comparison, because the person setting prices and the person reading the P&amp;L are the same exhausted person.</p>
+  </div>
+
+  <h2>Conversion table: markup → margin</h2>
+
+  <p>Every markup percentage corresponds to exactly one margin percentage. Here is the mapping. The third column is the number you actually multiply cost by.</p>
+
+  <table>
+    <thead><tr><th>Markup</th><th>Equals margin</th><th>Multiply cost by</th></tr></thead>
+    <tbody>
+      <tr><td>10%</td><td>9.1%</td><td>× 1.10</td></tr>
+      <tr><td>15%</td><td>13.0%</td><td>× 1.15</td></tr>
+      <tr><td>20%</td><td>16.7%</td><td>× 1.20</td></tr>
+      <tr><td>25%</td><td>20.0%</td><td>× 1.25</td></tr>
+      <tr><td>30%</td><td>23.1%</td><td>× 1.30</td></tr>
+      <tr><td>40%</td><td>28.6%</td><td>× 1.40</td></tr>
+      <tr class="hl"><td>50%</td><td>33.3%</td><td>× 1.50</td></tr>
+      <tr><td>60%</td><td>37.5%</td><td>× 1.60</td></tr>
+      <tr><td>75%</td><td>42.9%</td><td>× 1.75</td></tr>
+      <tr class="hl"><td>100%</td><td>50.0%</td><td>× 2.00</td></tr>
+      <tr><td>150%</td><td>60.0%</td><td>× 2.50</td></tr>
+      <tr><td>200%</td><td>66.7%</td><td>× 3.00</td></tr>
+      <tr><td>300%</td><td>75.0%</td><td>× 4.00</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice the two highlighted rows. <strong>A 100% markup — doubling your cost — gives you a 50% margin, not 100%.</strong> A margin of 100% is arithmetically impossible: it would mean the product cost you nothing. Anyone quoting a "120% margin" is quoting a markup and does not know it.</p>
+
+  <h2>Conversion table: margin → markup</h2>
+
+  <p>This is the direction that matters when you are pricing, because you almost always start from a margin target. Your overheads are a percentage of revenue. Your investors talk in margin. Your industry benchmarks are margins. So you need to work backwards to the markup that gets you there.</p>
+
+  <div class="formula">Markup % = Margin ÷ (100 − Margin) × 100
+Price    = Cost ÷ (1 − Margin/100)</div>
+
+  <table>
+    <thead><tr><th>Target margin</th><th>Markup required</th><th>Price from $40 cost</th></tr></thead>
+    <tbody>
+      <tr><td>10%</td><td>11.1%</td><td>$44.44</td></tr>
+      <tr><td>20%</td><td>25.0%</td><td>$50.00</td></tr>
+      <tr><td>25%</td><td>33.3%</td><td>$53.33</td></tr>
+      <tr><td>30%</td><td>42.9%</td><td>$57.14</td></tr>
+      <tr class="hl"><td>40%</td><td>66.7%</td><td>$66.67</td></tr>
+      <tr class="hl"><td>50%</td><td>100.0%</td><td>$80.00</td></tr>
+      <tr><td>60%</td><td>150.0%</td><td>$100.00</td></tr>
+      <tr><td>70%</td><td>233.3%</td><td>$133.33</td></tr>
+    </tbody>
+  </table>
+
+  <p>Read that 50% row again. To keep half of every dollar, you must add <strong>one hundred percent</strong> to your cost. Not fifty. The intuition is wrong, it is wrong by exactly a factor of two at that point, and the intuition is what most people price on.</p>
+
+  <div class="toolcta">
+    Rather than memorise this: the <a href="/tools/markup-calculator.html">Markup Calculator</a> converts between the two instantly, in both directions. The <a href="/tools/profit-margin-calculator.html">Profit Margin Calculator</a> works out gross, operating and net margin from your actual figures.
+  </div>
+
+  <h2>Which one should you use, and when?</h2>
+
+  <h3>Use markup when you are pricing</h3>
+  <p>You start from a cost and work forward to a price. Retail, wholesale, cost-plus contracts, quoting a job. The markup is the operation you perform: take the cost, add this much, that is the price.</p>
+
+  <h3>Use margin when you are measuring</h3>
+  <p>You start from revenue and look at what survived. Income statements, investor decks, industry benchmarks, bank covenants. Every one of them is expressed in margin, because margin answers the only question a financier cares about: of the money that came in, how much stayed?</p>
+
+  <p>This is why the confusion is so persistent. The two words live in different rooms of the same business. Pricing happens in the workshop; margin gets discussed in the meeting. Nobody ever puts them side by side, so nobody notices they disagree.</p>
+
+  <div class="pull">
+    <p><strong>A practical habit:</strong> write both numbers on the price list. "Cost $40 · Price $80 · markup 100% · margin 50%." It takes four extra characters and it makes the mistake impossible to make silently.</p>
+  </div>
+
+  <h2>Setting a margin target that actually covers your business</h2>
+
+  <p>Gross margin is not profit. It is what is left after the direct cost of making the thing — and it still has to pay for everything else: rent, salaries, software, marketing, your own wages, tax, and whatever is left over that you would like to call profit.</p>
+
+  <p>So work backwards from your overheads:</p>
+
+  <ol>
+    <li><strong>Add up annual operating costs</strong> that are not cost of goods — rent, wages, tools, marketing, insurance.</li>
+    <li><strong>Express them as a percentage of expected revenue.</strong> If overheads are $140,000 and you expect $400,000 of revenue, that is 35%.</li>
+    <li><strong>Add your target net profit.</strong> Want 10% net? Then your gross margin must be at least 35% + 10% = <strong>45%</strong>.</li>
+    <li><strong>Convert to markup.</strong> A 45% margin needs a markup of 45 ÷ (100 − 45) × 100 = <strong>81.8%</strong>.</li>
+  </ol>
+
+  <p>An 81.8% markup on a $40 cost gives a $72.73 price. Had you "added 45%" instead, you would have charged $58 — and structurally lost money on every unit while believing you had built in a 10% profit. That is the entire failure mode, in one number.</p>
+
+  <div class="toolcta">
+    The <a href="/tools/break-even-calculator.html">Break-Even Calculator</a> tells you how many units at that price actually cover your fixed costs. It is the natural next question.
+  </div>
+
+  <h2>The traps around the edges</h2>
+
+  <h3>Discounts destroy margin faster than they destroy markup</h3>
+  <p>A 10% discount off an 80-dollar item is $8 — but that $8 comes entirely out of your $40 of gross profit. You did not lose 10%. You lost <strong>20% of your profit</strong>. At a 33.3% margin, that same 10% discount removes 30% of your gross profit. The thinner your margin, the more violently discounting eats it.</p>
+
+  <h3>Stacked discounts do not add up</h3>
+  <p>"30% off, then an extra 10% off" is not 40% off. It is 37% off: $100 × 0.70 = $70, then × 0.90 = $63. Nice for you, if you are the seller who assumed 40%. Ruinous if you priced expecting to keep 40 points and the promotions team stacked three of them.</p>
+
+  <h3>"Keystone" is a margin in disguise</h3>
+  <p>The old retail rule of "keystone pricing" means doubling the wholesale cost. That is a 100% markup — and therefore a 50% margin. It survived a century because it happens to land on a round margin number, not because 100% is a magic markup.</p>
+
+  <h3>Service businesses have the same problem with a different name</h3>
+  <p>Replace "cost of goods" with "fully loaded cost of the person doing the work" — salary, payroll tax, benefits, and their share of overhead — and every sentence above still holds. A consultant whose loaded cost is $50/hour and who bills 1,200 of their 2,080 annual hours needs to recover $104,000 across those 1,200 hours. That is <strong>$86.67/hour to break even</strong>, before a single dollar of profit. Bill $130 and the margin is 33.3%, not 50%.</p>
+
+  <div class="advice-note">
+    <p><strong>These figures are illustrative, not financial advice.</strong> ToolsNook is not an accountancy practice. Your tax position, your cost base and your market will move every number on this page. Use it to understand the shape of the problem, then talk to an accountant before you reprice anything.</p>
+  </div>
+
+  <h2>The three-second version</h2>
+
+  <ul>
+    <li><strong>Markup</strong> divides profit by cost. <strong>Margin</strong> divides profit by price.</li>
+    <li>Markup is always the bigger, more flattering number.</li>
+    <li>50% markup = 33.3% margin. 100% markup = 50% margin. A 100% margin cannot exist.</li>
+    <li>To hit a margin target: <strong>Price = Cost ÷ (1 − margin)</strong>. Never Cost × (1 + margin).</li>
+    <li>Write both numbers down, every time. The error cannot hide in daylight.</li>
+  </ul>
+
+  <div class="page-meta">
+    <div class="pm-ini">AJ</div>
+    <div>
+      <div class="pm-name">Reviewed and published by <a href="/about.html">Asad Janjua</a></div>
+      <div class="pm-sub">Founder, ToolsNook &middot; Islamabad, Pakistan &middot; Last updated: 10 July 2026<br />
+      How we build and check these tools: <a href="/methodology.html">our methodology</a></div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h3>Work it out</h3>
+    <div class="rgrid">
+      <a href="/tools/markup-calculator.html"><span>🏷️</span><span>Markup Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html"><span>📈</span><span>Profit Margin Calculator</span></a>
+      <a href="/tools/break-even-calculator.html"><span>⚖️</span><span>Break-Even Calculator</span></a>
+      <a href="/tools/discount-calculator.html"><span>🔖</span><span>Discount Calculator</span></a>
+      <a href="/tools/roi-calculator.html"><span>💰</span><span>ROI Calculator</span></a>
+      <a href="/tools/freelancer-rate-calculator.html"><span>🧑‍💻</span><span>Freelancer Rate Calculator</span></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/about.html">About</a> · <a href="/methodology.html">Methodology</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Built and maintained by <a href="/about.html">Asad Janjua</a> in Islamabad, Pakistan.</p>
+</footer>
+</body>
+</html>
