@@ -120,10 +120,17 @@
       <li><strong>Definition.</strong> The formula is taken either from the issuing authority (for regulated figures like VAT and BMI) or from a standard, uncontested definition (for arithmetic like compound interest or amortisation).</li>
       <li><strong>Worked examples.</strong> We collect worked examples with known answers — from the source authority where one publishes them, or constructed by hand where none does.</li>
       <li><strong>Implementation.</strong> The formula is written in JavaScript that runs entirely in your browser.</li>
-      <li><strong>Testing.</strong> The implementation is run against every worked example before the tool goes live. If the code and the example disagree, the code is wrong until proven otherwise.</li>
+      <li><strong>Testing.</strong> The implementation is run against every worked example before the tool goes live. If the code and the example disagree, the code is wrong until proven otherwise. The test suite is public — you can read it, run it, and check us: <a href="https://github.com/asadjanjua89/toolsnook-tests" rel="noopener" target="_blank">github.com/asadjanjua89/toolsnook-tests</a>.</li>
       <li><strong>Edge cases.</strong> Zero, negative, and out-of-range inputs are checked so the tool fails visibly rather than returning a confident wrong answer.</li>
     </ol>
     <p>Two specific traps we test for, because they're the most common errors in this category: <strong>margin versus markup</strong> (a 50% markup is a 33.3% margin, and mixing them up silently under-prices everything), and <strong>inclusive versus exclusive date counting</strong> (the source of nearly every "off by one" bug in date arithmetic).</p>
+
+    <div class="note">
+      <p><strong>The tests run the real page code, not a copy of it.</strong> Each tool page is loaded into a browser-like environment, the inputs are filled in, the calculate button's function is called, and the number the page actually displays is compared against the worked example. There are currently 41 such checks, and they all pass. <a href="https://github.com/asadjanjua89/toolsnook-tests" rel="noopener" target="_blank">See for yourself →</a></p>
+    </div>
+
+    <h3>What the tests caught</h3>
+    <p>This is not a formality. On 9 July 2026 the suite found four defects in shipped code, including a compound-interest routine that recomputed the balance three times per year and a loan page whose main input asked for the term in years while a comparison table on the same page asked for months. It also caught five incorrect worked examples written into the page copy — the worst of which claimed that $131 a month reaches a million pounds in thirty years at 7%. The real figure is $820. All were fixed the same day, and the <a href="https://github.com/asadjanjua89/toolsnook-tests#defects-this-suite-found-and-fixed-9-july-2026" rel="noopener" target="_blank">full list is public</a>.</p>
   </div>
 
   <div class="box">
