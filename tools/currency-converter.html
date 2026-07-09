@@ -143,6 +143,20 @@
       .content-box{padding:1.25rem}
       .related-grid{grid-template-columns:1fr 1fr}
     }
+  
+    .sources{background:rgba(108,99,255,0.045);border:1px solid rgba(108,99,255,0.20);border-radius:14px;padding:1.35rem 1.6rem;margin:2rem 0}
+    .sources-label{display:inline-block;background:rgba(108,99,255,0.14);color:#a59fff;font-size:0.66rem;font-weight:700;letter-spacing:0.07em;padding:2px 8px;border-radius:4px;margin-bottom:0.85rem;text-transform:uppercase}
+    .sources h3{font-family:'Syne',sans-serif;font-size:1.02rem;font-weight:700;margin:0 0 0.9rem}
+    .sources ul{list-style:none;padding:0;margin:0}
+    .sources li{padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.88rem;line-height:1.65}
+    .sources li:last-child{border-bottom:none}
+    .sources a{color:#a59fff;text-decoration:none;font-weight:600}
+    .sources a:hover{text-decoration:underline}
+    .sources .what{display:block;color:#8888a0;font-size:0.82rem;margin-top:2px}
+    .src-note{margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.06);font-size:0.8rem;color:#8888a0;line-height:1.65}
+    .src-note a{color:#a59fff;text-decoration:none}
+    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid #f7971e;border-radius:10px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.87rem;color:#8888a0;line-height:1.7}
+    .advice-note strong{color:#f0f0f5}
   </style>
   <script type="application/ld+json">
   {
@@ -430,6 +444,17 @@
       <button class="faq-q" onclick="toggleFaq(this)">What currencies does the converter support?<span class="faq-icon">+</span></button>
       <div class="faq-a">The converter supports 30+ major and emerging market currencies: USD, EUR, GBP, JPY, CHF, CAD, AUD, NZD, CNY, HKD, SGD, INR, PKR, AED, SAR, KRW, TRY, BRL, MXN, ZAR, NGN, EGP, IDR, PHP, THB, MYR, SEK, NOK, DKK, and PLN. The multi-currency view shows 12 of these simultaneously for quick comparison.</div>
     </div>
+
+  <div class="sources">
+    <span class="sources-label">Sources</span>
+    <h3>Where these exchange rates come from</h3>
+      <ul>
+        <li><a href="https://www.exchangerate-api.com/" rel="noopener nofollow" target="_blank">ExchangeRate-API</a><span class="what">Live mid-market reference rates, fetched when this page loads. No personal data is sent.</span></li>
+      </ul>
+        <div class="src-note">Every figure above is taken from the primary source, not from a secondary summary of it. How we choose and verify formulas is set out in our <a href="/methodology.html">methodology</a>. Spotted an error? <a href="mailto:hello@toolsnook.com">hello@toolsnook.com</a></div>
+  </div>
+  <div class="advice-note"><strong>These are indicative mid-market rates.</strong> No bank or card provider will give you them. The rate you actually receive includes a spread, and often a fixed fee on top. Use the bank fee simulator above to estimate what you will really be charged.</div>
+
   </div>
 </div>
 

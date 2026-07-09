@@ -111,6 +111,20 @@
       .terms-grid{grid-template-columns:1fr 1fr}
       .rel-grid{grid-template-columns:1fr 1fr}
     }
+  
+    .sources{background:rgba(108,99,255,0.045);border:1px solid rgba(108,99,255,0.20);border-radius:14px;padding:1.35rem 1.6rem;margin:2rem 0}
+    .sources-label{display:inline-block;background:rgba(108,99,255,0.14);color:#a59fff;font-size:0.66rem;font-weight:700;letter-spacing:0.07em;padding:2px 8px;border-radius:4px;margin-bottom:0.85rem;text-transform:uppercase}
+    .sources h3{font-family:'Syne',sans-serif;font-size:1.02rem;font-weight:700;margin:0 0 0.9rem}
+    .sources ul{list-style:none;padding:0;margin:0}
+    .sources li{padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.88rem;line-height:1.65}
+    .sources li:last-child{border-bottom:none}
+    .sources a{color:#a59fff;text-decoration:none;font-weight:600}
+    .sources a:hover{text-decoration:underline}
+    .sources .what{display:block;color:#8888a0;font-size:0.82rem;margin-top:2px}
+    .src-note{margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.06);font-size:0.8rem;color:#8888a0;line-height:1.65}
+    .src-note a{color:#a59fff;text-decoration:none}
+    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid #f7971e;border-radius:10px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.87rem;color:#8888a0;line-height:1.7}
+    .advice-note strong{color:#f0f0f5}
   </style>
   <script type="application/ld+json">
   {
@@ -356,6 +370,19 @@
   <div style="margin-top:1rem">
     <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>
     <div id="faq-wrap"></div>
+
+  <div class="sources">
+    <span class="sources-label">Sources</span>
+    <h3>Where these invoicing rules come from</h3>
+      <ul>
+        <li><a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery" rel="noopener nofollow" target="_blank">GOV.UK — Late commercial payments: interest and debt recovery</a><span class="what">Statutory interest of 8% above the Bank of England base rate, and the fixed sums (£40–£100) recoverable on overdue commercial invoices.</span></li>
+        <li><a href="https://www.legislation.gov.uk/ukpga/1998/20/contents" rel="noopener nofollow" target="_blank">Late Payment of Commercial Debts (Interest) Act 1998</a><span class="what">The primary legislation those statutory rights derive from.</span></li>
+        <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records" rel="noopener nofollow" target="_blank">IRS — How long should I keep records?</a><span class="what">US record-retention periods for invoices and supporting business documents.</span></li>
+      </ul>
+        <div class="src-note">Every figure above is taken from the primary source, not from a secondary summary of it. How we choose and verify formulas is set out in our <a href="/methodology.html">methodology</a>. Spotted an error? <a href="mailto:hello@toolsnook.com">hello@toolsnook.com</a></div>
+  </div>
+  <div class="advice-note"><strong>This is not legal or tax advice.</strong> Statutory late-payment rights, mandatory invoice fields and record-retention periods all vary by country and by contract. Confirm the position for your jurisdiction before relying on it.</div>
+
   </div>
 
 </div>
