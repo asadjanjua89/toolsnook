@@ -121,12 +121,24 @@
       .content-box{padding:1.25rem}
       .rel-grid{grid-template-columns:1fr 1fr}
     }
+  
+    .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.18);border-radius:14px;padding:1rem 1.2rem;margin:2rem 0 1rem}
+    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:11px;background:linear-gradient(135deg,#6c63ff,#a575ff);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:#fff}
+    .pm-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:#f0f0f5}
+    .pm-name a{color:#a59fff;text-decoration:none}
+    .pm-name a:hover{text-decoration:underline}
+    .pm-sub{font-size:0.79rem;color:#8888a0;margin-top:2px;line-height:1.55}
+    .pm-sub a{color:#8888a0;text-decoration:underline;text-underline-offset:2px}
+    .pm-sub a:hover{color:#a59fff}
+  
+    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid #f7971e;border-radius:10px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.87rem;color:#8888a0;line-height:1.7}
+    .advice-note strong{color:#f0f0f5}
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Working Capital Calculator",
+    "author": {"@type": "Person", "name": "Asad Janjua", "url": "https://www.toolsnook.com/about.html", "sameAs": ["https://pk.linkedin.com/in/asad-janjua-16580717a"]}, "dateModified": "2026-07-09", "name": "Working Capital Calculator",
     "url": "https://www.toolsnook.com/tools/working-capital-calculator.html",
     "description": "Free working capital calculator. Calculate net working capital, current ratio, quick ratio, and cash ratio to understand your business liquidity.",
     "applicationCategory": "FinanceApplication",
@@ -337,12 +349,25 @@
   <div style="margin-top:1rem">
     <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>
     <div id="faq-wrap"></div>
+
+  <div class="page-meta">
+    <div class="pm-ini">AJ</div>
+    <div>
+      <div class="pm-name">Reviewed and published by <a href="/about.html">Asad Janjua</a></div>
+      <div class="pm-sub">Founder, ToolsNook &middot; Islamabad, Pakistan &middot; Last updated: 9 July 2026<br />
+      How we build and check these tools: <a href="/methodology.html">our methodology</a></div>
+    </div>
+  </div>
+
+  <div class="advice-note"><strong>These figures are informational, not financial advice.</strong> ToolsNook is not an accountancy practice or a financial adviser. Real outcomes depend on your jurisdiction, your tax position, and facts a calculator cannot know. Use this to understand the shape of a number, then speak to a qualified professional before acting on it.</div>
+
+
   </div>
 
 </div>
 
 <footer>
-  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/methodology.html">Methodology</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
   <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
 </footer>
 

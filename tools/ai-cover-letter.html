@@ -118,12 +118,21 @@
       .stats-grid{grid-template-columns:1fr 1fr}
       .related-grid{grid-template-columns:1fr 1fr}
     }
+  
+    .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.18);border-radius:14px;padding:1rem 1.2rem;margin:2rem 0 1rem}
+    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:11px;background:linear-gradient(135deg,#6c63ff,#a575ff);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:#fff}
+    .pm-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:#f0f0f5}
+    .pm-name a{color:#a59fff;text-decoration:none}
+    .pm-name a:hover{text-decoration:underline}
+    .pm-sub{font-size:0.79rem;color:#8888a0;margin-top:2px;line-height:1.55}
+    .pm-sub a{color:#8888a0;text-decoration:underline;text-underline-offset:2px}
+    .pm-sub a:hover{color:#a59fff}
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "AI Cover Letter Writer",
+    "author": {"@type": "Person", "name": "Asad Janjua", "url": "https://www.toolsnook.com/about.html", "sameAs": ["https://pk.linkedin.com/in/asad-janjua-16580717a"]}, "dateModified": "2026-07-09", "name": "AI Cover Letter Writer",
     "url": "https://www.toolsnook.com/tools/ai-cover-letter.html",
     "description": "Free AI cover letter generator. Write professional, tailored cover letters for any job application in seconds.",
     "applicationCategory": "UtilityApplication",
@@ -395,11 +404,21 @@
       <button class="faq-q" onclick="toggleFaq(this)">How should I end a cover letter?<span class="faq-icon">+</span></button>
       <div class="faq-a">Close with a confident call to action that invites the next step. Good example: "I would welcome the chance to discuss how my experience with X can help your team achieve Y — please feel free to reach out at your convenience." Avoid passive closings like "I hope to hear from you" — they signal low confidence. Sign off with "Sincerely," or "Best regards," followed by your full name and contact details.</div>
     </div>
+
+  <div class="page-meta">
+    <div class="pm-ini">AJ</div>
+    <div>
+      <div class="pm-name">Reviewed and published by <a href="/about.html">Asad Janjua</a></div>
+      <div class="pm-sub">Founder, ToolsNook &middot; Islamabad, Pakistan &middot; Last updated: 9 July 2026<br />
+      How we build and check these tools: <a href="/methodology.html">our methodology</a></div>
+    </div>
+  </div>
+
   </div>
 </div>
 
 <footer>
-  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/methodology.html">Methodology</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
   <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
 </footer>
 
