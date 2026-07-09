@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Methodology – How ToolsNook Builds and Verifies Its Tools | ToolsNook</title>
+  <meta name="description" content="How ToolsNook chooses formulas, which primary sources each tool relies on, how calculations are tested, our AI assistance disclosure, and how to report an error." />
+  <meta property="og:title" content="Methodology – How ToolsNook Builds and Verifies Its Tools" />
+  <meta property="og:description" content="Where our formulas come from, how they're tested, our AI disclosure, and how to report an error." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
+  <link rel="canonical" href="https://www.toolsnook.com/methodology.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/toolsnook-favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/toolsnook-favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/toolsnook-apple-touch-180.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.02em}
+    .logo span{color:var(--accent)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem}
+    .nav-back:hover{color:var(--text)}
+    .hero{padding:7rem 2rem 2rem;max-width:820px;margin:0 auto;text-align:center}
+    .breadcrumb{font-size:0.82rem;color:var(--muted);margin-bottom:1rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .hero h1{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.9rem;line-height:1.12}
+    .hero p{color:var(--muted);font-size:1.02rem;max-width:640px;margin:0 auto}
+    .container{max-width:820px;margin:0 auto;padding:0 2rem 3rem}
+    .box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-top:1.5rem}
+    .box h2{font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:0.85rem}
+    .box h3{font-family:'Syne',sans-serif;font-size:1.02rem;font-weight:700;margin:1.4rem 0 0.5rem}
+    .box p{color:var(--muted);font-size:0.95rem;margin-bottom:1rem;line-height:1.78}
+    .box ul,.box ol{color:var(--muted);font-size:0.95rem;padding-left:1.4rem;margin-bottom:1rem;line-height:1.85}
+    .box a{color:var(--accent);text-decoration:none}
+    .box a:hover{text-decoration:underline}
+    .box strong{color:var(--text)}
+    table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-top:0.5rem}
+    th{text-align:left;padding:0.6rem 0.7rem;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border2)}
+    td{padding:0.6rem 0.7rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
+    td:first-child{color:var(--text);font-weight:500;white-space:nowrap}
+    tr:last-child td{border-bottom:none}
+    .disclaimer{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid var(--amber);border-radius:10px;padding:1rem 1.25rem;margin:1.25rem 0}
+    .disclaimer p{color:var(--muted);font-size:0.9rem;margin:0;line-height:1.7}
+    .disclaimer strong{color:var(--text)}
+    .note{background:rgba(67,233,123,0.04);border:1px solid rgba(67,233,123,0.2);border-left:3px solid var(--green);border-radius:10px;padding:1rem 1.25rem;margin:1.25rem 0}
+    .note p{color:var(--muted);font-size:0.9rem;margin:0;line-height:1.7}
+    .note strong{color:var(--text)}
+    .meta-line{font-size:0.8rem;color:var(--muted);margin-top:1.5rem;text-align:center}
+    footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;color:var(--muted);font-size:0.86rem}
+    footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{color:var(--accent)}
+    @media(max-width:640px){.hero h1{font-size:1.9rem}.box{padding:1.3rem}.container,.hero{padding-left:1.1rem;padding-right:1.1rem}table{font-size:0.8rem}td:first-child{white-space:normal}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://www.toolsnook.com/methodology.html",
+    "name": "ToolsNook Methodology",
+    "description": "How ToolsNook chooses formulas, which primary sources each tool relies on, how calculations are tested, and how to report an error.",
+    "author": { "@type": "Person", "@id": "https://www.toolsnook.com/about.html#asad-janjua", "name": "Asad Janjua", "url": "https://www.toolsnook.com/about.html", "sameAs": ["https://pk.linkedin.com/in/asad-janjua-16580717a"] },
+    "publisher": { "@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com" },
+    "dateModified": "2026-07-09"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"ToolsNook","item":"https://www.toolsnook.com"},
+      {"@type":"ListItem","position":2,"name":"Methodology","item":"https://www.toolsnook.com/methodology.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+<nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
+
+<div class="hero">
+  <div class="breadcrumb"><a href="/">ToolsNook</a> › Methodology</div>
+  <h1>How we build and verify these tools</h1>
+  <p>Where the formulas come from, how the arithmetic is checked, what AI does and doesn't do here, and how to tell us when we get something wrong.</p>
+</div>
+
+<div class="container">
+
+  <div class="box">
+    <h2>Why this page exists</h2>
+    <p>A calculator is a claim. Type in a number, get a number back, and you are trusting that whoever built the thing did the maths correctly and used the right rate. Most calculator sites never tell you where their numbers came from, who wrote the page, or what happens if they're wrong.</p>
+    <p>This page answers those questions for all 33 tools on ToolsNook. It is deliberately specific. If any part of it turns out not to be true, that is a mistake worth reporting, and there are instructions at the bottom for doing exactly that.</p>
+  </div>
+
+  <div class="box">
+    <h2>The four principles</h2>
+    <ol>
+      <li><strong>Primary sources, not secondary ones.</strong> A VAT rate comes from HMRC, not from another blog quoting HMRC. Where a figure has an issuing authority, we cite that authority and link to it.</li>
+      <li><strong>Show the formula.</strong> Every calculator page states the formula it uses in plain text. You should be able to check our arithmetic on paper.</li>
+      <li><strong>Say what we don't know.</strong> Tax treatment varies by jurisdiction and circumstance. Health thresholds are population-level screening tools, not diagnoses. Where a tool has real limits, the page says so rather than projecting false confidence.</li>
+      <li><strong>Human accountability.</strong> One named person is responsible for every page on this site. That is <a href="/about.html">Asad Janjua</a>, and his contact address is at the bottom of this page.</li>
+    </ol>
+  </div>
+
+  <div class="box">
+    <h2>How a formula gets onto the site</h2>
+    <ol>
+      <li><strong>Definition.</strong> The formula is taken either from the issuing authority (for regulated figures like VAT and BMI) or from a standard, uncontested definition (for arithmetic like compound interest or amortisation).</li>
+      <li><strong>Worked examples.</strong> We collect worked examples with known answers — from the source authority where one publishes them, or constructed by hand where none does.</li>
+      <li><strong>Implementation.</strong> The formula is written in JavaScript that runs entirely in your browser.</li>
+      <li><strong>Testing.</strong> The implementation is run against every worked example before the tool goes live. If the code and the example disagree, the code is wrong until proven otherwise.</li>
+      <li><strong>Edge cases.</strong> Zero, negative, and out-of-range inputs are checked so the tool fails visibly rather than returning a confident wrong answer.</li>
+    </ol>
+    <p>Two specific traps we test for, because they're the most common errors in this category: <strong>margin versus markup</strong> (a 50% markup is a 33.3% margin, and mixing them up silently under-prices everything), and <strong>inclusive versus exclusive date counting</strong> (the source of nearly every "off by one" bug in date arithmetic).</p>
+  </div>
+
+  <div class="box">
+    <h2>Where each tool's numbers come from</h2>
+    <p>Tools not listed below implement uncontested arithmetic — percentage change, unit conversion, amortisation — where there is no rate or threshold to source. Those pages state their formula directly.</p>
+    <table>
+      <thead><tr><th>Tool</th><th>Authority</th><th>What we take from it</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="/tools/vat-calculator.html">VAT Calculator</a></td>
+          <td>HM Revenue &amp; Customs (UK)</td>
+          <td>Standard, reduced and zero VAT rates, and the rules for adding versus removing VAT from a gross figure.</td>
+        </tr>
+        <tr>
+          <td><a href="/tools/bmi-calculator.html">BMI Calculator</a></td>
+          <td>NHS (UK) and CDC (US)</td>
+          <td>BMI formula and the underweight / healthy / overweight / obese category thresholds, including the documented limitations of BMI as a screening measure.</td>
+        </tr>
+        <tr>
+          <td><a href="/tools/password-generator.html">Password Generator</a></td>
+          <td>NIST SP 800-63B; UK NCSC</td>
+          <td>Current guidance on password length, composition, and why scheduled password rotation is no longer recommended.</td>
+        </tr>
+        <tr>
+          <td><a href="/tools/invoice-generator.html">Invoice Generator</a></td>
+          <td>UK Late Payment of Commercial Debts (Interest) Act 1998; HMRC; IRS</td>
+          <td>Statutory late-payment interest and fixed sums, mandatory invoice fields, and record-retention periods.</td>
+        </tr>
+        <tr>
+          <td><a href="/tools/unit-converter.html">Unit Converter</a></td>
+          <td>BIPM SI Brochure; NIST Special Publication 811</td>
+          <td>Exact conversion factors between SI and imperial units.</td>
+        </tr>
+        <tr>
+          <td><a href="/tools/currency-converter.html">Currency Converter</a></td>
+          <td>ExchangeRate-API</td>
+          <td>Live mid-market exchange rates, fetched when you load the page. These are indicative reference rates — the rate your bank or card actually gives you will be worse, which is why the tool includes a bank fee simulator.</td>
+        </tr>
+        <tr>
+          <td><a href="/tools/gpa-calculator.html">GPA Calculator</a></td>
+          <td>Standard US 4.0 scale</td>
+          <td>Unweighted grade points, plus the common +1.0 (AP/IB) and +0.5 (Honors) weightings. Individual institutions vary — always check your school's own scale.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box">
+    <h2>Our AI disclosure</h2>
+    <p>We use AI, and we would rather say so plainly than have you find out.</p>
+    <p><strong>For the written explanations</strong> that sit beneath each calculator: these are drafted with the assistance of AI language models, then edited, fact-checked and published by Asad Janjua. Every factual claim — a tax rate, a health threshold, a statutory interest figure — is checked against the source authority before publication. Google's publisher policies permit AI-assisted content where there is genuine human oversight, and that oversight is a person with a name, not a rubber stamp.</p>
+    <p><strong>For the five AI writing tools</strong> (business name, product description, bio, cover letter, email subject line): these send your input to a third-party large language model through our server and return its response. Their output is generated on demand, is not reviewed by anyone, and should be treated as a first draft rather than a finished document.</p>
+    <div class="note">
+      <p><strong>What AI does not do here:</strong> it does not choose our formulas, it does not set our rates, and it does not publish anything. No page goes live without a human reading it.</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>Where your data goes</h2>
+    <p>Every calculator on this site runs in your browser. The figures you enter into the VAT calculator, the BMI calculator or the invoice generator are never sent to us, because there is nowhere for them to be sent — there is no database behind these tools.</p>
+    <p>There are exactly two exceptions. The currency converter fetches live rates from ExchangeRate-API when the page loads; it sends no personal data. The AI writing tools transmit whatever you type into them to a language model provider in order to generate a response. Both are described in full in the <a href="/privacy.html">privacy policy</a>.</p>
+  </div>
+
+  <div class="box">
+    <h2>Updates and corrections</h2>
+    <h3>When pages get updated</h3>
+    <p>Rate-dependent pages — VAT, tax, statutory interest — are reviewed when the issuing authority changes the figure, and at minimum once a year. Every tool page carries a <strong>Last updated</strong> date at the foot of the page. That date reflects the last time the content was substantively reviewed, not the last time a stylesheet changed.</p>
+
+    <h3>How to report an error</h3>
+    <p>Email <a href="mailto:hello@toolsnook.com">hello@toolsnook.com</a> or use the <a href="/contact.html">contact form</a>. Tell us the tool, the inputs you used, and what you expected. Every message goes to Asad directly.</p>
+    <p>Confirmed calculation errors are fixed as a priority and the page's last-updated date changes to reflect the correction. We would rather be told than be wrong quietly.</p>
+  </div>
+
+  <div class="box">
+    <h2>Limitations — please read this one</h2>
+    <div class="disclaimer">
+      <p><strong>These tools are informational. They are not professional advice.</strong> ToolsNook is not an accountancy practice, a financial adviser, a law firm, or a medical provider. Asad Janjua holds none of those qualifications and does not claim to.</p>
+    </div>
+    <p><strong>Financial tools.</strong> Tax, VAT and payroll treatment depend on your jurisdiction, your registration status, and facts specific to your situation. A calculator cannot know those. Use these tools to understand the shape of a number, then speak to a qualified accountant before acting on it.</p>
+    <p><strong>The BMI calculator.</strong> BMI is a population-level screening measure. It does not distinguish muscle from fat, and it does not account for age, sex, ethnicity or fat distribution. Athletes are routinely classified as overweight by it. It is not a diagnosis and it is not a measure of your health. If you have concerns about your weight, speak to a doctor.</p>
+    <p><strong>Exchange rates.</strong> The rates shown are indicative mid-market rates. No bank will give you them.</p>
+    <p>We would rather you leave this site with an accurate sense of what a number does and does not tell you than with false confidence.</p>
+  </div>
+
+  <div class="meta-line">Last updated: 9 July 2026 · Written and published by <a href="/about.html" style="color:var(--accent);text-decoration:none">Asad Janjua</a></div>
+
+</div>
+
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/methodology.html">Methodology</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Built and maintained by <a href="/about.html">Asad Janjua</a> in Islamabad, Pakistan.</p>
+</footer>
+</body>
+</html>
