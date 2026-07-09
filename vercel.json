@@ -1,20 +1,222 @@
 {
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/methodology",
+      "destination": "/methodology.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/age-calculator",
+      "destination": "/tools/age-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/ai-bio-generator",
+      "destination": "/tools/ai-bio-generator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/ai-business-name-generator",
+      "destination": "/tools/ai-business-name-generator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/ai-cover-letter",
+      "destination": "/tools/ai-cover-letter.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/ai-email-subject",
+      "destination": "/tools/ai-email-subject.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/ai-product-description",
+      "destination": "/tools/ai-product-description.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/bmi-calculator",
+      "destination": "/tools/bmi-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/break-even-calculator",
+      "destination": "/tools/break-even-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/business-plan-outline",
+      "destination": "/tools/business-plan-outline.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/compound-interest-calculator",
+      "destination": "/tools/compound-interest-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/currency-converter",
+      "destination": "/tools/currency-converter.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/date-calculator",
+      "destination": "/tools/date-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/debt-payoff-calculator",
+      "destination": "/tools/debt-payoff-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/discount-calculator",
+      "destination": "/tools/discount-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/freelancer-rate-calculator",
+      "destination": "/tools/freelancer-rate-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/gpa-calculator",
+      "destination": "/tools/gpa-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/hours-calculator",
+      "destination": "/tools/hours-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/image-converter",
+      "destination": "/tools/image-converter.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/invoice-generator",
+      "destination": "/tools/invoice-generator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/loan-calculator",
+      "destination": "/tools/loan-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/markup-calculator",
+      "destination": "/tools/markup-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/password-generator",
+      "destination": "/tools/password-generator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/percentage-calculator",
+      "destination": "/tools/percentage-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/profit-margin-calculator",
+      "destination": "/tools/profit-margin-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/roi-calculator",
+      "destination": "/tools/roi-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/salary-to-hourly",
+      "destination": "/tools/salary-to-hourly.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/startup-cost-estimator",
+      "destination": "/tools/startup-cost-estimator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/text-case-converter",
+      "destination": "/tools/text-case-converter.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/tip-calculator",
+      "destination": "/tools/tip-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/unit-converter",
+      "destination": "/tools/unit-converter.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/vat-calculator",
+      "destination": "/tools/vat-calculator.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/word-counter",
+      "destination": "/tools/word-counter.html",
+      "permanent": true
+    },
+    {
+      "source": "/tools/working-capital-calculator",
+      "destination": "/tools/working-capital-calculator.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/tools/(.*).html",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
       ]
     }
   ]
