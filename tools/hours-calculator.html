@@ -203,20 +203,124 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How do I calculate hours between two times?", "acceptedAnswer": { "@type": "Answer", "text": "Enter your start time and end time in the Hours Calculator. The tool instantly shows the total duration in both H:MM format and decimal hours. If you have breaks, enter the total break minutes to deduct them from the total." } },
-      { "@type": "Question", "name": "How does the calculator handle overnight shifts?", "acceptedAnswer": { "@type": "Answer", "text": "Automatically. If your end time is earlier than your start time — for example, a 10 PM to 6 AM shift — the calculator detects this and adds 24 hours to the end time, giving you the correct 8-hour result instead of a negative number." } },
-      { "@type": "Question", "name": "What is decimal hours and why does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "Decimal hours express time as a single number instead of hours and minutes. For example, 7 hours and 30 minutes is 7.50 decimal hours. Most payroll software, invoicing tools, and timesheets require decimal hours for accurate pay calculations." } },
-      { "@type": "Question", "name": "How do I calculate my pay from hours worked?", "acceptedAnswer": { "@type": "Answer", "text": "Use the Pay Calculator tab. Enter your hours worked and hourly rate. The calculator multiplies hours by rate for regular pay, and applies 1.5x for any hours over 8 in a single shift or 40 in a work week." } },
-      { "@type": "Question", "name": "What is the 7-minute rounding rule?", "acceptedAnswer": { "@type": "Answer", "text": "The 7-minute rule means time is rounded to the nearest quarter-hour (15 minutes). If you clock in at 9:07 or earlier, it rounds down to 9:00. If you clock in at 9:08 or later, it rounds up to 9:15. Many employers use this for FLSA compliance." } },
-      { "@type": "Question", "name": "How do I calculate hours for a full work week?", "acceptedAnswer": { "@type": "Answer", "text": "Use the Weekly Timesheet tab. Enter your start time, end time, and break minutes for each day Monday through Sunday. The calculator totals all hours, shows your weekly decimal hours, and flags any overtime over 40 hours." } },
-      { "@type": "Question", "name": "How do I convert minutes to decimal hours?", "acceptedAnswer": { "@type": "Answer", "text": "Divide the minutes by 60. For example, 45 minutes ÷ 60 = 0.75. So 7 hours and 45 minutes = 7.75 decimal hours. The calculator does this conversion automatically for every result." } },
-      { "@type": "Question", "name": "Can I use this for freelance billing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enter your start and end time for a client session, add your break time, then enter your hourly rate in the pay section. The calculator gives you the exact billable hours in decimal format and the total amount to invoice." } }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate hours between two times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your start time and end time in the calculator above. The result shows immediately in both H:MM format (e.g. 7:30) and decimal hours (e.g. 7.50). If you have unpaid breaks, enter the total break minutes in the break field — they'll be deducted automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the calculator handle overnight shifts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Automatically. If your end time is earlier than your start time — like a 10 PM to 6 AM night shift — the calculator adds 24 hours to the end time and shows an \"Overnight shift detected\" notice. A 10 PM to 6 AM shift correctly calculates as 8 hours, not a negative number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is decimal hours and why does payroll need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Decimal hours express time as a single number instead of hours:minutes. For example, 7 hours and 30 minutes is 7.50 decimal hours, and 7 hours 45 minutes is 7.75. Payroll software needs decimal hours because you can't multiply $20/hr × 7:45 directly — but you can multiply $20 × 7.75 = $155. The calculator always shows both formats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my weekly pay with overtime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Weekly Timesheet tab. Fill in each day's start time, end time, and breaks, then enter your hourly rate and select your overtime threshold (40 hours for US, 48 for UK/EU). The calculator shows your regular pay, overtime pay at 1.5×, and total weekly earnings automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 7-minute rounding rule for timesheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 7-minute rule rounds time to the nearest quarter-hour (15 minutes). If you clock in at 9:07 or earlier, it rounds down to 9:00. At 9:08 or later, it rounds up to 9:15. This is permitted under US FLSA rules as long as rounding doesn't consistently favor the employer over time. Select \"15 minutes (quarter hour)\" in the rounding dropdown to apply this rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert minutes to decimal hours manually?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the minutes by 60. So 45 minutes ÷ 60 = 0.75. A shift of 7 hours and 45 minutes = 7 + 0.75 = 7.75 decimal hours. The calculator does this conversion for every calculation automatically, but it's useful to know the formula for mental math."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for freelance billing and invoicing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — it's ideal for freelancers. Enter your session's start and end time, deduct any non-billable time, then enter your hourly rate in the Pay Calculator tab to get the exact invoice amount. Copy the decimal hours figure into your invoicing software. For calculating what to charge per hour, use the Freelancer Rate Calculator linked in the Related Tools section."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my timesheet data saved or stored anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All calculations happen entirely in your browser. Nothing you enter — your times, hours, or pay rate — is sent to any server, logged, or stored anywhere. When you close or refresh the page, the data is gone. This makes it safe for tracking sensitive work hours or rates you'd rather keep private."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is decimal hours and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Decimal hours express time as a single number instead of hours and minutes. For example, 7 hours and 30 minutes is 7.50 decimal hours. Most payroll software, invoicing tools, and timesheets require decimal hours for accurate pay calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my pay from hours worked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Pay Calculator tab. Enter your hours worked and hourly rate. The calculator multiplies hours by rate for regular pay, and applies 1.5x for any hours over 8 in a single shift or 40 in a work week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 7-minute rounding rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 7-minute rule means time is rounded to the nearest quarter-hour (15 minutes). If you clock in at 9:07 or earlier, it rounds down to 9:00. If you clock in at 9:08 or later, it rounds up to 9:15. Many employers use this for FLSA compliance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate hours for a full work week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Weekly Timesheet tab. Enter your start time, end time, and break minutes for each day Monday through Sunday. The calculator totals all hours, shows your weekly decimal hours, and flags any overtime over 40 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert minutes to decimal hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the minutes by 60. For example, 45 minutes ÷ 60 = 0.75. So 7 hours and 45 minutes = 7.75 decimal hours. The calculator does this conversion automatically for every result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for freelance billing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter your start and end time for a client session, add your break time, then enter your hourly rate in the pay section. The calculator gives you the exact billable hours in decimal format and the total amount to invoice."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -539,6 +643,30 @@
   <div class="faq-item">
     <button class="faq-q" onclick="toggleFaq(this)">Is my timesheet data saved or stored anywhere?<span class="faq-icon">+</span></button>
     <div class="faq-a">No. All calculations happen entirely in your browser. Nothing you enter — your times, hours, or pay rate — is sent to any server, logged, or stored anywhere. When you close or refresh the page, the data is gone. This makes it safe for tracking sensitive work hours or rates you'd rather keep private.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">What is decimal hours and why does it matter?<span class="faq-icon">+</span></button>
+    <div class="faq-a">Decimal hours express time as a single number instead of hours and minutes. For example, 7 hours and 30 minutes is 7.50 decimal hours. Most payroll software, invoicing tools, and timesheets require decimal hours for accurate pay calculations.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">How do I calculate my pay from hours worked?<span class="faq-icon">+</span></button>
+    <div class="faq-a">Use the Pay Calculator tab. Enter your hours worked and hourly rate. The calculator multiplies hours by rate for regular pay, and applies 1.5x for any hours over 8 in a single shift or 40 in a work week.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">What is the 7-minute rounding rule?<span class="faq-icon">+</span></button>
+    <div class="faq-a">The 7-minute rule means time is rounded to the nearest quarter-hour (15 minutes). If you clock in at 9:07 or earlier, it rounds down to 9:00. If you clock in at 9:08 or later, it rounds up to 9:15. Many employers use this for FLSA compliance.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">How do I calculate hours for a full work week?<span class="faq-icon">+</span></button>
+    <div class="faq-a">Use the Weekly Timesheet tab. Enter your start time, end time, and break minutes for each day Monday through Sunday. The calculator totals all hours, shows your weekly decimal hours, and flags any overtime over 40 hours.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">How do I convert minutes to decimal hours?<span class="faq-icon">+</span></button>
+    <div class="faq-a">Divide the minutes by 60. For example, 45 minutes ÷ 60 = 0.75. So 7 hours and 45 minutes = 7.75 decimal hours. The calculator does this conversion automatically for every result.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">Can I use this for freelance billing?<span class="faq-icon">+</span></button>
+    <div class="faq-a">Yes. Enter your start and end time for a client session, add your break time, then enter your hourly rate in the pay section. The calculator gives you the exact billable hours in decimal format and the total amount to invoice.</div>
   </div>
 
   <div class="page-meta">

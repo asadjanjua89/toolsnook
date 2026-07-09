@@ -186,17 +186,84 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ToolsNook","item":"https://www.toolsnook.com"},{"@type":"ListItem","position":2,"name":"Profit Margin Calculator","item":"https://www.toolsnook.com/tools/profit-margin-calculator.html"}]}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is profit margin?","acceptedAnswer":{"@type":"Answer","text":"Profit margin is the percentage of revenue that becomes profit after costs. Gross margin = (Revenue - COGS) / Revenue × 100. Net margin = Net Profit / Revenue × 100. A 20% net margin means for every $100 of revenue, $20 is profit after all costs."}},
-    {"@type":"Question","name":"What is the difference between gross margin and net margin?","acceptedAnswer":{"@type":"Answer","text":"Gross margin deducts only the direct cost of goods sold (COGS) from revenue. Net margin deducts all costs — COGS, operating expenses, interest, and taxes. Gross margin shows pricing efficiency; net margin shows overall business profitability. A business can have high gross margin but low net margin if operating costs are high."}},
-    {"@type":"Question","name":"What is a good profit margin?","acceptedAnswer":{"@type":"Answer","text":"It varies significantly by industry. Software and SaaS typically achieves 60-80% gross margin. Professional services target 40-60% gross margin. Retail operates at 25-50% gross margin. Restaurants typically achieve 60-70% gross margin on food but 5-10% net margin after all costs. Compare your margin to your specific industry rather than a universal benchmark."}},
-    {"@type":"Question","name":"What is operating margin?","acceptedAnswer":{"@type":"Answer","text":"Operating margin = Operating Income / Revenue × 100. Operating income is revenue minus COGS minus operating expenses (rent, salaries, utilities, marketing) but before interest and taxes. It measures how efficiently the core business operations generate profit, excluding financing and tax effects. It sits between gross margin and net margin."}},
-    {"@type":"Question","name":"How do I improve my profit margin?","acceptedAnswer":{"@type":"Answer","text":"There are two levers: increase revenue without proportionally increasing costs, or reduce costs without reducing revenue. Specific strategies include: raising prices (even 5-10% can dramatically improve margins if demand is inelastic), reducing COGS through better supplier negotiations or product redesign, cutting operating overhead, improving sales mix toward higher-margin products, and reducing customer churn to lower acquisition cost per customer served."}},
-    {"@type":"Question","name":"What is the difference between margin and markup?","acceptedAnswer":{"@type":"Answer","text":"Margin is profit as a percentage of selling price. Markup is profit as a percentage of cost. A 50% markup equals a 33.3% margin — they are not interchangeable. Margin = Markup / (100 + Markup) × 100. Confusing the two leads to systematic under-pricing. Use our Markup Calculator to convert between the two."}},
-    {"@type":"Question","name":"How do I calculate gross margin?","acceptedAnswer":{"@type":"Answer","text":"Gross Margin % = (Revenue - Cost of Goods Sold) / Revenue × 100. Example: Revenue $500,000, COGS $300,000. Gross Profit = $200,000. Gross Margin = $200,000 / $500,000 × 100 = 40%. COGS includes direct materials, direct labour, and manufacturing overhead — but not operating expenses like rent, marketing, or management salaries."}},
-    {"@type":"Question","name":"What costs are included in COGS vs operating expenses?","acceptedAnswer":{"@type":"Answer","text":"COGS (Cost of Goods Sold) includes direct costs: raw materials, direct labour, manufacturing costs, and freight-in. Operating expenses are indirect costs: rent, office salaries, utilities, marketing and advertising, insurance, and depreciation. The distinction matters for gross margin calculations. Including operating costs in COGS understates gross margin; excluding direct costs from COGS overstates it."}},
-    {"@type":"Question","name":"Why might a business have high gross margin but low net margin?","acceptedAnswer":{"@type":"Answer","text":"High operating costs are the most common cause. A SaaS company might have 75% gross margin but only 5% net margin because of heavy sales and marketing spend, engineering headcount, and G&A overhead. High interest payments on debt, significant depreciation from capital-heavy assets, or high tax rates can also compress net margin well below gross margin. Tracking all three margins — gross, operating, and net — reveals where profitability is being eroded."}}
-  ]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is profit margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Profit margin is the percentage of revenue that becomes profit after costs. Gross margin = (Revenue - COGS) / Revenue x 100. Net margin = Net Profit / Revenue x 100. A 20% net margin means for every $100 of revenue, $20 is profit after all costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between gross margin and net margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross margin deducts only the direct cost of goods sold from revenue. Net margin deducts all costs including operating expenses, interest, and taxes. Gross margin shows pricing efficiency; net margin shows overall business profitability. A business can have high gross margin but low net margin if operating costs are high."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good profit margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It varies by industry. Software and SaaS typically achieves 60-80% gross margin. Professional services target 40-60%. Retail operates at 25-50%. Restaurants typically achieve 60-70% gross margin on food but only 5-10% net margin after all costs. Compare your margin to your specific industry using the benchmarks above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is operating margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Operating margin = Operating Income / Revenue x 100. Operating income is revenue minus COGS minus operating expenses, but before interest and taxes. It measures how efficiently core business operations generate profit, excluding financing and tax effects. It sits between gross and net margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I improve my profit margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two levers: increase revenue without proportionally increasing costs, or reduce costs without reducing revenue. Key strategies: raise prices (even 5-10% on inelastic demand dramatically improves margins), negotiate lower COGS with suppliers, shift sales toward higher-margin products, reduce operating overhead, and eliminate unprofitable customers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between margin and markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin is profit as a percentage of selling price. Markup is profit as a percentage of cost. A 50% markup equals a 33.3% margin. They are not interchangeable. Confusing the two leads to systematic under-pricing. Use our Markup Calculator to convert between the two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate gross margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross Margin % = (Revenue - COGS) / Revenue x 100. Example: Revenue $500,000, COGS $300,000. Gross Profit = $200,000. Gross Margin = $200,000 / $500,000 x 100 = 40%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What costs are included in COGS vs operating expenses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "COGS includes direct costs: raw materials, direct labour, and manufacturing overhead. Operating expenses are indirect costs: rent, office salaries, utilities, marketing, and insurance. Including operating costs in COGS understates gross margin; excluding direct costs overstates it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why might a business have high gross margin but low net margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High operating costs are the most common cause. A SaaS company might have 75% gross margin but only 5% net margin because of heavy sales, marketing, and engineering headcount costs. High interest payments on debt or significant tax burden can also compress net margin well below gross margin."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>

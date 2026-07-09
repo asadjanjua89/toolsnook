@@ -191,57 +191,100 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I convert currencies?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Enter the amount you want to convert, select your base currency and target currency from the dropdowns, and the converter shows the converted amount instantly using live exchange rates. You can also swap the currencies with the ⇄ button to reverse the conversion."}
-      },
-      {
-        "@type": "Question",
-        "name": "Are the exchange rates live?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Yes — our currency converter fetches live exchange rates from a public forex data API. Rates are updated daily and reflect current market values. These are mid-market rates — the midpoint between buy and sell rates. Your bank or money transfer service will apply a spread on top of these rates, which is why we also include a bank fee simulator to show you the real cost."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is the mid-market rate and why is it different from my bank's rate?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The mid-market rate (also called the interbank rate) is the midpoint between the global buy and sell prices for a currency pair at any given moment. It is the rate that banks and financial institutions use when trading with each other. When you exchange money at a bank or send money abroad, your provider applies a markup — typically 1.5% to 4% for traditional banks, and 0.3% to 1% for specialist transfer services like Wise. Our bank fee simulator lets you enter your bank's typical spread to see exactly how much you are paying above the mid-market rate."}
-      },
-      {
-        "@type": "Question",
-        "name": "What currencies does the converter support?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Our converter supports 30+ major and emerging market currencies including USD, GBP, EUR, JPY, CHF, CAD, AUD, NZD, PKR, INR, AED, SAR, SGD, HKD, KRW, TRY, BRL, MXN, ZAR, NGN, EGP, IDR, PHP, THB, SEK, NOK, DKK, PLN, MYR, and CNY."}
-      },
-      {
-        "@type": "Question",
-        "name": "How much does my bank charge to exchange currency?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Traditional banks typically charge 2–4% above the mid-market rate on foreign currency exchange. This markup is usually hidden inside the exchange rate rather than charged as a visible fee. Specialist transfer services like Wise charge 0.3–1%. ATM withdrawals abroad typically incur 1.5–3% plus a fixed fee per transaction. Use our Bank Fee Simulator to enter your bank's typical spread percentage and see the exact cost for your specific conversion."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is the cheapest way to exchange currency?",
-        "acceptedAnswer": {"@type": "Answer", "text": "In 2026, specialist online transfer services like Wise (TransferWise), Revolut, and OFX consistently offer exchange rates closest to the mid-market rate — typically 0.3–1% above it. Traditional high street banks are the most expensive at 2–4% above mid-market. Airport currency exchange kiosks are typically the worst value at 5–10% above market rates. For travel, a Revolut or Wise multi-currency card gives you mid-market or near-mid-market rates on spending abroad. For large transfers, OFX and Wise offer the best combination of competitive rates and low fees."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is the multi-currency converter feature?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The multi-currency view converts your entered amount into 12 major currencies simultaneously — useful for travelers visiting multiple countries, freelancers billing clients in different currencies, or anyone comparing purchasing power across markets. Enter your amount and select your base currency in the main converter, and the multi-currency section below updates instantly for all currencies at once."}
-      },
-      {
-        "@type": "Question",
-        "name": "Why do exchange rates change so frequently?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Exchange rates fluctuate because currencies are traded on a global, 24-hour market called the forex (foreign exchange) market. Rates change based on economic data releases (inflation, employment, GDP), central bank interest rate decisions, geopolitical events, market sentiment, and supply and demand for each currency. Major currency pairs like EUR/USD can move hundreds of pips in a single day during high-volatility events. This is why real-time or daily-updated rates are important for accurate conversions."}
-      },
-      {
-        "@type": "Question",
-        "name": "How do I use the currency converter for freelance invoicing?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Enter the invoice amount in your client's currency, select their currency as the base, and select your home currency as the target. The result shows exactly what you will receive at the current mid-market rate. Then use the Bank Fee Simulator to enter your payment processor's fee percentage (PayPal typically charges 3–4%, Wise charges 0.3–1%) to see your net receipt after fees. For setting your rates with international clients, use our Freelancer Rate Calculator to calculate your minimum hourly rate."}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert currencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the amount, select your base currency and target currency from the dropdowns, and the result appears instantly using live exchange rates. Hit ⇄ to swap currencies and reverse the conversion. The multi-currency view below the main converter shows your amount converted to 12 currencies simultaneously."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the exchange rates live?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — rates are fetched from a live forex data API and updated daily. These are mid-market rates — the midpoint between global buy and sell prices. Your bank or transfer service applies a spread on top of these rates. Use our Bank Fee Simulator to enter your provider's typical spread and see the real cost of your conversion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the mid-market rate and why is it different from my bank's rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mid-market rate is the true midpoint between global buy and sell prices — what banks charge each other. When you exchange money at a bank, they add a markup of 2–4% on top of this rate as their profit. This markup is hidden inside the exchange rate rather than shown as a separate fee. Our Bank Fee Simulator lets you enter your bank's spread to see exactly how much you are overpaying versus the mid-market rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does my bank charge to exchange currency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional banks typically charge 2–4% above the mid-market rate. Airport kiosks charge 5–10%. PayPal charges 3–4%. Specialist services like Wise charge 0.3–0.7% and Revolut at mid-market hours charges near 0%. On a £1,000 exchange, the difference between a bank (3%) and Wise (0.5%) is £25. On a £10,000 transfer, that difference is £250. Enter your provider's rate in our Bank Fee Simulator to see your specific cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cheapest way to exchange currency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In 2026, Wise and Revolut consistently offer exchange rates closest to the mid-market rate for personal transfers. For business transfers, Wise Business and OFX are the most competitive. For travel spending abroad, a Revolut or Wise card charges near mid-market rates on purchases. Avoid airport exchange kiosks (worst rates), high-street bank exchanges (expensive), and PayPal currency conversion (hidden 3–4% margin)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the multi-currency view?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The multi-currency view converts your entered amount to 12 major currencies simultaneously — useful for travelers visiting multiple countries, freelancers with clients in different markets, or anyone comparing purchasing power across currencies. It updates automatically whenever you change the amount or base currency in the main converter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do exchange rates change so frequently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exchange rates change because currencies are traded 24 hours a day on the global forex market — the world's largest financial market at over $7.5 trillion daily. Rates move based on interest rate decisions, inflation data, economic growth, political events, trade balances, and market sentiment. Major pairs can move hundreds of pips in a single day during high-volatility events like central bank announcements or geopolitical developments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use this for freelance invoicing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the invoice amount in your client's currency, select their currency as the base, and select your home currency as the target. The result shows what you will receive at the current mid-market rate. Then use the Bank Fee Simulator to enter your payment processor's fee percentage — PayPal charges 3–4%, Wise charges 0.3–1% — to see your net receipt after fees. For calculating your minimum rate when working with international clients, use our Freelancer Rate Calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What currencies does the converter support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The converter supports 30+ major and emerging market currencies: USD, EUR, GBP, JPY, CHF, CAD, AUD, NZD, CNY, HKD, SGD, INR, PKR, AED, SAR, KRW, TRY, BRL, MXN, ZAR, NGN, EGP, IDR, PHP, THB, MYR, SEK, NOK, DKK, and PLN. The multi-currency view shows 12 of these simultaneously for quick comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the multi-currency converter feature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The multi-currency view converts your entered amount into 12 major currencies simultaneously — useful for travelers visiting multiple countries, freelancers billing clients in different currencies, or anyone comparing purchasing power across markets. Enter your amount and select your base currency in the main converter, and the multi-currency section below updates instantly for all currencies at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use the currency converter for freelance invoicing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the invoice amount in your client's currency, select their currency as the base, and select your home currency as the target. The result shows exactly what you will receive at the current mid-market rate. Then use the Bank Fee Simulator to enter your payment processor's fee percentage (PayPal typically charges 3–4%, Wise charges 0.3–1%) to see your net receipt after fees. For setting your rates with international clients, use our Freelancer Rate Calculator to calculate your minimum hourly rate."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -452,6 +495,14 @@
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What currencies does the converter support?<span class="faq-icon">+</span></button>
       <div class="faq-a">The converter supports 30+ major and emerging market currencies: USD, EUR, GBP, JPY, CHF, CAD, AUD, NZD, CNY, HKD, SGD, INR, PKR, AED, SAR, KRW, TRY, BRL, MXN, ZAR, NGN, EGP, IDR, PHP, THB, MYR, SEK, NOK, DKK, and PLN. The multi-currency view shows 12 of these simultaneously for quick comparison.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the multi-currency converter feature?<span class="faq-icon">+</span></button>
+      <div class="faq-a">The multi-currency view converts your entered amount into 12 major currencies simultaneously — useful for travelers visiting multiple countries, freelancers billing clients in different currencies, or anyone comparing purchasing power across markets. Enter your amount and select your base currency in the main converter, and the multi-currency section below updates instantly for all currencies at once.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How do I use the currency converter for freelance invoicing?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Enter the invoice amount in your client&#x27;s currency, select their currency as the base, and select your home currency as the target. The result shows exactly what you will receive at the current mid-market rate. Then use the Bank Fee Simulator to enter your payment processor&#x27;s fee percentage (PayPal typically charges 3–4%, Wise charges 0.3–1%) to see your net receipt after fees. For setting your rates with international clients, use our Freelancer Rate Calculator to calculate your minimum hourly rate.</div>
     </div>
 
   <div class="sources">

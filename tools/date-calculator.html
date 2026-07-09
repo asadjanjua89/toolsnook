@@ -43,31 +43,84 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How do I calculate the number of days between two dates?", "acceptedAnswer": { "@type": "Answer", "text": "Enter your start date and end date into the Days Between Dates calculator above. It automatically accounts for varying month lengths and leap years. You can choose 'inclusive' counting (counts both the start and end date, e.g. Jan 1 to Jan 3 = 3 days) or 'exclusive' counting (counts only the gap between them, e.g. Jan 1 to Jan 3 = 2 days) depending on what your situation requires." } },
-      { "@type": "Question", "name": "What is the difference between inclusive and exclusive date counting?", "acceptedAnswer": { "@type": "Answer", "text": "Exclusive counting measures only the gap between two dates — January 1 to January 3 is 2 days. Inclusive counting counts both endpoints — January 1 to January 3 is 3 days. Legal documents, billing cycles, and rental agreements often specify which method applies, so always check the relevant contract or rule. Hotel bookings typically use exclusive counting (nights stayed), while eligibility periods often use inclusive counting." } },
-      { "@type": "Question", "name": "How do I calculate business days between two dates?", "acceptedAnswer": { "@type": "Answer", "text": "Business days exclude Saturdays and Sundays (and optionally public holidays). Use the Business Days tab above, which automatically subtracts weekends from the total calendar days and lets you optionally exclude US federal holidays for accurate project planning and deadline calculations." } },
-      { "@type": "Question", "name": "How are leap years calculated?", "acceptedAnswer": { "@type": "Answer", "text": "A year is a leap year if it's divisible by 4, except for century years (divisible by 100), which are only leap years if also divisible by 400. So 2024 and 2028 are leap years, but 2100 will not be despite being divisible by 4, while 2000 was a leap year because it's divisible by 400. This calculator handles all leap year rules automatically when calculating date differences." } },
-      { "@type": "Question", "name": "How do I add or subtract months from a date when the day doesn't exist in the target month?", "acceptedAnswer": { "@type": "Answer", "text": "When adding months lands on a day that doesn't exist in the target month (e.g., adding 1 month to January 31, but February only has 28 or 29 days), standard convention rolls over to the next valid date — January 31 + 1 month becomes March 3 (or March 2 in a leap year) in JavaScript's native date handling, though some calculators instead clamp to the last day of the target month (February 28). Our calculator uses the clamping method, treating January 31 + 1 month as February 28 (or 29 in a leap year), which matches how most calendar and billing systems handle this edge case." } },
-      { "@type": "Question", "name": "What date format should I use for international dates?", "acceptedAnswer": { "@type": "Answer", "text": "Use ISO 8601 format (YYYY-MM-DD) whenever there's potential ambiguity, such as in international communication or technical documents. The format 03/04/2026 means March 4th in the US but April 3rd in the UK and most of the world — this ambiguity causes real errors in contracts, flight bookings, and software. ISO 8601 (2026-04-03) is unambiguous and sorts correctly as text, which is why it's the international standard." } },
-      { "@type": "Question", "name": "How many days are in each month?", "acceptedAnswer": { "@type": "Answer", "text": "January (31), February (28, or 29 in a leap year), March (31), April (30), May (31), June (30), July (31), August (31), September (30), October (31), November (30), December (31). A simple memory trick: months with 31 days are January, March, May, July, August, October, and December — easy to remember using the 'knuckle method' where each knuckle on your fist represents a 31-day month." } }
-    ,
-      {
-        "@type": "Question",
-        "name": "How do I calculate business days excluding weekends and holidays?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Use the Business Days mode in the calculator above. It automatically excludes Saturdays and Sundays and accounts for US federal holidays. Enter your start date and number of business days to add, or enter two dates to find the business days between them — essential for contract deadlines, delivery windows, and payment terms like Net 30 business days." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the number of days between two dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your start and end dates in the Days Between Dates calculator above. It automatically accounts for varying month lengths and leap years. Choose \"inclusive\" to count both endpoints, or \"exclusive\" to count only the gap between them."
       }
-    ,
-      {
-        "@type": "Question",
-        "name": "How many days are in each month?",
-        "acceptedAnswer": { "@type": "Answer", "text": "January: 31, February: 28 (29 in leap years), March: 31, April: 30, May: 31, June: 30, July: 31, August: 31, September: 30, October: 31, November: 30, December: 31. A useful mnemonic: knuckle months (Jan, Mar, May, Jul, Aug, Oct, Dec) have 31 days; the valleys between them have 30 days or 28." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between inclusive and exclusive date counting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exclusive counts only the gap — Jan 1 to Jan 3 = 2 days. Inclusive counts both endpoints — Jan 1 to Jan 3 = 3 days. Legal documents, billing cycles, and rental agreements often specify which applies — always check the relevant contract. Hotel bookings typically use exclusive (nights stayed); eligibility periods often use inclusive."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate business days between two dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Business days exclude Saturdays and Sundays, and optionally public holidays. Use the Business Days tab above — it automatically subtracts weekends and lets you exclude US federal holidays for accurate project and deadline planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are leap years calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A year is a leap year if divisible by 4, except century years (divisible by 100) — unless also divisible by 400. 2024 and 2028 are leap years. 2100 will not be, despite being divisible by 4. 2000 was a leap year because it's divisible by 400. This calculator handles all leap year rules automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when adding months lands on a day that doesn't exist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For example, adding 1 month to January 31 — February only has 28 or 29 days. Our calculator clamps to the last valid day of the target month (February 28, or 29 in a leap year), matching how most calendar and billing systems handle this edge case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What date format should I use for international dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use ISO 8601 format (YYYY-MM-DD) whenever there's potential ambiguity. 03/04/2026 means March 4 in the US but April 3 in the UK and most of the world. ISO 8601 (2026-04-03) is unambiguous and is the international standard for technical and legal documents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many days are in each month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jan (31), Feb (28/29), Mar (31), Apr (30), May (31), Jun (30), Jul (31), Aug (31), Sep (30), Oct (31), Nov (30), Dec (31). Memory trick: months with 31 days are Jan, Mar, May, Jul, Aug, Oct, Dec — easy to remember using the \"knuckle method\" on your fist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I add or subtract months from a date when the day doesn't exist in the target month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When adding months lands on a day that doesn't exist in the target month (e.g., adding 1 month to January 31, but February only has 28 or 29 days), standard convention rolls over to the next valid date — January 31 + 1 month becomes March 3 (or March 2 in a leap year) in JavaScript's native date handling, though some calculators instead clamp to the last day of the target month (February 28). Our calculator uses the clamping method, treating January 31 + 1 month as February 28 (or 29 in a leap year), which matches how most calendar and billing systems handle this edge case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate business days excluding weekends and holidays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Business Days mode in the calculator above. It automatically excludes Saturdays and Sundays and accounts for US federal holidays. Enter your start date and number of business days to add, or enter two dates to find the business days between them — essential for contract deadlines, delivery windows, and payment terms like Net 30 business days."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -386,6 +439,14 @@
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What happens when adding months lands on a day that doesn't exist?</div><div class="faq-a">For example, adding 1 month to January 31 — February only has 28 or 29 days. Our calculator clamps to the last valid day of the target month (February 28, or 29 in a leap year), matching how most calendar and billing systems handle this edge case.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What date format should I use for international dates?</div><div class="faq-a">Use ISO 8601 format (YYYY-MM-DD) whenever there's potential ambiguity. 03/04/2026 means March 4 in the US but April 3 in the UK and most of the world. ISO 8601 (2026-04-03) is unambiguous and is the international standard for technical and legal documents.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How many days are in each month?</div><div class="faq-a">Jan (31), Feb (28/29), Mar (31), Apr (30), May (31), Jun (30), Jul (31), Aug (31), Sep (30), Oct (31), Nov (30), Dec (31). Memory trick: months with 31 days are Jan, Mar, May, Jul, Aug, Oct, Dec — easy to remember using the "knuckle method" on your fist.</div></div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I add or subtract months from a date when the day doesn&#x27;t exist in the target month?</div>
+      <div class="faq-a">When adding months lands on a day that doesn&#x27;t exist in the target month (e.g., adding 1 month to January 31, but February only has 28 or 29 days), standard convention rolls over to the next valid date — January 31 + 1 month becomes March 3 (or March 2 in a leap year) in JavaScript&#x27;s native date handling, though some calculators instead clamp to the last day of the target month (February 28). Our calculator uses the clamping method, treating January 31 + 1 month as February 28 (or 29 in a leap year), which matches how most calendar and billing systems handle this edge case.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate business days excluding weekends and holidays?</div>
+      <div class="faq-a">Use the Business Days mode in the calculator above. It automatically excludes Saturdays and Sundays and accounts for US federal holidays. Enter your start date and number of business days to add, or enter two dates to find the business days between them — essential for contract deadlines, delivery windows, and payment terms like Net 30 business days.</div>
+    </div>
   </div>
 
   <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">

@@ -43,26 +43,124 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How do I calculate a percentage discount?", "acceptedAnswer": { "@type": "Answer", "text": "To calculate a percentage discount, multiply the original price by the discount percentage and divide by 100 to get the savings. Then subtract from the original price. Formula: Sale Price = Original Price × (1 − Discount% ÷ 100). Example: 20% off $50 → $50 × 0.80 = $40 sale price. You save $10." } },
-      { "@type": "Question", "name": "What is 20% off $50?", "acceptedAnswer": { "@type": "Answer", "text": "20% off $50 is $40. You save $10. Calculation: $50 × 0.20 = $10 discount. $50 − $10 = $40 sale price. To find any percentage off any price, multiply the original price by the decimal version of the percentage, then subtract from the original." } },
-      { "@type": "Question", "name": "What is 30% off $100?", "acceptedAnswer": { "@type": "Answer", "text": "30% off $100 is $70. You save $30. Calculation: $100 × 0.30 = $30 discount. $100 − $30 = $70 sale price." } },
-      { "@type": "Question", "name": "How do I find the original price before a discount?", "acceptedAnswer": { "@type": "Answer", "text": "To find the original price before a discount, divide the sale price by (1 minus the discount percentage as a decimal). Formula: Original Price = Sale Price ÷ (1 − Discount% ÷ 100). Example: you paid $80 at 20% off → $80 ÷ 0.80 = $100 original price." } },
-      { "@type": "Question", "name": "Do stacked discounts add up? Is 20% off plus 10% off the same as 30% off?", "acceptedAnswer": { "@type": "Answer", "text": "No — stacked discounts do NOT add up. 20% off plus 10% off equals 28% total, not 30%. The second discount applies to the already-reduced price. On a $100 item: 20% off gives $80, then 10% off $80 gives $72. Total saving = $28, not $30." } },
-      { "@type": "Question", "name": "Is it better to take percent off or dollars off?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the original price. Percent off is better on expensive items; fixed dollar off is better on cheaper items. Example: 20% off vs $15 off. On a $50 item: 20% saves $10 (dollar off wins). On a $100 item: 20% saves $20 (both equal at $75 crossover). Above $75, percent off wins. Use the Deal Comparison calculator to find the crossover point instantly." } },
-      { "@type": "Question", "name": "How do I calculate discount percentage from two prices?", "acceptedAnswer": { "@type": "Answer", "text": "Formula: Discount % = ((Original Price − Sale Price) ÷ Original Price) × 100. Example: Original $120, sale price $90 → ((120 − 90) ÷ 120) × 100 = 25% off." } },
-      { "@type": "Question", "name": "How does a BOGO deal work?", "acceptedAnswer": { "@type": "Answer", "text": "BOGO (Buy One Get One) Free means the second item is free — effectively 50% off per item when buying two. BOGO 50% off means the second item is half price — effectively 25% off your total. Buy 2 Get 1 Free gives 33% off per item when buying three. Use the BOGO calculator tab to compare any BOGO deal." } }
-    ,
-      {
-        "@type": "Question",
-        "name": "How do I calculate the original price before a discount?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Divide the sale price by (1 - discount%/100). If an item is £60 after a 25% discount: £60 / 0.75 = £80 original price. This reverse calculation is useful for finding the pre-sale price from a discounted tag. The calculator above handles this automatically in the reverse discount tab." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is 20% off $50?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "20% off $50 is $40. You save $10. Calculation: $50 × 0.20 = $10 discount. $50 − $10 = $40 sale price. To calculate: multiply the original price by the decimal version of the discount (20% = 0.20), then subtract from the original price."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 30% off $100?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30% off $100 is $70. You save $30. For any amount at 30% off: multiply by 0.70 to get the sale price directly. Or multiply by 0.30 to find the savings amount, then subtract. Example: 30% off $250 = $250 × 0.70 = $175."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 40% off $8.99?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "40% off $8.99 is $5.39. You save $3.60. Calculation: $8.99 × 0.40 = $3.596 (rounded to $3.60). $8.99 − $3.60 = $5.39 sale price. See the full quick reference table above for more exact-amount calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the original price before a discount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the sale price by (1 minus the discount as a decimal). Formula: Original = Sale ÷ (1 − discount%). Example: paid $80 at 20% off → $80 ÷ 0.80 = $100 original. Use the Original Price tab in the calculator above for instant results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do stacked discounts add up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — stacked discounts never simply add up. 20% off + 10% off = 28%, not 30%. The second discount applies to the already-reduced price. The more discounts stack, the bigger the gap. Use the Stacked Discounts tab to find the true effective discount for any combination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 30% off better than $20 off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the original price. The crossover point is $66.67. Below $66.67 the $20 off wins. Above $66.67 the 30% off wins. On a $50 item: 30% saves $15 (dollar off wins). On a $100 item: 30% saves $30 (percentage off wins). Use the Compare Deals tab to find which is better for any price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does BOGO work and how much do I actually save?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BOGO Free: pay for one, get two — effectively 50% off per item. BOGO 50% off: pay full for one, half for second — effectively 25% off total. Buy 2 Get 1 Free: effectively 33% off per item when buying three. The effective savings are always less than they sound — use the BOGO Calculator tab above to see the real discount for any deal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is tax calculated on the original price or the discounted price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most countries and US states, sales tax is calculated on the discounted (sale) price, not the original price. This means you save tax on the discount as well. Some exceptions apply with manufacturer coupons. Use the Discount + Tax tab above to calculate the exact final price with both discount and tax applied."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a percentage discount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate a percentage discount, multiply the original price by the discount percentage and divide by 100 to get the savings. Then subtract from the original price. Formula: Sale Price = Original Price × (1 − Discount% ÷ 100). Example: 20% off $50 → $50 × 0.80 = $40 sale price. You save $10."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do stacked discounts add up? Is 20% off plus 10% off the same as 30% off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — stacked discounts do NOT add up. 20% off plus 10% off equals 28% total, not 30%. The second discount applies to the already-reduced price. On a $100 item: 20% off gives $80, then 10% off $80 gives $72. Total saving = $28, not $30."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it better to take percent off or dollars off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the original price. Percent off is better on expensive items; fixed dollar off is better on cheaper items. Example: 20% off vs $15 off. On a $50 item: 20% saves $10 (dollar off wins). On a $100 item: 20% saves $20 (both equal at $75 crossover). Above $75, percent off wins. Use the Deal Comparison calculator to find the crossover point instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate discount percentage from two prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Formula: Discount % = ((Original Price − Sale Price) ÷ Original Price) × 100. Example: Original $120, sale price $90 → ((120 − 90) ÷ 120) × 100 = 25% off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a BOGO deal work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BOGO (Buy One Get One) Free means the second item is free — effectively 50% off per item when buying two. BOGO 50% off means the second item is half price — effectively 25% off your total. Buy 2 Get 1 Free gives 33% off per item when buying three. Use the BOGO calculator tab to compare any BOGO deal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the original price before a discount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the sale price by (1 - discount%/100). If an item is £60 after a 25% discount: £60 / 0.75 = £80 original price. This reverse calculation is useful for finding the pre-sale price from a discounted tag. The calculator above handles this automatically in the reverse discount tab."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -508,6 +606,30 @@
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Is tax calculated on the original price or the discounted price?</div>
       <div class="faq-a">In most countries and US states, sales tax is calculated on the discounted (sale) price, not the original price. This means you save tax on the discount as well. Some exceptions apply with manufacturer coupons. Use the Discount + Tax tab above to calculate the exact final price with both discount and tax applied.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate a percentage discount?</div>
+      <div class="faq-a">To calculate a percentage discount, multiply the original price by the discount percentage and divide by 100 to get the savings. Then subtract from the original price. Formula: Sale Price = Original Price × (1 − Discount% ÷ 100). Example: 20% off $50 → $50 × 0.80 = $40 sale price. You save $10.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do stacked discounts add up? Is 20% off plus 10% off the same as 30% off?</div>
+      <div class="faq-a">No — stacked discounts do NOT add up. 20% off plus 10% off equals 28% total, not 30%. The second discount applies to the already-reduced price. On a $100 item: 20% off gives $80, then 10% off $80 gives $72. Total saving = $28, not $30.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is it better to take percent off or dollars off?</div>
+      <div class="faq-a">It depends on the original price. Percent off is better on expensive items; fixed dollar off is better on cheaper items. Example: 20% off vs $15 off. On a $50 item: 20% saves $10 (dollar off wins). On a $100 item: 20% saves $20 (both equal at $75 crossover). Above $75, percent off wins. Use the Deal Comparison calculator to find the crossover point instantly.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate discount percentage from two prices?</div>
+      <div class="faq-a">Formula: Discount % = ((Original Price − Sale Price) ÷ Original Price) × 100. Example: Original $120, sale price $90 → ((120 − 90) ÷ 120) × 100 = 25% off.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How does a BOGO deal work?</div>
+      <div class="faq-a">BOGO (Buy One Get One) Free means the second item is free — effectively 50% off per item when buying two. BOGO 50% off means the second item is half price — effectively 25% off your total. Buy 2 Get 1 Free gives 33% off per item when buying three. Use the BOGO calculator tab to compare any BOGO deal.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate the original price before a discount?</div>
+      <div class="faq-a">Divide the sale price by (1 - discount%/100). If an item is £60 after a 25% discount: £60 / 0.75 = £80 original price. This reverse calculation is useful for finding the pre-sale price from a discounted tag. The calculator above handles this automatically in the reverse discount tab.</div>
     </div>
   </div>
 

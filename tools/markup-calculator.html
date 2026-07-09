@@ -117,7 +117,84 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ToolsNook","item":"https://www.toolsnook.com"},{"@type":"ListItem","position":2,"name":"Markup Calculator","item":"https://www.toolsnook.com/tools/markup-calculator.html"}]}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between markup and margin?","acceptedAnswer":{"@type":"Answer","text":"Markup = (Selling Price - Cost) / Cost × 100. Margin = (Selling Price - Cost) / Selling Price × 100. A 50% markup = 33.3% margin. Same profit, different percentages because they use different denominators."}},{"@type":"Question","name":"How do I calculate selling price from markup?","acceptedAnswer":{"@type":"Answer","text":"Selling Price = Cost × (1 + Markup% / 100). Cost $10 with 50% markup: $10 × 1.5 = $15. The calculator does this automatically."}},{"@type":"Question","name":"How do I convert markup to margin?","acceptedAnswer":{"@type":"Answer","text":"Margin% = Markup% / (100 + Markup%) × 100. A 50% markup: 50 / 150 × 100 = 33.3% margin. Use the converter above for instant results."}},{"@type":"Question","name":"How do I convert margin to markup?","acceptedAnswer":{"@type":"Answer","text":"Markup% = Margin% / (100 - Margin%) × 100. A 33.3% margin: 33.3 / 66.7 × 100 = 50% markup. A 50% margin = 100% markup."}},{"@type":"Question","name":"Why does mixing up markup and margin matter?","acceptedAnswer":{"@type":"Answer","text":"A 50% markup is 33.3% margin — a 16.7 percentage point difference. If you target a 50% margin but calculate prices using 50% markup, you are systematically under-pricing. On $500,000 revenue this error costs roughly $100,000 in lost profit."}},{"@type":"Question","name":"What is a good markup percentage?","acceptedAnswer":{"@type":"Answer","text":"Depends entirely on industry. Retail clothing: 100-300%. Restaurants: 200-400% on food costs. Software: 1000%+. Professional services target 60-100% gross margins. The right markup covers all costs — materials, labour, and overhead — and leaves a viable profit margin."}},{"@type":"Question","name":"What is gross margin vs net margin?","acceptedAnswer":{"@type":"Answer","text":"Gross margin = (Revenue - Cost of Goods Sold) / Revenue. Net margin = (Net Profit) / Revenue — after all costs including operating expenses, interest, and taxes. Gross margin measures pricing efficiency; net margin measures overall business profitability."}},{"@type":"Question","name":"What is keystone markup in retail?","acceptedAnswer":{"@type":"Answer","text":"Keystone is 100% markup — doubling the wholesale cost to set retail price. A product bought for $25 sells at $50. This gives a 50% gross margin. Many retailers achieve higher than keystone on own-brand products and lower on high-turnover branded goods."}},{"@type":"Question","name":"How do I use markup to set competitive prices?","acceptedAnswer":{"@type":"Answer","text":"Check competitor prices. Work backward: if market price is $50 and your cost is $20, the market-implied markup is 150% and margin is 60%. If that exceeds your minimum margin requirement, you can price competitively and still be profitable. If not, you need to reduce costs or differentiate to justify a premium."}}]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between markup and margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Markup = (Selling Price - Cost) / Cost × 100. Margin = (Selling Price - Cost) / Selling Price × 100. A 50% markup = 33.3% margin. Same profit, different percentages because they use different denominators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate selling price from markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selling Price = Cost × (1 + Markup% / 100). Cost $10 with 50% markup: $10 × 1.5 = $15. The calculator does this automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert markup to margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin% = Markup% / (100 + Markup%) × 100. A 50% markup: 50 / 150 × 100 = 33.3% margin. Use the converter above for instant results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert margin to markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Markup% = Margin% / (100 - Margin%) × 100. A 33.3% margin: 33.3 / 66.7 × 100 = 50% markup. A 50% margin = 100% markup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does mixing up markup and margin matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 50% markup is 33.3% margin — a 16.7 percentage point difference. If you target a 50% margin but calculate prices using 50% markup, you are systematically under-pricing. On $500,000 revenue this error costs roughly $100,000 in lost profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good markup percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depends entirely on industry. Retail clothing: 100-300%. Restaurants: 200-400% on food costs. Software: 1000%+. Professional services target 60-100% gross margins. The right markup covers all costs — materials, labour, and overhead — and leaves a viable profit margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is gross margin vs net margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross margin = (Revenue - Cost of Goods Sold) / Revenue. Net margin = (Net Profit) / Revenue — after all costs including operating expenses, interest, and taxes. Gross margin measures pricing efficiency; net margin measures overall business profitability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is keystone markup in retail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keystone is 100% markup — doubling the wholesale cost to set retail price. A product bought for $25 sells at $50. This gives a 50% gross margin. Many retailers achieve higher than keystone on own-brand products and lower on high-turnover branded goods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use markup to set competitive prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check competitor prices. Work backward: if market price is $50 and your cost is $20, the market-implied markup is 150% and margin is 60%. If that exceeds your minimum margin requirement, you can price competitively and still be profitable. If not, you need to reduce costs or differentiate to justify a premium."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>

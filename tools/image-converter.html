@@ -34,58 +34,100 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I convert PNG to JPG online for free?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Upload your PNG file using the converter above, select JPG as the output format, adjust quality if needed, and click Convert. Your PNG is converted to JPG instantly in your browser — no upload to any server, no signup required, completely free with no watermarks." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I convert multiple images at once?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. This converter supports bulk conversion of up to 20 images simultaneously. Drag and drop multiple files at once or click to select multiple files. Once converted, you can download each image individually or download all converted images as a single ZIP file." }
-      },
-      {
-        "@type": "Question",
-        "name": "Are my images uploaded to a server?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. This image converter works entirely in your browser using JavaScript and the HTML5 Canvas API. Your images are never uploaded to any server, never stored anywhere, and never seen by anyone. The conversion happens locally on your own device. This makes it completely private and secure." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I convert HEIC to JPG?",
-        "acceptedAnswer": { "@type": "Answer", "text": "HEIC is Apple's default photo format used on iPhones and iPads. To convert HEIC to JPG, upload your HEIC file in the converter above and select JPG as the output format. HEIC to JPG conversion works directly in supported browsers (Chrome, Firefox, Safari on Mac). For Windows users, Chrome handles HEIC conversion without needing to install anything." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between PNG and JPG?",
-        "acceptedAnswer": { "@type": "Answer", "text": "PNG is a lossless format — it preserves 100% of image quality and supports transparency (transparent backgrounds). It produces larger file sizes. JPG (JPEG) is a lossy format — it compresses images by discarding some data, producing smaller file sizes. JPG does not support transparency. Use PNG for logos, graphics, and images with transparent backgrounds. Use JPG for photographs and images where file size matters more than perfect quality." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is WebP and should I convert to it?",
-        "acceptedAnswer": { "@type": "Answer", "text": "WebP is a modern image format developed by Google that produces images 25-35% smaller than JPG at the same visual quality, and also supports transparency like PNG. It is recommended by Google for websites because smaller images load faster and improve SEO page speed scores. Convert your images to WebP for website use. For sharing via email or social media, JPG or PNG are more universally compatible." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I convert an image to PDF?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Upload your image (JPG, PNG, WebP, or GIF) in the converter above and select PDF as the output format. Each image is converted to a single-page PDF document. You can convert multiple images to separate PDF files in bulk using the batch conversion feature." }
-      },
-      {
-        "@type": "Question",
-        "name": "Does the image converter add a watermark?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. ToolsNook's image converter never adds watermarks to your converted images. The tool is completely free with no restrictions — no watermarks, no file limits, no signup, no premium tier required." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert PNG to JPG online for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload your PNG using the converter above, select JPG as the output format, and click Convert. Your PNG converts to JPG instantly in your browser — no server upload, no signup, completely free with no watermarks. You can adjust the JPG quality using the quality slider before converting."
       }
-    ,
-      {
-        "@type": "Question",
-        "name": "What is the difference between PNG and JPG?",
-        "acceptedAnswer": { "@type": "Answer", "text": "PNG uses lossless compression — no quality lost but larger file sizes. It supports transparency, ideal for logos and graphics. JPG uses lossy compression — slightly reduced quality but much smaller files. Ideal for photographs. Use PNG for graphics and logos where sharpness matters. Use JPG for photos where file size is the priority. WebP offers better compression than both for web use." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert multiple images at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Select up to 20 images at once — hold Ctrl (Windows) or Cmd (Mac) when selecting, or drag multiple files into the drop zone. All images are converted simultaneously. Once done, download each file individually or click \"Download All as ZIP\" to get everything in one ZIP file."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — never. This tool works entirely in your browser. Your images are never uploaded anywhere. The conversion uses JavaScript and the HTML5 Canvas API running locally on your device. Your files are completely private and secure. The tool even works offline once the page has loaded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert HEIC to JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload your HEIC file and select JPG as the output format. HEIC is Apple's default photo format for iPhone and iPad. In Chrome and other modern browsers, HEIC conversion works directly. If your browser doesn't support HEIC, try using Chrome — it has built-in HEIC support. For the best quality, use quality 90 or above when converting iPhone photos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between PNG and JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PNG is lossless — it preserves 100% quality and supports transparent backgrounds, but produces larger files. JPG is lossy — it compresses images by discarding some detail, producing smaller files. JPG doesn't support transparency. Use PNG for logos and graphics. Use JPG for photographs and when file size matters. Use WebP for websites — it's the best of both worlds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What quality setting should I use for JPG conversion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most uses, quality 85–95 is ideal — excellent visual quality with good compression. Quality 92 (the default) is the standard used by most professional tools. For email attachments or web thumbnails where file size matters more, quality 70–80 produces significantly smaller files with minimal visible quality loss. Avoid quality below 70 — compression artefacts become visible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is WebP and should I convert my images to it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WebP is a modern image format by Google. It produces files 25–35% smaller than JPG at the same visual quality, and supports transparency like PNG. All modern browsers support WebP since 2020. For website images, converting to WebP improves page load speed and Google PageSpeed scores. For email or general sharing, JPG or PNG are more universally compatible with older apps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the converter add a watermark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ToolsNook never adds watermarks to converted images. The tool is completely free with no restrictions — no watermarks, no file limits, no daily caps, no premium tier. What you convert is what you get."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is WebP and should I convert to it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WebP is a modern image format developed by Google that produces images 25-35% smaller than JPG at the same visual quality, and also supports transparency like PNG. It is recommended by Google for websites because smaller images load faster and improve SEO page speed scores. Convert your images to WebP for website use. For sharing via email or social media, JPG or PNG are more universally compatible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert an image to PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload your image (JPG, PNG, WebP, or GIF) in the converter above and select PDF as the output format. Each image is converted to a single-page PDF document. You can convert multiple images to separate PDF files in bulk using the batch conversion feature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the image converter add a watermark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ToolsNook's image converter never adds watermarks to your converted images. The tool is completely free with no restrictions — no watermarks, no file limits, no signup, no premium tier required."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -541,6 +583,18 @@
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Does the converter add a watermark?</div>
       <div class="faq-a">No. ToolsNook never adds watermarks to converted images. The tool is completely free with no restrictions — no watermarks, no file limits, no daily caps, no premium tier. What you convert is what you get.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is WebP and should I convert to it?</div>
+      <div class="faq-a">WebP is a modern image format developed by Google that produces images 25-35% smaller than JPG at the same visual quality, and also supports transparency like PNG. It is recommended by Google for websites because smaller images load faster and improve SEO page speed scores. Convert your images to WebP for website use. For sharing via email or social media, JPG or PNG are more universally compatible.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I convert an image to PDF?</div>
+      <div class="faq-a">Upload your image (JPG, PNG, WebP, or GIF) in the converter above and select PDF as the output format. Each image is converted to a single-page PDF document. You can convert multiple images to separate PDF files in bulk using the batch conversion feature.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Does the image converter add a watermark?</div>
+      <div class="faq-a">No. ToolsNook&#x27;s image converter never adds watermarks to your converted images. The tool is completely free with no restrictions — no watermarks, no file limits, no signup, no premium tier required.</div>
     </div>
   </div>
 

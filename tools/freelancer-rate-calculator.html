@@ -42,58 +42,124 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I calculate my freelance hourly rate?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The formula is: Hourly Rate = (Desired Annual Income + Annual Expenses) ÷ (1 - Tax Rate) ÷ Annual Billable Hours. For example: ($60,000 income + $5,000 expenses) ÷ 0.70 ÷ 1,200 billable hours = $77.38/hr. Most freelancers only bill 50-60% of their working hours — the rest goes to admin, marketing and non-billable tasks. Use a realistic billable hour estimate, not 40hrs × 52 weeks." }
-      },
-      {
-        "@type": "Question",
-        "name": "How many billable hours does a freelancer work per year?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Most freelancers bill between 1,000 and 1,400 hours per year — equivalent to 20-28 billable hours per week across 48 working weeks. The gap between total working hours and billable hours is filled by admin, client communication, marketing, proposals, and professional development. Assuming all 2,080 hours (40hrs × 52 weeks) are billable leads to underpricing by 30-50%." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I calculate a freelance day rate?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Your freelance day rate is simply your hourly rate multiplied by the number of hours in your working day (typically 7-8 hours). If your hourly rate is $75, your day rate is $75 × 8 = $600. Day rates are commonly used for on-site work, short-term contracts, and consulting engagements. Use our calculator above to find both your hourly and day rate simultaneously." }
-      },
-      {
-        "@type": "Question",
-        "name": "What percentage should a freelancer set aside for tax?",
-        "acceptedAnswer": { "@type": "Answer", "text": "As a general guideline, freelancers should set aside 25-35% of their income for tax. In the US, self-employed individuals pay income tax plus 15.3% self-employment tax (covering Social Security and Medicare). In the UK, freelancers pay income tax plus 9% Class 4 National Insurance. A safe starting point is 30% set aside for tax in most Western countries. Use the tax set-aside feature in our calculator for a personalised estimate." }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does Upwork take from freelancers?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Upwork charges freelancers a 10% service fee on all earnings (simplified from the previous tiered structure in 2025). This means if you charge a client $100/hr on Upwork, you receive $90. You should factor this into your rate — if you want to earn $90/hr net, quote $100/hr on Upwork. Our calculator includes a platform fee field to account for this automatically." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I calculate a freelance project rate?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Multiply your hourly rate by the estimated hours for the project, then add a buffer for scope creep (typically 10-20%). Formula: Project Rate = Hourly Rate × Estimated Hours × (1 + Buffer%). For example: $75/hr × 20 hours × 1.15 buffer = $1,725. Use the Project Rate calculator tab above to calculate this instantly with your own rates and estimates." }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I charge the same rate for all clients?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No — most experienced freelancers use tiered pricing. Charge higher rates for: rush projects (1.5-2x), short-term engagements, clients in high-revenue industries, and projects outside your niche. Charge standard rates for: regular long-term clients, projects in your core skill area. Your calculated rate from this tool is your floor — the minimum you need to stay profitable. You can and should charge above it based on value delivered." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a good freelance hourly rate in 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Freelance rates vary significantly by skill, experience, and location. In 2026, typical ranges are: Web developers $50-150/hr, UX/UI designers $45-120/hr, Copywriters $40-120/hr, Digital marketers $35-100/hr, Graphic designers $35-85/hr, Virtual assistants $15-45/hr, Business consultants $75-250/hr. These are US market rates. Rates in the UK, Europe, Australia and Canada are broadly similar. Rates in South Asia and Southeast Asia are typically 30-60% lower." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my freelance hourly rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Formula: (Desired Annual Income + Annual Expenses) ÷ (1 − Tax Rate) ÷ Annual Billable Hours. Use the calculator above — enter your income goal, expenses, tax rate and working hours to get your personalised minimum rate instantly. Most freelancers need to charge 30–50% more than they initially think."
       }
-    ,
-      {
-        "@type": "Question",
-        "name": "Should I charge the same rate to all clients?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Value-based pricing means charging based on the value you deliver, not a flat rate. A small startup and a large enterprise may need the same work, but the enterprise derives greater value and can afford more. Many freelancers use tiered pricing — a standard rate for small clients and a premium rate for larger organisations with bigger budgets." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many billable hours do freelancers work per year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most freelancers bill 1,000–1,400 hours per year (20–28 billable hours per week). The remaining time goes to admin, marketing, proposals, and professional development. Assuming all 2,080 hours are billable leads to underpricing by 30–50%. Our calculator uses a realistic billable rate of 60% as the default."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a freelance day rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your day rate = hourly rate × hours in your working day (typically 7–8 hours). If your hourly rate is $75, your day rate is $600 (8-hour day) or $525 (7-hour day). Day rates are common for on-site work, short-term contracts, and consulting. The hourly rate calculator above shows your day rate automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage should I set aside for tax as a freelancer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set aside 25–35% of every payment for tax. In the US, self-employed people pay income tax + 15.3% self-employment tax. In the UK, freelancers pay income tax + Class 4 National Insurance. A safe default is 30%. Set it aside immediately when payment arrives — never spend your tax reserve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Upwork take from freelancers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upwork takes a flat 10% service fee on all earnings (simplified from the previous tiered structure in 2025). If you charge a client $100/hr, you receive $90. To earn $90/hr net, quote $100/hr. Use the Platform Fee Calculator tab above to calculate the exact rate to quote on any platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I price a fixed-price project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply your hourly rate by estimated hours, then add a 15–20% scope creep buffer. Formula: Project Rate = Hourly Rate × Estimated Hours × 1.15. For example: $75/hr × 20 hours × 1.15 = $1,725. Always add extra for rush work (25–100% premium) and state clearly how many revision rounds are included. Use the Project Rate tab above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I charge more than my calculated minimum rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — your calculated rate is the floor, not the ceiling. Charge more based on the value you deliver, your reputation, and market demand. Signs you are undercharging: clients hire you without negotiating price, you are fully booked, or you resent the work because of the pay. Value-based pricing means charging based on the outcome you create for clients, not the hours you spend."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I transition from employment to freelancing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the \"Salary to Rate\" tab above to calculate the freelance rate you need to match your current salary. Add 30–50% on top to account for lost benefits, higher taxes, and the income risk of freelancing. Build 3–6 months of savings before going full-time. Start with one or two freelance clients while still employed if possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many billable hours does a freelancer work per year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most freelancers bill between 1,000 and 1,400 hours per year — equivalent to 20-28 billable hours per week across 48 working weeks. The gap between total working hours and billable hours is filled by admin, client communication, marketing, proposals, and professional development. Assuming all 2,080 hours (40hrs × 52 weeks) are billable leads to underpricing by 30-50%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage should a freelancer set aside for tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a general guideline, freelancers should set aside 25-35% of their income for tax. In the US, self-employed individuals pay income tax plus 15.3% self-employment tax (covering Social Security and Medicare). In the UK, freelancers pay income tax plus 9% Class 4 National Insurance. A safe starting point is 30% set aside for tax in most Western countries. Use the tax set-aside feature in our calculator for a personalised estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a freelance project rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply your hourly rate by the estimated hours for the project, then add a buffer for scope creep (typically 10-20%). Formula: Project Rate = Hourly Rate × Estimated Hours × (1 + Buffer%). For example: $75/hr × 20 hours × 1.15 buffer = $1,725. Use the Project Rate calculator tab above to calculate this instantly with your own rates and estimates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I charge the same rate for all clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — most experienced freelancers use tiered pricing. Charge higher rates for: rush projects (1.5-2x), short-term engagements, clients in high-revenue industries, and projects outside your niche. Charge standard rates for: regular long-term clients, projects in your core skill area. Your calculated rate from this tool is your floor — the minimum you need to stay profitable. You can and should charge above it based on value delivered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good freelance hourly rate in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Freelance rates vary significantly by skill, experience, and location. In 2026, typical ranges are: Web developers $50-150/hr, UX/UI designers $45-120/hr, Copywriters $40-120/hr, Digital marketers $35-100/hr, Graphic designers $35-85/hr, Virtual assistants $15-45/hr, Business consultants $75-250/hr. These are US market rates. Rates in the UK, Europe, Australia and Canada are broadly similar. Rates in South Asia and Southeast Asia are typically 30-60% lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I charge the same rate to all clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Value-based pricing means charging based on the value you deliver, not a flat rate. A small startup and a large enterprise may need the same work, but the enterprise derives greater value and can afford more. Many freelancers use tiered pricing — a standard rate for small clients and a premium rate for larger organisations with bigger budgets."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -760,6 +826,30 @@
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How do I transition from employment to freelancing?</div>
       <div class="faq-a">Use the "Salary to Rate" tab above to calculate the freelance rate you need to match your current salary. Add 30–50% on top to account for lost benefits, higher taxes, and the income risk of freelancing. Build 3–6 months of savings before going full-time. Start with one or two freelance clients while still employed if possible.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How many billable hours does a freelancer work per year?</div>
+      <div class="faq-a">Most freelancers bill between 1,000 and 1,400 hours per year — equivalent to 20-28 billable hours per week across 48 working weeks. The gap between total working hours and billable hours is filled by admin, client communication, marketing, proposals, and professional development. Assuming all 2,080 hours (40hrs × 52 weeks) are billable leads to underpricing by 30-50%.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What percentage should a freelancer set aside for tax?</div>
+      <div class="faq-a">As a general guideline, freelancers should set aside 25-35% of their income for tax. In the US, self-employed individuals pay income tax plus 15.3% self-employment tax (covering Social Security and Medicare). In the UK, freelancers pay income tax plus 9% Class 4 National Insurance. A safe starting point is 30% set aside for tax in most Western countries. Use the tax set-aside feature in our calculator for a personalised estimate.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate a freelance project rate?</div>
+      <div class="faq-a">Multiply your hourly rate by the estimated hours for the project, then add a buffer for scope creep (typically 10-20%). Formula: Project Rate = Hourly Rate × Estimated Hours × (1 + Buffer%). For example: $75/hr × 20 hours × 1.15 buffer = $1,725. Use the Project Rate calculator tab above to calculate this instantly with your own rates and estimates.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Should I charge the same rate for all clients?</div>
+      <div class="faq-a">No — most experienced freelancers use tiered pricing. Charge higher rates for: rush projects (1.5-2x), short-term engagements, clients in high-revenue industries, and projects outside your niche. Charge standard rates for: regular long-term clients, projects in your core skill area. Your calculated rate from this tool is your floor — the minimum you need to stay profitable. You can and should charge above it based on value delivered.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is a good freelance hourly rate in 2026?</div>
+      <div class="faq-a">Freelance rates vary significantly by skill, experience, and location. In 2026, typical ranges are: Web developers $50-150/hr, UX/UI designers $45-120/hr, Copywriters $40-120/hr, Digital marketers $35-100/hr, Graphic designers $35-85/hr, Virtual assistants $15-45/hr, Business consultants $75-250/hr. These are US market rates. Rates in the UK, Europe, Australia and Canada are broadly similar. Rates in South Asia and Southeast Asia are typically 30-60% lower.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Should I charge the same rate to all clients?</div>
+      <div class="faq-a">Not necessarily. Value-based pricing means charging based on the value you deliver, not a flat rate. A small startup and a large enterprise may need the same work, but the enterprise derives greater value and can afford more. Many freelancers use tiered pricing — a standard rate for small clients and a premium rate for larger organisations with bigger budgets.</div>
     </div>
   </div>
 

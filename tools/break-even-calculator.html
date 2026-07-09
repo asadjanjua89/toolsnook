@@ -42,26 +42,116 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "What is the break-even point?", "acceptedAnswer": { "@type": "Answer", "text": "The break-even point is the level of sales at which total revenue equals total costs — neither a profit nor a loss is made. Below break-even, the business operates at a loss. Above break-even, every additional unit sold generates profit. It is calculated as: Break-Even Units = Fixed Costs ÷ (Selling Price per Unit − Variable Cost per Unit)." } },
-      { "@type": "Question", "name": "How do I calculate the break-even point?", "acceptedAnswer": { "@type": "Answer", "text": "Break-Even Point (units) = Fixed Costs ÷ Contribution Margin per Unit. Contribution Margin per Unit = Selling Price − Variable Cost per Unit. Example: Fixed costs $10,000, selling price $50, variable cost $30. Contribution margin = $20. Break-even = $10,000 ÷ $20 = 500 units. To find break-even in revenue: Break-Even Revenue = Fixed Costs ÷ Contribution Margin Ratio. Contribution Margin Ratio = Contribution Margin ÷ Selling Price." } },
-      { "@type": "Question", "name": "What is contribution margin?", "acceptedAnswer": { "@type": "Answer", "text": "Contribution margin is the selling price per unit minus the variable cost per unit. It represents how much each unit sold contributes toward covering fixed costs and generating profit. Example: selling price $50, variable cost $30 = contribution margin $20 per unit. Once fixed costs are fully covered, each unit sold generates $20 in profit. Contribution margin ratio = contribution margin ÷ selling price = $20 ÷ $50 = 40%." } },
-      { "@type": "Question", "name": "What is margin of safety?", "acceptedAnswer": { "@type": "Answer", "text": "Margin of safety is the difference between actual (or projected) sales and the break-even sales level. It tells you how much sales can fall before the business makes a loss. Formula: Margin of Safety = Current Sales − Break-Even Sales. As a percentage: (Current Sales − Break-Even Sales) ÷ Current Sales × 100. A higher margin of safety means a more resilient business with more buffer against a sales downturn." } },
-      { "@type": "Question", "name": "What is the difference between fixed costs and variable costs?", "acceptedAnswer": { "@type": "Answer", "text": "Fixed costs stay the same regardless of how many units you produce or sell — rent, salaries, insurance, loan repayments. Variable costs change in proportion to production volume — materials, packaging, shipping, sales commissions. Understanding this distinction is fundamental to break-even analysis because only variable costs affect the contribution margin per unit." } },
-      { "@type": "Question", "name": "How do I lower my break-even point?", "acceptedAnswer": { "@type": "Answer", "text": "You can lower your break-even point by: (1) Increasing your selling price — even a small price increase significantly reduces break-even units. (2) Reducing variable costs per unit — better supplier deals, process efficiency, bulk purchasing. (3) Reducing fixed costs — renegotiating rent, reducing headcount, eliminating non-essential overheads. (4) A combination of all three. Use the break-even calculator above to model each scenario." } },
-      { "@type": "Question", "name": "How do I calculate break-even with multiple products?", "acceptedAnswer": { "@type": "Answer", "text": "For a business with multiple products, calculate a weighted average contribution margin based on your sales mix. Multiply each product's contribution margin by its percentage of total sales, then sum the results to get the weighted average contribution margin. Divide your total fixed costs by this weighted average to get the break-even point in total units." } },
-      { "@type": "Question", "name": "What is a target profit and how do I calculate it?", "acceptedAnswer": { "@type": "Answer", "text": "A target profit calculation tells you how many units you need to sell to achieve a specific profit goal. Formula: Target Profit Units = (Fixed Costs + Target Profit) ÷ Contribution Margin per Unit. Example: fixed costs $10,000, target profit $5,000, contribution margin $20 per unit. Target units = ($10,000 + $5,000) ÷ $20 = 750 units. Use the Target Profit tab in the calculator above." } }
-    ,
-      {
-        "@type": "Question",
-        "name": "How do I lower my break-even point?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Lower fixed costs by renegotiating rent or reducing overhead. Increase your selling price to improve contribution margin. Reduce variable costs per unit through better supplier terms. Each of these raises the contribution per sale, meaning fewer sales are needed to cover fixed costs and reach break-even." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the break-even point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The break-even point is where total revenue equals total costs — no profit and no loss. Below break-even you operate at a loss. Above break-even every additional unit generates profit. Formula: Break-Even Units = Fixed Costs ÷ (Selling Price − Variable Cost per Unit)."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate break-even point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Step 1: Calculate contribution margin per unit = selling price − variable cost per unit. Step 2: Divide fixed costs by contribution margin per unit. Example: Fixed costs $10,000, selling price $50, variable cost $30. CM = $20. Break-even = $10,000 ÷ $20 = 500 units per month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is contribution margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contribution margin is selling price minus variable cost per unit. It's how much each unit sold contributes toward covering fixed costs and then generating profit. A $20 contribution margin on fixed costs of $10,000 means you need to sell 500 units before making any profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is margin of safety in break-even analysis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin of safety is how much your sales can fall before you start making a loss. Formula: (Current Sales − Break-Even Sales) ÷ Current Sales × 100. A 30% margin of safety means sales can fall 30% before you hit break-even. Above 25% is healthy. Below 15% means the business is at risk from small downturns. Use the Margin of Safety tab above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are fixed costs and variable costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixed costs are the same regardless of sales volume — rent, salaries, insurance, loan repayments. Variable costs change with production volume — materials, packaging, shipping. This distinction is critical for break-even analysis. Only variable costs affect contribution margin per unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I lower my break-even point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three levers: (1) Increase selling price — most powerful, even small increases significantly reduce break-even units. (2) Reduce variable costs per unit through better supplier deals or efficiency. (3) Reduce fixed costs by renegotiating rent or subscriptions. A price increase is usually the fastest and most effective lever."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many units do I need to sell to make a target profit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Formula: Target Units = (Fixed Costs + Target Profit) ÷ Contribution Margin per Unit. Example: fixed costs $10,000, target profit $5,000, CM $20 per unit. Target units = $15,000 ÷ $20 = 750 units per month. Use the Target Profit tab in the calculator above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I do a break-even analysis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always do a break-even analysis before: launching a new product, starting a business, changing your pricing, taking on a lease or loan, hiring new staff, or entering a new market. It's also worth recalculating break-even whenever your costs change significantly — supplier price increases, rent renewals, or new overheads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the break-even point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Break-Even Point (units) = Fixed Costs ÷ Contribution Margin per Unit. Contribution Margin per Unit = Selling Price − Variable Cost per Unit. Example: Fixed costs $10,000, selling price $50, variable cost $30. Contribution margin = $20. Break-even = $10,000 ÷ $20 = 500 units. To find break-even in revenue: Break-Even Revenue = Fixed Costs ÷ Contribution Margin Ratio. Contribution Margin Ratio = Contribution Margin ÷ Selling Price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is margin of safety?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin of safety is the difference between actual (or projected) sales and the break-even sales level. It tells you how much sales can fall before the business makes a loss. Formula: Margin of Safety = Current Sales − Break-Even Sales. As a percentage: (Current Sales − Break-Even Sales) ÷ Current Sales × 100. A higher margin of safety means a more resilient business with more buffer against a sales downturn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between fixed costs and variable costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixed costs stay the same regardless of how many units you produce or sell — rent, salaries, insurance, loan repayments. Variable costs change in proportion to production volume — materials, packaging, shipping, sales commissions. Understanding this distinction is fundamental to break-even analysis because only variable costs affect the contribution margin per unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate break-even with multiple products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a business with multiple products, calculate a weighted average contribution margin based on your sales mix. Multiply each product's contribution margin by its percentage of total sales, then sum the results to get the weighted average contribution margin. Divide your total fixed costs by this weighted average to get the break-even point in total units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a target profit and how do I calculate it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A target profit calculation tells you how many units you need to sell to achieve a specific profit goal. Formula: Target Profit Units = (Fixed Costs + Target Profit) ÷ Contribution Margin per Unit. Example: fixed costs $10,000, target profit $5,000, contribution margin $20 per unit. Target units = ($10,000 + $5,000) ÷ $20 = 750 units. Use the Target Profit tab in the calculator above."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -420,6 +510,26 @@
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I lower my break-even point?</div><div class="faq-a">Three levers: (1) Increase selling price — most powerful, even small increases significantly reduce break-even units. (2) Reduce variable costs per unit through better supplier deals or efficiency. (3) Reduce fixed costs by renegotiating rent or subscriptions. A price increase is usually the fastest and most effective lever.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How many units do I need to sell to make a target profit?</div><div class="faq-a">Formula: Target Units = (Fixed Costs + Target Profit) ÷ Contribution Margin per Unit. Example: fixed costs $10,000, target profit $5,000, CM $20 per unit. Target units = $15,000 ÷ $20 = 750 units per month. Use the Target Profit tab in the calculator above.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">When should I do a break-even analysis?</div><div class="faq-a">Always do a break-even analysis before: launching a new product, starting a business, changing your pricing, taking on a lease or loan, hiring new staff, or entering a new market. It's also worth recalculating break-even whenever your costs change significantly — supplier price increases, rent renewals, or new overheads.</div></div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate the break-even point?</div>
+      <div class="faq-a">Break-Even Point (units) = Fixed Costs ÷ Contribution Margin per Unit. Contribution Margin per Unit = Selling Price − Variable Cost per Unit. Example: Fixed costs $10,000, selling price $50, variable cost $30. Contribution margin = $20. Break-even = $10,000 ÷ $20 = 500 units. To find break-even in revenue: Break-Even Revenue = Fixed Costs ÷ Contribution Margin Ratio. Contribution Margin Ratio = Contribution Margin ÷ Selling Price.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is margin of safety?</div>
+      <div class="faq-a">Margin of safety is the difference between actual (or projected) sales and the break-even sales level. It tells you how much sales can fall before the business makes a loss. Formula: Margin of Safety = Current Sales − Break-Even Sales. As a percentage: (Current Sales − Break-Even Sales) ÷ Current Sales × 100. A higher margin of safety means a more resilient business with more buffer against a sales downturn.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the difference between fixed costs and variable costs?</div>
+      <div class="faq-a">Fixed costs stay the same regardless of how many units you produce or sell — rent, salaries, insurance, loan repayments. Variable costs change in proportion to production volume — materials, packaging, shipping, sales commissions. Understanding this distinction is fundamental to break-even analysis because only variable costs affect the contribution margin per unit.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate break-even with multiple products?</div>
+      <div class="faq-a">For a business with multiple products, calculate a weighted average contribution margin based on your sales mix. Multiply each product&#x27;s contribution margin by its percentage of total sales, then sum the results to get the weighted average contribution margin. Divide your total fixed costs by this weighted average to get the break-even point in total units.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is a target profit and how do I calculate it?</div>
+      <div class="faq-a">A target profit calculation tells you how many units you need to sell to achieve a specific profit goal. Formula: Target Profit Units = (Fixed Costs + Target Profit) ÷ Contribution Margin per Unit. Example: fixed costs $10,000, target profit $5,000, contribution margin $20 per unit. Target units = ($10,000 + $5,000) ÷ $20 = 750 units. Use the Target Profit tab in the calculator above.</div>
+    </div>
   </div>
 
   <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">

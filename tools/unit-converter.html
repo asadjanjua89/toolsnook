@@ -43,26 +43,76 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How do I convert kilometers to miles?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the number of kilometers by 0.621371 to get miles. For example, 10 km × 0.621371 = 6.21 miles. To convert miles to kilometers, multiply by 1.609344. Our converter above does this instantly — just select Length, choose km and miles, and enter your value." } },
-      { "@type": "Question", "name": "How do I convert Celsius to Fahrenheit?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the Celsius temperature by 9/5 (1.8), then add 32. Formula: °F = (°C × 9/5) + 32. For example, 20°C × 1.8 = 36, plus 32 = 68°F. To convert Fahrenheit to Celsius, subtract 32 then multiply by 5/9: °C = (°F − 32) × 5/9." } },
-      { "@type": "Question", "name": "What is the difference between a US gallon and a UK gallon?", "acceptedAnswer": { "@type": "Answer", "text": "A US gallon is 3.785 liters, while a UK (Imperial) gallon is 4.546 liters — about 20% larger. This difference also applies to pints, quarts, and fluid ounces. Recipes, fuel economy figures, and product volumes can differ significantly depending on which gallon is used, so always check which measurement system a source is using." } },
-      { "@type": "Question", "name": "What is the difference between KB and KiB?", "acceptedAnswer": { "@type": "Answer", "text": "KB (kilobyte) uses the decimal (SI) definition: 1 KB = 1,000 bytes. KiB (kibibyte) uses the binary (IEC) definition: 1 KiB = 1,024 bytes. Storage manufacturers (hard drives, SSDs) typically use the decimal definition (1 TB = 1,000,000,000,000 bytes), while operating systems often display sizes using the binary definition but label them as KB, MB, GB — which is why a '1 TB' drive shows as roughly 931 GB in Windows. The correct binary terms are KiB, MiB, GiB, and TiB." } },
-      { "@type": "Question", "name": "How many tablespoons are in a cup?", "acceptedAnswer": { "@type": "Answer", "text": "There are 16 tablespoons in 1 US cup. There are also 48 teaspoons in a cup, and 8 fluid ounces in a cup. For metric conversions, 1 US cup equals approximately 236.6 mL, and 1 tablespoon equals approximately 14.8 mL." } },
-      { "@type": "Question", "name": "What is the difference between mass and weight?", "acceptedAnswer": { "@type": "Answer", "text": "Mass is the amount of matter in an object and stays constant everywhere (measured in kilograms or pounds-mass). Weight is the force of gravity acting on that mass and changes depending on location (measured in newtons). In everyday use, 'weight' and 'mass' are used interchangeably and kilograms/pounds are used for both — our converter handles this common usage." } },
-      { "@type": "Question", "name": "How do I convert square feet to square meters?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the area in square feet by 0.092903 to get square meters. For example, 1,000 sq ft × 0.092903 = 92.9 m². To convert square meters to square feet, multiply by 10.7639. This is commonly needed when comparing property listings between countries that use different units." } },
-      { "@type": "Question", "name": "Why do temperature conversions need formulas instead of simple multiplication?", "acceptedAnswer": { "@type": "Answer", "text": "Most unit conversions (like length or weight) start from zero in every system — 0 meters equals 0 feet. But temperature scales have different zero points: 0°C is 32°F, and 0 K is -273.15°C. Because the scales don't share a zero point, you can't just multiply — you need a formula that accounts for both the scale factor and the offset. Our converter applies the correct formula for each temperature conversion automatically." } }
-    ,
-      {
-        "@type": "Question",
-        "name": "How do I convert Celsius to Fahrenheit?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Formula: F = (C × 9/5) + 32. Example: 100°C = (100 × 1.8) + 32 = 212°F. To convert back: C = (F - 32) × 5/9. Key reference points: 0°C = 32°F (freezing), 37°C = 98.6°F (body temperature), 100°C = 212°F (boiling). The unit converter above handles all temperature conversions automatically." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert kilometers to miles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply kilometers by 0.621371 to get miles. Example: 10 km × 0.621371 = 6.21 miles. To go the other way, multiply miles by 1.609344. Use the Length tab above for instant results with any value."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert Celsius to Fahrenheit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "°F = (°C × 9/5) + 32. Example: 20°C × 1.8 = 36, + 32 = 68°F. To convert Fahrenheit to Celsius: °C = (°F − 32) × 5/9. Use the Temperature tab above for instant conversion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a US gallon and a UK gallon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A US gallon is 3.785 liters. A UK (Imperial) gallon is 4.546 liters — about 20% larger. The same difference applies to pints and fluid ounces. Always check which system a source uses, especially for fuel economy or recipe measurements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between KB and KiB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KB (kilobyte) = 1,000 bytes (decimal/SI definition, used by storage manufacturers). KiB (kibibyte) = 1,024 bytes (binary/IEC definition, the correct term for what operating systems often mislabel as \"KB\"). This is why a \"1 TB\" drive shows as about 931 GB in Windows — Windows uses binary math but decimal labels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tablespoons are in a cup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are 16 tablespoons in 1 US cup (also 48 teaspoons, or 8 fluid ounces). In metric, 1 US cup ≈ 236.6 mL and 1 tablespoon ≈ 14.8 mL. Use the Volume tab above for any custom conversion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between mass and weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mass is the amount of matter in an object and is constant (kg, lbs). Weight is the force of gravity on that mass and varies by location (measured in newtons). In everyday language and on this converter, \"weight\" and \"mass\" are used interchangeably, which matches how kilograms and pounds are used in daily life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert square feet to square meters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply square feet by 0.092903 to get square meters. Example: 1,000 sq ft × 0.092903 = 92.9 m². To go the other way, multiply square meters by 10.7639. This is especially useful when comparing real estate listings between countries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do temperature conversions need formulas instead of simple multiplication?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because temperature scales don't share a zero point — 0°C is 32°F, and 0 K is -273.15°C. Since the scales are offset from each other (not just scaled), conversion requires both a multiplication and an addition/subtraction step. Our converter applies the correct formula automatically for every temperature conversion."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>

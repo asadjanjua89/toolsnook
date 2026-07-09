@@ -43,26 +43,100 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How is GPA calculated?", "acceptedAnswer": { "@type": "Answer", "text": "GPA is calculated by multiplying each course's grade points by its credit hours, summing all those values, then dividing by the total credit hours. Formula: GPA = Sum(grade points × credit hours) ÷ Sum(credit hours). For example, an A (4.0) in a 3-credit course gives 12 quality points. A B (3.0) in a 4-credit course gives 12 quality points. Total quality points: 24. Total credits: 7. GPA = 24 ÷ 7 = 3.43." } },
-      { "@type": "Question", "name": "What is the difference between weighted and unweighted GPA?", "acceptedAnswer": { "@type": "Answer", "text": "An unweighted GPA uses a standard 4.0 scale where A = 4.0 regardless of course difficulty. A weighted GPA adds bonus points for harder courses: typically +0.5 for Honors courses and +1.0 for AP or IB courses, allowing a maximum of 5.0. Weighted GPA reflects both your grades and the rigor of your coursework. Colleges consider both when evaluating applications." } },
-      { "@type": "Question", "name": "What is a good GPA?", "acceptedAnswer": { "@type": "Answer", "text": "For high school: A 3.0 (B average) is considered satisfactory. A 3.5-4.0 is strong for most college applications. Top universities often expect 3.8+ unweighted. For college: 3.0 is the minimum for most graduate school applications and many job requirements. 3.5+ is considered strong. Some competitive graduate programs expect 3.7+. The definition of a 'good' GPA depends heavily on your institution and goals." } },
-      { "@type": "Question", "name": "How do I calculate cumulative GPA?", "acceptedAnswer": { "@type": "Answer", "text": "To calculate cumulative GPA: add all quality points from all semesters and all credit hours from all semesters, then divide total quality points by total credit hours. You can't simply average your semester GPAs unless all semesters had the same number of credit hours. Use the Cumulative GPA tab in the calculator above to add your previous GPA and credits alongside your current semester courses." } },
-      { "@type": "Question", "name": "What grade do I need on my final exam to get a certain grade in the course?", "acceptedAnswer": { "@type": "Answer", "text": "Use the formula: Required final grade = (Target course grade – Current grade × (1 – Final weight)) ÷ Final weight. For example, if your current grade is 78%, your target is 80%, and your final is worth 30% of your grade: Required = (0.80 – 0.78 × 0.70) ÷ 0.30 = (0.80 – 0.546) ÷ 0.30 = 0.254 ÷ 0.30 = 84.7%. Use the 'Grade Needed' tab in the calculator above for instant results." } },
-      { "@type": "Question", "name": "What GPA do I need for honors or cum laude?", "acceptedAnswer": { "@type": "Answer", "text": "Latin honors vary by institution, but common thresholds are: Cum Laude (With Honors): 3.5 GPA. Magna Cum Laude (With High Honors): 3.7 GPA. Summa Cum Laude (With Highest Honors): 3.9-4.0 GPA. Some schools use class rank percentiles instead of fixed GPA cutoffs, so check your specific institution's requirements." } },
-      { "@type": "Question", "name": "How do plus and minus grades affect GPA?", "acceptedAnswer": { "@type": "Answer", "text": "Plus/minus grades add specificity to the 4.0 scale. An A- is 3.7, not 4.0. A B+ is 3.3, not 3.0. This means an A- in a course actually lowers your GPA compared to a straight A — something many students don't realize. Note that many schools do not award A+ grades, or if they do, they cap the value at 4.0 (not 4.3). The 4.0 scale reference table below shows all grade point values." } },
-      { "@type": "Question", "name": "Can one bad semester significantly lower my cumulative GPA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, especially early in your academic career when fewer total credit hours are in the calculation. A 2.0 semester GPA (all C grades) in your first semester with 15 credits can be very hard to recover from. Later in your studies, a bad semester has less impact because it's averaged against many more credits. Use the Cumulative GPA calculator to model exactly how much a bad semester will move your overall GPA." } }
-    ,
-      {
-        "@type": "Question",
-        "name": "How do I calculate weighted GPA with AP or honors classes?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Weighted GPA assigns extra grade points to advanced courses. AP and IB courses typically add 1.0 points; Honors courses add 0.5 points. An A (4.0) in an AP class becomes 5.0 on a weighted scale. Select the correct course weight for each class in the calculator above and it calculates your weighted cumulative GPA automatically." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is GPA calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPA = Sum(grade points × credit hours) ÷ Sum(credit hours). Each course's grade is converted to a point value (A = 4.0, B = 3.0, etc.), multiplied by its credit hours, and the total is divided by total credit hours. It's a weighted average where higher-credit courses have more impact on your GPA."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between weighted and unweighted GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unweighted GPA uses a standard 4.0 scale where grade points are the same regardless of course difficulty. Weighted GPA adds bonus points for harder courses — typically +0.5 for Honors and +1.0 for AP/IB — allowing a maximum of 5.0. Colleges consider both, but use the context of your course load when evaluating weighted GPA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High school: 3.5-4.0 is strong for most college applications. Top universities expect 3.8+ unweighted. College: 3.0 is the minimum for most graduate programs and job GPA requirements. 3.5+ is considered strong. 3.7+ is expected for competitive graduate schools and law/medical programs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate cumulative GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cumulative GPA = (Previous quality points + New semester quality points) ÷ (Previous total credits + New semester credits). You can't just average your semester GPAs unless all semesters had identical credit loads. Use the Cumulative GPA tab above — enter your existing GPA and credits, then add this semester's courses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What grade do I need on my final exam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Required final score = (Target grade % – Current grade % × (1 – Final weight %)) ÷ Final weight %. Use the Grade Needed tab above for instant calculation. If the required score comes out above 100%, it means you can no longer reach your target — but the calculator will tell you the highest grade you can still achieve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What GPA do I need for Latin honors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common thresholds: Cum Laude (With Honors): 3.5. Magna Cum Laude (With High Honors): 3.7. Summa Cum Laude (With Highest Honors): 3.9-4.0. These vary by institution — some schools use class rank percentiles instead of fixed GPA cutoffs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do plus and minus grades affect GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Significantly. An A- is 3.7, not 4.0 — a student with all A- grades has a 3.7 GPA, not a 4.0. A B+ is 3.3, not 3.0. Many students are surprised how much plus/minus grading affects their GPA calculation compared to simple letter grades. Check whether your school awards A+ grades and whether they're valued at 4.0 or 4.3."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one bad semester significantly lower my cumulative GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — especially early on when fewer total credits are in the calculation. A 2.0 semester in your first semester (15 credits) is extremely hard to recover from because each new semester adds only 15 credits against those same 15 already dragging you down. Later in your studies, a bad semester has less percentage impact. Use the Cumulative GPA tab to model exactly how much any scenario moves your overall GPA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What grade do I need on my final exam to get a certain grade in the course?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the formula: Required final grade = (Target course grade – Current grade × (1 – Final weight)) ÷ Final weight. For example, if your current grade is 78%, your target is 80%, and your final is worth 30% of your grade: Required = (0.80 – 0.78 × 0.70) ÷ 0.30 = (0.80 – 0.546) ÷ 0.30 = 0.254 ÷ 0.30 = 84.7%. Use the 'Grade Needed' tab in the calculator above for instant results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What GPA do I need for honors or cum laude?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Latin honors vary by institution, but common thresholds are: Cum Laude (With Honors): 3.5 GPA. Magna Cum Laude (With High Honors): 3.7 GPA. Summa Cum Laude (With Highest Honors): 3.9-4.0 GPA. Some schools use class rank percentiles instead of fixed GPA cutoffs, so check your specific institution's requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate weighted GPA with AP or honors classes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weighted GPA assigns extra grade points to advanced courses. AP and IB courses typically add 1.0 points; Honors courses add 0.5 points. An A (4.0) in an AP class becomes 5.0 on a weighted scale. Select the correct course weight for each class in the calculator above and it calculates your weighted cumulative GPA automatically."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -434,6 +508,18 @@
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What GPA do I need for Latin honors?</div><div class="faq-a">Common thresholds: Cum Laude (With Honors): 3.5. Magna Cum Laude (With High Honors): 3.7. Summa Cum Laude (With Highest Honors): 3.9-4.0. These vary by institution — some schools use class rank percentiles instead of fixed GPA cutoffs.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do plus and minus grades affect GPA?</div><div class="faq-a">Significantly. An A- is 3.7, not 4.0 — a student with all A- grades has a 3.7 GPA, not a 4.0. A B+ is 3.3, not 3.0. Many students are surprised how much plus/minus grading affects their GPA calculation compared to simple letter grades. Check whether your school awards A+ grades and whether they're valued at 4.0 or 4.3.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can one bad semester significantly lower my cumulative GPA?</div><div class="faq-a">Yes — especially early on when fewer total credits are in the calculation. A 2.0 semester in your first semester (15 credits) is extremely hard to recover from because each new semester adds only 15 credits against those same 15 already dragging you down. Later in your studies, a bad semester has less percentage impact. Use the Cumulative GPA tab to model exactly how much any scenario moves your overall GPA.</div></div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What grade do I need on my final exam to get a certain grade in the course?</div>
+      <div class="faq-a">Use the formula: Required final grade = (Target course grade – Current grade × (1 – Final weight)) ÷ Final weight. For example, if your current grade is 78%, your target is 80%, and your final is worth 30% of your grade: Required = (0.80 – 0.78 × 0.70) ÷ 0.30 = (0.80 – 0.546) ÷ 0.30 = 0.254 ÷ 0.30 = 84.7%. Use the &#x27;Grade Needed&#x27; tab in the calculator above for instant results.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What GPA do I need for honors or cum laude?</div>
+      <div class="faq-a">Latin honors vary by institution, but common thresholds are: Cum Laude (With Honors): 3.5 GPA. Magna Cum Laude (With High Honors): 3.7 GPA. Summa Cum Laude (With Highest Honors): 3.9-4.0 GPA. Some schools use class rank percentiles instead of fixed GPA cutoffs, so check your specific institution&#x27;s requirements.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I calculate weighted GPA with AP or honors classes?</div>
+      <div class="faq-a">Weighted GPA assigns extra grade points to advanced courses. AP and IB courses typically add 1.0 points; Honors courses add 0.5 points. An A (4.0) in an AP class becomes 5.0 on a weighted scale. Select the correct course weight for each class in the calculator above and it calculates your weighted cumulative GPA automatically.</div>
+    </div>
   </div>
 
   <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">

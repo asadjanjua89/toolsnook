@@ -172,57 +172,100 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I convert annual salary to hourly rate?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Divide your annual salary by the total number of hours you work in a year. For a standard 40-hour week with 52 weeks: 40 × 52 = 2,080 hours per year. So a $52,000 salary equals $52,000 ÷ 2,080 = $25.00 per hour. If you have paid vacation or holidays, your hourly rate stays the same since you are still paid for those days. If you are a freelancer calculating billable rate, subtract your vacation days from the total to find your actual billable hours."}
-      },
-      {
-        "@type": "Question",
-        "name": "How many working hours are in a year?",
-        "acceptedAnswer": {"@type": "Answer", "text": "A standard full-time employee works 40 hours per week × 52 weeks = 2,080 hours per year. After subtracting 10 federal public holidays and 2 weeks of vacation (standard US), effective working hours drop to approximately 1,880 hours per year. In the UK, with 8 bank holidays and 28 days statutory leave, effective hours are closer to 1,760. Use our calculator's vacation days field to adjust for your specific situation."}
-      },
-      {
-        "@type": "Question",
-        "name": "How do I calculate my daily rate from my salary?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Divide your annual salary by the number of working days in a year. With a standard 5-day week and 52 weeks, there are 260 working days. A $60,000 salary equals $60,000 ÷ 260 = $230.77 per day. If you work fewer days due to part-time hours or vacation, adjust the denominator accordingly. Our calculator shows your daily rate automatically alongside hourly, weekly, and monthly figures."}
-      },
-      {
-        "@type": "Question",
-        "name": "How do I convert hourly rate to annual salary?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Multiply your hourly rate by the number of hours worked per week, then multiply by 52 weeks. For example: $25 per hour × 40 hours per week × 52 weeks = $52,000 per year. For part-time work at 30 hours per week: $25 × 30 × 52 = $39,000 per year. This is the reverse of the salary-to-hourly conversion and uses the same 2,080 hour baseline for full-time work."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between gross and net hourly rate?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Your gross hourly rate is your salary divided by hours worked — what your employer pays before deductions. Your net hourly rate is what you actually take home after income tax, National Insurance (UK) or Social Security and Medicare (US), and any pension or 401k contributions. Depending on your tax bracket and location, your net rate could be 25–40% lower than your gross rate. Our calculator shows your gross rate. For net rate, subtract your effective total deduction percentage."}
-      },
-      {
-        "@type": "Question",
-        "name": "How do I use this calculator as a freelancer?",
-        "acceptedAnswer": {"@type": "Answer", "text": "As a freelancer, your hourly rate calculation should account for unbillable time — admin, marketing, client communication, and downtime between projects. If you want to match a $60,000 employed salary but only bill 25 hours per week (with the rest spent on unbillable work), you should enter 25 in the hours per week field rather than 40. This gives you the true hourly rate you need to charge clients to hit your income target. Use our Freelancer Rate Calculator for a more comprehensive freelance rate calculation that factors in expenses and profit margin."}
-      },
-      {
-        "@type": "Question",
-        "name": "Why does my effective hourly rate change with vacation days?",
-        "acceptedAnswer": {"@type": "Answer", "text": "For salaried employees with paid vacation, the vacation days field does not change your pay — you earn the same annual salary regardless. It changes your effective hourly rate: if you work fewer hours but earn the same amount, each hour you work is worth more. This matters when comparing your effective rate to a freelancer's rate, or when evaluating whether a salary offer with generous vacation is better or worse than one without."}
-      },
-      {
-        "@type": "Question",
-        "name": "How does salary compare between countries?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Salaries for the same role vary significantly between countries due to cost of living, tax systems, and labour market conditions. A software engineer earning $120,000 in San Francisco has roughly the same purchasing power as one earning £55,000 in Manchester or €65,000 in Berlin — once local costs, tax rates, and benefits are factored in. The salary comparison panel in our calculator shows approximate median hourly rates for common roles to give you a benchmark for your own rate."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is a good hourly rate for a contract or consulting role?",
-        "acceptedAnswer": {"@type": "Answer", "text": "For contract and consulting work, a commonly used rule of thumb is to charge 1.5–2× your equivalent salaried hourly rate. This accounts for: employer National Insurance or payroll taxes (typically 12–15%), no paid vacation or sick leave, no employer pension contribution, self-employment admin and accounting costs, and the cost of downtime between contracts. So a professional who earns $50/hr as an employee might reasonably charge $75–$100/hr as a contractor to achieve the same net income. Use our Freelancer Rate Calculator for a precise calculation."}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert annual salary to hourly rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide your annual salary by the total number of hours you work per year. For a standard 40-hour week with 52 weeks: 40 × 52 = 2,080 hours. So $52,000 ÷ 2,080 = $25.00 per hour. Enter your salary in the calculator above and it shows your hourly, daily, weekly, and monthly rates instantly. Adjust the hours per week and vacation days for a more personalised result."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "How many working hours are in a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard full-time employee works 40 hours × 52 weeks = 2,080 hours per year. After subtracting 10 federal holidays and 2 weeks vacation (US standard), effective hours drop to approximately 1,880. In the UK with 8 bank holidays and 28 days statutory leave, effective hours are closer to 1,760. Use the vacation days field to adjust for your situation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my daily rate from my salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide your annual salary by the number of working days in a year. With a 5-day week and 52 weeks there are 260 working days. A $60,000 salary equals $60,000 ÷ 260 = $230.77 per day. The calculator shows this automatically. For roles with different working days (e.g. 4-day weeks), adjust the inputs to get the correct daily rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert hourly rate to annual salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply your hourly rate by the hours worked per week, then multiply by 52 weeks. Example: $25/hr × 40hrs × 52 weeks = $52,000/year. For part-time: $25/hr × 30hrs × 52 weeks = $39,000/year. This is the reverse calculation of salary-to-hourly and uses the same 2,080 hour baseline for standard full-time work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between gross and net hourly rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your gross hourly rate is your salary divided by hours worked — what your employer pays before deductions. Your net hourly rate is what you actually take home after income tax, Social Security or National Insurance, and pension contributions. Depending on your tax bracket and location, net rate can be 25–40% lower than gross. This calculator shows your gross rate. To estimate net, subtract your effective total tax rate percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use this calculator as a freelancer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a freelancer, enter your target annual income in the salary field. Then enter only your billable hours per week (not total working hours) in the hours per week field — since freelancers typically spend 20–30% of their time on unbillable admin. This gives you the true rate you need to charge to hit your income goal. The calculator also shows a suggested contract rate at 1.5× as a starting benchmark."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my effective hourly rate change with vacation days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For salaried employees, vacation days reduce the total hours you work but not your pay — so each working hour is effectively worth more. A $52,000 salary with 10 vacation days means you work 2,040 hours rather than 2,080, giving an effective rate of $25.49 vs $25.00. This matters when comparing a role with generous leave to one without, or when comparing your effective rate to a contractor's rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I charge as a contractor vs my employee salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A commonly used rule of thumb is to charge 1.5–2× your equivalent employee hourly rate as a contractor. This covers employer payroll taxes (15.3% for US self-employed), unpaid vacation and sick leave, no employer pension contribution, health insurance costs, and accounting admin. So someone earning $25/hr as an employee might reasonably charge $37.50–$50/hr as a contractor to achieve the same net income. Our calculator shows your 1.5× contract rate automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the salary comparison table?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The salary comparison table is a unique feature that shows how your calculated hourly rate compares to median hourly rates for common roles — software engineer, nurse, teacher, accountant, and others — based on US BLS and industry median data for 2025–2026. It lets you immediately see whether your rate is above or below market for common reference points. The comparison updates automatically every time you change your salary or hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does salary compare between countries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Salaries for the same role vary significantly between countries due to cost of living, tax systems, and labour market conditions. A software engineer earning $120,000 in San Francisco has roughly the same purchasing power as one earning £55,000 in Manchester or €65,000 in Berlin — once local costs, tax rates, and benefits are factored in. The salary comparison panel in our calculator shows approximate median hourly rates for common roles to give you a benchmark for your own rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good hourly rate for a contract or consulting role?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For contract and consulting work, a commonly used rule of thumb is to charge 1.5–2× your equivalent salaried hourly rate. This accounts for: employer National Insurance or payroll taxes (typically 12–15%), no paid vacation or sick leave, no employer pension contribution, self-employment admin and accounting costs, and the cost of downtime between contracts. So a professional who earns $50/hr as an employee might reasonably charge $75–$100/hr as a contractor to achieve the same net income. Use our Freelancer Rate Calculator for a precise calculation."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -450,6 +493,14 @@
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What is the salary comparison table?<span class="faq-icon">+</span></button>
       <div class="faq-a">The salary comparison table is a unique feature that shows how your calculated hourly rate compares to median hourly rates for common roles — software engineer, nurse, teacher, accountant, and others — based on US BLS and industry median data for 2025–2026. It lets you immediately see whether your rate is above or below market for common reference points. The comparison updates automatically every time you change your salary or hours.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How does salary compare between countries?<span class="faq-icon">+</span></button>
+      <div class="faq-a">Salaries for the same role vary significantly between countries due to cost of living, tax systems, and labour market conditions. A software engineer earning $120,000 in San Francisco has roughly the same purchasing power as one earning £55,000 in Manchester or €65,000 in Berlin — once local costs, tax rates, and benefits are factored in. The salary comparison panel in our calculator shows approximate median hourly rates for common roles to give you a benchmark for your own rate.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is a good hourly rate for a contract or consulting role?<span class="faq-icon">+</span></button>
+      <div class="faq-a">For contract and consulting work, a commonly used rule of thumb is to charge 1.5–2× your equivalent salaried hourly rate. This accounts for: employer National Insurance or payroll taxes (typically 12–15%), no paid vacation or sick leave, no employer pension contribution, self-employment admin and accounting costs, and the cost of downtime between contracts. So a professional who earns $50/hr as an employee might reasonably charge $75–$100/hr as a contractor to achieve the same net income. Use our Freelancer Rate Calculator for a precise calculation.</div>
     </div>
 
   <div class="page-meta">

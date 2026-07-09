@@ -28,58 +28,108 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a healthy BMI?",
-        "acceptedAnswer": { "@type": "Answer", "text": "According to the World Health Organization (WHO), a healthy BMI for adults is between 18.5 and 24.9. Below 18.5 is considered underweight. Between 25 and 29.9 is overweight. A BMI of 30 or above is classified as obese. For people of Asian descent, the overweight threshold is lower — 23 or above — because cardiometabolic risk increases at lower BMI values for this population." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a healthy BMI for a woman?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The healthy BMI range for women is the same as for men: 18.5 to 24.9. However, women naturally have a higher percentage of body fat than men at the same BMI, so the same BMI value can mean different levels of body fat between men and women. A BMI of 18.5 to 24.9 is considered healthy for adult women regardless of age." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a healthy BMI for a man?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The healthy BMI range for men is 18.5 to 24.9, the same as for women. However, men tend to carry more muscle mass, which means a man with a BMI of 26 who exercises regularly may actually have a lower body fat percentage than a sedentary man with a BMI of 24. BMI does not distinguish between muscle and fat, so athletes and muscular men often get misleading results." }
-      },
-      {
-        "@type": "Question",
-        "name": "How is BMI calculated?",
-        "acceptedAnswer": { "@type": "Answer", "text": "BMI is calculated by dividing your weight in kilograms by your height in metres squared. Formula: BMI = weight (kg) ÷ height (m)². In imperial units: BMI = (weight in pounds × 703) ÷ height in inches². For example, a person who weighs 70kg and is 1.75m tall: BMI = 70 ÷ (1.75 × 1.75) = 70 ÷ 3.0625 = 22.9 — which is in the healthy range." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is BMI 25 overweight?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes — a BMI of 25 falls in the overweight category according to WHO standards (overweight is 25 to 29.9). However, BMI of 25 is only just at the boundary and does not necessarily mean you have a health problem. BMI is a screening tool, not a diagnosis. Factors like muscle mass, age, fitness level, and waist circumference all matter. A muscular person can have a BMI of 25 while being in excellent health." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is BMI 30 obese?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes — a BMI of 30 or above is classified as obese according to WHO guidelines. Obesity is further divided into Class I (BMI 30–34.9), Class II (BMI 35–39.9), and Class III/severe obesity (BMI 40+). However, BMI alone does not diagnose obesity-related health risks. Always consult a healthcare professional for a full assessment." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is BMI accurate for athletes and muscular people?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No — BMI is not accurate for athletes or very muscular people. Because muscle weighs significantly more than fat, a muscular athlete can have a BMI in the overweight or even obese range while having very low body fat and excellent cardiovascular health. For athletes, body fat percentage or waist-to-height ratio are more meaningful measurements. BMI is most useful as a population-level screening tool, not for individual athletes." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the New BMI formula and how is it different?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The New BMI formula was proposed by Oxford mathematician Professor Nick Trefethen in 2013. He argued that the traditional BMI formula (weight ÷ height²) has a mathematical flaw: it unfairly labels tall people as overweight and short people as underweight, because the formula uses height squared in a three-dimensional world. The new formula uses height to the power of 2.5 instead: New BMI = 1.3 × weight (kg) ÷ height (m)^2.5. This adjusts results for people at height extremes. No major health organisation has officially adopted this formula yet." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a healthy BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A healthy BMI for adults is between 18.5 and 24.9 according to the WHO. Below 18.5 is underweight, 25-29.9 is overweight, and 30+ is obese. For South Asian and East Asian people, the overweight threshold is lower at 23+. Use the calculator above to find your BMI and healthy weight range."
       }
-    ,
-      {
-        "@type": "Question",
-        "name": "What are the limitations of BMI?",
-        "acceptedAnswer": { "@type": "Answer", "text": "BMI does not distinguish between muscle and fat — muscular athletes may be classified as overweight despite being very healthy. It also does not account for age, sex, or fat distribution. Waist circumference, body fat percentage, and other health markers give a more complete picture. Use BMI as a screening indicator, not a definitive health assessment." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a healthy BMI for a woman?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The healthy BMI range for women is 18.5 to 24.9 — the same as for men. Women naturally carry a higher percentage of body fat than men at the same BMI value, but the classification ranges are identical. A BMI of 18.5 to 24.9 is considered healthy for adult women of any age."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a healthy BMI for a man?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The healthy BMI range for men is 18.5 to 24.9. Men tend to have more muscle mass than women, which can push BMI higher even at a healthy body fat percentage. A muscular man with a BMI of 26 may be healthier than a sedentary man with a BMI of 23. Always consider fitness level alongside BMI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMI 25 overweight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — a BMI of exactly 25 is at the boundary of the overweight category (25–29.9). However, this does not necessarily indicate a health problem. BMI is just one screening metric. A muscular person with a BMI of 25 may be in excellent health. Speak to a doctor if you're concerned about your weight and health."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMI 30 obese?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — a BMI of 30 is the threshold for obesity Class I (BMI 30–34.9). Obesity is associated with increased risk of type 2 diabetes, heart disease, and other conditions. However, BMI alone doesn't diagnose health risk. Body fat distribution, waist circumference, fitness level, and other factors all matter. Consult a healthcare professional for a full assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMI accurate for athletes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — BMI is not accurate for athletes or very muscular people. Muscle weighs more than fat, so muscular athletes often appear \"overweight\" on BMI charts despite having low body fat and excellent health. For athletes, body fat percentage, waist-to-height ratio, or DEXA scan results are more meaningful measures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I weigh for my height?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Target Weight calculator tab above — enter your height and it calculates the weight range for a healthy BMI (18.5–24.9). You can also use the BMI reference table on this page to find the healthy weight range for your height. Remember that \"healthy weight\" is a range, not a single number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the New BMI formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The New BMI formula was proposed by Oxford mathematician Nick Trefethen in 2013. It corrects a flaw in the traditional formula by using height to the power of 2.5 instead of 2: New BMI = 1.3 × weight (kg) ÷ height (m)^2.5. This gives fairer results for tall and short people. However, no major health organisation has officially adopted this formula as of 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is BMI calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI is calculated by dividing your weight in kilograms by your height in metres squared. Formula: BMI = weight (kg) ÷ height (m)². In imperial units: BMI = (weight in pounds × 703) ÷ height in inches². For example, a person who weighs 70kg and is 1.75m tall: BMI = 70 ÷ (1.75 × 1.75) = 70 ÷ 3.0625 = 22.9 — which is in the healthy range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMI accurate for athletes and muscular people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — BMI is not accurate for athletes or very muscular people. Because muscle weighs significantly more than fat, a muscular athlete can have a BMI in the overweight or even obese range while having very low body fat and excellent cardiovascular health. For athletes, body fat percentage or waist-to-height ratio are more meaningful measurements. BMI is most useful as a population-level screening tool, not for individual athletes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the New BMI formula and how is it different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The New BMI formula was proposed by Oxford mathematician Professor Nick Trefethen in 2013. He argued that the traditional BMI formula (weight ÷ height²) has a mathematical flaw: it unfairly labels tall people as overweight and short people as underweight, because the formula uses height squared in a three-dimensional world. The new formula uses height to the power of 2.5 instead: New BMI = 1.3 × weight (kg) ÷ height (m)^2.5. This adjusts results for people at height extremes. No major health organisation has officially adopted this formula yet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the limitations of BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI does not distinguish between muscle and fat — muscular athletes may be classified as overweight despite being very healthy. It also does not account for age, sex, or fat distribution. Waist circumference, body fat percentage, and other health markers give a more complete picture. Use BMI as a screening indicator, not a definitive health assessment."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -495,6 +545,22 @@
     <div class="faq-item">
       <div class="faq-q">What is the New BMI formula?</div>
       <div class="faq-a">The New BMI formula was proposed by Oxford mathematician Nick Trefethen in 2013. It corrects a flaw in the traditional formula by using height to the power of 2.5 instead of 2: New BMI = 1.3 × weight (kg) ÷ height (m)^2.5. This gives fairer results for tall and short people. However, no major health organisation has officially adopted this formula as of 2026.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How is BMI calculated?</div>
+      <div class="faq-a">BMI is calculated by dividing your weight in kilograms by your height in metres squared. Formula: BMI = weight (kg) ÷ height (m)². In imperial units: BMI = (weight in pounds × 703) ÷ height in inches². For example, a person who weighs 70kg and is 1.75m tall: BMI = 70 ÷ (1.75 × 1.75) = 70 ÷ 3.0625 = 22.9 — which is in the healthy range.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is BMI accurate for athletes and muscular people?</div>
+      <div class="faq-a">No — BMI is not accurate for athletes or very muscular people. Because muscle weighs significantly more than fat, a muscular athlete can have a BMI in the overweight or even obese range while having very low body fat and excellent cardiovascular health. For athletes, body fat percentage or waist-to-height ratio are more meaningful measurements. BMI is most useful as a population-level screening tool, not for individual athletes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the New BMI formula and how is it different?</div>
+      <div class="faq-a">The New BMI formula was proposed by Oxford mathematician Professor Nick Trefethen in 2013. He argued that the traditional BMI formula (weight ÷ height²) has a mathematical flaw: it unfairly labels tall people as overweight and short people as underweight, because the formula uses height squared in a three-dimensional world. The new formula uses height to the power of 2.5 instead: New BMI = 1.3 × weight (kg) ÷ height (m)^2.5. This adjusts results for people at height extremes. No major health organisation has officially adopted this formula yet.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What are the limitations of BMI?</div>
+      <div class="faq-a">BMI does not distinguish between muscle and fat — muscular athletes may be classified as overweight despite being very healthy. It also does not account for age, sex, or fat distribution. Waist circumference, body fat percentage, and other health markers give a more complete picture. Use BMI as a screening indicator, not a definitive health assessment.</div>
     </div>
   </div>
 

@@ -159,22 +159,92 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "What should be included on an invoice?", "acceptedAnswer": {"@type": "Answer", "text": "A professional invoice must include: your business name and contact details, the client's name and billing address, a unique invoice number, the invoice date, the payment due date, an itemised list of products or services with quantities and rates, subtotal, any applicable tax with rate shown, total amount due, accepted payment methods and account details, and any late payment terms."}},
-      {"@type": "Question", "name": "What is Net 30 on an invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Net 30 means the invoice is due 30 calendar days from the invoice date. If you issue an invoice on June 1, Net 30 means payment is due by July 1. It is the most common payment term for B2B invoices. Other common terms include Net 15 (due in 15 days), Net 60 (due in 60 days), and Due on Receipt (payment expected immediately)."}},
-      {"@type": "Question", "name": "How do I create a professional invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Use the Invoice Generator above. Fill in your business name and contact details, enter your client's billing information, set the invoice date and due date, add your line items with descriptions and rates, apply any tax, and click Download PDF. The generator creates a professionally formatted PDF invoice instantly at no cost."}},
-      {"@type": "Question", "name": "What is the correct invoice number format?", "acceptedAnswer": {"@type": "Answer", "text": "There is no universal required format, but best practice is to use sequential numbering — either simple (001, 002, 003) or with a date prefix (INV-2026-001). The critical requirements are: every invoice must have a unique number, numbers must not be skipped or reused, and the sequence must be easy to track. Tax authorities use invoice numbers to audit completeness, so gaps in your sequence can raise questions."}},
-      {"@type": "Question", "name": "Do I need to charge VAT or GST on my invoice?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your country and registration status. In the UK, VAT-registered businesses must charge VAT (currently 20% standard rate) and show their VAT number on the invoice. In Australia, GST-registered businesses must include an ABN and show 10% GST. In the US, sales tax rules vary by state and product type. If you are not registered for VAT or GST, you do not charge it. Always consult an accountant if unsure."}},
-      {"@type": "Question", "name": "How quickly should I send an invoice after completing work?", "acceptedAnswer": {"@type": "Answer", "text": "Send invoices the same day you complete the work or delivery. Research consistently shows that every day you delay sending an invoice adds days to your payment timeline. Invoice promptly, use a specific due date rather than just payment terms (write the actual date, not just Net 30), and include all payment details so the client can pay immediately without needing to contact you."}},
-      {"@type": "Question", "name": "What do I do when an invoice is overdue?", "acceptedAnswer": {"@type": "Answer", "text": "First, send a polite reminder email with the original invoice attached the day after the due date. If unpaid after 7 days, send a firmer follow-up citing the overdue amount and any late fees specified in your terms. After 14 days overdue, consider a phone call or formal notice. If unpaid after 30 days, consider involving a collections agency or pursuing via small claims court. Always keep records of all invoices sent and payment dates received."}},
-      {"@type": "Question", "name": "Can I add a late payment fee to my invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if it is stated in your payment terms before work begins. Common late payment clauses include a fixed fee (e.g. £40 per overdue invoice under UK Late Payment legislation) or a percentage per month (e.g. 1.5% per month on the overdue balance). Including a late payment clause does not guarantee enforcement but it signals professionalism and creates a clear expectation. Never add a late fee that was not disclosed upfront."}},
-      {"@type": "Question", "name": "What is the difference between an invoice and a receipt?", "acceptedAnswer": {"@type": "Answer", "text": "An invoice is sent before payment — it is a request for payment listing what is owed. A receipt is issued after payment — it confirms that payment has been received. An invoice typically becomes a receipt once payment is marked. For accounting purposes, both documents serve different roles: invoices are accounts receivable records; receipts confirm the transaction is closed."}},
-      {"@type": "Question", "name": "How long should I keep copies of invoices?", "acceptedAnswer": {"@type": "Answer", "text": "Retention rules vary by country. In the UK, HMRC requires businesses to keep financial records including invoices for at least 6 years. In the US, the IRS recommends keeping records for at least 3–7 years depending on the situation. In Australia, the ATO requires records for 5 years. Best practice is to keep all invoices for at least 7 years, stored digitally in a secure, backed-up location."}}
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should be included on an invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A professional invoice must include: your business name and contact details, the client billing name and address, a unique invoice number, the invoice date and payment due date, an itemised list of services or products with rates and totals, subtotal, tax with rate shown, total amount due, and accepted payment methods with full details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Net 30 on an invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Net 30 means the invoice is due 30 calendar days from the invoice date. If you issue an invoice on June 1, Net 30 means payment is due by July 1. It is the most common B2B payment term. Always write the actual due date alongside the term to remove ambiguity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I create a professional invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Invoice Generator above. Fill in your business name and client details, set the invoice date and due date, add your line items with descriptions and rates, apply any tax, and click Download PDF. A professionally formatted PDF is created instantly at no cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the correct invoice number format?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any consistent sequential format works: 001, 002, 003 or INV-2026-001. The critical requirements are that every invoice has a unique number, numbers are never skipped or reused, and the sequence is easy to track. Tax authorities audit invoice completeness using sequential numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to charge VAT or GST on my invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you are registered for VAT or GST in your country. In the UK, VAT-registered businesses must charge 20% VAT and show their VAT number. In Australia, GST-registered businesses must include an ABN and show 10% GST. In the US, rules vary by state. If you are not registered, do not charge it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly should I send an invoice after completing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send it the same day. Every day you delay adds days to your payment timeline. Invoice the day work is completed, use a specific due date (not just Net 30), and include all payment details so the client can pay immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I do when an invoice is overdue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send a polite reminder with the original invoice re-attached the day after the due date. After 7 days, send a firmer follow-up citing the overdue amount and any late fees. After 14 days, consider a phone call. After 30 days, you may pursue statutory interest, a collections agency, or small claims court depending on the amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add a late payment fee to my invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if it was stated in your payment terms before work began. Common clauses are a fixed fee (e.g. the UK statutory £40-£100 under the Late Payment of Commercial Debts Act) or a percentage per month on the overdue balance. Never add a late fee that was not disclosed upfront."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between an invoice and a receipt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An invoice is sent before payment — it is a request for payment. A receipt is issued after payment — it confirms payment was received. An invoice becomes a receipt once payment is marked as received. Both serve different accounting roles: invoices are accounts receivable records; receipts confirm transactions are closed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should I keep copies of invoices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the UK, HMRC requires at least 6 years. In the US, the IRS recommends 3-7 years. In Australia, the ATO requires 5 years. Best practice is to keep all invoices for at least 7 years in a secure, backed-up digital location."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>

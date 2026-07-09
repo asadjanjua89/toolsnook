@@ -43,27 +43,108 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How do I convert text to a different case?", "acceptedAnswer": { "@type": "Answer", "text": "Paste or type your text into the box above. All 15 case conversions update instantly — UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and more. Click the copy button next to any result to copy it to your clipboard." } },
-      { "@type": "Question", "name": "What is camelCase and where is it used?", "acceptedAnswer": { "@type": "Answer", "text": "camelCase joins words together with no spaces, where the first word is lowercase and every subsequent word starts with a capital letter (e.g. helloWorldExample). It's the standard naming convention for variables and functions in JavaScript, Java, and C#. The name comes from the visual resemblance to a camel's humps." } },
-      { "@type": "Question", "name": "What is snake_case and where is it used?", "acceptedAnswer": { "@type": "Answer", "text": "snake_case is all lowercase with words separated by underscores (e.g. hello_world_example). It's the standard naming convention for variables and functions in Python and Ruby, and is commonly used for database column names and file names." } },
-      { "@type": "Question", "name": "What is kebab-case and where is it used?", "acceptedAnswer": { "@type": "Answer", "text": "kebab-case is all lowercase with words separated by hyphens (e.g. hello-world-example). It's the standard format for URL slugs, CSS class names, and HTML attributes, because hyphens are SEO-friendly and URL-safe. Also called dash-case or hyphen-case." } },
-      { "@type": "Question", "name": "What is the difference between camelCase and PascalCase?", "acceptedAnswer": { "@type": "Answer", "text": "Both join words with no spaces and capitalize each word boundary. The difference is the first letter: camelCase starts with a lowercase letter (helloWorld), while PascalCase starts with an uppercase letter (HelloWorld). camelCase is typically used for variables and functions. PascalCase is typically used for class names and components." } },
-      { "@type": "Question", "name": "How do I fix text that's stuck in ALL CAPS from Caps Lock?", "acceptedAnswer": { "@type": "Answer", "text": "Paste the all-caps text into the converter above. The 'Sentence case' or 'Title Case' output will fix it automatically — converting ACCIDENTALLY TYPED IN CAPS to a normal, readable format. Sentence case capitalizes only the first letter of each sentence, which is usually what you want for fixing caps-lock mistakes." } },
-      { "@type": "Question", "name": "What words are not capitalized in Title Case?", "acceptedAnswer": { "@type": "Answer", "text": "Following AP and Chicago style guides, Title Case capitalizes all major words but keeps short articles (a, an, the), coordinating conjunctions (and, but, or, nor), and short prepositions (in, on, at, to, for, of, with) lowercase — unless they are the first or last word of the title. For example: 'The Lord of the Rings' follows this rule, while 'Capitalize Each Word' capitalizes literally every word with no exceptions." } },
-      { "@type": "Question", "name": "Is my text sent to a server when I use this tool?", "acceptedAnswer": { "@type": "Answer", "text": "No. All text case conversion happens entirely in your browser using JavaScript. Your text is never sent to, stored on, or processed by any server. This makes it safe to use for sensitive documents, code, and confidential text." } },
-      { "@type": "Question", "name": "What is a slug and how do I create one?", "acceptedAnswer": { "@type": "Answer", "text": "A slug is the URL-friendly version of a title — lowercase, with spaces replaced by hyphens, and special characters removed. For example, 'My Blog Post: 2026 Edition!' becomes 'my-blog-post-2026-edition'. Use the Slugify utility below the case converter to generate SEO-friendly URL slugs from any text." } }
-    ,
-      {
-        "@type": "Question",
-        "name": "What is camelCase and when should I use it?",
-        "acceptedAnswer": { "@type": "Answer", "text": "camelCase capitalises the first letter of each word except the first, with no spaces: myVariableName, getUserData. It is the standard naming convention for variables and functions in JavaScript, Java, and many other languages. PascalCase (MyVariableName) capitalises the first letter too — typically used for class names and React components. snake_case uses underscores and is standard in Python." }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert text to a different case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste or type your text into the box above. All 15 case conversions — UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and more — update instantly. Click the copy button next to any result to copy it to your clipboard."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "What is camelCase and where is it used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "camelCase joins words with no spaces — the first word lowercase, every following word capitalized (helloWorldExample). It's the standard for variables and functions in JavaScript, Java, and C#. The name comes from its resemblance to a camel's humps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is snake_case and where is it used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "snake_case is all lowercase with underscores between words (hello_world_example). It's the standard for variables and functions in Python and Ruby, and is commonly used for database column names and file names."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is kebab-case and where is it used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "kebab-case is all lowercase with hyphens between words (hello-world-example). It's the standard for URL slugs, CSS class names, and HTML attributes — hyphens are SEO-friendly and URL-safe. Also called dash-case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between camelCase and PascalCase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both join words with no spaces. camelCase starts with a lowercase letter (helloWorld) and is used for variables/functions. PascalCase starts with an uppercase letter (HelloWorld) and is used for class names and React components."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix text stuck in ALL CAPS from Caps Lock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste the all-caps text into the converter. The \"Sentence case\" result fixes it automatically — converting ACCIDENTALLY TYPED IN CAPS into a normal readable sentence, capitalizing only the first letter of each sentence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What words are not capitalized in Title Case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Following AP/Chicago style: short articles (a, an, the), coordinating conjunctions (and, but, or, nor), and short prepositions (in, on, at, to, for, of, with) stay lowercase unless they're the first or last word. \"Capitalize Each Word\" instead capitalizes literally every word with no exceptions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All conversions happen entirely in your browser using JavaScript. Your text is never sent to, stored on, or processed by any server — safe for sensitive documents and code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a slug and how do I create one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A slug is the URL-friendly version of a title — lowercase, spaces replaced with hyphens, special characters removed. \"My Blog Post: 2026 Edition!\" becomes \"my-blog-post-2026-edition\". Use the Slugify utility above to generate one instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix text that's stuck in ALL CAPS from Caps Lock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste the all-caps text into the converter above. The 'Sentence case' or 'Title Case' output will fix it automatically — converting ACCIDENTALLY TYPED IN CAPS to a normal, readable format. Sentence case capitalizes only the first letter of each sentence, which is usually what you want for fixing caps-lock mistakes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text sent to a server when I use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All text case conversion happens entirely in your browser using JavaScript. Your text is never sent to, stored on, or processed by any server. This makes it safe to use for sensitive documents, code, and confidential text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is camelCase and when should I use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "camelCase capitalises the first letter of each word except the first, with no spaces: myVariableName, getUserData. It is the standard naming convention for variables and functions in JavaScript, Java, and many other languages. PascalCase (MyVariableName) capitalises the first letter too — typically used for class names and React components. snake_case uses underscores and is standard in Python."
+      }
+    }
+  ]
+}
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
@@ -277,6 +358,18 @@
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What words are not capitalized in Title Case?</div><div class="faq-a">Following AP/Chicago style: short articles (a, an, the), coordinating conjunctions (and, but, or, nor), and short prepositions (in, on, at, to, for, of, with) stay lowercase unless they're the first or last word. "Capitalize Each Word" instead capitalizes literally every word with no exceptions.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is my text sent to a server?</div><div class="faq-a">No. All conversions happen entirely in your browser using JavaScript. Your text is never sent to, stored on, or processed by any server — safe for sensitive documents and code.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a slug and how do I create one?</div><div class="faq-a">A slug is the URL-friendly version of a title — lowercase, spaces replaced with hyphens, special characters removed. "My Blog Post: 2026 Edition!" becomes "my-blog-post-2026-edition". Use the Slugify utility above to generate one instantly.</div></div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I fix text that&#x27;s stuck in ALL CAPS from Caps Lock?</div>
+      <div class="faq-a">Paste the all-caps text into the converter above. The &#x27;Sentence case&#x27; or &#x27;Title Case&#x27; output will fix it automatically — converting ACCIDENTALLY TYPED IN CAPS to a normal, readable format. Sentence case capitalizes only the first letter of each sentence, which is usually what you want for fixing caps-lock mistakes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is my text sent to a server when I use this tool?</div>
+      <div class="faq-a">No. All text case conversion happens entirely in your browser using JavaScript. Your text is never sent to, stored on, or processed by any server. This makes it safe to use for sensitive documents, code, and confidential text.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is camelCase and when should I use it?</div>
+      <div class="faq-a">camelCase capitalises the first letter of each word except the first, with no spaces: myVariableName, getUserData. It is the standard naming convention for variables and functions in JavaScript, Java, and many other languages. PascalCase (MyVariableName) capitalises the first letter too — typically used for class names and React components. snake_case uses underscores and is standard in Python.</div>
+    </div>
   </div>
 
   <div class="content-section" style="background:rgba(108,99,255,0.05);border-color:rgba(108,99,255,0.2)">
