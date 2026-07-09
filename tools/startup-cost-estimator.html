@@ -4,15 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Startup Cost Estimator – Calculate Business Launch Costs | ToolsNook</title>
-  <meta name="description" content="Estimate your total startup costs before launching a business. Add one-time and monthly expenses across all categories. Free startup cost calculator." />
-  <meta name="keywords" content="startup cost estimator, business startup costs, how much does it cost to start a business, startup budget calculator, business launch costs" />
+  <meta name="description" content="Free startup cost estimator. Plan one-time and recurring business launch costs, calculate your runway, and see how your budget compares to industry benchmarks." />
+  <meta property="og:title" content="Startup Cost Estimator – Calculate Your Business Launch Budget" />
+  <meta property="og:description" content="Estimate your full startup costs across all categories. Calculate runway, compare to industry benchmarks, and plan your one-time and recurring costs. Free, no signup." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <link rel="canonical" href="https://www.toolsnook.com/tools/startup-cost-estimator.html" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QNZ1FF31E"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9QNZ1FF31E');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
+
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--red:#ff6b6b;--amber:#f7971e}
     body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;min-height:100vh}
@@ -78,52 +87,47 @@
     .related-card:hover{background:var(--bg3);transform:translateY(-2px)}
     footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:0.85rem;margin-top:4rem}
     footer a{color:var(--muted);text-decoration:none}
+  
+    /* ADDITIONS */
+    .content-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.5rem;margin-top:2rem}
+    .content-box h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.85rem;letter-spacing:-0.02em}
+    .content-box h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.5rem 0 0.5rem}
+    .content-box p{color:var(--muted);font-size:0.95rem;margin-bottom:1rem;line-height:1.75}
+    .content-box ul{color:var(--muted);font-size:0.95rem;padding-left:1.5rem;margin-bottom:1rem;line-height:1.9}
+    .cost-table{width:100%;border-collapse:collapse;font-size:0.88rem;margin:1rem 0}
+    .cost-table th{text-align:left;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;border-bottom:1px solid var(--border2)}
+    .cost-table td{padding:0.65rem 0.75rem;border-bottom:1px solid var(--border);color:var(--muted)}
+    .cost-table td:first-child{color:var(--text);font-weight:500}
+    .cost-table tr:last-child td{border-bottom:none}
+    .related-section{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:20px;padding:1.75rem 2rem;margin:2rem 0}
+    .related-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+    .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem}
+    .rel-card{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;transition:border-color 0.2s,transform 0.2s}
+    .rel-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .faq-outer{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden}
+    .faq-btn{width:100%;background:var(--bg2);border:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.93rem;font-weight:500;padding:1rem 1.25rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-btn:hover{background:var(--bg3)}
+    .faq-ans{display:none;padding:0 1.25rem 1rem;background:var(--bg2);color:var(--muted);font-size:0.88rem;line-height:1.75}
+    .faq-ico{color:var(--accent);font-size:1.1rem;flex-shrink:0;transition:transform 0.2s}
+    @media(max-width:640px){
+      nav{padding:0.75rem 1rem}
+      .content-box{padding:1.25rem}
+      .rel-grid{grid-template-columns:1fr 1fr}
+    }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Startup Cost Estimator",
     "url": "https://www.toolsnook.com/tools/startup-cost-estimator.html",
-    "description": "Free startup cost estimator. Plan your full business launch budget across all categories — one-time and monthly costs.",
+    "description": "Free startup cost estimator. Plan your full business launch budget across all categories with one-time and recurring costs.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
     "publisher": {"@type": "Organization", "name": "ToolsNook", "url": "https://www.toolsnook.com"}
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does it cost to start a business?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Startup costs vary enormously by industry. A home-based service business can start for under $1,000. A retail store typically costs $50,000-$150,000. A tech startup can range from $10,000 (bootstrapped) to $500,000+. Use our estimator to plan your specific budget."}
-      },
-      {
-        "@type": "Question",
-        "name": "What are typical startup costs?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Common startup costs include business registration, website and domain, equipment and inventory, office space or lease deposit, legal and accounting fees, initial marketing and branding, software subscriptions, and working capital for the first 3-6 months."}
-      },
-      {
-        "@type": "Question",
-        "name": "What is working capital for a startup?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Working capital is the money needed to cover day-to-day operations before your business becomes profitable. As a rule of thumb, have 3-6 months of operating expenses in reserve before launching."}
-      }
-    ]
-  }
-  </script>
-  <meta property="og:image" content="https://www.toolsnook.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.toolsnook.com/og-image.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -134,17 +138,34 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How much does it cost to start a business?", "acceptedAnswer": {"@type": "Answer", "text": "Startup costs vary dramatically by industry. A freelance service business can start for under $5,000. An e-commerce store runs $5,000–$30,000. A restaurant costs $75,000–$300,000. A tech startup ranges from $10,000 bootstrapped to $500,000+ with a team. Use the estimator to build your specific budget across all categories."}},
+      {"@type": "Question", "name": "What is the difference between one-time and recurring startup costs?", "acceptedAnswer": {"@type": "Answer", "text": "One-time costs are paid once to launch: registration fees, website build, initial inventory, equipment, and fit-out. Recurring costs are paid every month: rent, staff, software subscriptions, and marketing. Your monthly recurring costs determine your burn rate and how many months of runway your capital provides."}},
+      {"@type": "Question", "name": "How much money should I have before starting a business?", "acceptedAnswer": {"@type": "Answer", "text": "Enough to cover all one-time startup costs plus at least 12 months of monthly operating costs, minus projected revenue. Most advisors recommend 12–18 months of runway as a minimum. Formula: one-time costs + (monthly burn × 12) − projected revenue = minimum capital needed."}},
+      {"@type": "Question", "name": "What startup costs are most commonly underestimated?", "acceptedAnswer": {"@type": "Answer", "text": "Professional services (legal, accounting), insurance, marketing and customer acquisition spend, technology subscription stacks, employer payroll taxes if hiring staff, and a 20%+ emergency buffer. Revenue almost always takes longer to materialise than projected."}},
+      {"@type": "Question", "name": "What is startup runway and how do I calculate it?", "acceptedAnswer": {"@type": "Answer", "text": "Runway = Available Capital divided by Monthly Burn Rate. If you have $60,000 and spend $5,000 per month with no revenue, you have 12 months of runway. Enter your available capital in the runway section of the estimator to calculate this automatically."}},
+      {"@type": "Question", "name": "Should I include my own salary in startup costs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you are leaving employment. Include a founder salary in monthly costs from day one. Investors include a modest founder salary in early-stage budgets because a founder who cannot afford to live cannot run a business effectively."}},
+      {"@type": "Question", "name": "How do I reduce startup costs without harming the business?", "acceptedAnswer": {"@type": "Answer", "text": "Start from home instead of renting an office; use freelancers for non-core functions; launch with an MVP; use free or low-cost software tiers; and delay cosmetic one-time costs until after first revenue is established."}},
+      {"@type": "Question", "name": "What financing options are available for startup costs?", "acceptedAnswer": {"@type": "Answer", "text": "Personal savings, friends and family, bank business loans, SBA loans (US), startup grants, angel investors, crowdfunding, and revenue-based financing. Use our Business Loan Calculator to model repayment costs for any loan amount."}},
+      {"@type": "Question", "name": "Are startup costs tax deductible?", "acceptedAnswer": {"@type": "Answer", "text": "In the US, up to $5,000 of business startup costs can be deducted in the first year, with remaining costs amortised over 15 years. In the UK, pre-trading expenses can typically be claimed in the first trading year. Rules vary by country — consult an accountant and keep records from day one."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 <nav><a href="/" class="logo">Tools<span>Nook</span></a><a href="/" class="nav-back">← All Tools</a></nav>
 <div class="hero">
   <div class="breadcrumb"><a href="/">ToolsNook</a> › Startup Cost Estimator</div>
-  <div class="hero-badge">✦ Business Tool</div>
+  <div class="hero-badge">✦ Finance Tool</div>
   <h1>Startup Cost Estimator</h1>
-  <p>Plan your business launch budget. Add one-time and recurring costs across every category to see your total funding requirement.</p>
+  <p>Estimate your total business launch budget. Add one-time and monthly costs across all categories, calculate your runway, and see how your budget stacks up.</p>
 </div>
 <div class="container">
-  <div class="top-row">
+<div class="top-row">
     <label>CURRENCY</label>
     <div class="csw"><select class="dsel" id="cs" onchange="onCC()">
       <optgroup label="Major"><option value="$|USD" selected>$ USD</option><option value="£|GBP">£ GBP</option><option value="€|EUR">€ EUR</option><option value="C$|CAD">C$ CAD</option><option value="A$|AUD">A$ AUD</option></optgroup>
@@ -184,17 +205,91 @@
     </p>
   </div>
 
-  <div class="related">
-    <h2>Related Tools</h2>
-    <div class="related-grid">
-      <a href="/tools/break-even-calculator.html" class="related-card"><span style="font-size:1.4rem">⚖️</span><span style="font-size:0.88rem;font-weight:500">Break-Even Calculator</span></a>
-      <a href="/tools/roi-calculator.html" class="related-card"><span style="font-size:1.4rem">💰</span><span style="font-size:0.88rem;font-weight:500">ROI Calculator</span></a>
-      <a href="/tools/loan-calculator.html" class="related-card"><span style="font-size:1.4rem">🏦</span><span style="font-size:0.88rem;font-weight:500">Loan Calculator</span></a>
+  <!-- CONTENT -->
+  <div class="content-box">
+    <h2>How Much Does It Cost to Start a Business?</h2>
+    <p>Startup costs vary enormously by industry, scale, and approach. The most important distinction is between one-time costs and recurring monthly costs. Conflating the two causes dangerous planning errors — a founder who budgets $50,000 for launch but ignores $6,000 per month in ongoing costs will exhaust capital in under 9 months, regardless of how well the launch went.</p>
+    <p>The estimator above separates both categories and calculates your runway automatically. Here is how costs typically break down by business type:</p>
+
+    <table class="cost-table">
+      <thead><tr><th>Business Type</th><th>Typical Range</th><th>Key Cost Driver</th></tr></thead>
+      <tbody>
+        <tr><td>Freelance / Service</td><td>$500 – $5,000</td><td>Website, tools, registration</td></tr>
+        <tr><td>Home-Based Business</td><td>$1,000 – $10,000</td><td>Equipment, inventory, marketing</td></tr>
+        <tr><td>E-commerce Store</td><td>$5,000 – $30,000</td><td>Inventory, platform, ads</td></tr>
+        <tr><td>SaaS / Tech Startup</td><td>$10,000 – $500,000</td><td>Development, infrastructure, team</td></tr>
+        <tr><td>Restaurant / Café</td><td>$75,000 – $300,000</td><td>Fit-out, equipment, licenses</td></tr>
+        <tr><td>Retail Store</td><td>$50,000 – $150,000</td><td>Fit-out, inventory, lease deposit</td></tr>
+        <tr><td>Manufacturing</td><td>$50,000 – $1,000,000+</td><td>Machinery, facility, raw materials</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Most Commonly Underestimated Startup Costs</h3>
+    <p>First-time founders consistently underestimate the same categories. Knowing these in advance lets you build a more realistic budget:</p>
+    <ul>
+      <li><strong>Time to first revenue:</strong> Most businesses take 3–12 months to generate meaningful revenue. Your monthly burn rate multiplied by this period is the minimum capital you need before the business can sustain itself.</li>
+      <li><strong>Marketing and customer acquisition:</strong> Typically the largest ongoing cost and the hardest to predict without data. Many founders budget generously for building and almost nothing for selling.</li>
+      <li><strong>Professional services:</strong> Legal fees, accountants, and insurance are frequently cut from early budgets and almost always cause problems later. Register your business correctly and understand your tax obligations from day one.</li>
+      <li><strong>Technology subscriptions:</strong> Email marketing, CRM, project management, accounting software — a typical small business uses 8–15 SaaS tools before launch. These stack up quickly.</li>
+      <li><strong>Emergency buffer:</strong> Budget at least 20% of your total projected costs as an unallocated reserve. Equipment breaks, suppliers fail, launches take longer than planned.</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Understanding Startup Runway</h2>
+    <p>Runway is the number of months your business can operate before running out of cash. The formula is simple: <strong>Runway = Available Capital ÷ Monthly Burn Rate</strong>. Monthly burn rate is your total monthly costs minus any monthly revenue. If you have $60,000 and spend $5,000 per month with no revenue, you have 12 months of runway.</p>
+    <p>Most advisors recommend a minimum of 12 months of runway before launch — 18–24 months is more comfortable. The runway section in the estimator calculates this automatically when you enter your available capital and expected monthly revenue.</p>
+
+    <h3>One-Time vs Recurring Costs — Why the Distinction Matters</h3>
+    <p>One-time costs are paid once to get the business operational: business registration and legal fees, website design and development, initial inventory purchase, equipment purchases, fit-out and renovation costs, logo and brand design, and professional fees for launch-phase advice.</p>
+    <p>Recurring costs are what you pay every month to keep the business running and determine your burn rate: rent and utilities, staff salaries and payroll taxes, software subscriptions, marketing and advertising spend, loan repayments, insurance premiums, and ongoing professional service retainers.</p>
+    <p>A founder who budgets $40,000 for one-time costs and then discovers $7,000 per month in ongoing costs — without budgeting for the months before revenue — will run out of money within 6 months regardless of how good the product is. Build the monthly cost projection from day one and use the runway calculator to see the real picture.</p>
+
+    <h3>Funding Your Startup</h3>
+    <p>Once you know your total capital requirement, you can assess the funding gap. Common startup financing options include: personal savings (most common for small businesses), friends and family investment, bank business loans, SBA loans in the US (lower interest, government-backed), startup grants specific to your industry or location, angel investors who take equity in exchange for capital, crowdfunding platforms for consumer product businesses, and revenue-based financing once you have initial revenue. Use our Business Loan Calculator to model monthly repayment costs for any loan amount before committing to debt financing.</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Startup Cost Planning: A Step-by-Step Approach</h2>
+    <p>Effective startup budgeting follows a clear sequence. Here is the process that experienced founders and advisors use to build a realistic pre-launch budget:</p>
+    <ul>
+      <li><strong>Step 1 — List all one-time costs:</strong> Go through every category (legal, technology, equipment, marketing, design) and research actual costs rather than estimating. Get quotes. Check prices. Do not guess.</li>
+      <li><strong>Step 2 — Map all recurring monthly costs:</strong> Every subscription, every bill, every salary from month one. Include items that do not start on day one — when will you need to hire? When does your lease start?</li>
+      <li><strong>Step 3 — Build a conservative revenue projection:</strong> How many customers do you realistically expect in month 1, 3, 6, 12? At what price? Multiply these out to get monthly revenue estimates.</li>
+      <li><strong>Step 4 — Calculate your break-even month:</strong> The month when cumulative revenue first exceeds cumulative costs. Use our Break-Even Calculator to model this precisely.</li>
+      <li><strong>Step 5 — Add a 20–30% buffer:</strong> To your total capital requirement. Things always cost more and take longer than planned. This buffer is not wasteful — it is the difference between making it and not.</li>
+      <li><strong>Step 6 — Identify your funding gap:</strong> Subtract your available personal capital from your total requirement. The gap is what you need to raise, borrow, or reduce costs to close.</li>
+    </ul>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related-section">
+    <h3>🔗 Related Tools</h3>
+    <div class="rel-grid">
+      <a href="/tools/break-even-calculator.html" class="rel-card"><span>⚖️</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Break-Even Calculator</span></a>
+      <a href="/tools/business-plan-outline.html" class="rel-card"><span>📋</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Business Plan Generator</span></a>
+      <a href="/tools/roi-calculator.html" class="rel-card"><span>💰</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">ROI Calculator</span></a>
+      <a href="/tools/loan-calculator.html" class="rel-card"><span>🏦</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Business Loan Calculator</span></a>
+      <a href="/tools/profit-margin-calculator.html" class="rel-card"><span>📈</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Profit Margin Calculator</span></a>
+      <a href="/tools/freelancer-rate-calculator.html" class="rel-card"><span>🧑‍💻</span><span style="font-size:0.82rem;font-weight:600;font-family:'Syne',sans-serif">Freelancer Rate Calculator</span></a>
     </div>
   </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:1rem">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>
+    <div id="faq-wrap"></div>
+  </div>
+
 </div>
-<footer><p>© 2026 <a href="/">ToolsNook</a> · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p></footer>
+
+<footer>
+  <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
+  <p style="margin-top:0.5rem">Free tools for the people who build things.</p>
+</footer>
+
 <script>
+
   let cur='$';
   const CATS=[
     {id:'legal',icon:'⚖️',title:'Legal & Registration',items:[{label:'Business Registration',val:500,type:'One-time'},{label:'Licenses & Permits',val:300,type:'One-time'},{label:'Legal / Attorney Fees',val:1000,type:'One-time'}]},
@@ -274,6 +369,11 @@
   }
 
   buildUI();
+
+  var FAQS=[["How much does it cost to start a business?","Startup costs vary dramatically by industry. A freelance service business can start for under $5,000. An e-commerce store runs $5,000-$30,000. A restaurant or retail location costs $75,000-$300,000. A tech startup ranges from $10,000 bootstrapped to $500,000+ with a team."],["What is the difference between one-time and recurring startup costs?","One-time costs are paid once to launch: registration fees, website build, initial inventory, equipment, and fit-out. Recurring costs are paid every month: rent, staff, software subscriptions, and marketing spend. Your monthly recurring costs determine your burn rate and how long your runway lasts."],["How much money should I have before starting a business?","Enough to cover all one-time startup costs plus at least 12 months of monthly operating costs, minus projected revenue. Most advisors recommend 12-18 months of runway as a minimum. Formula: one-time costs plus (monthly burn times 12) minus projected revenue equals minimum capital needed."],["What startup costs are most commonly underestimated?","Professional services (legal, accounting), insurance, marketing and customer acquisition, technology subscriptions, employer payroll taxes if hiring staff, and a 20% emergency buffer. Revenue always takes longer to materialise than projected."],["What is startup runway and how do I calculate it?","Runway equals Available Capital divided by Monthly Burn Rate. If you have $60,000 and spend $5,000 per month with no revenue, you have 12 months of runway. Enter your available capital in the runway section of the estimator to calculate this automatically."],["Should I include my own salary in startup costs?","Yes, if you are leaving employment. Include a founder salary in monthly costs from day one. Investors include a modest founder salary in early-stage budgets because a founder who cannot afford to live cannot run a business effectively."],["How do I reduce startup costs without harming the business?","Start from home instead of renting an office; use freelancers for non-core functions; launch with an MVP; use free or low-cost software tiers; and delay cosmetic one-time costs such as premium branding until after first revenue is established."],["What financing options are available for startup costs?","Personal savings, friends and family, bank business loans, SBA loans in the US, startup grants, angel investors, crowdfunding, and revenue-based financing. Use our Business Loan Calculator to model repayment costs for any loan amount."],["Are startup costs tax deductible?","In the US, up to $5,000 of business startup costs can be deducted in the first year, with remaining costs amortised over 15 years. In the UK, pre-trading expenses can typically be claimed in the first trading year. Rules vary by country so consult an accountant and keep records from day one."]];
+  var fw=document.getElementById('faq-wrap');
+  if(fw){fw.innerHTML=FAQS.map(function(q,i){return '<div class="faq-outer"><button class="faq-btn" onclick="xFaq('+i+')">'+q[0]+'<span class="faq-ico" id="fi'+i+'">+</span></button><div class="faq-ans" id="fa'+i+'">'+q[1]+'</div></div>';}).join('');}
+  function xFaq(i){var a=document.getElementById('fa'+i);var ic=document.getElementById('fi'+i);var o=a.style.display==='block';a.style.display=o?'none':'block';ic.style.transform=o?'':'rotate(45deg)';}
 </script>
 </body>
 </html>
