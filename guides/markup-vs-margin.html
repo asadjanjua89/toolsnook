@@ -22,13 +22,13 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5949507652143729" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#18181f;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--text:#f0f0f5;--muted:#8888a0;--accent:#6c63ff;--green:#43e97b;--amber:#f7971e;--red:#ff6b6b}
+    :root{--bg:#f6f2e9;--bg2:#fdfbf6;--bg3:#efe9dc;--border:rgba(30,30,26,0.10);--border2:rgba(30,30,26,0.20);--text:#1e1e1a;--muted:#6b6558;--accent:#0d5138;--accent2:#14724e;--green:#14724e;--amber:#c98a2b;--red:#b8492e;--blue:#2c6e7f;--purple:#7a5c8f;--paper:#f6f2e9;--ink:#1e1e1a;--clay:#b8492e;--gold:#c98a2b;--rule:#ded6c5;--e-out:cubic-bezier(.16,1,.3,1)}
     *{margin:0;padding:0;box-sizing:border-box}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-    .logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.02em}
+    body{background:var(--bg);color:var(--text);font-family:'Newsreader',Georgia,serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.85);border-bottom:1px solid var(--border)}
+    .logo{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.02em}
     .logo span{color:var(--accent)}
     .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem}
     .nav-back:hover{color:var(--text)}
@@ -36,75 +36,192 @@
     .breadcrumb{font-size:0.82rem;color:var(--muted);margin-bottom:1rem}
     .breadcrumb a{color:var(--muted);text-decoration:none}
     .breadcrumb a:hover{color:var(--accent)}
-    .kicker{display:inline-block;background:rgba(108,99,255,0.14);color:#a59fff;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;padding:3px 9px;border-radius:5px;text-transform:uppercase;margin-bottom:0.9rem}
-    .hero h1{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.9rem;line-height:1.13}
+    .kicker{display:inline-block;background:rgba(13,81,56,0.14);color:#14724e;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;padding:3px 9px;border-radius:2px;text-transform:uppercase;margin-bottom:0.9rem}
+    .hero h1{font-family:'Fraunces',Georgia,serif;font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.9rem;line-height:1.13}
     .standfirst{color:var(--muted);font-size:1.06rem;line-height:1.7}
     .container{max-width:780px;margin:0 auto;padding:0 2rem 3rem}
-    .container h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;margin:2.5rem 0 0.9rem}
-    .container h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin:1.8rem 0 0.55rem}
+    .container h2{font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;margin:2.5rem 0 0.9rem}
+    .container h3{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;margin:1.8rem 0 0.55rem}
     .container p{color:var(--muted);font-size:1rem;margin-bottom:1.1rem;line-height:1.8}
     .container ul,.container ol{color:var(--muted);font-size:1rem;padding-left:1.4rem;margin-bottom:1.1rem;line-height:1.85}
     .container li{margin-bottom:0.4rem}
     .container strong{color:var(--text)}
     .container a{color:var(--accent);text-decoration:none}
     .container a:hover{text-decoration:underline}
-    .formula{background:var(--bg3);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9rem;color:var(--text);margin:1.2rem 0;line-height:1.9;overflow-x:auto}
+    .formula{background:var(--bg3);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:2px;padding:1rem 1.25rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9rem;color:var(--text);margin:1.2rem 0;line-height:1.9;overflow-x:auto}
     table{width:100%;border-collapse:collapse;font-size:0.9rem;margin:1.2rem 0}
     th{text-align:left;padding:0.6rem 0.75rem;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border2)}
     td{padding:0.6rem 0.75rem;border-bottom:1px solid var(--border);color:var(--muted)}
     td:first-child{color:var(--text);font-weight:500}
     tr:last-child td{border-bottom:none}
-    .hl td{background:rgba(108,99,255,0.07)}
-    .hl td:first-child{color:#a59fff;font-weight:700}
-    .pull{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:10px;padding:1.1rem 1.35rem;margin:1.6rem 0}
+    .hl td{background:rgba(13,81,56,0.07)}
+    .hl td:first-child{color:#14724e;font-weight:700}
+    .pull{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:2px;padding:1.1rem 1.35rem;margin:1.6rem 0}
     .pull p{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.75}
     .pull strong{color:var(--text)}
-    .warn{background:rgba(255,107,107,0.05);border:1px solid rgba(255,107,107,0.25);border-left:3px solid var(--red);border-radius:10px;padding:1.1rem 1.35rem;margin:1.6rem 0}
+    .warn{background:rgba(255,107,107,0.05);border:1px solid rgba(255,107,107,0.25);border-left:3px solid var(--red);border-radius:2px;padding:1.1rem 1.35rem;margin:1.6rem 0}
     .warn p{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.75}
     .warn strong{color:var(--text)}
-    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid var(--amber);border-radius:10px;padding:1rem 1.25rem;margin:1.8rem 0;font-size:0.88rem;color:var(--muted);line-height:1.7}
+    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid var(--amber);border-radius:2px;padding:1rem 1.25rem;margin:1.8rem 0;font-size:0.88rem;color:var(--muted);line-height:1.7}
     .advice-note strong{color:var(--text)}
-    .toolcta{background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.22);border-radius:12px;padding:1rem 1.25rem;margin:1.4rem 0;font-size:0.92rem;color:var(--muted)}
+    .toolcta{background:rgba(13,81,56,0.06);border:1px solid rgba(13,81,56,0.22);border-radius:2px;padding:1rem 1.25rem;margin:1.4rem 0;font-size:0.92rem;color:var(--muted)}
     .toolcta a{font-weight:600}
-    .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.18);border-radius:14px;padding:1rem 1.2rem;margin:2.5rem 0 1rem}
-    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:11px;background:linear-gradient(135deg,#6c63ff,#a575ff);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:#fff}
-    .pm-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text)}
-    .pm-name a{color:#a59fff;text-decoration:none}
+    .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(13,81,56,0.05);border:1px solid rgba(13,81,56,0.18);border-radius:2px;padding:1rem 1.2rem;margin:2.5rem 0 1rem}
+    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:#0d5138;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:0.9rem;color:#fdfbf6}
+    .pm-name{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:0.92rem;color:var(--text)}
+    .pm-name a{color:#14724e;text-decoration:none}
     .pm-sub{font-size:0.79rem;color:var(--muted);margin-top:2px;line-height:1.55}
     .pm-sub a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
-    .related{background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:16px;padding:1.5rem 1.75rem;margin:2rem 0}
-    .related h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin:0 0 0.9rem}
+    .related{background:rgba(13,81,56,0.05);border:1px solid rgba(13,81,56,0.15);border-radius:2px;padding:1.5rem 1.75rem;margin:2rem 0}
+    .related h3{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;margin:0 0 0.9rem}
     .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0.7rem}
-    .rgrid a{background:var(--bg2);border:1px solid var(--border2);border-radius:11px;padding:0.85rem 1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:9px;font-size:0.86rem;font-weight:500}
+    .rgrid a{background:var(--bg2);border:1px solid var(--border2);border-radius:2px;padding:0.85rem 1rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:9px;font-size:0.86rem;font-weight:500}
     .rgrid a:hover{border-color:var(--accent);text-decoration:none}
     footer{border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center;color:var(--muted);font-size:0.86rem}
     footer a{color:var(--muted);text-decoration:none}
     footer a:hover{color:var(--accent)}
     @media(max-width:640px){.hero h1{font-size:1.85rem}.container,.hero{padding-left:1.1rem;padding-right:1.1rem}table{font-size:0.82rem}}
+  
+
+/* ── editorial layer — "The Ledger, Alive" ──────────────────────── */
+body{font-family:'Newsreader',Georgia,serif;font-size:18px;line-height:1.65;
+  background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* typography */
+body h1,body h2,body h3,body h4,body .logo,body .card-title,body .pm-name{
+  font-family:'Fraunces',Georgia,serif;letter-spacing:-.022em}
+body h1{font-weight:400;line-height:1.02}
+body h2{font-weight:600}
+body h3{font-weight:600;font-size:1.15rem}
+body .logo{font-weight:600}
+body nav,body .nav-back,body .breadcrumb,body label,body th,body footer,
+body .pm-sub,body .field-hint,body .rate-badge,body .cpill,body .result-label,
+body .breakdown-label,body .card-sub,body .badge,body .tag{
+  font-family:'IBM Plex Mono',monospace;letter-spacing:.04em}
+body .breadcrumb,body .nav-back{font-size:11.5px;text-transform:uppercase;letter-spacing:.14em}
+
+/* links */
+body a{color:var(--accent);text-decoration:none}
+body a:hover{text-decoration:underline;text-underline-offset:3px}
+body footer a,body .pm-sub a{color:var(--muted)}
+body footer a:hover,body .pm-sub a:hover{color:var(--accent)}
+
+/* the hero */
+body .hero h1{font-size:clamp(38px,6vw,72px)}
+body .hero{border-bottom:0}
+
+/* calculator card — paper with an offset shadow, not a glow */
+body .calc-card,body .result-card,body .content-box{
+  background:var(--bg2);border:1.5px solid var(--ink);border-radius:0;
+  box-shadow:10px 10px 0 -1px var(--bg3),10px 10px 0 0 var(--rule)}
+body .content-section{background:transparent;border:0;border-top:1px solid var(--rule);
+  border-radius:0;box-shadow:none;padding-top:28px}
+
+/* tabs — sliding underline, not pills */
+body .calc-tab{background:transparent;border:0;border-bottom:2px solid transparent;
+  border-radius:0;color:var(--muted);font-family:'IBM Plex Mono',monospace;
+  font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding:12px 2px;margin-right:24px}
+body .calc-tab.active{color:var(--accent);border-bottom-color:var(--accent);background:transparent}
+
+/* inputs */
+body input,body select,body textarea{
+  font-family:'IBM Plex Mono',monospace;background:#fff;color:var(--ink);
+  border:1.5px solid var(--ink);border-radius:2px}
+body input:focus,body select:focus,body textarea:focus{
+  outline:none;box-shadow:3px 3px 0 var(--gold)}
+body label{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+
+/* primary button — fills from the bottom */
+body .calc-btn,body button.calc-btn,body .btn-primary{
+  background:var(--accent);color:var(--bg2);border:0;border-radius:2px;
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.13em;
+  text-transform:uppercase;padding:16px;transition:background .25s var(--e-out)}
+body .calc-btn:hover,body .btn-primary:hover{background:var(--accent2)}
+body .copy-result-btn,body .cpill{background:transparent;border:1px solid var(--rule);
+  color:var(--muted);border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:11px}
+body .copy-result-btn:hover,body .cpill:hover{border-color:var(--accent);color:var(--accent)}
+
+/* results — display serif numerals, ledger rules */
+body .result-num,body .result-value,body .rv,body .breakdown-val,body .stat-num{
+  font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+body .result-num,body .result-value{color:var(--accent)}
+body .result-item,body .breakdown-row,body .rl{border-bottom:1px dotted var(--rule);
+  border-radius:0;background:transparent}
+body .result-label,body .breakdown-label{font-size:11px;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--muted)}
+
+/* tables */
+body table{border-collapse:collapse}
+body th{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border-bottom:1px solid var(--rule);text-align:left;padding:11px 13px;background:transparent}
+body td{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted);
+  border-bottom:1px dotted var(--rule);padding:11px 13px}
+body tbody tr:hover td{background:rgba(13,81,56,.05)}
+body .td-green{color:var(--accent);font-weight:500}
+
+/* FAQ — ruled ledger */
+body .faq-item{border:0;border-bottom:1px solid var(--rule);border-radius:0;background:transparent}
+body .faq-q{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:19px;
+  color:var(--ink);background:transparent;padding:19px 40px 19px 0}
+body .faq-q:hover{color:var(--accent)}
+body .faq-icon{color:var(--accent)}
+body .faq-a{color:var(--muted);font-size:17px}
+
+/* prose blocks */
+body .formula{font-family:'IBM Plex Mono',monospace;background:var(--bg3);
+  border:0;border-left:2px solid var(--accent);border-radius:0;color:var(--ink)}
+body .example,body .highlight{border-left:2px solid var(--clay);background:transparent;
+  border-radius:0;padding-left:22px;font-style:italic;color:var(--muted)}
+
+/* related grid */
+body .related-card,body .rel-card{background:var(--paper);border:1px solid var(--rule);
+  border-radius:0;box-shadow:none;transition:background .25s var(--e-out),color .25s}
+body .related-card:hover,body .rel-card:hover{background:var(--accent);border-color:var(--accent)}
+body .related-card:hover *,body .rel-card:hover *{color:var(--bg2)}
+body .related-name{font-family:'Fraunces',Georgia,serif;font-size:16px}
+
+/* byline */
+body .page-meta{background:transparent;border:0;border-top:1px solid var(--rule);
+  border-radius:0;padding:24px 0 0}
+body .pm-ini{background:var(--accent);border-radius:0;color:var(--bg2);
+  font-family:'Fraunces',Georgia,serif;font-weight:600}
+body .pm-name{font-family:'Fraunces',Georgia,serif;font-weight:600}
+body .pm-sub{font-size:11.5px;color:var(--muted)}
+
+/* footer */
+body footer{border-top:2px solid var(--ink);color:var(--muted);font-size:11.5px}
+
+::selection{background:var(--accent);color:var(--bg2)}
+:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
   </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Markup vs Margin: The Pricing Mistake That Halves Your Profit",
-    "description": "A 50% markup is a 33.3% margin, not a 50% margin. Confusing the two silently under-prices everything you sell.",
-    "url": "https://www.toolsnook.com/guides/markup-vs-margin.html",
-    "datePublished": "2026-07-10",
-    "dateModified": "2026-07-10",
-    "author": {
-      "@type": "Person",
-      "name": "Asad Janjua",
-      "url": "https://www.toolsnook.com/about.html",
-      "sameAs": ["https://pk.linkedin.com/in/asad-janjua-16580717a"]
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ToolsNook",
-      "url": "https://www.toolsnook.com",
-      "logo": "https://www.toolsnook.com/toolsnook-mark-512.png"
-    },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.toolsnook.com/guides/markup-vs-margin.html" }
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Markup vs Margin: The Pricing Mistake That Halves Your Profit",
+  "description": "A 50% markup is a 33.3% margin, not a 50% margin. Confusing the two silently under-prices everything you sell.",
+  "url": "https://www.toolsnook.com/guides/markup-vs-margin.html",
+  "datePublished": "2026-07-10",
+  "dateModified": "2026-07-10",
+  "author": {
+    "@type": "Organization",
+    "name": "ToolsNook",
+    "url": "https://www.toolsnook.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ToolsNook",
+    "url": "https://www.toolsnook.com",
+    "logo": "https://www.toolsnook.com/toolsnook-mark-512.png"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.toolsnook.com/guides/markup-vs-margin.html"
   }
+}
   </script>
   <script type="application/ld+json">
   {
@@ -283,10 +400,10 @@ Price    = Cost ÷ (1 − Margin/100)</div>
   </ul>
 
   <div class="page-meta">
-    <div class="pm-ini">AJ</div>
+    <div class="pm-ini">TN</div>
     <div>
-      <div class="pm-name">Reviewed and published by <a href="/about.html">Asad Janjua</a></div>
-      <div class="pm-sub">Founder, ToolsNook &middot; Islamabad, Pakistan &middot; Last updated: 10 July 2026<br />
+      <div class="pm-name">Reviewed and published by <a href="/about.html">ToolsNook</a></div>
+      <div class="pm-sub">Last updated: 10 July 2026<br />
       How we build and check these tools: <a href="/methodology.html">our methodology</a></div>
     </div>
   </div>
@@ -307,7 +424,7 @@ Price    = Cost ÷ (1 − Margin/100)</div>
 
 <footer>
   <p>© 2026 ToolsNook · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/about.html">About</a> · <a href="/methodology.html">Methodology</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.xml">Sitemap</a></p>
-  <p style="margin-top:0.5rem">Built and maintained by <a href="/about.html">Asad Janjua</a> in Islamabad, Pakistan.</p>
+  <p style="margin-top:0.5rem">Built and maintained in Pakistan. <a href="/about.html">About ToolsNook</a></p>
 </footer>
 </body>
 </html>
