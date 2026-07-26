@@ -22,10 +22,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#f6f2e9;--bg2:#fdfbf6;--bg3:#efe9dc;--border:rgba(30,30,26,0.10);--border2:rgba(30,30,26,0.20);--text:#1e1e1a;--muted:#6b6558;--accent:#0d5138;--accent2:#14724e;--green:#14724e;--amber:#c98a2b;--red:#b8492e;--blue:#2c6e7f;--purple:#7a5c8f;--paper:#f6f2e9;--ink:#1e1e1a;--clay:#b8492e;--gold:#c98a2b;--rule:#ded6c5;--e-out:cubic-bezier(.16,1,.3,1)}
+    :root{--bg:#f6f2e9;--bg2:#fdfbf6;--bg3:#efe9dc;--border:rgba(30,30,26,0.12);--border2:rgba(30,30,26,0.22);--text:#1e1e1a;--muted:#5c5648;--accent:#0d5138;--accent2:#14724e;--green:#14724e;--amber:#8a5e1a;--red:#a33a22;--blue:#1f5a7a;--purple:#6b4a7a;--paper:#f6f2e9;--ink:#1e1e1a;--clay:#9d3d24;--gold:#c98a2b;--rule:#ded6c5;--e-out:cubic-bezier(.16,1,.3,1)}
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--text);font-family:'Newsreader',Georgia,serif;font-size:16px;line-height:1.6;min-height:100vh;overflow-x:hidden}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);border-bottom:1px solid var(--border)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(246,242,233,0.9);border-bottom:1px solid var(--border)}
     .logo{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
     .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s}.nav-back:hover{color:var(--text)}
     .hero{padding:7rem 2rem 2rem;text-align:center;max-width:700px;margin:0 auto}
@@ -58,9 +58,9 @@
     .result-rate{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
 
     /* BANK FEE SIMULATOR — UNIQUE FEATURE */
-    .fee-section{background:rgba(247,151,30,0.06);border:1px solid rgba(247,151,30,0.2);border-radius:2px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+    .fee-section{background:rgba(138,94,26,0.06);border:1px solid rgba(138,94,26,0.2);border-radius:2px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
     .fee-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem}
-    .fee-badge{background:rgba(247,151,30,0.15);color:var(--amber);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:0.06em}
+    .fee-badge{background:rgba(138,94,26,0.15);color:var(--amber);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:0.06em}
     .fee-title{font-family:'Fraunces',Georgia,serif;font-size:0.9rem;font-weight:700}
     .fee-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0.75rem}
     .fee-group label{display:block;font-size:0.72rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.4rem}
@@ -75,9 +75,9 @@
     .fee-result-val.red{color:var(--red)}
 
     /* MULTI-CURRENCY — UNIQUE FEATURE */
-    .multi-section{background:rgba(78,205,196,0.05);border:1px solid rgba(78,205,196,0.2);border-radius:2px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+    .multi-section{background:rgba(31,90,102,0.05);border:1px solid rgba(31,90,102,0.2);border-radius:2px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
     .multi-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem}
-    .multi-badge{background:rgba(78,205,196,0.15);color:var(--blue);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:0.06em}
+    .multi-badge{background:rgba(31,90,102,0.15);color:var(--blue);font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:0.06em}
     .multi-title{font-family:'Fraunces',Georgia,serif;font-size:0.9rem;font-weight:700}
     .multi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.6rem}
     .multi-card{background:var(--bg2);border:1px solid var(--border);border-radius:2px;padding:0.85rem;transition:border-color 0.2s}
@@ -152,19 +152,19 @@
     .sources li:last-child{border-bottom:none}
     .sources a{color:#14724e;text-decoration:none;font-weight:600}
     .sources a:hover{text-decoration:underline}
-    .sources .what{display:block;color:#6b6558;font-size:0.82rem;margin-top:2px}
-    .src-note{margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(30,30,26,0.10);font-size:0.8rem;color:#6b6558;line-height:1.65}
+    .sources .what{display:block;color:#5c5648;font-size:0.82rem;margin-top:2px}
+    .src-note{margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(30,30,26,0.10);font-size:0.8rem;color:#5c5648;line-height:1.65}
     .src-note a{color:#14724e;text-decoration:none}
-    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid #c98a2b;border-radius:2px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.87rem;color:#6b6558;line-height:1.7}
+    .advice-note{background:rgba(138,94,26,0.05);border:1px solid rgba(138,94,26,0.25);border-left:3px solid #8a5e1a;border-radius:2px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.87rem;color:#5c5648;line-height:1.7}
     .advice-note strong{color:#1e1e1a}
   
     .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(13,81,56,0.05);border:1px solid rgba(13,81,56,0.18);border-radius:2px;padding:1rem 1.2rem;margin:2rem 0 1rem}
-    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:#0d5138;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:0.9rem;color:#fdfbf6}
+    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:0.9rem;color:#1e1e1a}
     .pm-name{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:0.92rem;color:#1e1e1a}
     .pm-name a{color:#14724e;text-decoration:none}
     .pm-name a:hover{text-decoration:underline}
-    .pm-sub{font-size:0.79rem;color:#6b6558;margin-top:2px;line-height:1.55}
-    .pm-sub a{color:#6b6558;text-decoration:underline;text-underline-offset:2px}
+    .pm-sub{font-size:0.79rem;color:#5c5648;margin-top:2px;line-height:1.55}
+    .pm-sub a{color:#5c5648;text-decoration:underline;text-underline-offset:2px}
     .pm-sub a:hover{color:#14724e}
   
 
@@ -280,6 +280,39 @@ body footer{border-top:2px solid var(--ink);color:var(--muted);font-size:11.5px}
 ::selection{background:var(--accent);color:var(--bg2)}
 :focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+
+/* ── contrast corrections (measured, not guessed) ───────────────── */
+body span.popular-badge,
+body button.ut.active, body button.tab-btn.active,
+body button.drop-zone-btn, body button.tl-btn{
+  color:#fdfbf6;
+}
+body span.popular-badge *,
+body button.ut.active *, body button.tab-btn.active *,
+body button.drop-zone-btn *, body button.tl-btn *{ color:inherit; }
+
+/* light box with placeholder text — needs ink, not paper */
+body div.case-output.empty{ color:var(--muted); }
+body .cat-tab.active .cat-count{ color:#fdfbf6; }
+
+  
+/* ── mobile: wide tables scroll instead of breaking the page ── */
+@media(max-width:640px){
+  body table{ display:block; overflow-x:auto; max-width:100%; -webkit-overflow-scrolling:touch; }
+  body table th, body table td{ white-space:nowrap; font-size:12.5px; padding:9px 11px; }
+  body pre, body code{ overflow-x:auto; max-width:100%; }
+  body img, body svg{ max-width:100%; height:auto; }
+}
+
+  
+@media(max-width:640px){
+  html, body{ overflow-x:hidden; }
+  body textarea, body input, body select{ max-width:100%; box-sizing:border-box; }
+  body .editor-card, body .calc-card, body .content-section, body .result-card{
+    max-width:100%; box-sizing:border-box; }
+  body table{ width:100%; }
+}
 
   </style>
   <script type="application/ld+json">

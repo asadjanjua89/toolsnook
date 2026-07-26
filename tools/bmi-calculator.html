@@ -153,9 +153,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#f6f2e9;--bg2:#fdfbf6;--bg3:#efe9dc;--border:rgba(30,30,26,0.10);--border2:rgba(30,30,26,0.20);--text:#1e1e1a;--muted:#6b6558;--accent:#0d5138;--accent2:#14724e;--green:#14724e;--amber:#c98a2b;--red:#b8492e;--blue:#2c6e7f;--purple:#7a5c8f;--paper:#f6f2e9;--ink:#1e1e1a;--clay:#b8492e;--gold:#c98a2b;--rule:#ded6c5;--e-out:cubic-bezier(.16,1,.3,1)}
+    :root{--bg:#f6f2e9;--bg2:#fdfbf6;--bg3:#efe9dc;--border:rgba(30,30,26,0.12);--border2:rgba(30,30,26,0.22);--text:#1e1e1a;--muted:#5c5648;--accent:#0d5138;--accent2:#14724e;--green:#14724e;--amber:#8a5e1a;--red:#a33a22;--blue:#1f5a7a;--purple:#6b4a7a;--paper:#f6f2e9;--ink:#1e1e1a;--clay:#9d3d24;--gold:#c98a2b;--rule:#ded6c5;--e-out:cubic-bezier(.16,1,.3,1)}
     body{background:var(--bg);color:var(--text);font-family:'Newsreader',Georgia,serif;font-size:16px;line-height:1.6;min-height:100vh}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,0.9);border-bottom:1px solid var(--border)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(246,242,233,0.9);border-bottom:1px solid var(--border)}
     .logo{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
     .nav-back{color:var(--muted);text-decoration:none;font-size:0.85rem}.nav-back:hover{color:var(--text)}
     .hero{padding:7rem 2rem 3rem;text-align:center;max-width:700px;margin:0 auto}
@@ -168,7 +168,7 @@
     /* UNIT TOGGLE */
     .unit-toggle{display:flex;gap:0.5rem;margin-top:2rem;margin-bottom:1rem;background:var(--bg2);border:1px solid var(--border);border-radius:2px;padding:0.35rem;width:fit-content}
     .ut{padding:6px 20px;border-radius:2px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--muted);font-family:'Newsreader',Georgia,serif;transition:all 0.2s}
-    .ut.active{background:var(--accent);color:#fdfbf6}
+    .ut.active{background:var(--accent);color:#1e1e1a}
 
     /* CALC TABS */
     .calc-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem}
@@ -186,7 +186,7 @@
     .input-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     .input-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
     @media(max-width:580px){.input-row,.input-row-3{grid-template-columns:1fr 1fr}}
-    .calc-btn{width:100%;padding:0.9rem;background:var(--accent);color:#fdfbf6;border:none;border-radius:2px;font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;margin-top:0.25rem}
+    .calc-btn{width:100%;padding:0.9rem;background:var(--bg2),#0d5138);color:#1e1e1a;border:none;border-radius:2px;font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;margin-top:0.25rem}
     .calc-btn:hover{opacity:0.88}
 
     /* BMI RESULT */
@@ -196,8 +196,8 @@
     .bmi-category{font-size:1.1rem;font-weight:600;margin-bottom:0.5rem}
     .bmi-desc{font-size:0.85rem;color:var(--muted)}
     .bmi-bar-wrap{margin:1.25rem 0 0.5rem}
-    .bmi-bar{height:10px;border-radius:2px;background:var(--accent);position:relative;margin-bottom:0.5rem}
-    .bmi-marker{position:absolute;top:-4px;width:18px;height:18px;background:#fdfbf6;border:3px solid var(--accent);border-radius:50%;transform:translateX(-50%);transition:left 0.4s ease;}
+    .bmi-bar{height:10px;border-radius:2px;background:var(--bg2);position:relative;margin-bottom:0.5rem}
+    .bmi-marker{position:absolute;top:-4px;width:18px;height:18px;background:#fff;border:3px solid var(--accent);border-radius:50%;transform:translateX(-50%);transition:left 0.4s ease;}
     .bmi-bar-labels{display:flex;justify-content:space-between;font-size:0.7rem;color:var(--muted)}
 
     .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:0.75rem}
@@ -207,11 +207,11 @@
     .result-num.green{color:var(--green)}.result-num.amber{color:var(--amber)}.result-num.accent{color:var(--accent)}.result-num.blue{color:var(--blue)}.result-num.red{color:var(--red)}
     .result-label{font-size:0.72rem;color:var(--muted);margin-top:3px}
 
-    .healthy-range-box{background:rgba(67,233,123,0.07);border:1px solid rgba(67,233,123,0.2);border-radius:2px;padding:1.1rem 1.25rem;margin-bottom:0.75rem}
+    .healthy-range-box{background:rgba(20,114,78,0.07);border:1px solid rgba(20,114,78,0.2);border-radius:2px;padding:1.1rem 1.25rem;margin-bottom:0.75rem}
     .healthy-range-title{font-family:'Fraunces',Georgia,serif;font-size:0.85rem;font-weight:700;color:var(--green);margin-bottom:0.4rem}
     .healthy-range-text{font-size:0.9rem;color:var(--text);line-height:1.6}
 
-    .new-bmi-box{background:rgba(192,132,252,0.07);border:1px solid rgba(192,132,252,0.2);border-radius:2px;padding:1.1rem 1.25rem;margin-bottom:0.75rem}
+    .new-bmi-box{background:rgba(107,74,122,0.07);border:1px solid rgba(107,74,122,0.2);border-radius:2px;padding:1.1rem 1.25rem;margin-bottom:0.75rem}
     .new-bmi-title{font-family:'Fraunces',Georgia,serif;font-size:0.85rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem}
     .new-bmi-text{font-size:0.9rem;color:var(--text);line-height:1.6}
 
@@ -225,10 +225,10 @@
     /* BMI CATEGORIES TABLE */
     .bmi-cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin:1rem 0}
     .bmi-cat{border-radius:2px;padding:1rem;text-align:center}
-    .bmi-cat.underweight{background:rgba(78,205,196,0.1);border:1px solid rgba(78,205,196,0.25)}
-    .bmi-cat.healthy{background:rgba(67,233,123,0.1);border:1px solid rgba(67,233,123,0.25)}
-    .bmi-cat.overweight{background:rgba(247,151,30,0.1);border:1px solid rgba(247,151,30,0.25)}
-    .bmi-cat.obese{background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.25)}
+    .bmi-cat.underweight{background:rgba(31,90,102,0.1);border:1px solid rgba(31,90,102,0.25)}
+    .bmi-cat.healthy{background:rgba(20,114,78,0.1);border:1px solid rgba(20,114,78,0.25)}
+    .bmi-cat.overweight{background:rgba(138,94,26,0.1);border:1px solid rgba(138,94,26,0.25)}
+    .bmi-cat.obese{background:rgba(163,58,34,0.1);border:1px solid rgba(163,58,34,0.25)}
     .bmi-cat-range{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:800;margin-bottom:4px}
     .bmi-cat.underweight .bmi-cat-range{color:var(--blue)}
     .bmi-cat.healthy .bmi-cat-range{color:var(--green)}
@@ -250,7 +250,7 @@
 
     .highlight-box{background:rgba(13,81,56,0.07);border:1px solid rgba(13,81,56,0.2);border-radius:2px;padding:1rem 1.25rem;margin:1rem 0}
     .highlight-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
-    .warning-box{background:rgba(247,151,30,0.07);border:1px solid rgba(247,151,30,0.2);border-radius:2px;padding:1rem 1.25rem;margin:1rem 0}
+    .warning-box{background:rgba(138,94,26,0.07);border:1px solid rgba(138,94,26,0.2);border-radius:2px;padding:1rem 1.25rem;margin:1rem 0}
     .warning-box p{color:var(--text);margin:0;font-size:0.9rem;line-height:1.7}
 
     .limitations-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
@@ -280,19 +280,19 @@
     .sources li:last-child{border-bottom:none}
     .sources a{color:#14724e;text-decoration:none;font-weight:600}
     .sources a:hover{text-decoration:underline}
-    .sources .what{display:block;color:#6b6558;font-size:0.82rem;margin-top:2px}
-    .src-note{margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(30,30,26,0.10);font-size:0.8rem;color:#6b6558;line-height:1.65}
+    .sources .what{display:block;color:#5c5648;font-size:0.82rem;margin-top:2px}
+    .src-note{margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(30,30,26,0.10);font-size:0.8rem;color:#5c5648;line-height:1.65}
     .src-note a{color:#14724e;text-decoration:none}
-    .advice-note{background:rgba(247,151,30,0.05);border:1px solid rgba(247,151,30,0.25);border-left:3px solid #c98a2b;border-radius:2px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.87rem;color:#6b6558;line-height:1.7}
+    .advice-note{background:rgba(138,94,26,0.05);border:1px solid rgba(138,94,26,0.25);border-left:3px solid #8a5e1a;border-radius:2px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.87rem;color:#5c5648;line-height:1.7}
     .advice-note strong{color:#1e1e1a}
   
     .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(13,81,56,0.05);border:1px solid rgba(13,81,56,0.18);border-radius:2px;padding:1rem 1.2rem;margin:2rem 0 1rem}
-    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:#0d5138;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:0.9rem;color:#fdfbf6}
+    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:0.9rem;color:#1e1e1a}
     .pm-name{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:0.92rem;color:#1e1e1a}
     .pm-name a{color:#14724e;text-decoration:none}
     .pm-name a:hover{text-decoration:underline}
-    .pm-sub{font-size:0.79rem;color:#6b6558;margin-top:2px;line-height:1.55}
-    .pm-sub a{color:#6b6558;text-decoration:underline;text-underline-offset:2px}
+    .pm-sub{font-size:0.79rem;color:#5c5648;margin-top:2px;line-height:1.55}
+    .pm-sub a{color:#5c5648;text-decoration:underline;text-underline-offset:2px}
     .pm-sub a:hover{color:#14724e}
   
 
@@ -408,6 +408,39 @@ body footer{border-top:2px solid var(--ink);color:var(--muted);font-size:11.5px}
 ::selection{background:var(--accent);color:var(--bg2)}
 :focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+
+/* ── contrast corrections (measured, not guessed) ───────────────── */
+body span.popular-badge,
+body button.ut.active, body button.tab-btn.active,
+body button.drop-zone-btn, body button.tl-btn{
+  color:#fdfbf6;
+}
+body span.popular-badge *,
+body button.ut.active *, body button.tab-btn.active *,
+body button.drop-zone-btn *, body button.tl-btn *{ color:inherit; }
+
+/* light box with placeholder text — needs ink, not paper */
+body div.case-output.empty{ color:var(--muted); }
+body .cat-tab.active .cat-count{ color:#fdfbf6; }
+
+  
+/* ── mobile: wide tables scroll instead of breaking the page ── */
+@media(max-width:640px){
+  body table{ display:block; overflow-x:auto; max-width:100%; -webkit-overflow-scrolling:touch; }
+  body table th, body table td{ white-space:nowrap; font-size:12.5px; padding:9px 11px; }
+  body pre, body code{ overflow-x:auto; max-width:100%; }
+  body img, body svg{ max-width:100%; height:auto; }
+}
+
+  
+@media(max-width:640px){
+  html, body{ overflow-x:hidden; }
+  body textarea, body input, body select{ max-width:100%; box-sizing:border-box; }
+  body .editor-card, body .calc-card, body .content-section, body .result-card{
+    max-width:100%; box-sizing:border-box; }
+  body table{ width:100%; }
+}
 
   </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

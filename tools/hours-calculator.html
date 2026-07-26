@@ -23,15 +23,15 @@
     :root {
       --bg: #f6f2e9; --bg2: #fdfbf6; --bg3: #efe9dc;
       --border: rgba(30,30,26,0.11); --border2: rgba(30,30,26,0.19);
-      --text: #1e1e1a; --muted: #6b6558; --accent: #0d5138;
-      --green: #14724e; --amber: #c98a2b; --red: #b8492e; --blue: #2c6e7f;
-      --purple: #8a5a7a;
+      --text: #1e1e1a; --muted: #5c5648; --accent: #0d5138;
+      --green: #14724e; --amber: #8a5e1a; --red: #a33a22; --blue: #1f5a66;
+      --purple: #6b4a7a;
     }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: 'Newsreader',Georgia,serif; font-size: 16px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
 
     /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(10,10,15,0.9);  border-bottom: 1px solid var(--border); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(246,242,233,0.9);  border-bottom: 1px solid var(--border); }
     .logo { font-family: 'Fraunces',Georgia,serif; font-size: 1.4rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
     .logo span { color: var(--accent); }
     .nav-back { color: var(--muted); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
@@ -41,7 +41,7 @@
     .hero { padding: 7rem 2rem 3rem; max-width: 860px; margin: 0 auto; text-align: center; }
     .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(13,81,56,0.1); border: 1px solid rgba(13,81,56,0.3); color: #14724e; font-size: 0.78rem; font-weight: 600; padding: 5px 14px; border-radius:2px; margin-bottom: 1.25rem; letter-spacing: 0.05em; }
     h1 { font-family: 'Fraunces',Georgia,serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1rem; }
-    h1 em { font-style: normal; background: var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h1 em { font-style: normal; background: var(--bg2), var(--blue));  -webkit-text-fill-color: transparent;  }
     .hero p { color: var(--muted); font-size: 1rem; max-width: 560px; margin: 0 auto; }
 
     /* MAIN LAYOUT */
@@ -50,7 +50,7 @@
     /* TABS */
     .tab-bar { display: flex; gap: 4px; background: var(--bg2); border: 1px solid var(--border2); border-radius:2px; padding: 4px; margin-bottom: 2rem; }
     .tab-btn { flex: 1; padding: 0.6rem 0.5rem; background: none; border: none; color: var(--muted); font-family: 'Newsreader',Georgia,serif; font-size: 0.82rem; font-weight: 500; border-radius:2px; cursor: pointer; transition: all 0.2s; text-align: center; }
-    .tab-btn.active { background: var(--accent); color: #fdfbf6; font-weight: 600; }
+    .tab-btn.active { background: var(--accent); color: #1e1e1a; font-weight: 600; }
     .tab-btn:hover:not(.active) { color: var(--text); background: var(--bg3); }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
@@ -73,14 +73,14 @@
     select option { background: var(--bg3); color: var(--text); }
 
     /* RESULT BOX */
-    .result-box { background: var(--accent), rgba(78,205,196,0.07)); border: 1px solid rgba(13,81,56,0.3); border-radius:2px; padding: 1.5rem 2rem; margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1.5rem; }
+    .result-box { background: var(--bg2), rgba(31,90,102,0.07)); border: 1px solid rgba(13,81,56,0.3); border-radius:2px; padding: 1.5rem 2rem; margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1.5rem; }
     .result-item { text-align: center; }
     .result-val { font-family: 'Fraunces',Georgia,serif; font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; }
     .result-val.green { color: var(--green); }
     .result-val.amber { color: var(--amber); }
     .result-val.blue { color: var(--blue); }
     .result-label { font-size: 0.75rem; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
-    .overnight-badge { display: none; margin-top: 1rem; background: rgba(247,151,30,0.1); border: 1px solid rgba(247,151,30,0.3); color: var(--amber); font-size: 0.82rem; padding: 6px 14px; border-radius:2px; text-align: center; }
+    .overnight-badge { display: none; margin-top: 1rem; background: rgba(138,94,26,0.1); border: 1px solid rgba(138,94,26,0.3); color: var(--amber); font-size: 0.82rem; padding: 6px 14px; border-radius:2px; text-align: center; }
     .overnight-badge.show { display: block; }
 
     /* TIMESHEET TABLE */
@@ -102,7 +102,7 @@
     .ts-total-val { font-family: 'Fraunces',Georgia,serif; font-size: 1.5rem; font-weight: 800; color: var(--accent); }
     .ts-total-val.green { color: var(--green); }
     .ts-total-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
-    .overtime-alert { background: rgba(255,107,107,0.08); border: 1px solid rgba(255,107,107,0.3); color: var(--red); font-size: 0.82rem; padding: 8px 14px; border-radius:2px; display: none; }
+    .overtime-alert { background: rgba(163,58,34,0.08); border: 1px solid rgba(163,58,34,0.3); color: var(--red); font-size: 0.82rem; padding: 8px 14px; border-radius:2px; display: none; }
     .overtime-alert.show { display: block; }
 
     /* PAY SECTION */
@@ -174,11 +174,11 @@
     }
   
     .page-meta{display:flex;gap:0.9rem;align-items:center;background:rgba(13,81,56,0.05);border:1px solid rgba(13,81,56,0.18);border-radius:2px;padding:1rem 1.2rem;margin:2rem 0 1rem}
-    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:#0d5138;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:0.9rem;color:#fdfbf6}
+    .pm-ini{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:0.9rem;color:#1e1e1a}
     .pm-name{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:0.92rem;color:#1e1e1a}
     .pm-name a{color:#14724e;text-decoration:none}
-    .pm-sub{font-size:0.79rem;color:#6b6558;margin-top:2px;line-height:1.55}
-    .pm-sub a{color:#6b6558;text-decoration:underline;text-underline-offset:2px}
+    .pm-sub{font-size:0.79rem;color:#5c5648;margin-top:2px;line-height:1.55}
+    .pm-sub a{color:#5c5648;text-decoration:underline;text-underline-offset:2px}
   
 
 /* ── editorial layer — "The Ledger, Alive" ──────────────────────── */
@@ -293,6 +293,39 @@ body footer{border-top:2px solid var(--ink);color:var(--muted);font-size:11.5px}
 ::selection{background:var(--accent);color:var(--bg2)}
 :focus-visible{outline:2.5px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+
+/* ── contrast corrections (measured, not guessed) ───────────────── */
+body span.popular-badge,
+body button.ut.active, body button.tab-btn.active,
+body button.drop-zone-btn, body button.tl-btn{
+  color:#fdfbf6;
+}
+body span.popular-badge *,
+body button.ut.active *, body button.tab-btn.active *,
+body button.drop-zone-btn *, body button.tl-btn *{ color:inherit; }
+
+/* light box with placeholder text — needs ink, not paper */
+body div.case-output.empty{ color:var(--muted); }
+body .cat-tab.active .cat-count{ color:#fdfbf6; }
+
+  
+/* ── mobile: wide tables scroll instead of breaking the page ── */
+@media(max-width:640px){
+  body table{ display:block; overflow-x:auto; max-width:100%; -webkit-overflow-scrolling:touch; }
+  body table th, body table td{ white-space:nowrap; font-size:12.5px; padding:9px 11px; }
+  body pre, body code{ overflow-x:auto; max-width:100%; }
+  body img, body svg{ max-width:100%; height:auto; }
+}
+
+  
+@media(max-width:640px){
+  html, body{ overflow-x:hidden; }
+  body textarea, body input, body select{ max-width:100%; box-sizing:border-box; }
+  body .editor-card, body .calc-card, body .content-section, body .result-card{
+    max-width:100%; box-sizing:border-box; }
+  body table{ width:100%; }
+}
 
   </style>
   <script type="application/ld+json">
